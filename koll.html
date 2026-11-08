@@ -21,14 +21,18 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 const COL={'Kemi':'kemi','Matte':'matte','Franska':'franska','Fysik och teknik':'fysik'};
 let D,rows;
 try{D=await (await fetch('data.json',{cache:'no-store'})).json();rows=await (await fetch(SB+'?select=key,done,updated_at',{headers:{apikey:SK}})).json()}catch(e){document.getElementById('out').innerHTML='<p class="err">Kunde inte hämta bockarna just nu.</p>';return}
+const P=x=>{const[a,b,c]=x.split('-');return new Date(+a,b-1,+c)};const today=new Date();today.setHours(0,0,0,0);
+const live=p=>P(p.datum2||p.datum)>=today;
+const rel=(amne,d)=>D.prov.filter(p=>p.amne.startsWith(amne)&&p.datum>=d).sort((a,b)=>a.datum<b.datum?-1:1)[0];
 const M=new Map(rows.map(r=>[r.key,r]));const last=rows.reduce((a,r)=>r.updated_at>a?r.updated_at:a,'');
 document.getElementById('sub').textContent=`Vecka ${D.vecka} · senaste bock ${last?new Date(last).toLocaleString('sv-SE',{dateStyle:'short',timeStyle:'short'}):'ingen än'}`;
 let h='';
-D.prov.forEach(p=>{const G=p.grupper||(p.kunna?[{kunna:p.kunna}]:[]);if(!G.length)return;let a=0,b=0,body='';
+D.prov.filter(live).forEach(p=>{const G=p.grupper||(p.kunna?[{kunna:p.kunna}]:[]);if(!G.length)return;let a=0,b=0,body='';
  G.forEach(g=>{body+=(g.rubrik?`<div class="g">${esc(g.rubrik)}</div>`:'')+'<ul>'+g.kunna.map(k=>{a++;const y=M.get(`k-${p.amne}-${p.datum}-${hs(k)}`)?.done;if(y)b++;return `<li class="${y?'y':''}">${esc(k)}</li>`}).join('')+'</ul>'});
  h+=`<div class="card" style="--c:var(--${COL[p.amne]||'kemi'})"><h2>${esc(p.amne)}: ${esc(p.titel)}<small>${b} av ${a} · prov ${p.datum.slice(8)}/${+p.datum.slice(5,7)}</small></h2><div class="bar"><i style="width:${a?b/a*100:0}%"></i></div>${body}</div>`});
-let pl='';D.dagar.forEach(x=>(x.plugg||[]).forEach((p,i)=>{const y=M.get(`p-${x.datum}-${i}`)?.done;pl+=`<li class="${y?'y':''}">${x.datum.slice(8)}/${+x.datum.slice(5,7)} · ${esc(p.amne)}: ${esc(p.vad)}</li>`}));
+let pl='';D.dagar.forEach(x=>(x.plugg||[]).forEach((p,i)=>{const r=rel(p.amne,x.datum);if(r?!live(r):P(x.datum)<new Date(today-7*864e5))return;const y=M.get(`p-${x.datum}-${i}`)?.done;pl+=`<li class="${y?'y':''}">${x.datum.slice(8)}/${+x.datum.slice(5,7)} · ${esc(p.amne)}: ${esc(p.vad)}</li>`}));
 if(pl)h+=`<div class="card"><h2>Pluggförslag dag för dag</h2><ul>${pl}</ul></div>`;
+h+=`<p class="sub">Punkter ligger kvar, avbockade eller inte, tills provet de hör till är gjort. Då försvinner de härifrån.</p>`;
 document.getElementById('out').innerHTML=h;
 })();
 </script></body></html>

@@ -164,7 +164,8 @@ h+=`<h2>🎯 Veckans fokus</h2><div class="fokus">${D.fokus.map((f,i)=>`<div cla
 h+=`<h2>📈 Tempot fram till jul</h2><div class="card"><div class="tempo">${D.tempo.map(t=>`<div class="tb l${t.niva}${t.v==D.vecka?' now':''}"><div class="bar" style="height:${70}px"><div class="fill"></div></div><b>v. ${t.v}</b><small>${esc(t.etikett)}</small></div>`).join('')}</div>
 <p style="margin:12px 0 0;font-size:13.5px;color:var(--mut)">Grönt är lugnt, orange är mycket. När det är lugnt är det smart att förbereda lite, så blir de tunga veckorna lättare.</p></div>`;
 // dagar
-const days=D.dagar.map(x=>({...x,d:P(x.datum)}));
+const mon0=new Date(today);mon0.setDate(today.getDate()-((today.getDay()+6)%7));
+const days=D.dagar.map(x=>({...x,d:P(x.datum)})).filter(x=>x.d>=mon0||x.helg&&dd(x.d,today)<1&&dd(x.d,today)>-1);
 const wkOf=d=>{const t=new Date(d);t.setDate(t.getDate()+3-((t.getDay()+6)%7));const y=new Date(t.getFullYear(),0,4);return 1+Math.round(((t-y)/864e5-3+((y.getDay()+6)%7))/7)};
 const weeks=[...new Set(days.map(x=>wkOf(x.d)))];
 h+=`<h2>🗓️ Dag för dag</h2><div class="wtabs">${weeks.map((w,i)=>`<button data-w="${w}" class="${i==0?'on':''}">Vecka ${w}</button>`).join('')}</div><div class="wsum">Förslag på vad som är smart att plugga när. Bocka av det du gör.</div><div class="days" id="days"></div>`;
