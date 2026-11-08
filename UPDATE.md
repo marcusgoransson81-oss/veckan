@@ -14,3 +14,8 @@ Publiceras via GitHub Pages: https://marcusgoransson81-oss.github.io/veckan/
 - Checkrutornas lagring nycklas på ämne+datum+text, så oförändrade punkter behåller sina bockar.
 - NotebookLM-recept (`notebooklm`, `notebooklm_extra`, `notebooklm_tips`) och studietips (`veckans_teknik`, `teknik_bank`) anpassas efter vilka ämnen och prov som är aktuella.
 - `nytt` = förändringar sedan förra söndagen.
+
+## Bockar och föräldravy
+- Bockar synkas till Supabase (projekt wpjgybjmezxorhltbdcr, tabell `checks`: key, done, updated_at). Publishable key ligger i index.html och koll.html; RLS tillåter bara select/insert/update på nycklar som börjar med `k-` eller `p-`.
+- Nycklar: `k-<ämne>-<provdatum>-<hash av punktens text>` och `p-<datum>-<index>`. Behåll texten på en punkt oförändrad om bocken ska ligga kvar.
+- Föräldravy: https://marcusgoransson81-oss.github.io/veckan/koll.html. Läs den (i webbläsaren) på söndagar för att se vad Hugo bockat av och anpassa veckan.
