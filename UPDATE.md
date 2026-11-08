@@ -19,3 +19,4 @@ Publiceras via GitHub Pages: https://marcusgoransson81-oss.github.io/veckan/
 - Bockar synkas till Supabase (projekt wpjgybjmezxorhltbdcr, tabell `checks`: key, done, updated_at). Publishable key ligger i index.html och koll.html; RLS tillåter bara select/insert/update på nycklar som börjar med `k-` eller `p-`.
 - Nycklar: `k-<ämne>-<provdatum>-<hash av punktens text>` och `p-<datum>-<index>`. Behåll texten på en punkt oförändrad om bocken ska ligga kvar.
 - Föräldravy: https://marcusgoransson81-oss.github.io/veckan/koll.html. Läs den (i webbläsaren) på söndagar för att se vad Hugo bockat av och anpassa veckan.
+- Marcus har en fäst kopia på claude.ai ("Hugos vecka", artifact 316828c0-ea2e-4f8f-a583-1ac9d7cc0035, delad publikt). Uppdatera den också varje söndag med samma data.json och index.html, men med "Pappas kopia"-raden överst (länkar till sidan och koll.html) och utan `await sync();` (claude.ai blockerar anrop till Supabase).
