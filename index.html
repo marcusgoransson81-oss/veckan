@@ -133,7 +133,18 @@ const dd=(a,b)=>Math.round((b-a)/864e5);
 const DN=['Sön','Mån','Tis','Ons','Tor','Fre','Lör'],MN=['jan','feb','mars','apr','maj','juni','juli','aug','sep','okt','nov','dec'];
 const fd=d=>`${DN[d.getDay()].toLowerCase()} ${d.getDate()}/${d.getMonth()+1}`;
 const COL={'Kemi':'kemi','Matte':'matte','Franska':'franska','Fysik':'fysik','Fysik och teknik':'fysik'};
-const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{v?localStorage.setItem(k,'1'):localStorage.removeItem(k)}catch(e){}}};
+const SB='https://wpjgybjmezxorhltbdcr.supabase.co/rest/v1/checks',SK='sb_publishable_bbDqfwFGM5plLU7DWIhlsg_TWjOE8L-',SH={apikey:SK,'Content-Type':'application/json'};
+const LS={g(k){try{return localStorage.getItem(k)}catch(e){return null}},s(k,v){try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}},keys(){try{return Object.keys(localStorage)}catch(e){return[]}}};
+let online=false;
+async function push(rows){if(!rows.length)return true;try{const r=await fetch(SB,{method:'POST',headers:{...SH,Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify(rows)});if(!r.ok)throw 0;rows.forEach(x=>LS.s('pend:'+x.key,null));online=true;return true}catch(e){return false}}
+async function sync(){try{const ctl=new AbortController();const t=setTimeout(()=>ctl.abort(),5000);const r=await fetch(SB+'?select=key,done',{headers:SH,signal:ctl.signal});clearTimeout(t);if(!r.ok)throw 0;const rows=await r.json();online=true;
+ const pend=new Set(LS.keys().filter(k=>k.startsWith('pend:')).map(k=>k.slice(5)));const remote=new Map(rows.map(x=>[x.key,x.done]));
+ for(const [k,v] of remote)if(!pend.has(k))LS.s(k,v?'1':null);
+ const up=[];for(const k of pend)up.push({key:k,done:LS.g(k)=='1',updated_at:new Date().toISOString()});
+ for(const k of LS.keys())if(/^(k|p)-/.test(k)&&LS.g(k)=='1'&&!remote.has(k)&&!pend.has(k))up.push({key:k,done:true,updated_at:new Date().toISOString()});
+ await push(up)}catch(e){online=false}}
+await sync();
+const store={get(k){return LS.g(k)},set(k,v){LS.s(k,v?'1':null);LS.s('pend:'+k,'1');push([{key:k,done:!!v,updated_at:new Date().toISOString()}]).then(ok=>{online=ok;const el=document.getElementById('syncst');if(el)el.textContent=ok?'☁️ Dina bockar sparas online och syns på alla dina enheter.':'Bockarna sparas på den här enheten och laddas upp när det går.'})}};
 const toast=t=>{const el=document.getElementById('toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1800)};
 const up=P(D.uppdaterad), jul=P(D.jullov);
 // skoldagar kvar till jullov
@@ -185,6 +196,7 @@ h+=`<h2>🧠 Veckans studieteknik</h2><div class="card tek"><h3>${esc(T.titel)}<
 const NB=D.notebooklm_tips;
 if(NB){h+=`<h2>✨ NotebookLM-verktygslådan</h2><p style="margin:-4px 0 10px;color:var(--mut)">${esc(NB.intro)} Byt ut det som står inom [hakparentes].</p><div class="provs">${NB.recept.map((r,i)=>`<div class="card c-${['kemi','matte','franska','fysik','kemi'][i%5]}" style="border-top:6px solid var(--pc)"><div class="nb" style="margin:0;border:0;padding:0;background:none"><div class="h">${esc(r.titel)}<button data-nb="${i}">Kopiera</button></div><q>${esc(r.text)}</q></div></div>`).join('')}</div><div class="card" style="margin-top:12px"><ul style="margin:0;padding-left:18px">${NB.extra.map(x=>`<li style="margin:5px 0;font-size:14.5px">${esc(x)}</li>`).join('')}</ul></div>`}
 if(D.teknik_bank){h+=`<h2>🧰 Fler pluggknep</h2><div class="fokus">${D.teknik_bank.map(t=>`<div class="card fk"><div class="ic">${t.ikon}</div><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p></div>`).join('')}</div>`}
+h+=`<p class="foot" id="syncst">${online?'☁️ Dina bockar sparas online och syns på alla dina enheter.':'Bockarna sparas på den här enheten och laddas upp när det går.'}</p>`;
 h+=`<p class="foot">Uppdateras varje söndag · senast ${fd(up)} · Planen är en grund. Behöver något mer tid, lägg mer tid på det. /Pappa</p>`;
 app.innerHTML=h;
 // dag-render

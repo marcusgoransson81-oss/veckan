@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Hugos bockar</title>
+<style>
+:root{--bg:#f4f1ea;--card:#fff;--ink:#16181d;--mut:#666a73;--line:#e4dfd4;--ok:#1f9d6b;--kemi:#7b4dff;--matte:#0a84d6;--franska:#e0336b;--fysik:#109a8a}
+@media(prefers-color-scheme:dark){:root{--bg:#121316;--card:#1d1f24;--ink:#f1efe9;--mut:#a3a6ae;--line:#30333a}}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,sans-serif;padding:16px}main{max-width:760px;margin:0 auto}
+h1{font-size:24px;margin:0 0 4px}.sub{color:var(--mut);font-size:13px;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;border-top:5px solid var(--c,var(--line))}
+h2{font-size:17px;margin:0 0 6px;display:flex;gap:8px;align-items:baseline}h2 small{margin-left:auto;font-size:13px;color:var(--mut);font-weight:600}
+.bar{height:8px;border-radius:5px;background:var(--bg);overflow:hidden;margin:4px 0 8px}.bar i{display:block;height:100%;background:var(--c)}
+.g{font-size:11.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--c);margin:10px 0 2px}
+ul{list-style:none;margin:0;padding:0}li{padding:3px 0 3px 24px;position:relative;font-size:14px}li:before{content:"○";position:absolute;left:2px;color:var(--mut)}li.y:before{content:"✓";color:var(--ok);font-weight:800}li.y{color:var(--mut)}
+.err{background:#fde7ee;color:#7a1033;border-radius:10px;padding:10px}
+</style></head><body><main><h1>Hugos bockar</h1><div class="sub" id="sub">Laddar…</div><div id="out"></div></main>
+<script>
+(async()=>{
+const SB='https://wpjgybjmezxorhltbdcr.supabase.co/rest/v1/checks',SK='sb_publishable_bbDqfwFGM5plLU7DWIhlsg_TWjOE8L-';
+const hs=t=>{let h=0;for(const c of t)h=(h*31+c.charCodeAt(0))|0;return (h>>>0).toString(36)};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const COL={'Kemi':'kemi','Matte':'matte','Franska':'franska','Fysik och teknik':'fysik'};
+let D,rows;
+try{D=await (await fetch('data.json',{cache:'no-store'})).json();rows=await (await fetch(SB+'?select=key,done,updated_at',{headers:{apikey:SK}})).json()}catch(e){document.getElementById('out').innerHTML='<p class="err">Kunde inte hämta bockarna just nu.</p>';return}
+const M=new Map(rows.map(r=>[r.key,r]));const last=rows.reduce((a,r)=>r.updated_at>a?r.updated_at:a,'');
+document.getElementById('sub').textContent=`Vecka ${D.vecka} · senaste bock ${last?new Date(last).toLocaleString('sv-SE',{dateStyle:'short',timeStyle:'short'}):'ingen än'}`;
+let h='';
+D.prov.forEach(p=>{const G=p.grupper||(p.kunna?[{kunna:p.kunna}]:[]);if(!G.length)return;let a=0,b=0,body='';
+ G.forEach(g=>{body+=(g.rubrik?`<div class="g">${esc(g.rubrik)}</div>`:'')+'<ul>'+g.kunna.map(k=>{a++;const y=M.get(`k-${p.amne}-${p.datum}-${hs(k)}`)?.done;if(y)b++;return `<li class="${y?'y':''}">${esc(k)}</li>`}).join('')+'</ul>'});
+ h+=`<div class="card" style="--c:var(--${COL[p.amne]||'kemi'})"><h2>${esc(p.amne)}: ${esc(p.titel)}<small>${b} av ${a} · prov ${p.datum.slice(8)}/${+p.datum.slice(5,7)}</small></h2><div class="bar"><i style="width:${a?b/a*100:0}%"></i></div>${body}</div>`});
+let pl='';D.dagar.forEach(x=>(x.plugg||[]).forEach((p,i)=>{const y=M.get(`p-${x.datum}-${i}`)?.done;pl+=`<li class="${y?'y':''}">${x.datum.slice(8)}/${+x.datum.slice(5,7)} · ${esc(p.amne)}: ${esc(p.vad)}</li>`}));
+if(pl)h+=`<div class="card"><h2>Pluggförslag dag för dag</h2><ul>${pl}</ul></div>`;
+document.getElementById('out').innerHTML=h;
+})();
+</script></body></html>
