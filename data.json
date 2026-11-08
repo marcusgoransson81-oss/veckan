@@ -1,0 +1,415 @@
+{
+ "uppdaterad": "2026-11-08",
+ "vecka": 46,
+ "rubrik": "Inga prov, men kemin är igång",
+ "hej": "Inga prov den här veckan, men det är nu kemiplugget gör störst nytta. Provet är fredag 20/11 och mattediagnosen dagen innan. Tricket är att börja tidigt och ta lite i taget, så blir det aldrig panik när proven kommer.",
+ "nytt": [
+  "Kemiprovet är flyttat till fredag 20/11 (det stod 18/11 tidigare).",
+  "Kemiläraren har lagt ut exakt vad som ska kunnas, se provkortet nedan.",
+  "Tisdag 17/11 är ledig dag."
+ ],
+ "fokus": [
+  {
+   "ikon": "🧪",
+   "titel": "Kemi, börja nu",
+   "text": "Provet är fredag 20/11. Börja med de fyra kemiska beteckningarna och instuderingsfrågorna i Classroom. Lite varje dag slår en lång kväll."
+  },
+  {
+   "ikon": "🙋",
+   "titel": "Gå på studiestödet tisdag",
+   "text": "Tis 10/11 kl. 15.30 med kemiläraren. Det är enda passet med honom före provet. Ta med två eller tre frågor du inte riktigt fattar."
+  },
+  {
+   "ikon": "🧭",
+   "titel": "SYV-träff i morgon",
+   "text": "Mån 9/11 på mentorstiden, om gymnasievalet. Bra frågor att ta med: vad som brukar krävas för att komma in på NA, vilka andra program eller skolor som liknar det du vill, och hur du kan rangordna flera val. Det är smart att ha mer än ett alternativ på listan."
+  }
+ ],
+ "tempo": [
+  {
+   "v": 46,
+   "niva": 2,
+   "etikett": "Plugga in",
+   "vad": "Inga prov, kemiplugget igång"
+  },
+  {
+   "v": 47,
+   "niva": 3,
+   "etikett": "Provvecka",
+   "vad": "Mattediagnos tor, kemiprov fre"
+  },
+  {
+   "v": 48,
+   "niva": 3,
+   "etikett": "Matte",
+   "vad": "Matteprov del 1 och 2"
+  },
+  {
+   "v": 49,
+   "niva": 2,
+   "etikett": "Franska",
+   "vad": "Muntligt prov mån 30/11"
+  },
+  {
+   "v": 50,
+   "niva": 3,
+   "etikett": "Franska + fysik",
+   "vad": "Skriftligt 7/12, fysik/teknik 11/12"
+  },
+  {
+   "v": 51,
+   "niva": 1,
+   "etikett": "Snart jul",
+   "vad": "Betygssamtal, mentorsdag, avslutning"
+  }
+ ],
+ "dagar": [
+  {
+   "datum": "2026-11-09",
+   "tid": "08.20–14.30",
+   "ta_med": [
+    "Idrottskläder"
+   ],
+   "skola": [
+    "SYV-träff om gymnasievalet (mentorstid)",
+    "Franska: bli klar med kapitel 2a och läs i Lupin"
+   ],
+   "plugg": [
+    {
+     "amne": "Kemi",
+     "vad": "Lär dig de fyra beteckningarna (flashcards)"
+    }
+   ],
+   "viktig": true
+  },
+  {
+   "datum": "2026-11-10",
+   "tid": "08.20–16.30",
+   "ta_med": [
+    "Idrottskläder"
+   ],
+   "skola": [
+    "Hemkunskap grupp 1: inlämningsuppgiften",
+    "Studiestöd kemi 15.30–16.30"
+   ],
+   "plugg": [],
+   "viktig": true
+  },
+  {
+   "datum": "2026-11-11",
+   "tid": "08.20–14.40",
+   "ta_med": [],
+   "skola": [
+    "Kemi första lektionen"
+   ],
+   "plugg": [
+    {
+     "amne": "Kemi",
+     "vad": "Instuderingsfrågor, första halvan"
+    },
+    {
+     "amne": "Matte",
+     "vad": "Bli klar med kapitel 2"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-12",
+   "tid": "08.20–15.15",
+   "ta_med": [],
+   "skola": [
+    "Studiestöd finns 15.25 om du vill"
+   ],
+   "plugg": [
+    {
+     "amne": "Kemi",
+     "vad": "Instuderingsfrågor, andra halvan"
+    },
+    {
+     "amne": "Franska",
+     "vad": "Några glosor och fraser från kapitel 2, en kort stund"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-13",
+   "tid": "08.20–14.35",
+   "ta_med": [],
+   "skola": [],
+   "plugg": []
+  },
+  {
+   "datum": "2026-11-15",
+   "helg": true,
+   "plugg": [
+    {
+     "amne": "Kemi",
+     "vad": "NotebookLM-quiz på allt, skriv upp det du missar"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-16",
+   "tid": "08.20–14.30",
+   "ta_med": [
+    "Idrottskläder"
+   ],
+   "skola": [],
+   "plugg": [
+    {
+     "amne": "Matte",
+     "vad": "Procent, förändringsfaktor och ränta"
+    },
+    {
+     "amne": "Kemi",
+     "vad": "Repetera det du missade i quizet"
+    },
+    {
+     "amne": "Franska",
+     "vad": "Några glosor och fraser från kapitel 2, en kort stund"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-17",
+   "ledig": true,
+   "notis": "Ledig från skolan. Bra läge för ett kemi-genrep, provet är på fredag.",
+   "plugg": [
+    {
+     "amne": "Kemi",
+     "vad": "Genrep: gör ett quiz som om det vore provet"
+    },
+    {
+     "amne": "Matte",
+     "vad": "Blandade uppgifter kapitel 2"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-18",
+   "tid": "08.20–14.40",
+   "ta_med": [],
+   "skola": [
+    "Sista kemilektionen före provet: fråga om det som är oklart"
+   ],
+   "plugg": [
+    {
+     "amne": "Kemi",
+     "vad": "Förklara pH, buffert och försurning högt för någon hemma"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-19",
+   "tid": "08.20–15.15",
+   "ta_med": [],
+   "skola": [
+    "Mattediagnos kapitel 2 (bedöms inte)"
+   ],
+   "plugg": [
+    {
+     "amne": "Kemi",
+     "vad": "Lätt genomgång av beteckningar och begrepp. Sedan sova i tid."
+    }
+   ],
+   "viktig": true
+  },
+  {
+   "datum": "2026-11-20",
+   "tid": "08.20–14.35",
+   "ta_med": [],
+   "skola": [
+    "KEMIPROV: syror, baser och joner"
+   ],
+   "plugg": [],
+   "prov": true,
+   "notis": "Ät frukost. Du är förberedd."
+  }
+ ],
+ "prov": [
+  {
+   "datum": "2026-11-20",
+   "amne": "Kemi",
+   "titel": "Syror, baser och joner",
+   "borja": "2026-11-09",
+   "farg": "kemi",
+   "kunna": [
+    "Bok s. 104–118 och 124–129",
+    "Grundämnen, joner och hur joner bildas",
+    "pH-skalan, surt och basiskt",
+    "Försurning i naturen och vad en buffert är",
+    "Para ihop joner",
+    "Beteckningar: svavelsyra, salpetersyra, saltsyra, natriumhydroxid"
+   ],
+   "kort": [
+    [
+     "Svavelsyra",
+     "H₂SO₄"
+    ],
+    [
+     "Salpetersyra",
+     "HNO₃"
+    ],
+    [
+     "Saltsyra",
+     "HCl"
+    ],
+    [
+     "Natriumhydroxid",
+     "NaOH"
+    ]
+   ],
+   "notebooklm": "Du är min kemilärare. Ställ 15 frågor om syror, baser, joner, pH, buffert och försurning utifrån mina källor, en fråga i taget. Vänta på mitt svar, säg om det var rätt och förklara kort. Blanda lätta och svåra frågor och avsluta med en lista över det jag behöver öva mer på.",
+   "kallor": "Lägg in instuderingsfrågorna och listan från Classroom, plus foton av bokens sidor eller dina anteckningar."
+  },
+  {
+   "datum": "2026-11-26",
+   "datum2": "2026-11-27",
+   "amne": "Matte",
+   "titel": "Kapitel 2, del 1 och 2",
+   "borja": "2026-11-11",
+   "farg": "matte",
+   "kunna": [
+    "Andelar och procent",
+    "Jämförelser och förändringar i procent",
+    "Ränta",
+    "Det diagnosen 19/11 visar att du ska öva mer på"
+   ],
+   "notebooklm": "Ge mig 10 procentuppgifter i stil med kapitel 2 (förändringsfaktor, procentuella förändringar och ränta). Visa inte svaret förrän jag har svarat, och visa sedan hur man räknar steg för steg.",
+   "kallor": "Lägg in planeringen för kapitel 2 och din rättade diagnos. Räkna själv med penna, det är där matten fastnar."
+  },
+  {
+   "datum": "2026-11-30",
+   "amne": "Franska",
+   "titel": "Muntligt prov kapitel 2",
+   "borja": "2026-11-12",
+   "farg": "franska",
+   "kunna": [
+    "Kapitel 2, öva på att tala"
+   ],
+   "tips": "Prata högt, gärna med någon hemma eller spela in dig själv och lyssna."
+  },
+  {
+   "datum": "2026-12-07",
+   "amne": "Franska",
+   "titel": "Skriftligt prov kapitel 2",
+   "borja": "2026-11-23",
+   "farg": "franska",
+   "kunna": [
+    "Glosor och verb i kapitel 2"
+   ]
+  },
+  {
+   "datum": "2026-12-11",
+   "amne": "Fysik och teknik",
+   "titel": "Prov",
+   "borja": "2026-11-23",
+   "farg": "fysik",
+   "kunna": [
+    "Vad som ingår är inte utlagt än. Fråga läraren om du vill veta tidigt."
+   ]
+  }
+ ],
+ "ovrigt": [
+  {
+   "datum": "2026-12-01",
+   "text": "Hemkunskap grupp 1"
+  },
+  {
+   "datum": "2026-12-15",
+   "text": "Hemkunskap grupp 1 och betygssamtal i franska"
+  },
+  {
+   "datum": "2026-12-17",
+   "text": "Mentorsdag"
+  },
+  {
+   "datum": "2026-12-18",
+   "text": "Julavslutning 🎄"
+  }
+ ],
+ "lediga": [
+  "2026-11-17"
+ ],
+ "jullov": "2026-12-18",
+ "kolla": [
+  "Två uppgifter i Classroom saknar datum och är inte inlämnade: \"Kost och hälsa – en utmaning\" (hemkunskap) och \"Introduktion till konditionstema\" (idrott). Fråga lärarna om de ska göras."
+ ],
+ "bra": [
+  "Du har inte missat en enda lektion i höst.",
+  "Godtagbart i alla 14 bedömda ämnen.",
+  "Kemiprovet blir din första chans att visa vad du kan i kemi den här terminen."
+ ],
+ "veckans_teknik": {
+  "titel": "Testa dig själv i stället för att läsa om",
+  "text": "Att läsa samma sida igen känns bra men fastnar dåligt. Att försöka plocka fram svaret ur huvudet (quiz, flashcards, förklara högt) är jobbigare, men det är just det som gör att du minns. NotebookLM-quizen du redan kör är precis rätt. Gör om dem några dagar senare, och lägg mest tid på frågorna du missade.",
+  "extra": [
+   "Korta pass, 25 min fokus och 5 min paus. Mobilen i ett annat rum.",
+   "Förklara för någon hemma. Kan du förklara buffert för pappa har du koll.",
+   "Sömnen kvällen före provet är värd mer än en sista timmes plugg."
+  ]
+ },
+ "notebooklm_tips": {
+  "intro": "Du kör redan quiz i NotebookLM, och det är ett av de bästa sätten att plugga. Här är fler sätt att använda det.",
+  "recept": [
+   {
+    "titel": "Hitta dina luckor",
+    "text": "Gå igenom källorna och lista de 10 viktigaste sakerna jag måste kunna till provet. Fråga mig sedan om dem en i taget och håll koll på vilka jag inte kan."
+   },
+   {
+    "titel": "Förklara enkelt",
+    "text": "Förklara [begrepp, t.ex. buffert] som om jag vore 10 år, med ett exempel från vardagen. Ställ sedan en kontrollfråga till mig."
+   },
+   {
+    "titel": "Provgenrep",
+    "text": "Gör ett prov som liknar ett riktigt prov på det här området: blanda kortsvar, flervalsfrågor och två frågor där jag ska förklara med egna ord. Rätta efter att jag svarat allt och ge mig ett betyg med motivering."
+   },
+   {
+    "titel": "Rätta mina förklaringar",
+    "text": "Jag skriver min förklaring av [begrepp]. Säg vad som är rätt, vad som saknas och vad som är fel, utan att skriva hela svaret åt mig."
+   },
+   {
+    "titel": "Repetera missarna",
+    "text": "Här är frågorna jag svarade fel på förra gången: [klistra in]. Gör nya frågor om samma saker, men formulerade på ett annat sätt."
+   }
+  ],
+  "extra": [
+   "I Studio-panelen kan du göra flashcards, quiz och en tankekarta direkt av dina källor.",
+   "Ljudöversikten går att få på svenska. Bra att lyssna på i bussen eller när du går, som repetition.",
+   "NotebookLM svarar utifrån det du laddat upp. Kolla mot boken om något verkar konstigt, och lägg in bra källor (instuderingsfrågor, dina anteckningar, foton av sidorna).",
+   "Gör en notebook per ämne och lägg till nytt material efterhand, så blir den bättre inför varje prov."
+  ]
+ },
+ "teknik_bank": [
+  {
+   "ikon": "🐢",
+   "titel": "Lite, tidigt och ofta",
+   "text": "Börja långt före provet och ta korta pass utspridda över flera veckor. Det känns lätt i början och gör att du har koll när provet kommer, utan sista-minuten-stress."
+  },
+  {
+   "ikon": "📅",
+   "titel": "Sprid ut repetitionen",
+   "text": "Repetera samma sak efter 1 dag, 3 dagar och en vecka. Fyra korta pass slår ett långt kvällen innan."
+  },
+  {
+   "ikon": "🔀",
+   "titel": "Blanda i matten",
+   "text": "Räkna blandade uppgifter (procent, förändringsfaktor, ränta) i stället för tio av samma sort. Då tränar du på att känna igen vilken metod som gäller, precis som på provet."
+  },
+  {
+   "ikon": "📒",
+   "titel": "Felbok",
+   "text": "Skriv upp varje fråga du missar och varför. Gå igenom felboken innan provet. Det är där poängen finns."
+  },
+  {
+   "ikon": "🗣️",
+   "titel": "Lär ut det",
+   "text": "Förklara ett område högt utan att titta, för någon hemma eller för dig själv. Där du tvekar är det du behöver plugga."
+  },
+  {
+   "ikon": "✍️",
+   "titel": "Skriv för hand",
+   "text": "Kemiska beteckningar och matteuträkningar fastnar bättre när du skriver dem själv än när du bara läser."
+  }
+ ]
+}

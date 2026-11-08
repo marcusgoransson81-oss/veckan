@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hugos vecka</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1ea;--card:#fff;--ink:#16181d;--mut:#666a73;--line:#e4dfd4;--acc:#ff6b2c;--acc2:#ffb020;--ok:#1f9d6b;--okbg:#e3f5ec;--soft:#f8f5ef;
+--kemi:#7b4dff;--kemibg:#efe9ff;--matte:#0a84d6;--mattebg:#e3f1fb;--franska:#e0336b;--franskabg:#fde7ee;--fysik:#109a8a;--fysikbg:#e0f4f1}
+@media(prefers-color-scheme:dark){:root{--bg:#121316;--card:#1d1f24;--ink:#f1efe9;--mut:#a3a6ae;--line:#30333a;--okbg:#173327;--soft:#24262c;--kemibg:#2a2144;--mattebg:#16293a;--franskabg:#3a1824;--fysikbg:#142f2b}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.5 Inter,system-ui,sans-serif;padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) 48px max(12px,env(safe-area-inset-left))}
+main{max-width:980px;margin:0 auto}
+h1,h2,h3,.disp{font-family:"Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.01em}
+h2{font-size:21px;margin:30px 0 10px;display:flex;align-items:center;gap:8px}
+h2 .n{font-size:12px;font-family:Inter;font-weight:600;color:var(--mut);margin-left:auto}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+/* hero */
+.hero{position:relative;overflow:hidden;border-radius:24px;padding:22px 20px 20px;color:#fff;background:radial-gradient(120% 140% at 100% 0%,#ffb020 0%,#ff6b2c 45%,#d4264f 100%)}
+.hero:after{content:"";position:absolute;right:-60px;bottom:-80px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.12)}
+.hero .wk{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.hero h1{font-size:clamp(30px,7vw,46px);line-height:1.02;margin:6px 0 8px;font-weight:800}
+.hero p{margin:0;max-width:560px;font-size:16px;opacity:.96;position:relative;z-index:1}
+.hero .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;position:relative;z-index:1}
+.pill{background:rgba(255,255,255,.2);backdrop-filter:blur(4px);border-radius:999px;padding:7px 13px;font-size:13.5px;font-weight:600}
+.pill b{font-size:16px}
+.stale{background:#fff4d6;color:#6b4a00;border-radius:12px;padding:10px 14px;margin:0 0 12px;font-weight:600;font-size:14px}
+/* nytt */
+.nytt{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.nytt span{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:14px}
+.nytt span:before{content:"NYTT";font-size:10px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--ok);border-radius:5px;padding:2px 6px;margin-right:8px;vertical-align:1px}
+/* fokus */
+.fokus{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.fk{position:relative;padding:16px 16px 16px 16px}
+.fk .num{position:absolute;right:14px;top:10px;font:800 42px/1 "Bricolage Grotesque";color:var(--line)}
+.fk .ic{font-size:28px}.fk h3{margin:6px 0 4px;font-size:18px}.fk p{margin:0;color:var(--mut);font-size:14.5px}
+/* tempo */
+.tempo{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;align-items:end}
+.tb{text-align:center;font-size:12px}
+.tb .bar{border-radius:10px 10px 4px 4px;background:var(--soft);border:1px solid var(--line);margin:0 auto 6px;width:100%;max-width:70px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.tb .fill{width:100%;border-radius:8px 8px 3px 3px}
+.tb.l1 .fill{height:30%;background:#7fd1a8}.tb.l2 .fill{height:62%;background:var(--acc2)}.tb.l3 .fill{height:100%;background:var(--acc)}
+.tb b{display:block;font-size:13px}.tb small{display:block;color:var(--mut);line-height:1.25;margin-top:2px}
+.tb.now .bar{outline:3px solid var(--ink);outline-offset:2px}
+.tb.now b:after{content:" · nu";color:var(--acc)}
+/* dagar */
+.wtabs{display:flex;gap:6px;margin:0 0 10px}
+.wtabs button{font:600 14px Inter;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer}
+.wtabs button.on{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.wsum{font-size:13px;color:var(--mut);margin:-2px 0 10px}
+.days{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
+.day{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:8px;min-height:120px}
+.day.today{outline:3px solid var(--acc);outline-offset:-1px}
+.day.prov{border:2px solid var(--kemi);background:linear-gradient(var(--kemibg),var(--card) 60%)}
+.day.ledig,.day.helg{background:var(--soft)}
+.dh{display:flex;align-items:baseline;gap:8px}.dh .dn{font:800 13px Inter;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+.dh .dd{font:800 24px/1 "Bricolage Grotesque"}.dh .tm{margin-left:auto;font-size:12px;color:var(--mut)}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;border-radius:6px;padding:2px 7px;background:var(--soft);border:1px solid var(--line);margin:0 4px 4px 0}
+.tag.bring:before{content:"🎒 "}
+.sk{font-size:13.5px;margin:0;padding-left:16px}.sk li{margin:2px 0}
+.dnote{font-size:13.5px;color:var(--mut);font-style:italic}
+.pl{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;padding:7px 8px;border-radius:10px;background:var(--pb);cursor:pointer;user-select:none}
+.pl input{margin-top:3px;accent-color:var(--pc);width:16px;height:16px;flex:none}
+.pl .m{font-weight:700;color:var(--pc);white-space:nowrap}
+.pl.done{opacity:.55}.pl.done .t{text-decoration:line-through}
+.c-kemi{--pc:var(--kemi);--pb:var(--kemibg)}.c-matte{--pc:var(--matte);--pb:var(--mattebg)}.c-franska{--pc:var(--franska);--pb:var(--franskabg)}.c-fysik{--pc:var(--fysik);--pb:var(--fysikbg)}
+.badge{font-size:10px;font-weight:800;letter-spacing:.06em;border-radius:5px;padding:2px 6px;color:#fff;background:var(--acc);margin-left:auto}
+.badge.p{background:var(--kemi)}
+/* prov */
+.provs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.pk{border-top:6px solid var(--pc);position:relative}
+.pk .top{display:flex;align-items:flex-start;gap:12px}
+.cd{flex:none;width:64px;height:64px;border-radius:16px;background:var(--pb);color:var(--pc);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.cd b{font:800 26px "Bricolage Grotesque"}.cd small{font-size:10.5px;font-weight:700;margin-top:3px}
+.pk h3{margin:0;font-size:19px}.pk .sub{color:var(--mut);font-size:13.5px}
+.prog{margin:14px 0 4px;position:relative;height:10px;border-radius:6px;background:var(--soft);border:1px solid var(--line)}
+.prog .f{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:var(--pc)}
+.prog .nowm{position:absolute;top:-4px;width:3px;height:16px;border-radius:2px;background:var(--ink)}
+.prl{display:flex;justify-content:space-between;font-size:11.5px;color:var(--mut)}
+.kunna{list-style:none;padding:0;margin:12px 0 0}
+.kunna li{display:flex;gap:8px;align-items:flex-start;font-size:14px;padding:4px 0;cursor:pointer}
+.kunna input{accent-color:var(--pc);width:16px;height:16px;margin-top:3px;flex:none}
+.kunna li.done span{color:var(--mut);text-decoration:line-through}
+.kprog{font-size:12px;font-weight:700;color:var(--pc);margin-top:6px}
+.flash{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}
+.fc{perspective:600px;height:66px;cursor:pointer}
+.fc .in{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
+.fc.flip .in{transform:rotateY(180deg)}
+.fc .s{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;padding:6px}
+.fc .a{background:var(--pb);color:var(--pc);border:1.5px dashed var(--pc);font-size:14px}
+.fc .b{background:var(--pc);color:#fff;transform:rotateY(180deg);font:800 22px "Bricolage Grotesque"}
+.fhint{font-size:12px;color:var(--mut);margin-top:6px}
+.nb{margin-top:14px;border-radius:14px;background:var(--soft);border:1px solid var(--line);padding:12px}
+.nb .h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.nb .h button{margin-left:auto;font:700 12.5px Inter;border:0;border-radius:999px;padding:6px 12px;background:var(--pc);color:#fff;cursor:pointer}
+.nb q{display:block;quotes:none;font-size:13.5px;margin:8px 0 6px;padding:8px 10px;border-left:3px solid var(--pc);background:var(--card);border-radius:0 8px 8px 0}
+.nb small{color:var(--mut);font-size:12.5px;display:block}
+.tip{margin-top:10px;font-size:13.5px;color:var(--mut)}
+/* tidslinje */
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:3px;border-radius:2px;background:linear-gradient(var(--acc),var(--acc2),#7fd1a8)}
+.te{position:relative;padding:6px 0 10px}
+.te:before{content:"";position:absolute;left:-21px;top:11px;width:13px;height:13px;border-radius:50%;background:var(--card);border:3px solid var(--pc,var(--mut))}
+.te.big:before{background:var(--pc)}
+.te .d{font-weight:700;font-size:13px;color:var(--mut)}.te .x{font-size:15px}.te .x b{color:var(--pc,var(--ink))}
+.te .st{font-size:12.5px;color:var(--mut)}
+.te.jul:before{border-color:var(--ok);background:var(--ok)}
+/* bra + kolla + teknik */
+.two{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.bra{background:var(--okbg);border-color:transparent}.bra ul,.kol ul{margin:6px 0 0;padding-left:0;list-style:none}
+.bra li,.kol li{padding:5px 0 5px 28px;position:relative;font-size:14.5px}
+.bra li:before{content:"⭐";position:absolute;left:0}.kol li:before{content:"👀";position:absolute;left:0}
+.bra h3,.kol h3,.tek h3{margin:0;font-size:18px}
+.tek{background:linear-gradient(135deg,var(--kemibg),var(--mattebg));border-color:transparent}
+.tek p{margin:8px 0}.tek ul{margin:8px 0 0;padding-left:18px}.tek li{margin:4px 0;font-size:14.5px}
+.foot{font-size:12.5px;color:var(--mut);margin-top:26px;text-align:center}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--card);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .25s;z-index:9}
+.toast.show{transform:translateX(-50%) translateY(0)}
+@media(max-width:520px){.tempo{gap:5px}.tb small{display:none}.days{grid-template-columns:1fr 1fr}.day{min-height:0}}
+@media(max-width:360px){.days{grid-template-columns:1fr}}
+</style></head><body><main id="app"><p style="padding:40px;text-align:center;color:var(--mut)">Laddar veckan…</p></main><div class="toast" id="toast"></div>
+<script>
+(async function(){
+const app=document.getElementById('app');
+let D;
+try{D=await (await fetch('data.json',{cache:'no-store'})).json()}catch(e){app.innerHTML='<p class="card">Kunde inte ladda veckan just nu. Prova att ladda om sidan.</p>';return}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const P=s=>{const[a,b,c]=s.split('-');return new Date(+a,b-1,+c)};
+const today=new Date();today.setHours(0,0,0,0);
+const dd=(a,b)=>Math.round((b-a)/864e5);
+const DN=['Sön','Mån','Tis','Ons','Tor','Fre','Lör'],MN=['jan','feb','mars','apr','maj','juni','juli','aug','sep','okt','nov','dec'];
+const fd=d=>`${DN[d.getDay()].toLowerCase()} ${d.getDate()}/${d.getMonth()+1}`;
+const COL={'Kemi':'kemi','Matte':'matte','Franska':'franska','Fysik':'fysik','Fysik och teknik':'fysik'};
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{v?localStorage.setItem(k,'1'):localStorage.removeItem(k)}catch(e){}}};
+const toast=t=>{const el=document.getElementById('toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1800)};
+const up=P(D.uppdaterad), jul=P(D.jullov);
+// skoldagar kvar till jullov
+let sd=0;for(let d=new Date(Math.max(today,up));d<=jul;d.setDate(d.getDate()+1)){const w=d.getDay();const iso=d.toISOString().slice(0,10);if(w>0&&w<6&&!(D.lediga||[]).some(l=>dd(P(l),d)==0))sd++}
+const mon=new Date(up);mon.setDate(up.getDate()+1);const sun=new Date(mon);sun.setDate(mon.getDate()+6);
+let h='';
+if(dd(up,today)>7)h+=`<div class="stale">Den här sidan uppdaterades ${fd(up)} och kan vara gammal. Säg till pappa om den inte har uppdaterats på söndag.</div>`;
+h+=`<section class="hero"><div class="wk">Vecka ${D.vecka} · ${mon.getDate()}–${sun.getDate()} ${MN[sun.getMonth()]}</div><h1>Hej Hugo!<br>${esc(D.rubrik)}</h1><p>${esc(D.hej)}</p>
+<div class="row"><span class="pill">🎄 <b>${Math.max(0,dd(today,jul))}</b> dagar till jullovet</span><span class="pill">🏫 <b>${sd}</b> skoldagar kvar</span>`;
+const nxt=D.prov.map(p=>({...p,d:P(p.datum)})).filter(p=>p.d>=today).sort((a,b)=>a.d-b.d)[0];
+if(nxt)h+=`<span class="pill">📝 Nästa prov: <b>${esc(nxt.amne)}</b> ${fd(nxt.d)}</span>`;
+h+=`</div></section>`;
+if(D.nytt&&D.nytt.length)h+=`<div class="nytt">${D.nytt.map(n=>`<span>${esc(n)}</span>`).join('')}</div>`;
+// fokus
+h+=`<h2>🎯 Veckans fokus</h2><div class="fokus">${D.fokus.map((f,i)=>`<div class="card fk"><span class="num">${i+1}</span><div class="ic">${f.ikon}</div><h3>${esc(f.titel)}</h3><p>${esc(f.text)}</p></div>`).join('')}</div>`;
+// tempo
+h+=`<h2>📈 Tempot fram till jul</h2><div class="card"><div class="tempo">${D.tempo.map(t=>`<div class="tb l${t.niva}${t.v==D.vecka?' now':''}"><div class="bar" style="height:${70}px"><div class="fill"></div></div><b>v. ${t.v}</b><small>${esc(t.etikett)}</small></div>`).join('')}</div>
+<p style="margin:12px 0 0;font-size:13.5px;color:var(--mut)">Grönt är lugnt, orange är mycket. När det är lugnt är det smart att förbereda lite, så blir de tunga veckorna lättare.</p></div>`;
+// dagar
+const days=D.dagar.map(x=>({...x,d:P(x.datum)}));
+const wkOf=d=>{const t=new Date(d);t.setDate(t.getDate()+3-((t.getDay()+6)%7));const y=new Date(t.getFullYear(),0,4);return 1+Math.round(((t-y)/864e5-3+((y.getDay()+6)%7))/7)};
+const weeks=[...new Set(days.map(x=>wkOf(x.d)))];
+h+=`<h2>🗓️ Dag för dag</h2><div class="wtabs">${weeks.map((w,i)=>`<button data-w="${w}" class="${i==0?'on':''}">Vecka ${w}</button>`).join('')}</div><div class="wsum">Förslag på vad som är smart att plugga när. Bocka av det du gör.</div><div class="days" id="days"></div>`;
+// prov
+h+=`<h2>📝 Provkort <span class="n">Bocka av när du kan något</span></h2><div class="provs">`;
+D.prov.forEach((p,pi)=>{const c=COL[p.amne]||'kemi',pd=P(p.datum),b=P(p.borja),left=dd(today,pd);
+ if(left<0)return;
+ const tot=Math.max(1,dd(b,pd)),done=Math.min(tot,Math.max(0,dd(b,today))),pct=done/tot*100,nowp=Math.min(100,Math.max(0,pct));
+ const startTxt=today<b?`Börja lugnt ${fd(b)}`:`Igång nu, lite i taget`;
+ h+=`<div class="card pk c-${c}"><div class="top"><div class="cd"><b>${left}</b><small>${left==1?'DAG':'DAGAR'}</small></div><div><h3>${esc(p.amne)}: ${esc(p.titel)}</h3><div class="sub">${fd(pd)}${p.datum2?' och '+fd(P(p.datum2)):''} · ${startTxt}</div></div></div>
+ <div class="prog"><div class="f" style="width:${pct}%"></div><div class="nowm" style="left:calc(${nowp}% - 1px)"></div></div><div class="prl"><span>Start ${b.getDate()}/${b.getMonth()+1}</span><span>Prov</span></div>`;
+ if(p.kunna){h+=`<ul class="kunna" data-p="${pi}">${p.kunna.map((k,ki)=>`<li data-k="k-${p.datum}-${ki}"><input type="checkbox" tabindex="-1"><span>${esc(k)}</span></li>`).join('')}</ul><div class="kprog" id="kp-${pi}"></div>`}
+ if(p.kort){h+=`<div class="flash">${p.kort.map(k=>`<div class="fc"><div class="in"><div class="s a">${esc(k[0])}</div><div class="s b">${esc(k[1])}</div></div></div>`).join('')}</div><div class="fhint">Tryck på ett kort för att vända det. Kan du alla fyra utan att vända?</div>`}
+ if(p.notebooklm){h+=`<div class="nb"><div class="h">✨ NotebookLM-recept<button data-copy="${pi}">Kopiera</button></div><q>${esc(p.notebooklm)}</q><small>Källor: ${esc(p.kallor)}</small></div>`}
+ if(p.tips)h+=`<div class="tip">💡 ${esc(p.tips)}</div>`;
+ h+=`</div>`});
+h+=`</div>`;
+// tidslinje
+const ev=[...D.prov.map(p=>({d:P(p.datum),c:COL[p.amne],big:1,x:`<b>${esc(p.amne)}</b> · ${esc(p.titel)}`,st:p.borja?`Börja förbereda ${fd(P(p.borja))}`:''})),...D.ovrigt.map(o=>({d:P(o.datum),x:esc(o.text),jul:o.datum==D.jullov}))].filter(e=>e.d>=today).sort((a,b)=>a.d-b.d);
+h+=`<h2>🛣️ Vägen till jullovet</h2><div class="card"><div class="tl">${ev.map(e=>`<div class="te${e.big?' big':''}${e.jul?' jul':''}" style="${e.c?`--pc:var(--${e.c})`:''}"><div class="d">${fd(e.d)} · om ${dd(today,e.d)} dagar</div><div class="x">${e.x}</div>${e.st?`<div class="st">${e.st}</div>`:''}</div>`).join('')}</div></div>`;
+// bra + kolla
+h+=`<h2>💪 Läget</h2><div class="two"><div class="card bra"><h3>Det här går bra</h3><ul>${D.bra.map(b=>`<li>${esc(b)}</li>`).join('')}</ul></div>`;
+if(D.kolla&&D.kolla.length)h+=`<div class="card kol"><h3>Bra att kolla upp</h3><ul>${D.kolla.map(b=>`<li>${esc(b)}</li>`).join('')}</ul></div>`;
+h+=`</div>`;
+const T=D.veckans_teknik;
+h+=`<h2>🧠 Veckans studieteknik</h2><div class="card tek"><h3>${esc(T.titel)}</h3><p>${esc(T.text)}</p><ul>${T.extra.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`;
+const NB=D.notebooklm_tips;
+if(NB){h+=`<h2>✨ NotebookLM-verktygslådan</h2><p style="margin:-4px 0 10px;color:var(--mut)">${esc(NB.intro)} Byt ut det som står inom [hakparentes].</p><div class="provs">${NB.recept.map((r,i)=>`<div class="card c-${['kemi','matte','franska','fysik','kemi'][i%5]}" style="border-top:6px solid var(--pc)"><div class="nb" style="margin:0;border:0;padding:0;background:none"><div class="h">${esc(r.titel)}<button data-nb="${i}">Kopiera</button></div><q>${esc(r.text)}</q></div></div>`).join('')}</div><div class="card" style="margin-top:12px"><ul style="margin:0;padding-left:18px">${NB.extra.map(x=>`<li style="margin:5px 0;font-size:14.5px">${esc(x)}</li>`).join('')}</ul></div>`}
+if(D.teknik_bank){h+=`<h2>🧰 Fler pluggknep</h2><div class="fokus">${D.teknik_bank.map(t=>`<div class="card fk"><div class="ic">${t.ikon}</div><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p></div>`).join('')}</div>`}
+h+=`<p class="foot">Uppdateras varje söndag · senast ${fd(up)} · Planen är en grund. Behöver något mer tid, lägg mer tid på det. /Pappa</p>`;
+app.innerHTML=h;
+// dag-render
+function renderW(w){
+ const L=days.filter(x=>wkOf(x.d)==w);let mins=0;
+ document.getElementById('days').innerHTML=L.map((x,xi)=>{
+  const cls=['day'];if(dd(x.d,today)==0)cls.push('today');if(x.prov)cls.push('prov');if(x.ledig)cls.push('ledig');if(x.helg)cls.push('helg');
+  let s=`<div class="${cls.join(' ')}"><div class="dh"><span class="dn">${x.helg?'Helg':DN[x.d.getDay()]}</span><span class="dd">${x.d.getDate()}/${x.d.getMonth()+1}</span>${x.prov?'<span class="badge p">PROV</span>':x.viktig?'<span class="badge">VIKTIGT</span>':x.tid?`<span class="tm">${x.tid}</span>`:''}</div>`;
+  if(x.ta_med&&x.ta_med.length)s+=`<div>${x.ta_med.map(t=>`<span class="tag bring">${esc(t)}</span>`).join('')}</div>`;
+  if(x.skola&&x.skola.length)s+=`<ul class="sk">${x.skola.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`;
+  (x.plugg||[]).forEach((p,pi)=>{const k=`p-${x.datum}-${pi}`,on=store.get(k);s+=`<label class="pl c-${COL[p.amne]||'kemi'}${on?' done':''}" data-k="${k}"><input type="checkbox"${on?' checked':''}><span class="t"><span class="m">${esc(p.amne)}</span> · ${esc(p.vad)}</span></label>`});
+  if(x.notis)s+=`<div class="dnote">${esc(x.notis)}</div>`;
+  return s+'</div>'}).join('');
+ document.querySelectorAll('#days .pl').forEach(el=>el.querySelector('input').addEventListener('change',e=>{store.set(el.dataset.k,e.target.checked);el.classList.toggle('done',e.target.checked);if(e.target.checked)toast('Snyggt! ✅')}));
+}
+document.querySelectorAll('.wtabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.wtabs button').forEach(x=>x.classList.toggle('on',x==b));renderW(+b.dataset.w)});
+renderW(weeks[0]);
+// kunna-checklistor
+document.querySelectorAll('.kunna').forEach(ul=>{const pi=ul.dataset.p;const upd=()=>{const a=ul.querySelectorAll('li').length,b=ul.querySelectorAll('li.done').length;document.getElementById('kp-'+pi).textContent=b==a?'Allt avbockat. Grymt! 🎉':`${b} av ${a} sitter`};
+ ul.querySelectorAll('li').forEach(li=>{const cb=li.querySelector('input');if(store.get(li.dataset.k)){cb.checked=true;li.classList.add('done')}
+  li.onclick=e=>{if(e.target!==cb)cb.checked=!cb.checked;li.classList.toggle('done',cb.checked);store.set(li.dataset.k,cb.checked);upd()}});upd()});
+document.querySelectorAll('.fc').forEach(f=>f.onclick=()=>f.classList.toggle('flip'));
+document.querySelectorAll('[data-nb]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(D.notebooklm_tips.recept[b.dataset.nb].text);toast('Kopierat, klistra in i NotebookLM')}catch(e){toast('Markera texten och kopiera själv')}});
+document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(D.prov[b.dataset.copy].notebooklm);toast('Kopierat, klistra in i NotebookLM')}catch(e){toast('Markera texten och kopiera själv')}});
+})();
+</script></body></html>
