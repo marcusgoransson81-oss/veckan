@@ -11,6 +11,7 @@ h2{font-size:17px;margin:0 0 6px;display:flex;gap:8px;align-items:baseline}h2 sm
 .bar{height:8px;border-radius:5px;background:var(--bg);overflow:hidden;margin:4px 0 8px}.bar i{display:block;height:100%;background:var(--c)}
 .g{font-size:11.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--c);margin:10px 0 2px}
 ul{list-style:none;margin:0;padding:0}li{padding:3px 0 3px 24px;position:relative;font-size:14px}li:before{content:"○";position:absolute;left:2px;color:var(--mut)}li.y:before{content:"✓";color:var(--ok);font-weight:800}li.y{color:var(--mut)}
+.sig{display:inline-block;font-size:12px;font-weight:800;border-radius:999px;padding:2px 9px;margin-left:6px;vertical-align:2px}.s0{background:#e3f5ec;color:#1f7a53}.s1{background:#fff1d6;color:#8a5a00}.s2{background:#fde7ee;color:#a3123f}.alert{border-radius:14px;padding:12px 14px;margin-bottom:12px;font-size:14.5px}.alert.a0{background:#e3f5ec}.alert.a1{background:#fff1d6}.alert.a2{background:#fde7ee}.alert ul{margin-top:4px}.alert li:before{content:'•';color:inherit}.exp{font-size:12px;color:var(--mut)}
 .err{background:#fde7ee;color:#7a1033;border-radius:10px;padding:10px}
 </style></head><body><main><h1>Hugos bockar</h1><div class="sub" id="sub">Laddar…</div><div id="out"></div></main>
 <script>
@@ -27,9 +28,17 @@ const rel=(amne,d)=>D.prov.filter(p=>p.amne.startsWith(amne)&&p.datum>=d).sort((
 const M=new Map(rows.map(r=>[r.key,r]));const last=rows.reduce((a,r)=>r.updated_at>a?r.updated_at:a,'');
 document.getElementById('sub').textContent=`Vecka ${D.vecka} · senaste bock ${last?new Date(last).toLocaleString('sv-SE',{dateStyle:'short',timeStyle:'short'}):'ingen än'}`;
 let h='';
-D.prov.filter(live).forEach(p=>{const G=p.grupper||(p.kunna?[{kunna:p.kunna}]:[]);if(!G.length)return;let a=0,b=0,body='';
- G.forEach(g=>{body+=(g.rubrik?`<div class="g">${esc(g.rubrik)}</div>`:'')+'<ul>'+g.kunna.map(k=>{a++;const y=M.get(`k-${p.amne}-${p.datum}-${hs(k)}`)?.done;if(y)b++;return `<li class="${y?'y':''}">${esc(k)}</li>`}).join('')+'</ul>'});
- h+=`<div class="card" style="--c:var(--${COL[p.amne]||'kemi'})"><h2>${esc(p.amne)}: ${esc(p.titel)}<small>${b} av ${a} · prov ${p.datum.slice(8)}/${+p.datum.slice(5,7)}</small></h2><div class="bar"><i style="width:${a?b/a*100:0}%"></i></div>${body}</div>`});
+const REM=[];
+D.prov.filter(live).forEach(p=>{const G=p.grupper||(p.kunna?[{kunna:p.kunna}]:[]);if(!G.length)return;let a=0,b=0,body='';const open=[];
+ G.forEach(g=>{body+=(g.rubrik?`<div class="g">${esc(g.rubrik)}</div>`:'')+'<ul>'+g.kunna.map(k=>{a++;const y=M.get(`k-${p.amne}-${p.datum}-${hs(k)}`)?.done;if(y)b++;else open.push(k);return `<li class="${y?'y':''}">${esc(k)}</li>`}).join('')+'</ul>'});
+ const pd=P(p.datum),left=Math.round((pd-today)/864e5),st=p.borja?P(p.borja):pd,tot=Math.max(1,(pd-st)/864e5),exp=Math.min(1,Math.max(0,(today-st)/864e5/tot)),act=a?b/a:1;
+ let lv=0;if(act<1){if(left<=3&&act<.7)lv=2;else if(left<=7&&act<exp-.15)lv=1;else if(left<=3)lv=1}
+ const lab=['I fas','Dags att påminna','Påminn nu'][lv];if(lv)REM.push({lv,p,left,open,b,a});
+ const sig=`<span class="sig s${lv}">${lab}</span>`;
+ h+=`<div class="card" style="--c:var(--${COL[p.amne]||'kemi'})"><h2>${esc(p.amne)}: ${esc(p.titel)}${sig}<small>${b} av ${a} · prov ${p.datum.slice(8)}/${+p.datum.slice(5,7)}</small></h2><div class="bar"><i style="width:${a?b/a*100:0}%"></i></div><div class="exp">${left} dagar kvar · förväntat ungefär ${Math.round(exp*100)} % klart nu, faktiskt ${Math.round(act*100)} %</div>${body}</div>`});
+REM.sort((x,y)=>y.lv-x.lv||x.left-y.left);
+const top=REM.length?`<div class="alert a${REM[0].lv}"><b>${REM[0].lv==2?'🔴 Påminn Hugo nu':'🟡 Bra läge att påminna Hugo'}</b><ul>${REM.map(r=>`<li><b>${esc(r.p.amne)}</b> om ${r.left} ${r.left==1?'dag':'dagar'}: ${r.b} av ${r.a} klart. Öppet bl.a.: ${r.open.slice(0,3).map(esc).join(', ')}${r.open.length>3?' …':''}</li>`).join('')}</ul></div>`:`<div class="alert a0"><b>🟢 Inget att påminna om just nu.</b> Hugo ligger i fas med det som är nära.</div>`;
+h=top+h;
 let pl='';D.dagar.forEach(x=>(x.plugg||[]).forEach((p,i)=>{const r=rel(p.amne,x.datum);if(r?!live(r):P(x.datum)<new Date(today-7*864e5))return;const y=M.get(`p-${x.datum}-${i}`)?.done;pl+=`<li class="${y?'y':''}">${x.datum.slice(8)}/${+x.datum.slice(5,7)} · ${esc(p.amne)}: ${esc(p.vad)}</li>`}));
 if(pl)h+=`<div class="card"><h2>Pluggförslag dag för dag</h2><ul>${pl}</ul></div>`;
 h+=`<p class="sub">Punkter ligger kvar, avbockade eller inte, tills provet de hör till är gjort. Då försvinner de härifrån.</p>`;
