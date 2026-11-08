@@ -233,14 +233,6 @@
    "titel": "Syror, baser och joner",
    "borja": "2026-11-09",
    "farg": "kemi",
-   "kunna": [
-    "Bok s. 104–118 och 124–129",
-    "Grundämnen, joner och hur joner bildas",
-    "pH-skalan, surt och basiskt",
-    "Försurning i naturen och vad en buffert är",
-    "Para ihop joner",
-    "Beteckningar: svavelsyra, salpetersyra, saltsyra, natriumhydroxid"
-   ],
    "kort": [
     [
      "Svavelsyra",
@@ -260,7 +252,62 @@
     ]
    ],
    "notebooklm": "Du är min kemilärare. Ställ 15 frågor om syror, baser, joner, pH, buffert och försurning utifrån mina källor, en fråga i taget. Vänta på mitt svar, säg om det var rätt och förklara kort. Blanda lätta och svåra frågor och avsluta med en lista över det jag behöver öva mer på.",
-   "kallor": "Lägg in instuderingsfrågorna och listan från Classroom, plus foton av bokens sidor eller dina anteckningar."
+   "kallor": "Lägg in instuderingsfrågorna och listan från Classroom, plus foton av bokens sidor eller dina anteckningar.",
+   "grupper": [
+    {
+     "rubrik": "Läsa och förbereda",
+     "kunna": [
+      "Läst bok s. 104–118",
+      "Läst bok s. 124–129",
+      "Gått igenom alla instuderingsfrågor i Classroom",
+      "Gått igenom begreppen i kapitlet"
+     ]
+    },
+    {
+     "rubrik": "Grundämnen och joner",
+     "kunna": [
+      "Förklara vad ett grundämne är och ge exempel",
+      "Förklara vad en jon är",
+      "Förklara hur en positiv jon bildas (atomen lämnar ifrån sig elektroner)",
+      "Förklara hur en negativ jon bildas (atomen tar upp elektroner)",
+      "Para ihop positiva och negativa joner"
+     ]
+    },
+    {
+     "rubrik": "Syror, baser och pH",
+     "kunna": [
+      "Förklara vad som gör en lösning sur (vätejoner)",
+      "Förklara vad som gör en lösning basisk (hydroxidjoner)",
+      "Förklara pH-skalan: surt, neutralt (pH 7) och basiskt",
+      "Svavelsyra = H₂SO₄",
+      "Salpetersyra = HNO₃",
+      "Saltsyra = HCl",
+      "Natriumhydroxid = NaOH"
+     ]
+    },
+    {
+     "rubrik": "Naturen",
+     "kunna": [
+      "Förklara försurning: vad som orsakar den och vad den gör med sjöar och skog",
+      "Förklara vad en buffert är och varför den skyddar mot pH-ändringar"
+     ]
+    },
+    {
+     "rubrik": "Testa dig själv",
+     "kunna": [
+      "Gjort ett NotebookLM-quiz på hela området",
+      "Gjort om quizet på det jag missade",
+      "Genrep tis 17/11",
+      "Förklarat pH och buffert högt för någon hemma"
+     ]
+    }
+   ],
+   "notebooklm_extra": [
+    {
+     "titel": "Flashcards",
+     "text": "Gör flashcards av alla begrepp och kemiska beteckningar i mina källor. Framsidan ska vara begreppet, baksidan en kort förklaring eller formeln."
+    }
+   ]
   },
   {
    "datum": "2026-11-26",
@@ -269,14 +316,44 @@
    "titel": "Kapitel 2, del 1 och 2",
    "borja": "2026-11-11",
    "farg": "matte",
-   "kunna": [
-    "Andelar och procent",
-    "Jämförelser och förändringar i procent",
-    "Ränta",
-    "Det diagnosen 19/11 visar att du ska öva mer på"
-   ],
    "notebooklm": "Ge mig 10 procentuppgifter i stil med kapitel 2 (förändringsfaktor, procentuella förändringar och ränta). Visa inte svaret förrän jag har svarat, och visa sedan hur man räknar steg för steg.",
-   "kallor": "Lägg in planeringen för kapitel 2 och din rättade diagnos. Räkna själv med penna, det är där matten fastnar."
+   "kallor": "Lägg in planeringen för kapitel 2 och din rättade diagnos. Räkna själv med penna, det är där matten fastnar.",
+   "grupper": [
+    {
+     "rubrik": "Andelar och procent",
+     "kunna": [
+      "Skriva en andel som bråk, decimaltal och procent",
+      "Räkna ut hur många procent en del är av det hela",
+      "Räkna ut delen när du vet procenten och det hela",
+      "Räkna ut det hela när du vet delen och procenten"
+     ]
+    },
+    {
+     "rubrik": "Förändringar och jämförelser",
+     "kunna": [
+      "Räkna ut en procentuell ökning eller minskning",
+      "Använda förändringsfaktor (t.ex. 1,15 eller 0,80)",
+      "Räkna med flera förändringar efter varandra",
+      "Jämföra två värden i procent"
+     ]
+    },
+    {
+     "rubrik": "Ränta",
+     "kunna": [
+      "Räkna ut ränta på ett belopp under ett år",
+      "Räkna ut nytt belopp efter ränta"
+     ]
+    },
+    {
+     "rubrik": "Inför provet",
+     "kunna": [
+      "Gjort diagnosen 19/11",
+      "Övat extra på det diagnosen visade",
+      "Räknat blandade uppgifter med penna",
+      "Gått igenom felboken"
+     ]
+    }
+   ]
   },
   {
    "datum": "2026-11-30",
@@ -285,7 +362,10 @@
    "borja": "2026-11-12",
    "farg": "franska",
    "kunna": [
-    "Kapitel 2, öva på att tala"
+    "Gått igenom texterna i kapitel 2",
+    "Övat fraserna högt",
+    "Spelat in dig själv och lyssnat",
+    "Övat ett samtal med någon hemma"
    ],
    "tips": "Prata högt, gärna med någon hemma eller spela in dig själv och lyssna."
   },
