@@ -1,8 +1,8 @@
 {
  "uppdaterad": "2026-11-13",
  "vecka": 46,
- "rubrik": "Kemin sitter, nu matte och franska",
- "hej": "Snyggt jobbat! Du har bockat av nästan allt inför kemiprovet, en hel vecka innan. Nästa vecka är det mattediagnos på torsdag och kemiprov på fredag. Eftersom kemin redan sitter kan du lägga lite tid på matten nu, så blir veckan efter (matteprovet) lugn. Små pass, lite i taget.",
+ "rubrik": "Kemin är nästan avbockad, nu ska den testas",
+ "hej": "Snyggt jobbat! Du har bockat av nästan allt inför kemiprovet, en hel vecka innan. Nästa steg är att ta reda på om det verkligen sitter: gör genrepet på lediga tisdagen som om det vore provet, utan bok, och plugga sedan det du missade. Samtidigt är det ett bra läge att komma igång med matten inför diagnosen på torsdag och att börja prata lite franska. Små pass, lite i taget.",
  "nytt": [
   "Kemiläraren har ändrat listan \"att kunna inför provet\": under salter står nu bara s. 124 (tidigare 124–129). Har du redan läst hela, bra, då har du det.",
   "Nytt i kemi-Classroom: \"grundämnena att träna på\", en PowerPoint med grundämnenas kemiska symboler. Den är tillagd i checklistan.",
@@ -11,8 +11,8 @@
  "fokus": [
   {
    "ikon": "🧪",
-   "titel": "Kemi: finslipa",
-   "text": "Du har koll på nästan allt. Kvar: grundämnenas symboler (PowerPointen i Classroom), genrepet på lediga tisdagen och att förklara pH och buffert högt för någon hemma."
+   "titel": "Kemi: testa att det sitter",
+   "text": "Att ha läst och bockat av är halva jobbet. Nu ska du kolla att du kan det utan boken: genrep tis 17/11 med stängd bok och timer, förklara pH och buffert högt för någon hemma, och öva grundämnenas symboler med PowerPointen. Det du missar på genrepet pluggar du onsdag och torsdag."
   },
   {
    "ikon": "➗",
@@ -432,13 +432,13 @@
   "Två uppgifter i Classroom saknar datum och är inte inlämnade: \"Kost och hälsa – en utmaning\" (hemkunskap) och \"Introduktion till konditionstema\" (idrott). Fråga lärarna om de ska göras."
  ],
  "bra": [
-  "19 av 22 punkter i kemi avbockade, en vecka före provet. Så ser det ut när man börjar tidigt.",
+  "19 av 22 punkter i kemi avbockade, en vecka före provet. Bra att du började tidigt.",
   "Godtagbart i alla 14 bedömda ämnen.",
   "Inga uppgifter saknas i Classroom."
  ],
  "veckans_teknik": {
   "titel": "Genrep under provlika former",
-  "text": "När du kan det mesta är nästa steg att testa dig som på riktigt: stäng boken, sätt en timer och svara på ett NotebookLM-prov utan att fuska. Rätta efteråt och plugga bara det du missade. Lediga tisdagen passar perfekt för kemi-genrepet.",
+  "text": "Att känna igen något när man läser det är inte samma sak som att kunna det. Testa dig därför som på riktigt: stäng boken, sätt en timer och svara på ett NotebookLM-prov utan att fuska. Rätta efteråt och plugga det du missade. Lediga tisdagen passar perfekt för kemi-genrepet.",
   "extra": [
    "Korta pass, 25 min fokus och 5 min paus. Mobilen i ett annat rum.",
    "Byt ämne mellan passen: lite kemi, lite matte. Hjärnan gillar omväxling.",
