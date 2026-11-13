@@ -1,28 +1,28 @@
 {
- "uppdaterad": "2026-11-08",
+ "uppdaterad": "2026-11-13",
  "vecka": 46,
- "rubrik": "Inga prov, men kemin är igång",
- "hej": "Inga prov den här veckan, men det är nu kemiplugget gör störst nytta. Provet är fredag 20/11 och mattediagnosen dagen innan. Tricket är att börja tidigt och ta lite i taget, så blir det aldrig panik när proven kommer.",
+ "rubrik": "Kemin sitter, nu matte och franska",
+ "hej": "Snyggt jobbat! Du har bockat av nästan allt inför kemiprovet, en hel vecka innan. Nästa vecka är det mattediagnos på torsdag och kemiprov på fredag. Eftersom kemin redan sitter kan du lägga lite tid på matten nu, så blir veckan efter (matteprovet) lugn. Små pass, lite i taget.",
  "nytt": [
-  "Kemiprovet är flyttat till fredag 20/11 (det stod 18/11 tidigare).",
-  "Kemiläraren har lagt ut exakt vad som ska kunnas, se provkortet nedan.",
-  "Tisdag 17/11 är ledig dag."
+  "Kemiläraren har ändrat listan \"att kunna inför provet\": under salter står nu bara s. 124 (tidigare 124–129). Har du redan läst hela, bra, då har du det.",
+  "Nytt i kemi-Classroom: \"grundämnena att träna på\", en PowerPoint med grundämnenas kemiska symboler. Den är tillagd i checklistan.",
+  "I SO finns en sammanfattning av 1700- och 1800-talet i Classroom. Inget prov är utsatt."
  ],
  "fokus": [
   {
    "ikon": "🧪",
-   "titel": "Kemi, börja nu",
-   "text": "Provet är fredag 20/11. Börja med de fyra kemiska beteckningarna och instuderingsfrågorna i Classroom. Lite varje dag slår en lång kväll."
+   "titel": "Kemi: finslipa",
+   "text": "Du har koll på nästan allt. Kvar: grundämnenas symboler (PowerPointen i Classroom), genrepet på lediga tisdagen och att förklara pH och buffert högt för någon hemma."
   },
   {
-   "ikon": "🙋",
-   "titel": "Gå på studiestödet tisdag",
-   "text": "Tis 10/11 kl. 15.30 med kemiläraren. Det är enda passet med honom före provet. Ta med två eller tre frågor du inte riktigt fattar."
+   "ikon": "➗",
+   "titel": "Matte: kom igång före diagnosen",
+   "text": "Diagnosen tor 19/11 bedöms inte, men den visar vad du ska öva på inför provet 26–27/11. Räkna några procentuppgifter (delen, det hela, förändringsfaktor) så att diagnosen blir rättvisande."
   },
   {
-   "ikon": "🧭",
-   "titel": "SYV-träff i morgon",
-   "text": "Mån 9/11 på mentorstiden, om gymnasievalet. Bra frågor att ta med: vad som brukar krävas för att komma in på NA, vilka andra program eller skolor som liknar det du vill, och hur du kan rangordna flera val. Det är smart att ha mer än ett alternativ på listan."
+   "ikon": "🗣️",
+   "titel": "Franska: börja prata högt",
+   "text": "Muntliga provet är mån 30/11. Läs texterna i kapitel 2 högt några minuter då och då redan nu. Det känns ovant första gångerna och lätt efter några veckor."
   }
  ],
  "tempo": [
@@ -145,6 +145,10 @@
     {
      "amne": "Kemi",
      "vad": "NotebookLM-quiz på allt, skriv upp det du missar"
+    },
+    {
+     "amne": "Kemi",
+     "vad": "Grundämnenas symboler med PowerPointen i Classroom"
     }
    ]
   },
@@ -158,7 +162,7 @@
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Procent, förändringsfaktor och ränta"
+     "vad": "Procent: delen, det hela och förändringsfaktor"
     },
     {
      "amne": "Kemi",
@@ -196,6 +200,10 @@
     {
      "amne": "Kemi",
      "vad": "Förklara pH, buffert och försurning högt för någon hemma"
+    },
+    {
+     "amne": "Matte",
+     "vad": "Några blandade procentuppgifter inför diagnosen"
     }
    ]
   },
@@ -204,7 +212,8 @@
    "tid": "08.20–15.15",
    "ta_med": [],
    "skola": [
-    "Mattediagnos kapitel 2 (bedöms inte)"
+    "Mattediagnos kapitel 2 (bedöms inte)",
+    "Studiestöd 15.25–16.25 om du vill"
    ],
    "plugg": [
     {
@@ -252,7 +261,7 @@
     ]
    ],
    "notebooklm": "Du är min kemilärare. Ställ 15 frågor om syror, baser, joner, pH, buffert och försurning utifrån mina källor, en fråga i taget. Vänta på mitt svar, säg om det var rätt och förklara kort. Blanda lätta och svåra frågor och avsluta med en lista över det jag behöver öva mer på.",
-   "kallor": "Lägg in instuderingsfrågorna och listan från Classroom, plus foton av bokens sidor eller dina anteckningar.",
+   "kallor": "Lägg in instuderingsfrågorna, listan och grundämnes-PowerPointen från Classroom, plus foton av bokens sidor eller dina anteckningar.",
    "grupper": [
     {
      "rubrik": "Läsa och förbereda",
@@ -270,7 +279,8 @@
       "Förklara vad en jon är",
       "Förklara hur en positiv jon bildas (atomen lämnar ifrån sig elektroner)",
       "Förklara hur en negativ jon bildas (atomen tar upp elektroner)",
-      "Para ihop positiva och negativa joner"
+      "Para ihop positiva och negativa joner",
+      "Grundämnenas kemiska symboler (PowerPointen \"grundämnena att träna på\")"
      ]
     },
     {
@@ -306,6 +316,10 @@
     {
      "titel": "Flashcards",
      "text": "Gör flashcards av alla begrepp och kemiska beteckningar i mina källor. Framsidan ska vara begreppet, baksidan en kort förklaring eller formeln."
+    },
+    {
+     "titel": "Grundämnesmemory",
+     "text": "Gör flashcards av grundämnena i PowerPointen: namnet på framsidan och den kemiska symbolen på baksidan. Blanda ordningen och fråga mig åt båda hållen."
     }
    ]
   },
@@ -367,7 +381,9 @@
     "Spelat in dig själv och lyssnat",
     "Övat ett samtal med någon hemma"
    ],
-   "tips": "Prata högt, gärna med någon hemma eller spela in dig själv och lyssna."
+   "tips": "Prata högt, gärna med någon hemma eller spela in dig själv och lyssna.",
+   "notebooklm": "Du är min fransklärare. Ställ enkla frågor på franska om texterna i kapitel 2, en i taget. Jag svarar högt och skriver sedan in vad jag sa. Rätta mig vänligt och föreslå ett bättre sätt att säga det.",
+   "kallor": "Lägg in texterna och glosorna från kapitel 2 (foton av sidorna fungerar)."
   },
   {
    "datum": "2026-12-07",
@@ -416,16 +432,16 @@
   "Två uppgifter i Classroom saknar datum och är inte inlämnade: \"Kost och hälsa – en utmaning\" (hemkunskap) och \"Introduktion till konditionstema\" (idrott). Fråga lärarna om de ska göras."
  ],
  "bra": [
-  "Du har inte missat en enda lektion i höst.",
+  "19 av 22 punkter i kemi avbockade, en vecka före provet. Så ser det ut när man börjar tidigt.",
   "Godtagbart i alla 14 bedömda ämnen.",
-  "Kemiprovet blir din första chans att visa vad du kan i kemi den här terminen."
+  "Inga uppgifter saknas i Classroom."
  ],
  "veckans_teknik": {
-  "titel": "Testa dig själv i stället för att läsa om",
-  "text": "Att läsa samma sida igen känns bra men fastnar dåligt. Att försöka plocka fram svaret ur huvudet (quiz, flashcards, förklara högt) är jobbigare, men det är just det som gör att du minns. NotebookLM-quizen du redan kör är precis rätt. Gör om dem några dagar senare, och lägg mest tid på frågorna du missade.",
+  "titel": "Genrep under provlika former",
+  "text": "När du kan det mesta är nästa steg att testa dig som på riktigt: stäng boken, sätt en timer och svara på ett NotebookLM-prov utan att fuska. Rätta efteråt och plugga bara det du missade. Lediga tisdagen passar perfekt för kemi-genrepet.",
   "extra": [
    "Korta pass, 25 min fokus och 5 min paus. Mobilen i ett annat rum.",
-   "Förklara för någon hemma. Kan du förklara buffert för pappa har du koll.",
+   "Byt ämne mellan passen: lite kemi, lite matte. Hjärnan gillar omväxling.",
    "Sömnen kvällen före provet är värd mer än en sista timmes plugg."
   ]
  },

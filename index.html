@@ -149,7 +149,7 @@ const toast=t=>{const el=document.getElementById('toast');el.textContent=t;el.cl
 const up=P(D.uppdaterad), jul=P(D.jullov);
 // skoldagar kvar till jullov
 let sd=0;for(let d=new Date(Math.max(today,up));d<=jul;d.setDate(d.getDate()+1)){const w=d.getDay();const iso=d.toISOString().slice(0,10);if(w>0&&w<6&&!(D.lediga||[]).some(l=>dd(P(l),d)==0))sd++}
-const mon=new Date(up);mon.setDate(up.getDate()+1);const sun=new Date(mon);sun.setDate(mon.getDate()+6);
+const mon=new Date(up);mon.setDate(up.getDay()==0?up.getDate()+1:up.getDate()-((up.getDay()+6)%7));const sun=new Date(mon);sun.setDate(mon.getDate()+6);
 let h='';
 if(dd(up,today)>7)h+=`<div class="stale">Den här sidan uppdaterades ${fd(up)} och kan vara gammal. Säg till pappa om den inte har uppdaterats på söndag.</div>`;
 h+=`<section class="hero"><div class="wk">Vecka ${D.vecka} · ${mon.getDate()}–${sun.getDate()} ${MN[sun.getMonth()]}</div><h1>Hej Hugo!<br>${esc(D.rubrik)}</h1><p>${esc(D.hej)}</p>
