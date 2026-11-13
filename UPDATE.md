@@ -14,6 +14,7 @@ Publiceras via GitHub Pages: https://marcusgoransson81-oss.github.io/veckan/
 - Checkrutornas lagring nycklas på ämne+datum+text, så oförändrade punkter behåller sina bockar.
 - NotebookLM-recept (`notebooklm`, `notebooklm_extra`, `notebooklm_tips`) och studietips (`veckans_teknik`, `teknik_bank`) anpassas efter vilka ämnen och prov som är aktuella.
 - `nytt` = förändringar sedan förra söndagen.
+- Bockar visar att Hugo gått igenom något, inte att han kan det. Beröm arbetet, men påstå aldrig att ett ämne "sitter". Låt nästa steg vara att testa sig utan bok (genrep, quiz, förklara högt).
 
 ## Bockar och föräldravy
 - Bockar synkas till Supabase (projekt wpjgybjmezxorhltbdcr, tabell `checks`: key, done, updated_at). Publishable key ligger i index.html och koll.html; RLS tillåter bara select/insert/update på nycklar som börjar med `k-` eller `p-`.
