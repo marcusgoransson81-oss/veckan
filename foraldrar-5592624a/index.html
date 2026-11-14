@@ -1,0 +1,331 @@
+<!doctype html><html><head><meta charset=utf8><meta name="robots" content="noindex,nofollow"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes,viewport-fit=cover">
+<title>Skolrapport Melvin &amp; Hugo</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--ink:#1d1d1b;--mut:#6b6860;--line:#e3dfd6;--m:#2f6fb0;--mbg:#e8f0fa;--h:#c0612b;--hbg:#fbeee4;--off:#ecebe6;--chg:#8a5a00}
+@media(prefers-color-scheme:dark){:root{--bg:#161614;--card:#22211f;--ink:#eeebe4;--mut:#a29e95;--line:#38362f;--mbg:#1c2b3d;--hbg:#3a271b;--off:#2b2a27;--chg:#e0a640}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,system-ui,sans-serif;padding:max(14px,env(safe-area-inset-top)) 12px 40px}
+main{max-width:680px;margin:0 auto}h1{font-size:22px;margin:4px 0 2px}.sub{color:var(--mut);font-size:13px;margin-bottom:10px}
+h2{font-size:17px;margin:24px 0 8px}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:13px;margin:0 0 10px}.lg{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border-radius:999px;font-weight:600}
+.lg.M{background:var(--mbg);color:var(--m)}.lg.H{background:var(--hbg);color:var(--h)}.lg.V{border:2px solid var(--ink);font-weight:700}
+.it{border-left:4px solid var(--k);background:var(--kb);border-radius:8px;padding:7px 10px;margin:6px 0;font-size:14px}
+.it.M{--k:var(--m);--kb:var(--mbg)}.it.H{--k:var(--h);--kb:var(--hbg)}
+.it .who{font-size:11px;font-weight:800;letter-spacing:.04em;color:var(--k);text-transform:uppercase;margin-right:6px}
+.it .d{display:block;color:var(--mut);font-size:13px;margin-top:2px}
+.it.v{border:2.5px solid var(--k);border-left-width:6px;box-shadow:0 1px 0 var(--k)}
+.it.v::after{content:"VIKTIGT";float:right;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--card);background:var(--k);border-radius:4px;padding:1px 6px;margin-left:8px}
+.day{display:grid;grid-template-columns:48px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}.day:first-of-type{border-top:0;padding-top:2px}
+.dd{text-align:center;font-size:11px;font-weight:700;color:var(--mut);padding-top:6px}.dd b{display:block;font-size:20px;line-height:1;color:var(--ink)}
+.none{color:var(--mut);font-size:13px;padding-top:8px}
+.offday{background:var(--off);border-radius:8px;padding:7px 10px;margin:6px 0;font-size:14px;font-weight:600}
+.ex{display:grid;grid-template-columns:70px 1fr;gap:10px;align-items:start}
+.ex .dt{font-weight:700;font-size:13px;line-height:1.25;padding-top:8px}.ex .dt small{display:block;font-weight:600;color:var(--mut)}
+.ex .dt s{display:block;font-weight:600;color:var(--mut);font-size:12px}
+.note{font-size:12.5px;color:var(--mut);margin-top:8px}
+ul{margin:0;padding-left:18px}li{margin:6px 0}.flag{font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:14px}td{padding:6px 4px;border-top:1px solid var(--line);vertical-align:top}td:first-child{white-space:nowrap;padding-right:10px;font-weight:600}
+.ok{color:#2e7d4f;font-weight:600}
+.new,.chg{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;vertical-align:1px}
+.new{background:#2e7d4f}.chg{background:var(--chg)}
+.newbox{background:var(--card);border:2px solid #2e7d4f;border-radius:12px;padding:10px 12px;margin:6px 0 10px}.newbox h3{margin:0 0 4px;font-size:15px;color:#2e7d4f}
+.newbox h4{margin:10px 0 2px;font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.tm{font-size:12px;color:var(--mut);margin:0 0 2px}.tm .mm{color:var(--m);font-weight:700}.tm .hh{color:var(--h);font-weight:700}
+
+/* gantt */
+.gwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.gantt{font-size:12px}
+.ztools{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 0 8px;font-size:12px;color:var(--mut)}.ztools button{font:inherit;font-weight:700;min-width:34px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:0 10px}.ztools #zlab{min-width:44px;text-align:center;font-weight:700;color:var(--ink)}.zhint{flex-basis:100%;font-size:11.5px}
+.gwrap{touch-action:pan-x pan-y}
+.grow{display:grid;align-items:center;min-height:30px;border-top:1px solid var(--line)}
+.grow .gl{position:sticky;left:0;z-index:4;background:var(--card);align-self:stretch;display:flex;flex-direction:column;justify-content:center;padding:4px 8px 4px 0;line-height:1.2}.grow .gl b{display:block;font-size:12.5px}.grow .gl small{color:var(--mut);font-size:11px}
+.gtrack{position:relative;height:30px}
+.gday{position:absolute;top:0;bottom:0}
+.gday.we{background:var(--off);opacity:.7}.gday.off{background:repeating-linear-gradient(45deg,var(--off) 0 4px,transparent 4px 8px)}
+.gday.jul{background:repeating-linear-gradient(45deg,#d9e7d4 0 4px,transparent 4px 8px)}
+.gbar{position:absolute;top:9px;height:12px;border-radius:7px;background:var(--k);opacity:.35}
+.gbar.H{--k:var(--h)}.gbar.M{--k:var(--m)}
+.gev{position:absolute;width:14px;height:14px;margin-left:-7px;transform:rotate(45deg);background:var(--k);border:2px solid var(--card);box-shadow:0 0 0 1.5px var(--k);top:8px}
+.gev.H{--k:var(--h)}.gev.M{--k:var(--m)}.gev.soft{background:var(--card)}
+.gevl{position:absolute;font-size:10px;font-weight:700;white-space:nowrap;color:var(--ink);text-align:center;line-height:11px}
+.gtoday{position:absolute;top:0;bottom:0;width:2px;background:#b3261e;z-index:2}
+.ghead{display:grid;grid-template-columns:120px 1fr}
+.ghead .gtrack{height:34px}.ghead>div:first-child{position:sticky;left:0;z-index:4;background:var(--card)}
+.gwk{position:absolute;top:0;overflow:hidden;white-space:nowrap;font-size:11px;font-weight:800;color:var(--mut);border-left:1px solid var(--line);padding-left:3px;height:100%}
+.gwk small{display:block;font-weight:600}
+.gload{display:flex;gap:0;height:22px;position:relative}
+.gl1{position:absolute;top:3px;height:16px;border-radius:3px;text-align:center;font-size:10px;font-weight:800;color:#fff;line-height:16px}
+.glegend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--mut);margin-top:8px}
+.glegend i{display:inline-block;vertical-align:-2px;margin-right:4px}
+/* timetable */
+.ttw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tt{display:grid;grid-template-columns:30px repeat(5,minmax(62px,1fr));gap:0 3px;min-width:360px}
+.tth{text-align:center;font-size:11px;font-weight:800;color:var(--mut);padding:2px 0 4px}.tth b{display:block;font-size:15px;color:var(--ink)}
+.ttaxis,.ttcol{position:relative}
+.ttaxis span{position:absolute;right:3px;font-size:9.5px;color:var(--mut);transform:translateY(-50%)}
+.ttcol{background:repeating-linear-gradient(to bottom,transparent 0 44px,var(--line) 44px 45px);border-radius:6px}
+.ttcol.off{background:repeating-linear-gradient(45deg,var(--off) 0 6px,transparent 6px 12px);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--mut);font-size:12px;writing-mode:vertical-rl;letter-spacing:.1em}
+.ls{position:absolute;left:1px;right:1px;border-radius:4px;background:var(--off);color:var(--mut);font-size:10px;line-height:1.1;padding:1px 3px;overflow:hidden;border:1px solid var(--line)}
+.ls.lunch{background:transparent;border:1px dashed var(--line)}
+.ls.p{background:var(--kb);color:var(--ink);border:1.5px solid var(--k);font-weight:700}
+.ls.v{background:var(--k);color:#fff;border:1.5px solid var(--k);font-weight:800}
+.ls.x{background:#b3261e;color:#fff;border:2px solid #b3261e;font-weight:800}
+.ls.p,.ls.v,.ls.x{padding-right:16px;overflow-wrap:anywhere;hyphens:auto}
+.ls .bn{position:absolute;right:2px;top:1px;width:14px;height:14px;border-radius:50%;background:var(--card);color:var(--ink);font-size:9px;font-weight:800;text-align:center;line-height:14px}
+.ttH{--k:var(--h);--kb:var(--hbg)}.ttM{--k:var(--m);--kb:var(--mbg)}
+.ttfoot{display:grid;grid-template-columns:30px repeat(5,minmax(62px,1fr));gap:3px;min-width:360px;margin-top:4px}
+.chipz{display:flex;flex-wrap:wrap;gap:2px;justify-content:center}
+.pc{font-size:9.5px;font-weight:700;border-radius:3px;padding:1px 4px;background:var(--kb);color:var(--k);border:1px dashed var(--k)}
+.plist{margin:10px 0 0;padding:0;list-style:none}.plist li{display:grid;grid-template-columns:22px 1fr;gap:6px;margin:6px 0;font-size:13.5px}
+.plist .bn2{width:20px;height:20px;border-radius:50%;background:var(--k);color:#fff;font-size:11px;font-weight:800;text-align:center;line-height:20px}
+.plist .bn2.x{background:#b3261e}
+.plist small{color:var(--mut)}
+.wkh{display:flex;align-items:baseline;gap:8px;margin:2px 0 8px}.wkh .who{font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--k)}
+.wkh .wt{margin:0}
+</style></head><body><main>
+<h1>Skolrapport v. 46–47</h1>
+<div class="sub">Melvin (åk 4, klass 16a) &amp; Hugo (åk 8, klass 12b) · Genarps skola · uppdaterad lör 14 nov 2026 kl. 09.45 · <a href="skolrapport.pdf">PDF</a></div>
+<div class="legend"><span class="lg M">● Melvin</span><span class="lg H">● Hugo</span><span class="lg V">Ram = viktigt</span><span class="lg"><span class="new">NYTT</span><span class="chg">ÄNDRAT</span>sedan förra rapporten</span></div>
+
+
+
+<div class="newbox"><h3>Förändringar sedan förra rapporten (fre 13/11 kl. 08)</h3>
+<h4>Melvin</h4>
+<ul><li><span class="new">NYTT</span>Veckobrev v. 46 (fre 13/11): <b>läsläxa till ons 18/11</b>. Läsa s. 79–86 i <i>Drakskeppet</i> och svara på två frågor i det röda häftet: vilket svenskt ord Åsa säger högt för första gången, och hur Åsas liv hos Boel och Stein skiljer sig från hennes tidigare liv som Petite (minst ett exempel från texten). Boken och häftet ska med på onsdag.</li>
+<li><span class="new">NYTT</span>Nästa vecka i skolan: matte kapitel 2.3 (multiplikation med uppställning), NO repetition av kapitel 4 (naturen på vintern), SO judendomen och i svenska börjar de lyssna på <i>Mio, min Mio</i>.</li></ul>
+<h4>Hugo</h4>
+<ul><li><span class="chg">ÄNDRAT</span>Kemi: läraren uppdaterade instuderingsfrågorna i Classroom fre 13/11. Där finns både elevversion och facit. Vad som ändrats framgår inte.</li>
+<li>Inget nytt i matte, franska, fysik eller SO. Inga uppgifter saknas.</li></ul>
+<h4>Övrigt</h4>
+<ul><li>Frånvaron är oförändrad för båda. Inga nya meddelanden i Edlevo, inga skolmejl i Gmail och klasskalendern är oförändrad.</li></ul></div>
+
+<details style="margin:0 0 10px"><summary style="font-size:13px;color:var(--mut);cursor:pointer">Förändringar i rapporten fre 13/11</summary><div class="newbox" style="border-color:var(--line)"><h3 style="color:var(--mut)">Förändringar ons 11/11 – fre 13/11</h3>
+<h4>Båda</h4>
+<ul><li>Unikum, Edlevo och Hugos Classroom gick att läsa igen. Skoltiderna för v. 47 i Edlevo stämmer med schemat nedan, och tis 17/11 är ledig för båda.</li></ul>
+<h4>Hugo</h4>
+<ul><li><span class="chg">ÄNDRAT</span>Kemiläraren ändrade listan "att kunna inför provet" 11/11. Under salter står nu bara <b>s. 124</b> (tidigare s. 124–129). Syror och baser är fortfarande s. 104–118.</li>
+<li><span class="new">NYTT</span>Nytt kemimaterial 11/11: "grundämnena att träna på", en PowerPoint med grundämnenas kemiska symboler.</li>
+<li><span class="new">NYTT</span>5 minuter ogiltig frånvaro i franska tor 12/11 (troligen sen ankomst, orsaken anges inte).</li>
+<li><span class="new">NYTT</span>SO: en sammanfattning av 1700- och 1800-talet i Classroom (10/11, ändrad 12/11). Inget prov är angivet.</li>
+<li>Inga uppgifter saknas i Classroom.</li></ul>
+<h4>Melvin</h4>
+<ul><li><span class="new">NYTT</span>Mentorerna i åk 4 skrev i Unikum 11/11 att tonen i elevernas gemensamma klasschatt ibland är dålig. De vill att föräldrar pratar med barnen och tittar på chatten tillsammans med dem.</li>
+<li>Frånvaron är oförändrad.</li></ul>
+<h4>Övrigt</h4>
+<ul><li>Inga skolmejl i Gmail de senaste 4 dagarna och inga nya meddelanden i Edlevo.</li></ul></div></details>
+
+
+<h2>Planering fram till jul</h2>
+<div class="card">
+<p style="margin:0 0 8px;font-size:13.5px">Staplarna visar när det är rimligt att <b>börja förbereda</b> sig, och romben med datum under är provet. Den röda linjen är idag. Raden "Samtidiga förberedelser" visar hur många saker Hugo har igång samtidigt.</p>
+<div class="ztools"><button id="zout" aria-label="Zooma ut">−</button><span id="zlab">100 %</span><button id="zin" aria-label="Zooma in">+</button><button id="zfit">Hela perioden</button><span class="zhint">Nyp med två fingrar för att zooma, svep i sidled</span></div>
+<div class="gwrap"><div class="gantt" id="gantt"></div></div>
+<div class="glegend"><span><i style="width:18px;height:8px;border-radius:4px;background:var(--h);opacity:.35"></i>Förberedelse (förslag)</span><span><i style="width:9px;height:9px;transform:rotate(45deg);background:var(--h)"></i>Prov eller bedömning</span><span><i style="width:9px;height:9px;transform:rotate(45deg);border:2px solid var(--h)"></i>Övrigt (bedöms ej, möte)</span><span><i style="width:12px;height:12px;background:repeating-linear-gradient(45deg,var(--off) 0 3px,transparent 3px 6px);border:1px solid var(--line)"></i>Ledig dag</span></div>
+<p class="note">När förberedelserna börjar är mitt förslag, utifrån provets omfattning och vad som krockar. Omfattningen är känd för kemi och matte men inte för fysik/teknik och franska. Melvin har inga kända prov, men en läsläxa till ons 18/11.</p>
+</div>
+
+<h2>Prov och viktiga datum framåt</h2>
+<div class="card">
+<div class="ex"><div class="dt">Tis 17/11<small>om 3 dagar</small></div><div class="offday">Ledig dag för både Melvin och Hugo. Klasskalendern kallar det utvecklingsdag för 12b, och Edlevo visar inga lektioner för någon av dem.</div></div>
+<div class="ex"><div class="dt">Ons 18/11<small>om 4 dagar</small></div><div class="it M v"><span class="who">Melvin</span><span class="new">NYTT</span>Läsläxa: Drakskeppet s. 79–86<span class="d">Läsa sidorna och svara på två frågor i det röda häftet (jämföra Åsas liv före och nu, med exempel från texten). Ta med boken och häftet till skolan.</span></div></div>
+<div class="ex"><div class="dt">Tor 19/11<small>om 5 dagar</small></div><div class="it H"><span class="who">Hugo</span>Mattediagnos kapitel 2<span class="d">Ett övningstest som inte bedöms. Det visar vad han behöver öva mer på inför provet veckan efter.</span></div></div>
+<div class="ex"><div class="dt">Fre 20/11<small>om 6 dagar</small></div><div class="it H v"><span class="who">Hugo</span>Kemiprov: syror, baser och joner<span class="d"><span class="chg">ÄNDRAT</span>Enligt läraren (Carl-Magnus Rosell) ska han kunna: bok s. 104–118 och s. 124 (salter), begreppen, grundämnen, joner och hur de bildas, förklara pH-skalan, förklara surt och basiskt, förklara försurning i naturen, veta vad en buffert är, kunna para ihop joner, och de kemiska beteckningarna för svavelsyra, salpetersyra, saltsyra och natriumhydroxid. Instuderingsfrågor (<span class="chg">ÄNDRAT</span>uppdaterade 13/11, med facit) och en PowerPoint med grundämnenas symboler finns i Classroom.</span></div></div>
+<div class="ex"><div class="dt">Tor 26/11<small>om 12 dagar</small></div><div class="it H v"><span class="who">Hugo</span>Matteprov kapitel 2, del 1<span class="d">Kapitlet "Samband och förändring": andelar och procent, jämförelser och förändringar i procent, och ränta.</span></div></div>
+<div class="ex"><div class="dt">Fre 27/11<small>om 13 dagar</small></div><div class="it H v"><span class="who">Hugo</span>Matteprov kapitel 2, del 2</div></div>
+<div class="ex"><div class="dt">Mån 30/11<small>om 16 dagar</small></div><div class="it H v"><span class="who">Hugo</span>Franska, muntligt prov kapitel 2</div></div>
+<div class="ex"><div class="dt">Tis 1/12<small>om 17 dagar, och tis 15/12</small></div><div class="it H"><span class="who">Hugo</span>Hemkunskap, grupp 1<span class="d">Står i klasskalendern utan närmare beskrivning.</span></div></div>
+<div class="ex"><div class="dt">Mån 7/12<small>om 23 dagar</small></div><div class="it H v"><span class="who">Hugo</span>Franska, skriftligt prov kapitel 2</div></div>
+<div class="ex"><div class="dt">Fre 11/12<small>om 27 dagar</small></div><div class="it H v"><span class="who">Hugo</span>Prov i fysik och teknik<span class="d">Teknik är ännu inte bedömt den här terminen.</span></div></div>
+<div class="ex"><div class="dt">Tis 15/12<small>om 31 dagar</small></div><div class="it H"><span class="who">Hugo</span>Betygssamtal i franska</div></div>
+<div class="ex"><div class="dt">Tor 17/12<small>om 33 dagar</small></div><div class="it H"><span class="who">Hugo</span>Mentorsdag<span class="d">Står i klasskalendern som heldag utan närmare beskrivning. Troligen ingen vanlig undervisning utan tid med mentorn, men det framgår inte.</span></div></div>
+<div class="ex"><div class="dt">Fre 18/12<small>om 34 dagar</small></div><div class="offday">Julavslutning. Jullov 21/12 till 6/1.</div></div>
+</div>
+
+
+<h2>Vecka 46 · 9–13 november</h2>
+<div class="card ttH"><div class="wkh"><span class="who">Hugo</span><span class="wt">Schema och förberedelser</span></div><div class="ttw" id="tt-H-46"></div><ul class="plist" id="pl-H-46"></ul></div>
+<div class="card ttM"><div class="wkh"><span class="who">Melvin</span><span class="wt">Schema och förberedelser</span></div><div class="ttw" id="tt-M-46"></div><ul class="plist" id="pl-M-46"></ul></div>
+
+<h2>Vecka 47 · 16–20 november</h2>
+<div class="card ttH"><div class="wkh"><span class="who">Hugo</span><span class="wt">Schema och förberedelser</span></div><div class="ttw" id="tt-H-47"></div><ul class="plist" id="pl-H-47"></ul></div>
+<div class="card ttM"><div class="wkh"><span class="who">Melvin</span><span class="wt">Schema och förberedelser</span></div><div class="ttw" id="tt-M-47"></div><ul class="plist" id="pl-M-47"></ul></div>
+<p class="note">Schemat kommer från Edlevo. Grå block är vanliga lektioner. Färgade block har något att förbereda, helfärgade är extra viktiga och rött är prov. De streckade chipsen under varje dag är plugg hemma enligt planeringen ovan. Melvins läsläxa till ons 18/11 kommer från veckobrevet v. 46.</p>
+
+<h2>Att göra för föräldrar</h2>
+<div class="card"><ul>
+<li>☐ <b>Hugo, kemi 20/11:</b> gå igenom listan med vad som ska kunnas, instuderingsfrågorna och den nya PowerPointen med grundämnenas symboler i Classroom tillsammans. Särskilt formlerna för svavelsyra, salpetersyra, saltsyra och natriumhydroxid är lätta att öva hemma.</li>
+<li>☐ <span class="new">NYTT</span><b>Melvin, läsläxa till ons 18/11:</b> Drakskeppet s. 79–86 och två frågor i det röda häftet. Ledigheten tis 17/11 passar bra för att läsa. Påminn om att boken och häftet ska med på onsdag.</li>
+<li>☐ <b>Tis 17/11:</b> båda killarna är lediga. Ordna med dagen för Melvin vid behov.</li>
+<li>☐ <b>Idrottskläder:</b> Hugo måndag och tisdag, Melvin onsdag och torsdag.</li>
+<li>☐ <b>Hugo:</b> lägg upp en plugg-plan för kemi (20/11), matte (26–27/11) och franska (30/11 och 7/12).</li>
+<li>☐ <span class="new">NYTT</span><b>Melvin, klasschatten:</b> mentorerna ber föräldrar i åk 4 prata med barnen om hur man skriver till varandra och titta på chatten tillsammans.</li>
+<li>☐ <b>Melvin:</b> se över varma ytterkläder, skolan har alltid uteraster.</li>
+<li>☐ <b>Melvins skoldator:</b> båda vårdnadshavarna måste ha signerat lånavtalet (veckobrev v. 42), annars kan han inte hämta ut datorn. <span class="flag">Kontrollera att det är gjort.</span></li>
+<li>☐ <b>Hugo:</b> två uppgifter utan slutdatum är fortfarande inte inlämnade, <i>Kost och hälsa – en utmaning</i> (hemkunskap) och <i>Introduktion till konditionstema</i> (idrott). Fråga om de ska göras.</li>
+</ul></div>
+
+<h2>Närvaro och frånvaro hösten 2026 (Edlevo)</h2>
+<div class="card">
+<table>
+<tr><td><span style="color:var(--h)">Hugo</span></td><td><span class="ok">100 % närvaro</span> (274 timmar). Ingen giltig frånvaro. <span class="new">NYTT</span>5 minuter ogiltig frånvaro i franska tor 12/11.</td></tr>
+<tr><td><span style="color:var(--m)">Melvin</span></td><td><b>93 % närvaro.</b> 16 h 15 min giltig frånvaro, nästan allt anmält av Tina: heldagar 1/9, 2/9 och 30/9, del av dag 24/8, 21/10 och 3/11 (NO och SO på eftermiddagen), och 45 minuter SO 29/9.<br><b>23 minuter ogiltig frånvaro</b> vid tre lektioner: slöjd 28/9 (15 min), SO 16/10 (3 min) och musik 20/10 (5 min). Det ser ut som sena ankomster, men Edlevo anger inte orsaken.</td></tr>
+</table>
+<p class="note">Melvins frånvaro är mest sjukdagar och ligger på en vanlig nivå. Det enda att hålla koll på är de sena ankomsterna. Inga nya meddelanden i Edlevo (det senaste är från januari).</p>
+</div>
+
+<h2>Hugo, status och merit</h2>
+<div class="card">
+<p style="margin:0 0 8px"><span class="ok">Godtagbara kunskaper</span> i 14 ämnen enligt Unikum. Biologi, kemi och teknik är <b>ännu inte bedömda</b> den här terminen.</p>
+<b>Här är det enklast att höja</b>
+<ul>
+<li><b>Kemi 20/11:</b> första bedömningen i ämnet den här terminen. Nu finns en tydlig lista med vad som ska kunnas.</li>
+<li><b>Matte 26–27/11:</b> det tydligaste tillfället. Diagnosen 19/11 visar vad han behöver öva mer på.</li>
+<li><b>Franska 30/11 och 7/12:</b> två prov på kapitel 2 före betygssamtalet 15/12.</li>
+<li><b>Fysik och teknik 11/12:</b> teknik är inte bedömt ännu.</li>
+<li><b>Bild:</b> läraren vill se "mer noggrannhet i dina bilder" för att han ska nå nästa nivå.</li>
+<li><b>Hemkunskap:</b> en öppen uppgift och en inlämningsuppgift under november.</li>
+</ul>
+<p class="note">Unikum visar bara godtagbar eller inte godtagbar. Terminsbetygen A–F finns i Edlevo: meritvärde 260 efter våren i åk 7. Hela genomgången finns på den fästa sidan "Hugos betygsstatus".</p>
+</div>
+
+<h2>Melvin, status och omdömen</h2>
+<div class="card">
+<p style="margin:0 0 8px"><span class="ok">Godtagbara kunskaper</span> i alla bedömda ämnen. Det finns extra anpassningar registrerade.</p>
+<table>
+<tr><td>Biologi</td><td>Att utveckla: näringskedjor och kretslopp, fotosyntes och cellandning</td></tr>
+<tr><td>Fysik</td><td>Att utveckla: väderfenomen och vad som orsakar dem</td></tr>
+<tr><td>Slöjd</td><td>"Du har ett bra handlag" och dokumenterar arbetet bra. Ibland blir det för mycket prat med bänkkamraterna.</td></tr>
+<tr><td>Matte</td><td>Godtagbar. Har bytt till den andra matteboken. Ny lärare i matte och NO: Jesper.</td></tr>
+</table>
+</div>
+
+<p class="note">Kontrollerat lör 14/11 kl. 09.45: Unikum (meddelanden och kalender), Edlevo (frånvaro och meddelanden), Hugos Classroom (att göra, saknas och kursflödena i kemi, matte, franska, fysik och SO), 12B:s klasskalender till jullovet och Gmail (senaste 3 dagarna).</p>
+<p class="note">12B:s klasskalender har också "tyska åk 8, test kapitel 3" tor 19/11 och hemkunskap grupp 2 tis 24/11 och 8/12. De är inte med ovan eftersom Hugo läser franska och är i grupp 1.</p>
+<p class="note">Källor: Edlevo, 12B:s klasskalender, lärarnas planeringar i matte (kapitel 2) och franska, Unikum (veckobrev och kunskaper), Hugos Google Classroom och Gmail. Melvins klass har ingen klasskalender som jag har hittat.</p>
+</main>
+<script>
+(function(){
+const D0=new Date(2026,10,9), N=40; // 9 nov .. 18 dec
+const di=(m,d)=>Math.round((new Date(2026,m-1,d)-D0)/864e5);
+const pct=i=>(i/N*100)+'%';
+const OFF=[di(11,17)];
+// ---- GANTT ----
+const T=[
+ {c:'H',n:'Kemiprov',s:'lista, frågor, grundämnen',p:[di(11,9),di(11,19)],e:[[di(11,20),'Prov 20/11',0]],x:[[di(11,10),'studiestöd']]},
+ {c:'H',n:'Mattediagnos',s:'bli klar med kapitel 2',p:[di(11,9),di(11,18)],e:[[di(11,19),'Diagnos 19/11',1]]},
+ {c:'H',n:'Matteprov kap. 2',s:'öva på det diagnosen visar',p:[di(11,20),di(11,25)],e:[[di(11,26),'Del 1 26/11',0],[di(11,27),'Del 2',0]]},
+ {c:'H',n:'Franska muntligt',s:'kapitel 2, öva tala',p:[di(11,19),di(11,29)],e:[[di(11,30),'Muntligt 30/11',0]]},
+ {c:'H',n:'Franska skriftligt',s:'glosor, verb, kapitel 2',p:[di(12,1),di(12,6)],e:[[di(12,7),'Skriftligt 7/12',0],[di(12,15),'Betygssamtal',1]]},
+ {c:'H',n:'Fysik och teknik',s:'omfattning ej känd än',p:[di(11,30),di(12,10)],e:[[di(12,11),'Prov 11/12',0]]},
+ {c:'H',n:'Hemkunskap gr 1',s:'enligt klasskalendern',p:null,e:[[di(12,1),'1/12',1],[di(12,15),'15/12',1]]},
+ {c:'M',n:'Melvin',s:'läsläxa Drakskeppet',p:[di(11,14),di(11,17)],e:[[di(11,9),'Hälsosamtal börjar',1],[di(11,18),'Läsläxa 18/11',0]]}
+];
+
+// rename/clean event labels: short date only, type in row label
+T.forEach(t=>{if(t.n=='Franska skriftligt')t.s='glosor, verb, kap. 2 · sedan betygssamtal';if(t.n=='Matteprov kap. 2')t.s='del 1 och del 2 · öva på diagnosen'});
+const gw=document.querySelector('.gwrap'), gel=document.getElementById('gantt');
+let SC=1; const LABW=118;
+function fmt(i){const d=new Date(D0);d.setDate(d.getDate()+i);return d.getDate()+'/'+(d.getMonth()+1)}
+function draw(){
+ const vw=gw.clientWidth||360; const W=vw*SC; const tw=W-LABW; const PAD=14; const dx=(tw-2*PAD)/N;
+ gel.style.width=W+'px';
+ const X=i=>PAD+i*dx;
+ const bgs=()=>{let s='';for(let i=0;i<N;i++){if(i%7>=5)s+=`<div class="gday we" style="left:${X(i)}px;width:${dx}px"></div>`;else if(OFF.includes(i))s+=`<div class="gday off" style="left:${X(i)}px;width:${dx}px"></div>`}return s+`<div class="gtoday" style="left:${X(Math.min(N,Math.max(0,(new Date().setHours(0,0,0,0)-D0)/864e5)))-1}px"></div>`};
+ let g=`<div class="ghead" style="grid-template-columns:${LABW}px 1fr"><div></div><div class="gtrack" style="height:${SC>1.6?44:34}px">`;
+ for(let i=0;i<N;i+=7)g+=`<div class="gwk" style="left:${X(i)}px;width:${7*dx}px">v. ${46+i/7}<small>${fmt(i)}</small></div>`;
+ if(SC>1.6)for(let i=0;i<N;i++)if(i%7<5)g+=`<div style="position:absolute;bottom:0;left:${X(i)}px;width:${dx}px;text-align:center;font-size:9px;color:var(--mut)">${new Date(D0.getTime()+i*864e5).getDate()}</div>`;
+ g+='</div></div>';
+ for(const t of T){
+  // place labels under markers, avoid overlap with up to 2 lines
+  const lines=[[],[]];let html='';
+  for(const [d,l,soft] of t.e){
+   const cx=X(d+.5); const txt=fmt(d); const lw=txt.length*6.2+6; let L=0;
+   for(L=0;L<2;L++){if(!lines[L].some(([a,b])=>cx-lw/2<b+3&&cx+lw/2>a-3))break}
+   if(L==2)L=1; lines[L].push([cx-lw/2,cx+lw/2]);
+   html+=`<div class="gev ${t.c}${soft?' soft':''}" style="left:${cx}px"></div><div class="gevl" style="left:${cx-lw/2}px;width:${lw}px;top:${26+L*12}px">${txt}</div>`;
+  }
+  const h=lines[1].length?52:40;
+  g+=`<div class="grow" style="grid-template-columns:${LABW}px 1fr"><div class="gl"><b style="color:var(--${t.c=='H'?'h':'m'})">${t.n}</b><small>${t.s}</small></div><div class="gtrack" style="height:${h}px">${bgs()}`;
+  if(t.p)g+=`<div class="gbar ${t.c}" style="left:${X(t.p[0])}px;width:${(t.p[1]-t.p[0]+1)*dx}px"></div>`;
+  g+=html+'</div></div>';
+ }
+ let ld='';for(let i=0;i<N;i++){if(i%7>=5)continue;let n=0;for(const t of T)if(t.c=='H'&&t.p&&i>=t.p[0]&&i<=t.p[1]&&t.n!='Hemkunskap gr 1')n++;if(n){const col=n>=3?'#b3261e':n==2?'#e58a3a':'#c9a24a';ld+=`<div class="gl1" style="left:${X(i)}px;width:${dx-1}px;background:${col}">${dx>11?n:''}</div>`}}
+ g+=`<div class="grow" style="grid-template-columns:${LABW}px 1fr"><div class="gl"><b>Samtidiga förberedelser</b><small>Hugo, antal prov att plugga till</small></div><div class="gtrack" style="height:30px">${bgs()}${ld}</div></div>`;
+ gel.innerHTML=g;
+ const zl=document.getElementById('zlab'); if(zl)zl.textContent=Math.round(SC*100)+' %';
+}
+function setScale(ns,cx){ns=Math.min(4,Math.max(1,ns));if(ns==SC)return;const before=(gw.scrollLeft+(cx??gw.clientWidth/2))/gel.offsetWidth;SC=ns;draw();gw.scrollLeft=before*gel.offsetWidth-(cx??gw.clientWidth/2)}
+document.getElementById('zin').onclick=()=>setScale(SC*1.4);
+document.getElementById('zout').onclick=()=>setScale(SC/1.4);
+document.getElementById('zfit').onclick=()=>{SC=1;draw();gw.scrollLeft=0};
+let p0=null,s0=1;
+gw.addEventListener('touchstart',e=>{if(e.touches.length==2){const[a,b]=e.touches;p0=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);s0=SC;e.preventDefault()}},{passive:false});
+gw.addEventListener('touchmove',e=>{if(e.touches.length==2&&p0){const[a,b]=e.touches;const p=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);const r=gw.getBoundingClientRect();setScale(s0*p/p0,(a.clientX+b.clientX)/2-r.left);e.preventDefault()}},{passive:false});
+gw.addEventListener('touchend',e=>{if(e.touches.length<2)p0=null});
+gw.addEventListener('wheel',e=>{if(e.ctrlKey){e.preventDefault();const r=gw.getBoundingClientRect();setScale(SC*(e.deltaY<0?1.15:1/1.15),e.clientX-r.left)}},{passive:false});
+let rt;window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(draw,150)});
+draw();
+
+
+// ---- TIMETABLES ----
+const L={
+H:{1:[["08:20","09:00","Mentor­stid"],["09:10","10:30","Idrott"],["10:40","11:30","SO"],["11:40","12:00","Lunch"],["12:05","13:05","Franska"],["13:25","14:30","Matte"]],
+2:[["08:20","09:00","Franska"],["09:10","10:05","Matte"],["10:15","11:35","Idrott"],["11:40","12:00","Lunch"],["12:25","13:30","NO (kemi)"],["13:40","15:20","Hem­kunskap"],["15:30","16:30","Studie­stöd"]],
+3:[["08:20","09:20","NO (kemi)"],["09:30","10:25","Svenska"],["10:45","11:30","Musik"],["11:40","12:00","Lunch"],["12:25","13:25","Bild"],["13:40","14:40","SO"]],
+4:[["08:20","09:05","Matte"],["09:15","10:10","Svenska"],["10:20","11:40","Slöjd"],["11:45","12:05","Lunch"],["12:10","13:00","Franska"],["13:10","14:10","Engelska"],["14:15","15:15","SO"],["15:25","16:25","Studiestöd"]],
+5:[["08:20","09:15","Svenska"],["09:25","10:20","SO"],["10:45","11:40","Engelska"],["11:45","12:05","Lunch"],["12:15","13:20","NO (kemi)"],["13:35","14:35","Matte"]]},
+M:{1:[["08:00","08:40","Mentorstid"],["08:45","09:50","Matte"],["10:05","10:45","SO"],["10:50","11:10","Lunch"],["11:30","12:00","SO"],["12:05","12:50","Svenska"],["13:00","14:20","Slöjd"]],
+2:[["08:00","09:10","Svenska"],["09:30","10:05","Engelska"],["10:10","10:45","Matte"],["10:50","11:10","Lunch"],["11:30","12:15","Musik"],["12:30","13:30","NO"],["13:45","14:30","SO"],["15:00","16:00","Rastaktivitet"]],
+3:[["08:00","08:40","Svenska"],["08:40","09:15","SO"],["09:40","10:45","NO"],["10:50","11:10","Lunch"],["11:40","12:25","Idrott"],["12:40","13:25","Matte"],["13:25","14:10","Studiestöd"]],
+4:[["08:00","08:50","Matte"],["09:00","09:35","Engelska"],["09:50","10:35","Idrott"],["10:50","11:10","Lunch"],["11:30","12:10","NO"],["12:30","13:35","Svenska"],["13:35","14:10","Studiestöd"]],
+5:[["08:00","09:00","SO"],["09:25","10:10","Bild"],["10:15","10:50","Matte"],["10:50","11:10","Lunch"],["11:30","12:25","Engelska"],["12:50","14:00","Svenska"]]}};
+// prep marks: [child, date, start, kind p|v|x, text]
+const P=[
+ ['H',11,'08:20','p','Kemi: en av de sista lektionerna före provet 20/11. Ta med frågor från instuderingsfrågorna.'],
+ ['H',13,'12:15','p','Kemi: lektion en vecka före provet.'],
+ ['H',16,'09:10','p','Idrottskläder.'],
+ ['H',16,'12:05','p','Franska: övningsboken s. 68–69 enligt planeringen.'],
+ ['H',16,'13:25','p','Matte: blandade uppgifter s. 49 enligt planeringen.'],
+ ['H',18,'08:20','p','Sista kemilektionen före provet. Fråga om det som fortfarande är oklart. Öva grundämnenas symboler med lärarens PowerPoint.'],
+ ['H',19,'08:20','x','<b>Mattediagnos kapitel 2.</b> Bedöms inte, men visar vad han ska öva på inför provet 26–27/11.'],
+ ['H',19,'12:10','p','Franska: kapitel 2c enligt planeringen.'],
+ ['H',20,'12:15','x','<b>Kemiprov.</b> Står som heldag i klasskalendern, troligen på NO-passet. Syror, baser, joner, pH, försurning, buffert och fyra kemiska beteckningar.'],
+ ['H',20,'13:35','p','Matte: träna på det diagnosen visade, inför provet 26–27/11.'],
+ ['M',11,'11:40','p','Idrottskläder.'],
+ ['M',12,'09:50','p','Idrottskläder.'],
+ ['M',18,'08:00','v','<b>Läsläxa:</b> Drakskeppet s. 79–86 ska vara läst och de två frågorna besvarade i det röda häftet. Ta med boken och häftet.'],
+ ['M',18,'11:40','p','Idrottskläder.'],
+ ['M',19,'09:50','p','Idrottskläder.'],
+];
+const DAYNOTE={'M-9':'<b>Hälsosamtal</b> med skolsköterskan börjar i åk 4 den här veckan. Det står inte vilken dag Melvin har sitt.','H-17':'<b>Ledig dag.</b> Bra dag för kemi (provet på fredag) och matte (diagnosen på torsdag).','M-17':'<b>Ledig dag.</b> Bra dag att läsa Drakskeppet s. 79–86 och svara på frågorna i röda häftet.','M-16':'Veckan i skolan: matte kapitel 2.3 (multiplikation med uppställning), NO repetition av kapitel 4, SO judendomen och svenska <i>Mio, min Mio</i>.'};
+const m2=t=>{const[a,b]=t.split(':');return a*60+ +b}, T0=m2('08:00'), T1=m2('16:30'), PX=.75;
+const W=[{w:46,d:[9,10,11,12,13]},{w:47,d:[16,17,18,19,20]}], DN=['MÅN','TIS','ONS','TOR','FRE'];
+const active=d=>{const i=di(11,d);return T.filter(t=>t.c=='H'&&t.p&&t.n!='Hemkunskap gr 1'&&i>=t.p[0]&&i<=t.p[1]).map(t=>t.n.replace(' kap. 2','').replace('Mattediagnos','Matte').replace('Matteprov','Matte'))};
+for(const c of ['H','M'])for(const wk of W){
+ let h='<div class="tt"><div></div>'+wk.d.map((d,i)=>`<div class="tth">${DN[i]}<b>${d}</b></div>`).join('');
+ let ax='<div class="ttaxis" style="height:'+(T1-T0)*PX+'px">';for(let hh=8;hh<=16;hh++)ax+=`<span style="top:${(hh*60-T0)*PX}px">${hh}</span>`;h+=ax+'</div>';
+ let n=0;const items=[];
+ wk.d.forEach((d,i)=>{
+  if(OFF.includes(di(11,d))){h+=`<div class="ttcol off" style="height:${(T1-T0)*PX}px">LEDIG</div>`;items.push({d,i,txt:DAYNOTE[c+'-'+d],nb:null});return}
+  let col=`<div class="ttcol" style="height:${(T1-T0)*PX}px">`;
+  for(const [s,e,name] of L[c][i+1]){
+   const pm=P.find(p=>p[0]==c&&p[1]==d&&p[2]==s);let cls='ls'+(name=='Lunch'?' lunch':''),bn='';
+   if(pm){n++;cls+=' '+pm[3];bn=`<span class="bn">${n}</span>`;items.push({d,i,txt:pm[4],nb:n,k:pm[3]})}
+   const lab=name=='Lunch'?'':name;
+   col+=`<div class="${cls}" style="top:${(m2(s)-T0)*PX}px;height:${(m2(e)-m2(s))*PX-1}px">${lab}${bn}</div>`;
+  }
+  col+='</div>';h+=col;
+  if(DAYNOTE[c+'-'+d])items.push({d,i,txt:DAYNOTE[c+'-'+d],nb:null});
+ });
+ h+='</div>';
+ if(c=='H'){h+='<div class="ttfoot"><div style="font-size:9px;color:var(--mut);text-align:right;padding-right:3px">plugg</div>'+wk.d.map(d=>`<div class="chipz">${OFF.includes(di(11,d))?'':''}${active(d).map(a=>`<span class="pc">${a}</span>`).join('')}</div>`).join('')+'</div>'}
+ document.getElementById(`tt-${c}-${wk.w}`).innerHTML=h;
+ items.sort((a,b)=>a.d-b.d||(a.nb||99)-(b.nb||99));
+ document.getElementById(`pl-${c}-${wk.w}`).innerHTML=items.length?items.map(it=>`<li><span class="bn2${it.k=='x'?' x':''}" ${it.nb?'':'style="background:var(--mut)"'}>${it.nb||'!'}</span><span><small>${DN[it.i].charAt(0)+DN[it.i].slice(1).toLowerCase()} ${it.d}/11 ·</small> ${it.txt}</span></li>`).join(''):'<li><span></span><span><small>Inget särskilt att förbereda.</small></span></li>';
+}
+})();
+</script>
+</body></html>
+</body></html>
