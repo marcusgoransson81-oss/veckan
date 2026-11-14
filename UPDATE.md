@@ -14,6 +14,7 @@ Publiceras via GitHub Pages: https://marcusgoransson81-oss.github.io/veckan/
 - Checkrutornas lagring nycklas på ämne+datum+text, så oförändrade punkter behåller sina bockar.
 - NotebookLM-recept (`notebooklm`, `notebooklm_extra`, `notebooklm_tips`) och studietips (`veckans_teknik`, `teknik_bank`) anpassas efter vilka ämnen och prov som är aktuella.
 - `nytt` = förändringar sedan förra söndagen.
+- Sätt `uppdaterad` (datum) och `uppdaterad_tid` (ÅÅÅÅ-MM-DDTHH:MM, svensk tid) vid varje uppdatering. index.html och koll.html visar den överst som "Uppdaterad: Lördag 14/11 kl 09:49".
 - Bockar visar att Hugo gått igenom något, inte att han kan det. Beröm arbetet, men påstå aldrig att ett ämne "sitter". Låt nästa steg vara att testa sig utan bok (genrep, quiz, förklara högt).
 
 ## Bockar och föräldravy
@@ -26,4 +27,4 @@ Publiceras via GitHub Pages: https://marcusgoransson81-oss.github.io/veckan/
 
 ## Föräldrarapporten (Skolrapport Melvin & Hugo)
 - Publik kopia för Marcus och Tina: https://marcusgoransson81-oss.github.io/veckan/foraldrar-5592624a/ (index.html + skolrapport.pdf). Länka den inte från Hugos sidor.
-- Varje gång rapporten på claude.ai (artifact be28c770-ced9-4f76-ba8d-6fa2465f8cf4) uppdateras: hämta dess index.html, lägg in `<meta name="robots" content="noindex,nofollow">` och PDF-länken efter "uppdaterad ..."-raden, spara som foraldrar-5592624a/index.html, lägg den nya PDF:en som skolrapport.pdf och pusha till main.
+- Varje gång rapporten på claude.ai (artifact be28c770-ced9-4f76-ba8d-6fa2465f8cf4) uppdateras: hämta dess index.html, lägg in `<meta name="robots" content="noindex,nofollow">`, PDF-länken i undertitelraden och raden `<div class="upd">Uppdaterad: Veckodag D/M kl HH:MM</div>` först i `<main>` (stil `.upd`), spara som foraldrar-5592624a/index.html, lägg den nya PDF:en som skolrapport.pdf och pusha till main.

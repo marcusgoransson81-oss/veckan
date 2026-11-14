@@ -119,7 +119,7 @@ h2 .n{font-size:12px;font-family:Inter;font-weight:600;color:var(--mut);margin-l
 .toast.show{transform:translateX(-50%) translateY(0)}
 @media(max-width:520px){.tempo{gap:5px}.tb small{display:none}.days{grid-template-columns:1fr 1fr}.day{min-height:0}}
 @media(max-width:360px){.days{grid-template-columns:1fr}}
-</style></head><body><main id="app"><p style="padding:40px;text-align:center;color:var(--mut)">Laddar veckan…</p></main><div class="toast" id="toast"></div>
+.upd{font-size:11.5px;color:var(--mut);text-align:right;margin:0 0 6px;opacity:.85}</style></head><body><main id="app"><p style="padding:40px;text-align:center;color:var(--mut)">Laddar veckan…</p></main><div class="toast" id="toast"></div>
 <script>
 (async function(){
 const app=document.getElementById('app');
@@ -150,7 +150,8 @@ const up=P(D.uppdaterad), jul=P(D.jullov);
 // skoldagar kvar till jullov
 let sd=0;for(let d=new Date(Math.max(today,up));d<=jul;d.setDate(d.getDate()+1)){const w=d.getDay();const iso=d.toISOString().slice(0,10);if(w>0&&w<6&&!(D.lediga||[]).some(l=>dd(P(l),d)==0))sd++}
 const mon=new Date(up);mon.setDate(up.getDay()==0?up.getDate()+1:up.getDate()-((up.getDay()+6)%7));const sun=new Date(mon);sun.setDate(mon.getDate()+6);
-let h='';
+const UPD=s=>{if(!s)return'';const t=new Date(s.length>10?s:s+'T12:00');const W=['Söndag','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag'];return 'Uppdaterad: '+W[t.getDay()]+' '+t.getDate()+'/'+(t.getMonth()+1)+(s.length>10?' kl '+s.slice(11,16):'')};
+let h=`<div class="upd">${UPD(D.uppdaterad_tid||D.uppdaterad)}</div>`;
 if(dd(up,today)>7)h+=`<div class="stale">Den här sidan uppdaterades ${fd(up)} och kan vara gammal. Säg till pappa om den inte har uppdaterats på söndag.</div>`;
 h+=`<section class="hero"><div class="wk">Vecka ${D.vecka} · ${mon.getDate()}–${sun.getDate()} ${MN[sun.getMonth()]}</div><h1>Hej Hugo!<br>${esc(D.rubrik)}</h1><p>${esc(D.hej)}</p>
 <div class="row"><span class="pill">🎄 <b>${Math.max(0,dd(today,jul))}</b> dagar till jullovet</span><span class="pill">🏫 <b>${sd}</b> skoldagar kvar</span>`;

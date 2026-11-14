@@ -13,7 +13,7 @@ h2{font-size:17px;margin:0 0 6px;display:flex;gap:8px;align-items:baseline}h2 sm
 ul{list-style:none;margin:0;padding:0}li{padding:3px 0 3px 24px;position:relative;font-size:14px}li:before{content:"○";position:absolute;left:2px;color:var(--mut)}li.y:before{content:"✓";color:var(--ok);font-weight:800}li.y{color:var(--mut)}
 .sig{display:inline-block;font-size:12px;font-weight:800;border-radius:999px;padding:2px 9px;margin-left:6px;vertical-align:2px}.s0{background:#e3f5ec;color:#1f7a53}.s1{background:#fff1d6;color:#8a5a00}.s2{background:#fde7ee;color:#a3123f}.alert{border-radius:14px;padding:12px 14px;margin-bottom:12px;font-size:14.5px}.alert.a0{background:#e3f5ec}.alert.a1{background:#fff1d6}.alert.a2{background:#fde7ee}.alert ul{margin-top:4px}.alert li:before{content:'•';color:inherit}.exp{font-size:12px;color:var(--mut)}
 .err{background:#fde7ee;color:#7a1033;border-radius:10px;padding:10px}
-</style></head><body><main><h1>Hugos bockar</h1><div class="sub" id="sub">Laddar…</div><div id="out"></div></main>
+.upd{font-size:11.5px;color:var(--mut);text-align:right;margin:0 0 6px;opacity:.85}</style></head><body><main><div class="upd" id="upd"></div><h1>Hugos bockar</h1><div class="sub" id="sub">Laddar…</div><div id="out"></div></main>
 <script>
 (async()=>{
 const SB='https://wpjgybjmezxorhltbdcr.supabase.co/rest/v1/checks',SK='sb_publishable_bbDqfwFGM5plLU7DWIhlsg_TWjOE8L-';
@@ -21,7 +21,7 @@ const hs=t=>{let h=0;for(const c of t)h=(h*31+c.charCodeAt(0))|0;return (h>>>0).
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const COL={'Kemi':'kemi','Matte':'matte','Franska':'franska','Fysik och teknik':'fysik'};
 let D,rows;
-try{D=await (await fetch('data.json',{cache:'no-store'})).json();rows=await (await fetch(SB+'?select=key,done,updated_at',{headers:{apikey:SK}})).json()}catch(e){document.getElementById('out').innerHTML='<p class="err">Kunde inte hämta bockarna just nu.</p>';return}
+const UPD=s=>{if(!s)return'';const t=new Date(s.length>10?s:s+'T12:00');const W=['Söndag','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag'];return 'Uppdaterad: '+W[t.getDay()]+' '+t.getDate()+'/'+(t.getMonth()+1)+(s.length>10?' kl '+s.slice(11,16):'')};try{D=await (await fetch('data.json',{cache:'no-store'})).json();document.getElementById('upd').textContent=UPD(D.uppdaterad_tid||D.uppdaterad);rows=await (await fetch(SB+'?select=key,done,updated_at',{headers:{apikey:SK}})).json()}catch(e){document.getElementById('out').innerHTML='<p class="err">Kunde inte hämta bockarna just nu.</p>';return}
 const P=x=>{const[a,b,c]=x.split('-');return new Date(+a,b-1,+c)};const today=new Date();today.setHours(0,0,0,0);
 const live=p=>P(p.datum2||p.datum)>=today;
 const rel=(amne,d)=>D.prov.filter(p=>p.amne.startsWith(amne)&&p.datum>=d).sort((a,b)=>a.datum<b.datum?-1:1)[0];
