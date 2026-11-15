@@ -18,6 +18,12 @@ Publiceras via GitHub Pages: https://marcusgoransson81-oss.github.io/veckan/
 - Sätt `uppdaterad` (datum) och `uppdaterad_tid` (ÅÅÅÅ-MM-DDTHH:MM, svensk tid) vid varje uppdatering. index.html och koll.html visar den överst som "Uppdaterad: Lördag 14/11 kl 09:49".
 - Bockar visar att Hugo gått igenom något, inte att han kan det. Beröm arbetet, men påstå aldrig att ett ämne "sitter". Låt nästa steg vara att testa sig utan bok (genrep, quiz, förklara högt).
 
+## Källkontroll (gäller varje uppdatering, även mitt i veckan)
+- Läs ALLA källor varje gång: 12B:s klasskalender (agenda idag till +6 veckor), Classroom (att göra, saknas, flödena för kemi/matte/franska/fysik/SO), lärarnas planeringsdokument (matte kap-planering i Drive, franskans levande veckoplanering "Franska 8 26/27"), Unikum, Edlevo (tider, meddelanden) och Gmail. Inga datum får komma från "kända uppgifter" eller förra veckans data.json utan att stämmas av mot källan igen.
+- Varje prov, diagnos och inlämning ska stämmas av mot minst två källor när det går (t.ex. kalender + planering). Står ett datum bara i ett planeringsdokument, eller säger källorna olika: skriv det inte som säkert. Lägg det i `fragor` (fråga läraren) och flagga det för Marcus i svaret.
+- Det Hugo eller Marcus säger går före planeringsdokument (lärare ändrar muntligt utan att uppdatera dokumenten). Exempel: matteplaneringen (Word-fil, uppladdad 18/10) sa diagnos tor 19/11, men den gjordes v. 46.
+- Avsluta varje uppdatering med en kort lista till Marcus: vilka datum som är bekräftade av flera källor och vilka som bara har en källa.
+
 ## Nya delar (från 15/11) – fyll i vid varje söndagsuppdatering
 - **Testa dig själv**: varje prov med checklista ska ha en sista grupp `{"rubrik":"Testa dig själv","typ":"gora","kunna":[...]}` med 2–4 punkter: quiz/provgenrep på hela området, gör om det jag missade, genrep med datum (en lugn dag några dagar före provet). Anpassa till ämnet (matte: provgenrep med penna utan att titta i exemplen; muntligt språk: samtal utan manus). koll.html räknar "testat sig x av y" på rubriken exakt, och påminner om inget är testat 4 dagar före.
 - Alla `grupper` får `"typ":"gora"` (en bock per punkt). Ändra inte texten på befintliga punkter, då försvinner bocken.
