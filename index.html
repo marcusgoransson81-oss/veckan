@@ -165,9 +165,13 @@ h+=`<h2>🎯 Veckans fokus</h2><div class="fokus">${D.fokus.map((f,i)=>`<div cla
 h+=`<h2>📈 Tempot fram till jul</h2><div class="card"><div class="tempo">${D.tempo.map(t=>`<div class="tb l${t.niva}${t.v==D.vecka?' now':''}"><div class="bar" style="height:${70}px"><div class="fill"></div></div><b>v. ${t.v}</b><small>${esc(t.etikett)}</small></div>`).join('')}</div>
 <p style="margin:12px 0 0;font-size:13.5px;color:var(--mut)">Grönt är lugnt, orange är mycket. När det är lugnt är det smart att förbereda lite, så blir de tunga veckorna lättare.</p></div>`;
 // dagar
-const mon0=new Date(today);mon0.setDate(today.getDate()-((today.getDay()+6)%7));
-const days=D.dagar.map(x=>({...x,d:P(x.datum)})).filter(x=>x.d>=mon0||x.helg&&dd(x.d,today)<1&&dd(x.d,today)>-1);
-const wkOf=d=>{const t=new Date(d);t.setDate(t.getDate()+3-((t.getDay()+6)%7));const y=new Date(t.getFullYear(),0,4);return 1+Math.round(((t-y)/864e5-3+((y.getDay()+6)%7))/7)};
+// På helgen räknas kommande vecka som "denna vecka"; helgens egna pass läggs först i den veckan
+const wd=today.getDay(),wkend=wd==0||wd==6;
+const mon0=new Date(today);mon0.setDate(wkend?today.getDate()+(wd==6?2:1):today.getDate()-((wd+6)%7));
+const sat0=new Date(mon0);sat0.setDate(mon0.getDate()-2);
+const days=D.dagar.map(x=>({...x,d:P(x.datum)})).filter(x=>x.d>=mon0||(wkend&&x.helg&&x.d>=sat0)).map(x=>({...x,nu:x.d<mon0}));
+const wkOf0=d=>{const t=new Date(d);t.setDate(t.getDate()+3-((t.getDay()+6)%7));const y=new Date(t.getFullYear(),0,4);return 1+Math.round(((t-y)/864e5-3+((y.getDay()+6)%7))/7)};
+const wkOf=d=>wkOf0(d<mon0?mon0:d);
 const weeks=[...new Set(days.map(x=>wkOf(x.d)))];
 h+=`<h2>🗓️ Dag för dag</h2><div class="wtabs">${weeks.map((w,i)=>`<button data-w="${w}" class="${i==0?'on':''}">Vecka ${w}</button>`).join('')}</div><div class="wsum">Förslag på vad som är smart att plugga när. Bocka av det du gör.</div><div class="days" id="days"></div>`;
 // prov
@@ -205,8 +209,8 @@ app.innerHTML=h;
 function renderW(w){
  const L=days.filter(x=>wkOf(x.d)==w);let mins=0;
  document.getElementById('days').innerHTML=L.map((x,xi)=>{
-  const cls=['day'];if(dd(x.d,today)==0)cls.push('today');if(x.prov)cls.push('prov');if(x.ledig)cls.push('ledig');if(x.helg)cls.push('helg');
-  let s=`<div class="${cls.join(' ')}"><div class="dh"><span class="dn">${x.helg?'Helg':DN[x.d.getDay()]}</span><span class="dd">${x.d.getDate()}/${x.d.getMonth()+1}</span>${x.prov?'<span class="badge p">PROV</span>':x.viktig?'<span class="badge">VIKTIGT</span>':x.tid?`<span class="tm">${x.tid}</span>`:''}</div>`;
+  const cls=['day'];if(dd(x.d,today)==0||x.nu)cls.push('today');if(x.prov)cls.push('prov');if(x.ledig)cls.push('ledig');if(x.helg)cls.push('helg');
+  let s=`<div class="${cls.join(' ')}"><div class="dh"><span class="dn">${x.nu?'Idag · helgen':x.helg?'Helg':DN[x.d.getDay()]}</span><span class="dd">${x.d.getDate()}/${x.d.getMonth()+1}</span>${x.prov?'<span class="badge p">PROV</span>':x.viktig?'<span class="badge">VIKTIGT</span>':x.tid?`<span class="tm">${x.tid}</span>`:''}</div>`;
   if(x.ta_med&&x.ta_med.length)s+=`<div>${x.ta_med.map(t=>`<span class="tag bring">${esc(t)}</span>`).join('')}</div>`;
   if(x.skola&&x.skola.length)s+=`<ul class="sk">${x.skola.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`;
   (x.plugg||[]).forEach((p,pi)=>{const k=`p-${x.datum}-${pi}`,on=store.get(k);s+=`<label class="pl c-${COL[p.amne]||'kemi'}${on?' done':''}" data-k="${k}"><input type="checkbox"${on?' checked':''}><span class="t"><span class="m">${esc(p.amne)}</span> · ${esc(p.vad)}</span></label>`});

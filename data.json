@@ -1,39 +1,32 @@
 {
- "uppdaterad": "2026-11-14",
- "uppdaterad_tid": "2026-11-14T09:49",
- "vecka": 46,
- "rubrik": "Kemin är nästan avbockad, nu ska den testas",
- "hej": "Snyggt jobbat! Du har bockat av nästan allt inför kemiprovet, en hel vecka innan. Nästa steg är att ta reda på om det verkligen sitter: gör genrepet på lediga tisdagen som om det vore provet, utan bok, och plugga sedan det du missade. Samtidigt är det ett bra läge att komma igång med matten inför diagnosen på torsdag och att börja prata lite franska. Små pass, lite i taget.",
+ "uppdaterad": "2026-11-15",
+ "uppdaterad_tid": "2026-11-15T10:05",
+ "vecka": 47,
+ "rubrik": "Kemiprov på fredag, sedan är det matte som gäller",
+ "hej": "Den här veckan kommer kemiprovet, och du är väl förberedd: nästan hela checklistan är avbockad. Nu handlar det om att testa dig utan bok, så att du vet att det sitter på riktigt och inte bara känns bekant. Lediga tisdagen är perfekt för ett genrep. Samtidigt är det smart att hålla igång matten lite varje dag, för diagnosen är på torsdag och provet redan veckan efter. Små pass, utspridda. Då blir vecka 48 lugnare.",
  "nytt": [
-  "Kemiläraren uppdaterade instuderingsfrågorna i Classroom fredag 13/11, och nu finns det ett facit. Ladda ner den nya versionen så att du jobbar med rätt frågor. Svara först utan bok, rätta sedan med facit och gör om de du missade.",
-  "Kemiläraren har ändrat listan \"att kunna inför provet\": under salter står nu bara s. 124 (tidigare 124–129). Har du redan läst hela, bra, då har du det.",
-  "Nytt i kemi-Classroom: \"grundämnena att träna på\", en PowerPoint med grundämnenas kemiska symboler. Den är tillagd i checklistan.",
-  "I SO finns en sammanfattning av 1700- och 1800-talet i Classroom. Inget prov är utsatt."
+  "Sidan visar nu två veckor framåt, vecka 47 och 48. Det du har kvar i helgen ligger först under vecka 47.",
+  "Vecka 48 är inlagd: matteprovet del 1 tor 26/11 och del 2 fre 27/11, med förslag på vad du kan plugga dagarna innan.",
+  "Kemiläraren uppdaterade instuderingsfrågorna i fredags, nu med facit. Kolla att du har den nya versionen."
  ],
  "fokus": [
   {
    "ikon": "🧪",
-   "titel": "Kemi: testa att det sitter",
-   "text": "Att ha läst och bockat av är halva jobbet. Nu ska du kolla att du kan det utan boken: genrep tis 17/11 med stängd bok och timer, förklara pH och buffert högt för någon hemma, och öva grundämnenas symboler med PowerPointen. Det du missar på genrepet pluggar du onsdag och torsdag."
+   "titel": "Kemi: genrep och sedan provet",
+   "text": "Gör genrepet tis 17/11 med stängd bok och timer, som om det vore provet. Rätta och plugga det du missade onsdag och torsdag. Kvar på listan: grundämnenas symboler och att kunna förklara vad ett grundämne är."
   },
   {
    "ikon": "➗",
-   "titel": "Matte: kom igång före diagnosen",
-   "text": "Diagnosen tor 19/11 bedöms inte, men den visar vad du ska öva på inför provet 26–27/11. Räkna några procentuppgifter (delen, det hela, förändringsfaktor) så att diagnosen blir rättvisande."
+   "titel": "Matte: håll igång inför diagnosen",
+   "text": "Diagnosen tor 19/11 bedöms inte, men den visar vad du ska öva på inför provet 26–27/11. Ett kort pass per dag räcker: delen, det hela och förändringsfaktor. Genomgångsfilmerna för kapitel 2 ligger i matte-Classroom."
   },
   {
    "ikon": "🗣️",
-   "titel": "Franska: börja prata högt",
-   "text": "Muntliga provet är mån 30/11. Läs texterna i kapitel 2 högt några minuter då och då redan nu. Det känns ovant första gångerna och lätt efter några veckor."
+   "titel": "Franska: lite högt då och då",
+   "text": "Muntliga provet är mån 30/11. Läs texterna i kapitel 2 högt några minuter några gånger i veckan. Det är så det blir lätt till slut."
   }
  ],
  "tempo": [
-  {
-   "v": 46,
-   "niva": 2,
-   "etikett": "Plugga in",
-   "vad": "Inga prov, kemiplugget igång"
-  },
   {
    "v": 47,
    "niva": 3,
@@ -146,13 +139,18 @@
    "plugg": [
     {
      "amne": "Kemi",
-     "vad": "NotebookLM-quiz på allt, skriv upp det du missar"
+     "vad": "Grundämnenas symboler med PowerPointen i Classroom, fråga dig själv åt båda hållen"
     },
     {
      "amne": "Kemi",
-     "vad": "Grundämnenas symboler med PowerPointen i Classroom"
+     "vad": "Förklara högt vad ett grundämne är, med några exempel"
+    },
+    {
+     "amne": "Matte",
+     "vad": "Titta på genomgångsfilmen Y 2.4 Delen och räkna några uppgifter"
     }
-   ]
+   ],
+   "notis": "Det här är kvar från helgen. Ta det i lugn takt i dag."
   },
   {
    "datum": "2026-11-16",
@@ -211,7 +209,7 @@
   },
   {
    "datum": "2026-11-19",
-   "tid": "08.20–15.15",
+   "tid": "08.20–16.25",
    "ta_med": [],
    "skola": [
     "Mattediagnos kapitel 2 (bedöms inte)",
@@ -235,6 +233,113 @@
    "plugg": [],
    "prov": true,
    "notis": "Ät frukost. Du är förberedd."
+  },
+  {
+   "datum": "2026-11-22",
+   "helg": true,
+   "plugg": [
+    {
+     "amne": "Matte",
+     "vad": "Titta på den rättade diagnosen och räkna några uppgifter på det som var svårt"
+    },
+    {
+     "amne": "Franska",
+     "vad": "Läs texterna i kapitel 2 högt en kort stund"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-23",
+   "tid": "08.20–14.30",
+   "ta_med": [
+    "Idrottskläder"
+   ],
+   "skola": [],
+   "plugg": [
+    {
+     "amne": "Matte",
+     "vad": "Öva extra på det diagnosen visade"
+    },
+    {
+     "amne": "Franska",
+     "vad": "Öva fraserna i kapitel 2 högt"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-24",
+   "tid": "08.20–16.30",
+   "ta_med": [
+    "Idrottskläder"
+   ],
+   "skola": [
+    "Studiestöd 15.30–16.30, bra läge att fråga om matten inför provet"
+   ],
+   "plugg": [
+    {
+     "amne": "Matte",
+     "vad": "Blandade uppgifter kapitel 2 med penna"
+    },
+    {
+     "amne": "Franska",
+     "vad": "Spela in dig själv när du läser och lyssna"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-25",
+   "tid": "08.20–14.40",
+   "ta_med": [],
+   "skola": [],
+   "plugg": [
+    {
+     "amne": "Matte",
+     "vad": "Gå igenom felboken och räkna om ett par av de missade. Sedan sova i tid."
+    }
+   ],
+   "viktig": true
+  },
+  {
+   "datum": "2026-11-26",
+   "tid": "08.20–16.25",
+   "ta_med": [],
+   "skola": [
+    "MATTEPROV kapitel 2, del 1",
+    "Studiestöd 15.25–16.25 om du vill"
+   ],
+   "plugg": [
+    {
+     "amne": "Matte",
+     "vad": "Kort titt i felboken inför del 2"
+    }
+   ],
+   "prov": true,
+   "notis": "Ät frukost. Du har övat i flera veckor, lita på det."
+  },
+  {
+   "datum": "2026-11-27",
+   "tid": "08.20–14.35",
+   "ta_med": [],
+   "skola": [
+    "MATTEPROV kapitel 2, del 2"
+   ],
+   "plugg": [],
+   "prov": true
+  },
+  {
+   "datum": "2026-11-29",
+   "helg": true,
+   "plugg": [
+    {
+     "amne": "Franska",
+     "vad": "Öva ett samtal på franska med någon hemma inför muntliga provet"
+    },
+    {
+     "amne": "Franska",
+     "vad": "Läs texterna i kapitel 2 högt en sista gång"
+    }
+   ],
+   "notis": "Muntliga provet i franska är i morgon."
   }
  ],
  "prov": [
@@ -434,17 +539,17 @@
   "Två uppgifter i Classroom saknar datum och är inte inlämnade: \"Kost och hälsa – en utmaning\" (hemkunskap) och \"Introduktion till konditionstema\" (idrott). Fråga lärarna om de ska göras."
  ],
  "bra": [
-  "19 av 22 punkter i kemi avbockade, en vecka före provet. Bra att du började tidigt.",
-  "Godtagbart i alla 14 bedömda ämnen.",
-  "Inga uppgifter saknas i Classroom."
+  "19 av 23 punkter i kemi avbockade inför provet på fredag. Du började tidigt och det märks.",
+  "Du har kommit igång med matten: andelar och procent av det hela är avbockade.",
+  "Inga uppgifter med inlämningsdatum saknas i Classroom."
  ],
  "veckans_teknik": {
-  "titel": "Genrep under provlika former",
-  "text": "Att känna igen något när man läser det är inte samma sak som att kunna det. Testa dig därför som på riktigt: stäng boken, sätt en timer och svara på ett NotebookLM-prov utan att fuska. Rätta efteråt och plugga det du missade. Lediga tisdagen passar perfekt för kemi-genrepet.",
+  "titel": "Testa dig utan bok",
+  "text": "Att känna igen något när man läser det är inte samma sak som att kunna det. Gör därför kemi-genrepet på tisdag som på riktigt: stäng boken, sätt en timer och svara på ett NotebookLM-prov utan att kika. Rätta efteråt och plugga bara det du missade. Samma knep funkar för matten: räkna utan att titta i lösningarna först.",
   "extra": [
    "Korta pass, 25 min fokus och 5 min paus. Mobilen i ett annat rum.",
    "Byt ämne mellan passen: lite kemi, lite matte. Hjärnan gillar omväxling.",
-   "Sömnen kvällen före provet är värd mer än en sista timmes plugg."
+   "Kvällen före ett prov: lätt repetition och sova i tid slår en sista lång plugg-timme."
   ]
  },
  "notebooklm_tips": {
