@@ -1,10 +1,11 @@
 {
  "uppdaterad": "2026-11-15",
- "uppdaterad_tid": "2026-11-15T11:45",
+ "uppdaterad_tid": "2026-11-15T11:55",
  "vecka": 47,
  "rubrik": "Kemiprov på fredag, sedan är det matte som gäller",
- "hej": "Den här veckan kommer kemiprovet, och du är väl förberedd: nästan hela checklistan är avbockad. Nu handlar det om att testa dig utan bok, så att du vet att det sitter på riktigt och inte bara känns bekant. Lediga tisdagen är perfekt för ett genrep. Samtidigt är det smart att hålla igång matten lite varje dag, för diagnosen är på torsdag och provet redan veckan efter. Små pass, utspridda. Då blir vecka 48 lugnare.",
+ "hej": "Den här veckan kommer kemiprovet, och du är väl förberedd: nästan hela checklistan är avbockad. Nu handlar det om att testa dig utan bok, så att du vet att det sitter på riktigt och inte bara känns bekant. Lediga tisdagen är perfekt för ett genrep. Samtidigt är det smart att hålla igång matten lite varje dag, för provet är redan veckan efter. Små pass, utspridda. Då blir vecka 48 lugnare.",
  "nytt": [
+  "Rättat: mattediagnosen var den här veckan (v. 46), inte tor 19/11 som det stod tidigare.",
   "Nytt på sidan: länkar direkt till materialet i Classroom på provkorten och på pluggpassen (📂 Öppna).",
   "Varje prov har nu en grupp \"Testa dig själv\" 🎯. Det är där du visar att du kan det, inte bara har läst.",
   "\"Så ser ett starkt svar ut\" på provkorten visar skillnaden mellan ett enkelt och ett utvecklat svar.",
@@ -19,8 +20,8 @@
   },
   {
    "ikon": "➗",
-   "titel": "Matte: håll igång inför diagnosen",
-   "text": "Diagnosen tor 19/11 bedöms inte, men den visar vad du ska öva på inför provet 26–27/11. Ett kort pass per dag räcker: delen, det hela och förändringsfaktor. Genomgångsfilmerna för kapitel 2 ligger i matte-Classroom."
+   "titel": "Matte: använd diagnosen inför provet",
+   "text": "Diagnosen är gjord, och den visar vad du ska öva på inför provet 26–27/11. Fråga läraren om resultatet om du inte fått tillbaka den, och lägg extra tid på det som var svårt. Ett kort pass per dag räcker. Genomgångsfilmerna för kapitel 2 ligger i matte-Classroom."
   },
   {
    "ikon": "🗣️",
@@ -33,7 +34,7 @@
    "v": 47,
    "niva": 3,
    "etikett": "Provvecka",
-   "vad": "Mattediagnos tor, kemiprov fre"
+   "vad": "Kemiprov fre"
   },
   {
    "v": 48,
@@ -159,7 +160,8 @@
      "lank": "https://www.youtube.com/watch?v=VsWxlDTTlbU"
     }
    ],
-   "notis": "Det här är kvar från helgen. Ta det i lugn takt i dag."
+   "notis": "Det här är kvar från helgen. Ta det i lugn takt i dag.",
+   "skola": []
   },
   {
    "datum": "2026-11-16",
@@ -200,7 +202,8 @@
      "vad": "Blandade uppgifter kapitel 2",
      "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
     }
-   ]
+   ],
+   "skola": []
   },
   {
    "datum": "2026-11-18",
@@ -217,7 +220,7 @@
     },
     {
      "amne": "Matte",
-     "vad": "Några blandade procentuppgifter inför diagnosen",
+     "vad": "Några blandade procentuppgifter, särskilt det som var svårt på diagnosen",
      "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MjU0ODI5MzAxNzk/details"
     }
    ]
@@ -227,7 +230,6 @@
    "tid": "08.20–16.25",
    "ta_med": [],
    "skola": [
-    "Mattediagnos kapitel 2 (bedöms inte)",
     "Studiestöd 15.25–16.25 om du vill"
    ],
    "plugg": [
@@ -236,8 +238,7 @@
      "vad": "Lätt genomgång av beteckningar och begrepp. Sedan sova i tid.",
      "lank": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MjU1MjM4OTY0OTA/details"
     }
-   ],
-   "viktig": true
+   ]
   },
   {
    "datum": "2026-11-20",
@@ -256,14 +257,15 @@
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Titta på den rättade diagnosen och räkna några uppgifter på det som var svårt",
+     "vad": "Räkna några uppgifter på det som var svårt",
      "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
     },
     {
      "amne": "Franska",
      "vad": "Läs texterna i kapitel 2 högt en kort stund"
     }
-   ]
+   ],
+   "skola": []
   },
   {
    "datum": "2026-11-23",
@@ -275,7 +277,7 @@
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Öva extra på det diagnosen visade",
+     "vad": "Öva extra på det som var svårt på diagnosen",
      "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
     },
     {
@@ -358,7 +360,8 @@
      "vad": "Läs texterna i kapitel 2 högt en sista gång"
     }
    ],
-   "notis": "Muntliga provet i franska är i morgon."
+   "notis": "Muntliga provet i franska är i morgon.",
+   "skola": []
   }
  ],
  "prov": [
@@ -504,7 +507,7 @@
    "borja": "2026-11-11",
    "farg": "matte",
    "notebooklm": "Ge mig 10 procentuppgifter i stil med kapitel 2 (förändringsfaktor, procentuella förändringar och ränta). Visa inte svaret förrän jag har svarat, och visa sedan hur man räknar steg för steg.",
-   "kallor": "Lägg in planeringen för kapitel 2 och din rättade diagnos. Räkna själv med penna, det är där matten fastnar.",
+   "kallor": "Lägg in planeringen för kapitel 2 och diagnosen när du fått tillbaka den. Räkna själv med penna, det är där matten fastnar.",
    "grupper": [
     {
      "rubrik": "Andelar och procent",
@@ -537,7 +540,7 @@
     {
      "rubrik": "Inför provet",
      "kunna": [
-      "Gjort diagnosen 19/11",
+      "Gjort diagnosen (v. 46)",
       "Övat extra på det diagnosen visade",
       "Gått igenom felboken"
      ],
