@@ -1,11 +1,11 @@
 {
  "uppdaterad": "2026-11-15",
- "uppdaterad_tid": "2026-11-15T11:55",
+ "uppdaterad_tid": "2026-11-15T12:00",
  "vecka": 47,
  "rubrik": "Kemiprov på fredag, sedan är det matte som gäller",
  "hej": "Den här veckan kommer kemiprovet, och du är väl förberedd: nästan hela checklistan är avbockad. Nu handlar det om att testa dig utan bok, så att du vet att det sitter på riktigt och inte bara känns bekant. Lediga tisdagen är perfekt för ett genrep. Samtidigt är det smart att hålla igång matten lite varje dag, för provet är redan veckan efter. Små pass, utspridda. Då blir vecka 48 lugnare.",
  "nytt": [
-  "Rättat: mattediagnosen var den här veckan (v. 46), inte tor 19/11 som det stod tidigare.",
+  "Mattediagnosen: lärarens planering säger tor 19/11, men du har sagt att den redan är gjord. Kolla med läraren på måndag vad som gäller.",
   "Nytt på sidan: länkar direkt till materialet i Classroom på provkorten och på pluggpassen (📂 Öppna).",
   "Varje prov har nu en grupp \"Testa dig själv\" 🎯. Det är där du visar att du kan det, inte bara har läst.",
   "\"Så ser ett starkt svar ut\" på provkorten visar skillnaden mellan ett enkelt och ett utvecklat svar.",
@@ -185,7 +185,8 @@
      "amne": "Franska",
      "vad": "Några glosor och fraser från kapitel 2, en kort stund"
     }
-   ]
+   ],
+   "notis": "Kolla med matteläraren om det blir diagnos på torsdag (se Frågor till läraren)."
   },
   {
    "datum": "2026-11-17",
@@ -238,7 +239,8 @@
      "vad": "Lätt genomgång av beteckningar och begrepp. Sedan sova i tid.",
      "lank": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MjU1MjM4OTY0OTA/details"
     }
-   ]
+   ],
+   "notis": "Planeringen sa diagnos i dag. Gå på det läraren sa på måndag."
   },
   {
    "datum": "2026-11-20",
@@ -812,6 +814,10 @@
   }
  ],
  "fragor": [
+  {
+   "amne": "Matte",
+   "fraga": "Lärarens planering säger diagnos på kapitel 2 tor 19/11, men du har sagt att den redan är gjord. Kolla med läraren på måndag: blir det någon diagnos på torsdag, eller var det den ni gjorde förra veckan?"
+  },
   {
    "amne": "Fysik/teknik",
    "fraga": "Vad ingår i provet fre 11/12, och finns det en lista att plugga från?"
