@@ -1,13 +1,15 @@
 {
  "uppdaterad": "2026-11-15",
- "uppdaterad_tid": "2026-11-15T10:05",
+ "uppdaterad_tid": "2026-11-15T11:45",
  "vecka": 47,
  "rubrik": "Kemiprov på fredag, sedan är det matte som gäller",
  "hej": "Den här veckan kommer kemiprovet, och du är väl förberedd: nästan hela checklistan är avbockad. Nu handlar det om att testa dig utan bok, så att du vet att det sitter på riktigt och inte bara känns bekant. Lediga tisdagen är perfekt för ett genrep. Samtidigt är det smart att hålla igång matten lite varje dag, för diagnosen är på torsdag och provet redan veckan efter. Små pass, utspridda. Då blir vecka 48 lugnare.",
  "nytt": [
-  "Sidan visar nu två veckor framåt, vecka 47 och 48. Det du har kvar i helgen ligger först under vecka 47.",
-  "Vecka 48 är inlagd: matteprovet del 1 tor 26/11 och del 2 fre 27/11, med förslag på vad du kan plugga dagarna innan.",
-  "Kemiläraren uppdaterade instuderingsfrågorna i fredags, nu med facit. Kolla att du har den nya versionen."
+  "Nytt på sidan: länkar direkt till materialet i Classroom på provkorten och på pluggpassen (📂 Öppna).",
+  "Varje prov har nu en grupp \"Testa dig själv\" 🎯. Det är där du visar att du kan det, inte bara har läst.",
+  "\"Så ser ett starkt svar ut\" på provkorten visar skillnaden mellan ett enkelt och ett utvecklat svar.",
+  "Sidan visar två veckor framåt. Det du har kvar i helgen ligger överst under Idag.",
+  "Vecka 48 är inlagd: matteprovet del 1 tor 26/11 och del 2 fre 27/11."
  ],
  "fokus": [
   {
@@ -72,7 +74,8 @@
    "plugg": [
     {
      "amne": "Kemi",
-     "vad": "Lär dig de fyra beteckningarna (flashcards)"
+     "vad": "Lär dig de fyra beteckningarna (flashcards)",
+     "lank": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MjU1MjM4OTY0OTA/details"
     }
    ],
    "viktig": true
@@ -100,11 +103,13 @@
    "plugg": [
     {
      "amne": "Kemi",
-     "vad": "Instuderingsfrågor, första halvan"
+     "vad": "Instuderingsfrågor, första halvan",
+     "lank": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MTYyODE1MTkyNjIy/details"
     },
     {
      "amne": "Matte",
-     "vad": "Bli klar med kapitel 2"
+     "vad": "Bli klar med kapitel 2",
+     "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
     }
    ]
   },
@@ -118,7 +123,8 @@
    "plugg": [
     {
      "amne": "Kemi",
-     "vad": "Instuderingsfrågor, andra halvan"
+     "vad": "Instuderingsfrågor, andra halvan",
+     "lank": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MTYyODE1MTkyNjIy/details"
     },
     {
      "amne": "Franska",
@@ -139,15 +145,18 @@
    "plugg": [
     {
      "amne": "Kemi",
-     "vad": "Grundämnenas symboler med PowerPointen i Classroom, fråga dig själv åt båda hållen"
+     "vad": "Grundämnenas symboler med PowerPointen i Classroom, fråga dig själv åt båda hållen",
+     "lank": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MjU1NTMzMzg0Njg/details"
     },
     {
      "amne": "Kemi",
-     "vad": "Förklara högt vad ett grundämne är, med några exempel"
+     "vad": "Förklara högt vad ett grundämne är, med några exempel",
+     "lank": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MjU0NzkwODg4OTk/details"
     },
     {
      "amne": "Matte",
-     "vad": "Titta på genomgångsfilmen Y 2.4 Delen och räkna några uppgifter"
+     "vad": "Titta på genomgångsfilmen Y 2.4 Delen och räkna några uppgifter",
+     "lank": "https://www.youtube.com/watch?v=VsWxlDTTlbU"
     }
    ],
    "notis": "Det här är kvar från helgen. Ta det i lugn takt i dag."
@@ -162,11 +171,13 @@
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Procent: delen, det hela och förändringsfaktor"
+     "vad": "Procent: delen, det hela och förändringsfaktor",
+     "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MjU0ODI5MzAxNzk/details"
     },
     {
      "amne": "Kemi",
-     "vad": "Repetera det du missade i quizet"
+     "vad": "Repetera det du missade i quizet",
+     "lank": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MTYyODE1MTkyNjIy/details"
     },
     {
      "amne": "Franska",
@@ -181,11 +192,13 @@
    "plugg": [
     {
      "amne": "Kemi",
-     "vad": "Genrep: gör ett quiz som om det vore provet"
+     "vad": "Genrep: gör ett quiz som om det vore provet",
+     "lank": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MTYyODE1MTkyNjIy/details"
     },
     {
      "amne": "Matte",
-     "vad": "Blandade uppgifter kapitel 2"
+     "vad": "Blandade uppgifter kapitel 2",
+     "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
     }
    ]
   },
@@ -199,11 +212,13 @@
    "plugg": [
     {
      "amne": "Kemi",
-     "vad": "Förklara pH, buffert och försurning högt för någon hemma"
+     "vad": "Förklara pH, buffert och försurning högt för någon hemma",
+     "lank": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MjU0Nzg3NjcxMDg/details"
     },
     {
      "amne": "Matte",
-     "vad": "Några blandade procentuppgifter inför diagnosen"
+     "vad": "Några blandade procentuppgifter inför diagnosen",
+     "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MjU0ODI5MzAxNzk/details"
     }
    ]
   },
@@ -218,7 +233,8 @@
    "plugg": [
     {
      "amne": "Kemi",
-     "vad": "Lätt genomgång av beteckningar och begrepp. Sedan sova i tid."
+     "vad": "Lätt genomgång av beteckningar och begrepp. Sedan sova i tid.",
+     "lank": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MjU1MjM4OTY0OTA/details"
     }
    ],
    "viktig": true
@@ -240,7 +256,8 @@
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Titta på den rättade diagnosen och räkna några uppgifter på det som var svårt"
+     "vad": "Titta på den rättade diagnosen och räkna några uppgifter på det som var svårt",
+     "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
     },
     {
      "amne": "Franska",
@@ -258,7 +275,8 @@
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Öva extra på det diagnosen visade"
+     "vad": "Öva extra på det diagnosen visade",
+     "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
     },
     {
      "amne": "Franska",
@@ -278,7 +296,8 @@
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Blandade uppgifter kapitel 2 med penna"
+     "vad": "Blandade uppgifter kapitel 2 med penna",
+     "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
     },
     {
      "amne": "Franska",
@@ -377,7 +396,8 @@
       "Läst bok s. 124–129",
       "Gått igenom alla instuderingsfrågor i Classroom",
       "Gått igenom begreppen i kapitlet"
-     ]
+     ],
+     "typ": "gora"
     },
     {
      "rubrik": "Grundämnen och joner",
@@ -388,7 +408,8 @@
       "Förklara hur en negativ jon bildas (atomen tar upp elektroner)",
       "Para ihop positiva och negativa joner",
       "Grundämnenas kemiska symboler (PowerPointen \"grundämnena att träna på\")"
-     ]
+     ],
+     "typ": "gora"
     },
     {
      "rubrik": "Syror, baser och pH",
@@ -400,14 +421,16 @@
       "Salpetersyra = HNO₃",
       "Saltsyra = HCl",
       "Natriumhydroxid = NaOH"
-     ]
+     ],
+     "typ": "gora"
     },
     {
      "rubrik": "Naturen",
      "kunna": [
       "Förklara försurning: vad som orsakar den och vad den gör med sjöar och skog",
       "Förklara vad en buffert är och varför den skyddar mot pH-ändringar"
-     ]
+     ],
+     "typ": "gora"
     },
     {
      "rubrik": "Testa dig själv",
@@ -416,7 +439,8 @@
       "Gjort om quizet på det jag missade",
       "Genrep tis 17/11",
       "Förklarat pH och buffert högt för någon hemma"
-     ]
+     ],
+     "typ": "gora"
     }
    ],
    "notebooklm_extra": [
@@ -428,7 +452,49 @@
      "titel": "Grundämnesmemory",
      "text": "Gör flashcards av grundämnena i PowerPointen: namnet på framsidan och den kemiska symbolen på baksidan. Blanda ordningen och fråga mig åt båda hållen."
     }
-   ]
+   ],
+   "lankar": [
+    {
+     "t": "Att kunna inför provet",
+     "url": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MTYyODE1MDY5ODk5/details"
+    },
+    {
+     "t": "Instuderingsfrågor (med facit)",
+     "url": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MTYyODE1MTkyNjIy/details"
+    },
+    {
+     "t": "Grundämnena att träna på",
+     "url": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MjU1NTMzMzg0Njg/details"
+    },
+    {
+     "t": "Kemiska beteckningar",
+     "url": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MjU1MjM4OTY0OTA/details"
+    },
+    {
+     "t": "Begrepp",
+     "url": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MjU0NzkwODg4OTk/details"
+    },
+    {
+     "t": "Texthäfte syror och joner",
+     "url": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MTYyNzkyMzk1Njc3/details"
+    },
+    {
+     "t": "pH-skalan",
+     "url": "https://classroom.google.com/c/ODkxNzgyNDg3MjA5/m/MjU0Nzg3NjcxMDg/details"
+    }
+   ],
+   "toppoang": {
+    "fraga": "Förklara vad försurning är och vad den gör med en sjö.",
+    "e": "Försurning är när sjöar blir sura av surt regn. Då kan fiskarna dö.",
+    "a": "När vi eldar kol och olja och kör bil bildas svaveldioxid och kväveoxider. De löser sig i regnvattnet och bildar svavelsyra och salpetersyra. Syrorna ger fler vätejoner i vattnet, så pH sjunker. Finns det kalk i marken fungerar den som buffert och tar hand om vätejonerna, men i en sjö utan kalk sjunker pH mer. Fiskrom och smådjur tål inte lågt pH, och när de försvinner påverkas hela näringskedjan. Man kan kalka sjöar, men det håller bara en tid. Det verkliga botemedlet är att minska utsläppen.",
+    "skillnad": [
+     "Orsak och verkan i flera led: utsläpp → syror → vätejoner → lägre pH → djuren påverkas.",
+     "Rätt begrepp används och förklaras: vätejoner, pH, buffert.",
+     "Följden tas vidare: hela näringskedjan, inte bara \"fiskarna dör\".",
+     "Avslutar med en lösning och en värdering (kalkning hjälper en tid, utsläppen är grunden)."
+    ],
+    "not": "Exemplet är skrivet för att visa skillnaden mellan ett enkelt och ett utvecklat svar. Det är inte lärarens bedömningsmall. Fråga gärna kemiläraren om det finns en matris."
+   }
   },
   {
    "datum": "2026-11-26",
@@ -447,7 +513,8 @@
       "Räkna ut hur många procent en del är av det hela",
       "Räkna ut delen när du vet procenten och det hela",
       "Räkna ut det hela när du vet delen och procenten"
-     ]
+     ],
+     "typ": "gora"
     },
     {
      "rubrik": "Förändringar och jämförelser",
@@ -456,25 +523,78 @@
       "Använda förändringsfaktor (t.ex. 1,15 eller 0,80)",
       "Räkna med flera förändringar efter varandra",
       "Jämföra två värden i procent"
-     ]
+     ],
+     "typ": "gora"
     },
     {
      "rubrik": "Ränta",
      "kunna": [
       "Räkna ut ränta på ett belopp under ett år",
       "Räkna ut nytt belopp efter ränta"
-     ]
+     ],
+     "typ": "gora"
     },
     {
      "rubrik": "Inför provet",
      "kunna": [
       "Gjort diagnosen 19/11",
       "Övat extra på det diagnosen visade",
-      "Räknat blandade uppgifter med penna",
       "Gått igenom felboken"
+     ],
+     "typ": "gora"
+    },
+    {
+     "rubrik": "Testa dig själv",
+     "typ": "gora",
+     "kunna": [
+      "Gjort ett provgenrep på hela kapitel 2 (NotebookLM-uppgifter eller blandade uppgifter), med penna och utan att titta i exemplen",
+      "Räknat om det jag missade",
+      "Genrep tis 24/11"
      ]
     }
-   ]
+   ],
+   "lankar": [
+    {
+     "t": "Planering kap 2",
+     "url": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
+    },
+    {
+     "t": "Genomgångsfilmer kap 2",
+     "url": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MjU0ODI5MzAxNzk/details"
+    },
+    {
+     "t": "Film Y 2.1 Andelen",
+     "url": "https://www.youtube.com/watch?v=yjE-97Wduws"
+    },
+    {
+     "t": "Film Y 2.2 Jämförelser och förändringar",
+     "url": "https://www.youtube.com/watch?v=R5FVC_bSuqE"
+    },
+    {
+     "t": "Film Y 2.3 Det hela",
+     "url": "https://www.youtube.com/watch?v=khaeYJjXOuk"
+    },
+    {
+     "t": "Film Y 2.4 Delen",
+     "url": "https://www.youtube.com/watch?v=VsWxlDTTlbU"
+    },
+    {
+     "t": "Film Y 2.5 Ränta",
+     "url": "https://www.youtube.com/watch?v=vf53gQXFDyM"
+    }
+   ],
+   "toppoang": {
+    "fraga": "En jacka höjs i pris med 20 % och sänks sedan med 20 %. Kostar den lika mycket som från början?",
+    "e": "Nej, den blir billigare.",
+    "a": "Förändringsfaktorerna är 1,20 och 0,80. Totalt: 1,20 · 0,80 = 0,96, alltså 96 % av ursprungspriset, 4 % billigare. Kontroll med 100 kr: 100 → 120 → 96 kr. Det blir billigare för att sänkningen på 20 % räknas på det högre priset, 120 kr.",
+    "skillnad": [
+     "Visar metoden (förändringsfaktor), inte bara svaret.",
+     "Svarar med ett exakt resultat: 4 % billigare.",
+     "Kontrollerar med ett enkelt exempel att svaret är rimligt.",
+     "Förklarar med ord varför det blir så."
+    ],
+    "not": "Exemplet visar hur man redovisar. Det är inte lärarens bedömningsmall."
+   }
   },
   {
    "datum": "2026-11-30",
@@ -482,15 +602,47 @@
    "titel": "Muntligt prov kapitel 2",
    "borja": "2026-11-12",
    "farg": "franska",
-   "kunna": [
-    "Gått igenom texterna i kapitel 2",
-    "Övat fraserna högt",
-    "Spelat in dig själv och lyssnat",
-    "Övat ett samtal med någon hemma"
-   ],
    "tips": "Prata högt, gärna med någon hemma eller spela in dig själv och lyssna.",
    "notebooklm": "Du är min fransklärare. Ställ enkla frågor på franska om texterna i kapitel 2, en i taget. Jag svarar högt och skriver sedan in vad jag sa. Rätta mig vänligt och föreslå ett bättre sätt att säga det.",
-   "kallor": "Lägg in texterna och glosorna från kapitel 2 (foton av sidorna fungerar)."
+   "kallor": "Lägg in texterna och glosorna från kapitel 2 (foton av sidorna fungerar).",
+   "lankar": [
+    {
+     "t": "Veckoplanering franska",
+     "url": "https://classroom.google.com/c/NzAzODg1NjQxMTY0/m/ODcyMjEzOTcwNzE4/details"
+    }
+   ],
+   "toppoang": {
+    "fraga": "Qu’est-ce que tu aimes faire le week-end ?",
+    "e": "J’aime le foot.",
+    "a": "Le week-end, j’aime jouer au foot avec mes amis parce que c’est amusant. Le samedi, je joue souvent un match et le dimanche je me repose. Et toi, qu’est-ce que tu aimes faire ?",
+    "skillnad": [
+     "Utvecklar svaret med parce que (därför att).",
+     "Använder tidsord: le samedi, le dimanche, souvent.",
+     "Ställer en motfråga så att det blir ett samtal."
+    ],
+    "not": "Exemplet visar hur man utvecklar ett svar. Vad läraren bedömer på just det här provet vet vi inte än, se Frågor till läraren."
+   },
+   "grupper": [
+    {
+     "rubrik": "Öva",
+     "typ": "gora",
+     "kunna": [
+      "Gått igenom texterna i kapitel 2",
+      "Övat fraserna högt",
+      "Spelat in dig själv och lyssnat",
+      "Övat ett samtal med någon hemma"
+     ]
+    },
+    {
+     "rubrik": "Testa dig själv",
+     "typ": "gora",
+     "kunna": [
+      "Haft ett samtal på franska med någon hemma utan manus",
+      "Övat igen på det som var svårt",
+      "Genrep sön 29/11"
+     ]
+    }
+   ]
   },
   {
    "datum": "2026-12-07",
@@ -500,6 +652,12 @@
    "farg": "franska",
    "kunna": [
     "Glosor och verb i kapitel 2"
+   ],
+   "lankar": [
+    {
+     "t": "Veckoplanering franska",
+     "url": "https://classroom.google.com/c/NzAzODg1NjQxMTY0/m/ODcyMjEzOTcwNzE4/details"
+    }
    ]
   },
   {
@@ -510,13 +668,28 @@
    "farg": "fysik",
    "kunna": [
     "Vad som ingår är inte utlagt än. Fråga läraren om du vill veta tidigt."
-   ]
+   ],
+   "lankar": [
+    {
+     "t": "Fysik: kunna inför provet",
+     "url": "https://classroom.google.com/c/MjIzMjAwMDY5NzRa/m/MjU0MjQyNzA2MDE/details"
+    },
+    {
+     "t": "Fysik: instuderingsfrågor",
+     "url": "https://classroom.google.com/c/MjIzMjAwMDY5NzRa/m/MjU0MzQ5NjMxMzI/details"
+    }
+   ],
+   "kunna_typ": "gora"
   }
  ],
  "ovrigt": [
   {
    "datum": "2026-12-01",
    "text": "Hemkunskap grupp 1"
+  },
+  {
+   "datum": "2026-12-02",
+   "text": "Kemi: kort repetition, ett NotebookLM-quiz på det du missade på provet (10 min). Då sitter det kvar till åk 9."
   },
   {
    "datum": "2026-12-15",
@@ -535,9 +708,7 @@
   "2026-11-17"
  ],
  "jullov": "2026-12-18",
- "kolla": [
-  "Två uppgifter i Classroom saknar datum och är inte inlämnade: \"Kost och hälsa – en utmaning\" (hemkunskap) och \"Introduktion till konditionstema\" (idrott). Fråga lärarna om de ska göras."
- ],
+ "kolla": [],
  "bra": [
   "19 av 23 punkter i kemi avbockade inför provet på fredag. Du började tidigt och det märks.",
   "Du har kommit igång med matten: andelar och procent av det hela är avbockade.",
@@ -613,6 +784,46 @@
    "ikon": "✍️",
    "titel": "Skriv för hand",
    "text": "Kemiska beteckningar och matteuträkningar fastnar bättre när du skriver dem själv än när du bara läser."
+  }
+ ],
+ "ovriga": [
+  {
+   "amne": "Svenska",
+   "vad": "Pågående uppgift i Classroom: Argumenterande text (uppdaterad 11/11). Inget datum.",
+   "url": "https://classroom.google.com/c/MTYyNzE3MDM3NTUy/a/MjU0MDA3ODg5Njk/details"
+  },
+  {
+   "amne": "Engelska",
+   "vad": "Uppgift i Classroom: Horror story. Inget datum.",
+   "url": "https://classroom.google.com/c/MTYyNzE3MjgzNTA5/a/MjU0NzUyNTY4NDI/details"
+  },
+  {
+   "amne": "SO",
+   "vad": "Sammanfattning av 1700- och 1800-talet i Classroom. Inget prov utsatt.",
+   "url": "https://classroom.google.com/c/MTYyNTg2OTMwMDIy/p/MjU1NTEyMDg4MDM/details"
+  },
+  {
+   "amne": "Hemkunskap",
+   "vad": "Grupp 1 har hemkunskap tis 1/12 och tis 15/12.",
+   "url": "https://classroom.google.com/c/NjUzMjEzMjg0ODU0"
+  }
+ ],
+ "fragor": [
+  {
+   "amne": "Fysik/teknik",
+   "fraga": "Vad ingår i provet fre 11/12, och finns det en lista att plugga från?"
+  },
+  {
+   "amne": "Franska",
+   "fraga": "Hur går muntliga provet mån 30/11 till, och vad bedöms?"
+  },
+  {
+   "amne": "Kemi",
+   "fraga": "Finns det en bedömningsmatris för provet, så jag vet vad som krävs för högre betyg?"
+  },
+  {
+   "amne": "Hemkunskap/idrott",
+   "fraga": "Ska \"Kost och hälsa – en utmaning\" och \"Introduktion till konditionstema\" göras? De saknar datum i Classroom."
   }
  ]
 }

@@ -119,7 +119,36 @@ h2 .n{font-size:12px;font-family:Inter;font-weight:600;color:var(--mut);margin-l
 .toast.show{transform:translateX(-50%) translateY(0)}
 @media(max-width:520px){.tempo{gap:5px}.tb small{display:none}.days{grid-template-columns:1fr 1fr}.day{min-height:0}}
 @media(max-width:360px){.days{grid-template-columns:1fr}}
-.upd{font-size:11.5px;color:var(--mut);text-align:right;margin:0 0 6px;opacity:.85}</style></head><body><main id="app"><p style="padding:40px;text-align:center;color:var(--mut)">Laddar veckan…</p></main><div class="toast" id="toast"></div>
+.upd{font-size:11.5px;color:var(--mut);text-align:right;margin:0 0 6px;opacity:.85}.demo{background:#fff1b8;color:#5c4400;border:1px dashed #d4a400;border-radius:12px;padding:9px 13px;font-size:13.5px;font-weight:600;margin:0 0 10px}
+.ny{display:inline-block;font:800 9.5px Inter;letter-spacing:.06em;background:#ffd23f;color:#3d2e00;border-radius:5px;padding:2px 6px;vertical-align:2px;margin-left:6px}
+.kunna li{flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px;border-bottom:1px dashed var(--line);padding:7px 0}
+.kunna li .kt{flex:1 1 180px}
+.lv{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.lv button{font:600 11.5px Inter;border:0;background:var(--card);color:var(--mut);padding:5px 9px;cursor:pointer}
+.lv button+button{border-left:1px solid var(--line)}
+.lv button.on{background:var(--pb);color:var(--pc)}
+.lv button[data-l="2"].on{background:var(--pc);color:#fff}
+.kunna li[data-l="2"] .kt{color:var(--pc);font-weight:600}
+.kbar{position:relative}.kbar i{position:absolute;left:0;top:0;bottom:0}.kbar i.a{background:var(--pb);filter:saturate(2)}.kbar i.b{background:var(--pc)}
+.kprog span{font-weight:500;color:var(--mut)}.kprog span b{color:var(--pc)}
+.lvhelp{font-size:12.5px;color:var(--mut);margin-top:6px}
+.lnk{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;align-items:center}.lnk a{font-size:13px;font-weight:600;color:var(--pc);background:var(--pb);border-radius:999px;padding:5px 11px;text-decoration:none}
+details.top3,details.eft{margin-top:12px;border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--soft)}
+details summary{font-weight:700;font-size:14px;cursor:pointer}
+.top3 .q{font-size:13.5px;margin:10px 0 8px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:8px}.cmp>div{border-radius:10px;padding:8px 10px;background:var(--card);border:1px solid var(--line)}.cmp .a{border:2px solid var(--pc)}
+.cmp small{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--mut)}.cmp .a small{color:var(--pc)}.cmp p{margin:4px 0 0;font-size:13.5px}
+.top3 ul{margin:10px 0 0;padding-left:18px;font-size:13.5px}.top3 li{margin:3px 0}
+.fn{font-size:12px;color:var(--mut);margin:8px 0 0}
+.eft label{display:block;font-size:13px;font-weight:600;margin-top:8px}.eft textarea{width:100%;margin-top:4px;border:1px solid var(--line);border-radius:8px;padding:6px;font:13.5px Inter;background:var(--card);color:var(--ink)}
+.ov{display:grid;gap:2px}.or{display:flex;gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--line);font-size:14px}.or b{flex:none;width:92px}.or span{flex:1;color:var(--mut)}.or a{font-size:12.5px;font-weight:600}
+.fq li{justify-content:flex-start}.fq li.done span{color:var(--mut);text-decoration:line-through}
+#idag{grid-template-columns:1fr}
+@media(max-width:520px){.cmp{grid-template-columns:1fr}}
+.kg.tst{color:var(--pc)}.kunna li.test .kt:after{content:' 🎯'}
+.kunna li.task{justify-content:flex-start;flex-wrap:nowrap}.kunna li.task.done .kt{color:var(--mut);text-decoration:line-through}
+.pk-l{font-weight:700;color:var(--pc);text-decoration:none;white-space:nowrap;margin-left:4px}
+</style></head><body><main id="app"><p style="padding:40px;text-align:center;color:var(--mut)">Laddar veckan…</p></main><div class="toast" id="toast"></div>
 <script>
 (async function(){
 const app=document.getElementById('app');
@@ -159,6 +188,9 @@ const nxt=D.prov.map(p=>({...p,d:P(p.datum)})).filter(p=>p.d>=today).sort((a,b)=
 if(nxt)h+=`<span class="pill">📝 Nästa prov: <b>${esc(nxt.amne)}</b> ${fd(nxt.d)}</span>`;
 h+=`</div></section>`;
 if(D.nytt&&D.nytt.length)h+=`<div class="nytt">${D.nytt.map(n=>`<span>${esc(n)}</span>`).join('')}</div>`;
+// IDAG först
+{const t=D.dagar.map(x=>({...x,d:P(x.datum)})).find(x=>dd(x.d,today)==0||(x.helg&&dd(today,x.d)>=-1&&dd(today,x.d)<=1));
+ if(t)h+=`<h2>☀️ Idag</h2><div class="days" id="idag"></div>`;window.__idag=t;}
 // fokus
 h+=`<h2>🎯 Veckans fokus</h2><div class="fokus">${D.fokus.map((f,i)=>`<div class="card fk"><span class="num">${i+1}</span><div class="ic">${f.ikon}</div><h3>${esc(f.titel)}</h3><p>${esc(f.text)}</p></div>`).join('')}</div>`;
 // tempo
@@ -182,18 +214,25 @@ D.prov.forEach((p,pi)=>{const c=COL[p.amne]||'kemi',pd=P(p.datum),b=P(p.borja),l
  const startTxt=today<b?`Börja lugnt ${fd(b)}`:`Igång nu, lite i taget`;
  h+=`<div class="card pk c-${c}"><div class="top"><div class="cd"><b>${left}</b><small>${left==1?'DAG':'DAGAR'}</small></div><div><h3>${esc(p.amne)}: ${esc(p.titel)}</h3><div class="sub">${fd(pd)}${p.datum2?' och '+fd(P(p.datum2)):''} · ${startTxt}</div></div></div>
  <div class="prog"><div class="f" style="width:${pct}%"></div><div class="nowm" style="left:calc(${nowp}% - 1px)"></div></div><div class="prl"><span>Start ${b.getDate()}/${b.getMonth()+1}</span><span>Prov</span></div>`;
- const G=p.grupper||(p.kunna?[{kunna:p.kunna}]:[]);
- if(G.length){h+=`<div class="kunna" data-p="${pi}">${G.map(g=>`${g.rubrik?`<div class="kg">${esc(g.rubrik)}</div>`:''}<ul class="kunna">${g.kunna.map(k=>`<li data-k="k-${p.amne}-${p.datum}-${hs(k)}"><input type="checkbox" tabindex="-1"><span>${esc(k)}</span></li>`).join('')}</ul>`).join('')}</div><div class="kprog" id="kp-${pi}"><div class="kbar"><i></i></div><span></span></div>`}
+ const G=p.grupper||(p.kunna?[{kunna:p.kunna,typ:p.kunna_typ}]:[]);
+ if(G.length){h+=`<div class="kunna" data-p="${pi}">${G.map(g=>`${g.rubrik?`<div class="kg">${esc(g.rubrik)}</div>`:''}<ul class="kunna">${g.kunna.map(k=>`<li data-k="k-${p.amne}-${p.datum}-${hs(k)}" class="${g.typ=='gora'?'task':'know'}${g.rubrik=='Testa dig själv'?' test':''}">${g.typ=='gora'?`<input type="checkbox" tabindex="-1"><span class="kt">${esc(k)}</span>`:`<span class="kt">${esc(k)}</span><span class="lv"><button data-l="1">Läst</button><button data-l="2">Rätt i quiz</button></span>`}</li>`).join('')}</ul>`).join('')}</div><div class="kprog" id="kp-${pi}"><div class="kbar"><i class="a"></i><i class="b"></i></div><span></span></div>${G.some(g=>g.typ!='gora')?`<div class="lvhelp">Tryck <b>Rätt i quiz</b> när du har svarat rätt på punkten i ett NotebookLM-quiz eller på genrepet.</div>`:''}`}
+ if(p.lankar)h+=`<div class="lnk">${p.lankar.map(l=>`<a href="${l.url}" target="_blank" rel="noopener">📂 ${esc(l.t)}</a>`).join('')}</div>`;
+ if(p.toppoang){const T=p.toppoang;h+=`<details class="top3"><summary>🏆 Så ser ett starkt svar ut</summary><div class="q">Exempelfråga: <b>${esc(T.fraga)}</b></div><div class="cmp"><div class="e"><small>Enkelt svar</small><p>${esc(T.e)}</p></div><div class="a"><small>Utvecklat svar</small><p>${esc(T.a)}</p></div></div><ul>${T.skillnad.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p class="fn">${esc(T.not)}</p></details>`}
  if(p.kort){h+=`<div class="flash">${p.kort.map(k=>`<div class="fc"><div class="in"><div class="s a">${esc(k[0])}</div><div class="s b">${esc(k[1])}</div></div></div>`).join('')}</div><div class="fhint">Tryck på ett kort för att vända det. Kan du alla fyra utan att vända?</div>`}
  if(p.notebooklm){h+=`<div class="nb"><div class="h">✨ NotebookLM-recept<button data-copy="${pi}">Kopiera</button></div><q>${esc(p.notebooklm)}</q><small>Källor: ${esc(p.kallor)}</small></div>`}
  if(p.notebooklm_extra)h+=p.notebooklm_extra.map((r,ri)=>`<div class="nb"><div class="h">✨ ${esc(r.titel)}<button data-nx="${pi}-${ri}">Kopiera</button></div><q>${esc(r.text)}</q></div>`).join('');
  if(p.tips)h+=`<div class="tip">💡 ${esc(p.tips)}</div>`;
  h+=`</div>`});
 h+=`</div>`;
+// efter provet: prov som var för 1–21 dagar sedan
+{const E=D.prov.filter(p=>{const x=dd(P(p.datum2||p.datum),today);return x>=1&&x<=21});
+ if(E.length)h+=`<h2>📓 Efter provet</h2><p style="margin:-4px 0 10px;color:var(--mut)">Skriv några rader när du fått tillbaka provet. Det är så du blir bättre till nästa gång.</p><div class="provs">${E.map(p=>`<div class="card c-${COL[p.amne]||'kemi'}" style="border-top:6px solid var(--pc)"><h3 style="margin:0 0 4px">${esc(p.amne)}: ${esc(p.titel)}</h3><div class="eft" style="border:0;padding:0;background:none">${[['bra','Vad gick bra?'],['miss','Vad missade jag, och varför? (slarv, glömt, förstod inte frågan, hann inte)'],['nasta','Vad gör jag annorlunda till nästa prov?'],['resultat','Vad fick jag för resultat eller kommentar från läraren?']].map(([id,q])=>`<label>${q}<textarea rows="2" data-r="r-${p.amne}-${p.datum}-${id}" data-amne="${esc(p.amne)}" data-prov="${p.datum}" data-fraga="${esc(q)}"></textarea></label>`).join('')}<p class="fn rst"></p></div></div>`).join('')}</div>`;}
 // tidslinje
 const ev=[...D.prov.map(p=>({d:P(p.datum),c:COL[p.amne],big:1,x:`<b>${esc(p.amne)}</b> · ${esc(p.titel)}`,st:p.borja?`Börja förbereda ${fd(P(p.borja))}`:''})),...D.ovrigt.map(o=>({d:P(o.datum),x:esc(o.text),jul:o.datum==D.jullov}))].filter(e=>e.d>=today).sort((a,b)=>a.d-b.d);
 h+=`<h2>🛣️ Vägen till jullovet</h2><div class="card"><div class="tl">${ev.map(e=>`<div class="te${e.big?' big':''}${e.jul?' jul':''}" style="${e.c?`--pc:var(--${e.c})`:''}"><div class="d">${fd(e.d)} · om ${dd(today,e.d)} dagar</div><div class="x">${e.x}</div>${e.st?`<div class="st">${e.st}</div>`:''}</div>`).join('')}</div></div>`;
 // bra + kolla
+if(D.ovriga)h+=`<h2>📚 Övriga ämnen</h2><div class="card"><div class="ov">${D.ovriga.map(o=>`<div class="or"><b>${esc(o.amne)}</b><span>${esc(o.vad)}</span>${o.url?`<a href="${o.url}" target="_blank" rel="noopener">Classroom</a>`:''}</div>`).join('')}</div></div>`;
+if(D.fragor)h+=`<h2>🙋 Frågor till läraren</h2><div class="card"><ul class="kunna fq">${D.fragor.map((f,i)=>`<li data-k="k-fraga-${hs(f.fraga)}"><input type="checkbox"><span><b>${esc(f.amne)}:</b> ${esc(f.fraga)}</span></li>`).join('')}</ul><p class="fn">Bocka av när du har frågat. Skriv gärna svaret i NotebookLM-anteckningen för ämnet.</p></div>`;
 h+=`<h2>💪 Läget</h2><div class="two"><div class="card bra"><h3>Det här går bra</h3><ul>${D.bra.map(b=>`<li>${esc(b)}</li>`).join('')}</ul></div>`;
 if(D.kolla&&D.kolla.length)h+=`<div class="card kol"><h3>Bra att kolla upp</h3><ul>${D.kolla.map(b=>`<li>${esc(b)}</li>`).join('')}</ul></div>`;
 h+=`</div>`;
@@ -206,24 +245,33 @@ h+=`<p class="foot" id="syncst">${online?'☁️ Dina bockar sparas online och s
 h+=`<p class="foot">Uppdateras varje söndag · senast ${fd(up)} · Planen är en grund. Behöver något mer tid, lägg mer tid på det. /Pappa</p>`;
 app.innerHTML=h;
 // dag-render
-function renderW(w){
- const L=days.filter(x=>wkOf(x.d)==w);let mins=0;
- document.getElementById('days').innerHTML=L.map((x,xi)=>{
+function card(x){{
   const cls=['day'];if(dd(x.d,today)==0||x.nu)cls.push('today');if(x.prov)cls.push('prov');if(x.ledig)cls.push('ledig');if(x.helg)cls.push('helg');
   let s=`<div class="${cls.join(' ')}"><div class="dh"><span class="dn">${x.nu?'Idag · helgen':x.helg?'Helg':DN[x.d.getDay()]}</span><span class="dd">${x.d.getDate()}/${x.d.getMonth()+1}</span>${x.prov?'<span class="badge p">PROV</span>':x.viktig?'<span class="badge">VIKTIGT</span>':x.tid?`<span class="tm">${x.tid}</span>`:''}</div>`;
   if(x.ta_med&&x.ta_med.length)s+=`<div>${x.ta_med.map(t=>`<span class="tag bring">${esc(t)}</span>`).join('')}</div>`;
   if(x.skola&&x.skola.length)s+=`<ul class="sk">${x.skola.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`;
-  (x.plugg||[]).forEach((p,pi)=>{const k=`p-${x.datum}-${pi}`,on=store.get(k);s+=`<label class="pl c-${COL[p.amne]||'kemi'}${on?' done':''}" data-k="${k}"><input type="checkbox"${on?' checked':''}><span class="t"><span class="m">${esc(p.amne)}</span> · ${esc(p.vad)}</span></label>`});
+  (x.plugg||[]).forEach((p,pi)=>{const k=`p-${x.datum}-${pi}`,on=store.get(k);s+=`<label class="pl c-${COL[p.amne]||'kemi'}${on?' done':''}" data-k="${k}"><input type="checkbox"${on?' checked':''}><span class="t"><span class="m">${esc(p.amne)}</span> · ${esc(p.vad)}${p.lank?` <a class="pk-l" href="${p.lank}" target="_blank" rel="noopener" onclick="event.stopPropagation()">📂 Öppna</a>`:''}</span></label>`});
   if(x.notis)s+=`<div class="dnote">${esc(x.notis)}</div>`;
-  return s+'</div>'}).join('');
+  return s+'</div>'}}
+function bind(root){root.querySelectorAll('.pl').forEach(el=>el.querySelector('input').addEventListener('change',e=>{store.set(el.dataset.k,e.target.checked);el.classList.toggle('done',e.target.checked);if(e.target.checked)toast('Snyggt! ✅')}))}
+function renderW(w){const L=days.filter(x=>wkOf(x.d)==w);const el=document.getElementById('days');el.innerHTML=L.map(card).join('');bind(el);return;
  document.querySelectorAll('#days .pl').forEach(el=>el.querySelector('input').addEventListener('change',e=>{store.set(el.dataset.k,e.target.checked);el.classList.toggle('done',e.target.checked);if(e.target.checked)toast('Snyggt! ✅')}));
 }
 document.querySelectorAll('.wtabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.wtabs button').forEach(x=>x.classList.toggle('on',x==b));renderW(+b.dataset.w)});
 renderW(weeks[0]);
+if(window.__idag){const t=window.__idag;const el=document.getElementById('idag');el.innerHTML=card({...t,nu:t.helg});bind(el)}
+document.querySelectorAll('.fq li').forEach(li=>{const cb=li.querySelector('input');if(store.get(li.dataset.k)){cb.checked=true;li.classList.add('done')}li.onclick=e=>{if(e.target!==cb)cb.checked=!cb.checked;li.classList.toggle('done',cb.checked);store.set(li.dataset.k,cb.checked)}});
 // kunna-checklistor
-document.querySelectorAll('div.kunna').forEach(ul=>{const pi=ul.dataset.p;const upd=()=>{const a=ul.querySelectorAll('li').length,b=ul.querySelectorAll('li.done').length;const kp=document.getElementById('kp-'+pi);kp.querySelector('i').style.width=(b/a*100)+'%';kp.querySelector('span').textContent=b==a?'Allt avbockat. Grymt! 🎉':`${b} av ${a} sitter`};
- ul.querySelectorAll('li').forEach(li=>{const cb=li.querySelector('input');if(store.get(li.dataset.k)){cb.checked=true;li.classList.add('done')}
-  li.onclick=e=>{if(e.target!==cb)cb.checked=!cb.checked;li.classList.toggle('done',cb.checked);store.set(li.dataset.k,cb.checked);upd()}});upd()});
+const lvOf=k=>store.get(k)?(store.get(k+'-u')?2:1):0;
+const setLv=(k,l)=>{store.set(k,l>=1);store.set(k+'-u',l>=2)};
+document.querySelectorAll('div.kunna').forEach(ul=>{const pi=ul.dataset.p;const upd=()=>{const T=[...ul.querySelectorAll('li.task')],K=[...ul.querySelectorAll('li.know')];const td=T.filter(li=>li.classList.contains('done')).length,kg=K.filter(li=>+li.dataset.l>=1).length,ku=K.filter(li=>+li.dataset.l==2).length;const all=T.length+K.length;const kp=document.getElementById('kp-'+pi);kp.querySelector('.a').style.width=((td+kg)/all*100)+'%';kp.querySelector('.b').style.width=(K.length?ku/all*100:0)+'%';const parts=[];if(K.length)parts.push(`<b>${kg} av ${K.length}</b> lästa · <b>${ku}</b> rätt i quiz`);if(T.length)parts.push(`<b>${td} av ${T.length}</b> avbockade`);const X=T.filter(li=>li.classList.contains('test'));if(X.length)parts.push(`Testat dig: <b>${X.filter(li=>li.classList.contains('done')).length} av ${X.length}</b>`);kp.querySelector('span').innerHTML=parts.join(' · ')};
+ ul.querySelectorAll('li.know').forEach(li=>{const k=li.dataset.k;const show=l=>{li.dataset.l=l;li.querySelectorAll('.lv button').forEach(b=>b.classList.toggle('on',+b.dataset.l<=l))};show(lvOf(k));
+  li.querySelectorAll('.lv button').forEach(b=>b.onclick=e=>{e.stopPropagation();const n=+b.dataset.l,cur=+li.dataset.l,l=n==cur?n-1:n;setLv(k,l);show(l);upd();if(l==2)toast('Rätt i quiz. Snyggt! 💪')})});
+ ul.querySelectorAll('li.task').forEach(li=>{const cb=li.querySelector('input');if(store.get(li.dataset.k)){cb.checked=true;li.classList.add('done')}li.onclick=e=>{if(e.target!==cb)cb.checked=!cb.checked;li.classList.toggle('done',cb.checked);store.set(li.dataset.k,cb.checked);upd()}});upd()});
+// efter provet: spara i Supabase-tabellen reflektioner
+(async()=>{const RB='https://wpjgybjmezxorhltbdcr.supabase.co/rest/v1/reflektioner';const T=[...document.querySelectorAll('textarea[data-r]')];if(!T.length)return;const st=t=>document.querySelectorAll('.rst').forEach(e=>e.textContent=t);
+ try{const r=await fetch(RB+'?select=key,svar',{headers:SH});if(!r.ok)throw 0;const m=new Map((await r.json()).map(x=>[x.key,x.svar]));T.forEach(t=>{if(m.has(t.dataset.r))t.value=m.get(t.dataset.r)});st('☁️ Svaren sparas automatiskt.')}catch(e){st('Svaren kan inte sparas just nu. Prova att ladda om sidan.');return}
+ T.forEach(t=>{let tm;t.addEventListener('input',()=>{clearTimeout(tm);tm=setTimeout(async()=>{try{const r=await fetch(RB,{method:'POST',headers:{...SH,Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify([{key:t.dataset.r,amne:t.dataset.amne,provdatum:t.dataset.prov,fraga:t.dataset.fraga,svar:t.value,updated_at:new Date().toISOString()}])});st(r.ok?'☁️ Sparat.':'Kunde inte spara just nu.')}catch(e){st('Kunde inte spara just nu.')}},800)})})})();
 document.querySelectorAll('.fc').forEach(f=>f.onclick=()=>f.classList.toggle('flip'));
 document.querySelectorAll('[data-nx]').forEach(b=>b.onclick=async()=>{const[a,c]=b.dataset.nx.split('-');try{await navigator.clipboard.writeText(D.prov[a].notebooklm_extra[c].text);toast('Kopierat, klistra in i NotebookLM')}catch(e){toast('Markera texten och kopiera själv')}});
 document.querySelectorAll('[data-nb]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(D.notebooklm_tips.recept[b.dataset.nb].text);toast('Kopierat, klistra in i NotebookLM')}catch(e){toast('Markera texten och kopiera själv')}});
