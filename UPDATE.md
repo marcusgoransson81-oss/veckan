@@ -14,6 +14,7 @@ Publiceras via GitHub Pages: https://marcusgoransson81-oss.github.io/veckan/
 - Checkrutornas lagring nycklas på ämne+datum+text, så oförändrade punkter behåller sina bockar.
 - NotebookLM-recept (`notebooklm`, `notebooklm_extra`, `notebooklm_tips`) och studietips (`veckans_teknik`, `teknik_bank`) anpassas efter vilka ämnen och prov som är aktuella.
 - `nytt` = förändringar sedan förra söndagen.
+- Söndagsuppdateringen lägger in två veckor framåt (kommande vecka + veckan efter). På lördag/söndag visar index.html kommande vecka som första flik och lägger helgens `helg`-post (lör/sön före) först i den fliken som "Idag · helgen", så helgens pass inte försvinner. Plugg-bockar nycklas på datum+index, så ändra inte ordningen på redan avbockade pass.
 - Sätt `uppdaterad` (datum) och `uppdaterad_tid` (ÅÅÅÅ-MM-DDTHH:MM, svensk tid) vid varje uppdatering. index.html och koll.html visar den överst som "Uppdaterad: Lördag 14/11 kl 09:49".
 - Bockar visar att Hugo gått igenom något, inte att han kan det. Beröm arbetet, men påstå aldrig att ett ämne "sitter". Låt nästa steg vara att testa sig utan bok (genrep, quiz, förklara högt).
 
