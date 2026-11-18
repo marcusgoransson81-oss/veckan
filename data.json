@@ -1,27 +1,26 @@
 {
- "uppdaterad": "2026-11-15",
- "uppdaterad_tid": "2026-11-15T12:00",
+ "uppdaterad": "2026-11-18",
+ "uppdaterad_tid": "2026-11-18T08:26",
  "vecka": 47,
  "rubrik": "Kemiprov på fredag, sedan är det matte som gäller",
- "hej": "Den här veckan kommer kemiprovet, och du är väl förberedd: nästan hela checklistan är avbockad. Nu handlar det om att testa dig utan bok, så att du vet att det sitter på riktigt och inte bara känns bekant. Lediga tisdagen är perfekt för ett genrep. Samtidigt är det smart att hålla igång matten lite varje dag, för provet är redan veckan efter. Små pass, utspridda. Då blir vecka 48 lugnare.",
+ "hej": "Snyggt jobbat i början av veckan: alla pluggpass måndag och tisdag är avbockade, och du gjorde kemi-genrepet på lediga dagen. Kolla gärna vad du missade på genrepet och ta just de sakerna i kväll, så är du redo för fredag. Att något känns bekant är inte samma sak som att kunna det, så testa dig utan bok en gång till. Efter kemiprovet är det matten som gäller. Den har bara börjat på listan, så små pass varje dag från helgen gör vecka 48 mycket lugnare.",
  "nytt": [
-  "Mattediagnosen: lärarens planering säger tor 19/11, men du har sagt att den redan är gjord. Kolla med läraren på måndag vad som gäller.",
-  "Nytt på sidan: länkar direkt till materialet i Classroom på provkorten och på pluggpassen (📂 Öppna).",
-  "Varje prov har nu en grupp \"Testa dig själv\" 🎯. Det är där du visar att du kan det, inte bara har läst.",
-  "\"Så ser ett starkt svar ut\" på provkorten visar skillnaden mellan ett enkelt och ett utvecklat svar.",
-  "Sidan visar två veckor framåt. Det du har kvar i helgen ligger överst under Idag.",
-  "Vecka 48 är inlagd: matteprovet del 1 tor 26/11 och del 2 fre 27/11."
+  "SO: nytt grupparbete om 1700- och 1800-talet. Du har fått Franska revolutionen. Arbetet ska ha inledning, fakta och avslutande ord, plus en presentation. Datum står inte än.",
+  "Malou är din nya mentor (meddelande i Unikum 17/11).",
+  "Lucia fre 11/12 kl 9.30 i matsalen. Ni går dit med läraren ni har på lektionen.",
+  "Julavslutning fre 18/12: 8.20–12.20, lunch 11.40, bussen hem 12.30.",
+  "Mattediagnosen är fortfarande oklar: planeringen säger tor 19/11. Fråga läraren om du inte redan gjort det."
  ],
  "fokus": [
   {
    "ikon": "🧪",
-   "titel": "Kemi: genrep och sedan provet",
-   "text": "Gör genrepet tis 17/11 med stängd bok och timer, som om det vore provet. Rätta och plugga det du missade onsdag och torsdag. Kvar på listan: grundämnenas symboler och att kunna förklara vad ett grundämne är."
+   "titel": "Kemi: plugga det du missade på genrepet",
+   "text": "Genrepet är gjort. Gå igenom det du svarade fel på och testa dig på just det igen, utan bok. Torsdag kväll: lätt genomgång och sova i tid."
   },
   {
    "ikon": "➗",
    "titel": "Matte: använd diagnosen inför provet",
-   "text": "Diagnosen är gjord, och den visar vad du ska öva på inför provet 26–27/11. Fråga läraren om resultatet om du inte fått tillbaka den, och lägg extra tid på det som var svårt. Ett kort pass per dag räcker. Genomgångsfilmerna för kapitel 2 ligger i matte-Classroom."
+   "text": "Provet är 26–27/11 och listan har bara börjat. Ta ett kort pass per dag från helgen: en rubrik i taget på provkortet, räkna med penna utan att titta i exemplen. Planeringen säger diagnos tor 19/11, men du har sagt att den redan är gjord. Fråga läraren vad som gäller och be om resultatet, det visar vad du ska öva på. Genomgångsfilmerna för kapitel 2 ligger i matte-Classroom."
   },
   {
    "ikon": "🗣️",
@@ -697,6 +696,10 @@
    "text": "Kemi: kort repetition, ett NotebookLM-quiz på det du missade på provet (10 min). Då sitter det kvar till åk 9."
   },
   {
+   "datum": "2026-12-11",
+   "text": "Lucia kl 9.30 i matsalen"
+  },
+  {
    "datum": "2026-12-15",
    "text": "Hemkunskap grupp 1 och betygssamtal i franska"
   },
@@ -706,7 +709,7 @@
   },
   {
    "datum": "2026-12-18",
-   "text": "Julavslutning 🎄"
+   "text": "Julavslutning 🎄 8.20–12.20, bussen hem 12.30"
   }
  ],
  "lediga": [
@@ -715,9 +718,9 @@
  "jullov": "2026-12-18",
  "kolla": [],
  "bra": [
-  "19 av 23 punkter i kemi avbockade inför provet på fredag. Du började tidigt och det märks.",
-  "Du har kommit igång med matten: andelar och procent av det hela är avbockade.",
-  "Inga uppgifter med inlämningsdatum saknas i Classroom."
+  "Alla pluggpass måndag och tisdag är avbockade, och kemi-genrepet är gjort.",
+  "22 av 23 punkter i kemi avbockade inför provet på fredag. Du började tidigt och det märks.",
+  "Inga uppgifter saknas i Classroom."
  ],
  "veckans_teknik": {
   "titel": "Testa dig utan bok",
@@ -804,8 +807,8 @@
   },
   {
    "amne": "SO",
-   "vad": "Sammanfattning av 1700- och 1800-talet i Classroom. Inget prov utsatt.",
-   "url": "https://classroom.google.com/c/MTYyNTg2OTMwMDIy/p/MjU1NTEyMDg4MDM/details"
+   "vad": "Grupparbete om 1700- och 1800-talet (16/11). Du har Franska revolutionen: inledning, fakta, avslutande ord och en presentation. Dela upp jobbet i gruppen. Inget datum utsatt än.",
+   "url": "https://classroom.google.com/c/MTYyNTg2OTMwMDIy/p/MjU1NzE5NTg2NTA/details"
   },
   {
    "amne": "Hemkunskap",
@@ -821,6 +824,10 @@
   {
    "amne": "Fysik/teknik",
    "fraga": "Vad ingår i provet fre 11/12, och finns det en lista att plugga från?"
+  },
+  {
+   "amne": "SO",
+   "fraga": "När ska grupparbetet om Franska revolutionen vara klart, och när är presentationen?"
   },
   {
    "amne": "Franska",
