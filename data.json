@@ -1,63 +1,65 @@
 {
- "uppdaterad": "2026-11-18",
- "uppdaterad_tid": "2026-11-18T08:26",
+ "uppdaterad": "2026-11-20",
+ "uppdaterad_tid": "2026-11-20T11:27",
  "vecka": 47,
- "rubrik": "Kemiprov på fredag, sedan är det matte som gäller",
- "hej": "Snyggt jobbat i början av veckan: alla pluggpass måndag och tisdag är avbockade, och du gjorde kemi-genrepet på lediga dagen. Kolla gärna vad du missade på genrepet och ta just de sakerna i kväll, så är du redo för fredag. Att något känns bekant är inte samma sak som att kunna det, så testa dig utan bok en gång till. Efter kemiprovet är det matten som gäller. Den har bara börjat på listan, så små pass varje dag från helgen gör vecka 48 mycket lugnare.",
+ "rubrik": "Kemiprovet idag. Matteprovet kan komma redan på måndag",
+ "hej": "Kemi: hela listan avbockad och du testade dig utan bok fyra gånger. Så förbereder man sig, oavsett hur provet går idag. Nu matten. Klasskalendern säger att matteprovet är redan mån 23/11 och tis 24/11, men lärarens planering säger tor 26/11 och fre 27/11. Fråga Rania på mattelektionen idag vad som gäller. Tills du vet: plugga som om det är på måndag. Det betyder korta pass i helgen, en rubrik i taget på provkortet, med penna och utan att titta i exemplen. Inget maraton, bara jämnt och lugnt.",
  "nytt": [
-  "SO: nytt grupparbete om 1700- och 1800-talet. Du har fått Franska revolutionen. Arbetet ska ha inledning, fakta och avslutande ord, plus en presentation. Datum står inte än.",
+  "Matte: klasskalendern säger nu delprov 2 mån 23/11 och delprov 1 tis 24/11. Lärarens planering säger fortfarande tor 26/11 och fre 27/11. Fråga läraren idag (se Frågor till läraren).",
+  "Franska: veckoplaneringen är ändrad. Skriftligt prov på kapitel 2 tor 3/12 och muntligt prov mån 7/12 (förut stod muntligt 30/11 och skriftligt 7/12). Betygsprat tor 17/12.",
+  "Svenska: ny PowerPoint om ordklasser i Classroom (idag).",
+  "Engelska: nytt material, The survival challenge, i Classroom (idag).",
+  "SO: nytt grupparbete om 1700- och 1800-talet. Du har fått Franska revolutionen. Datum står inte än.",
   "Malou är din nya mentor (meddelande i Unikum 17/11).",
-  "Lucia fre 11/12 kl 9.30 i matsalen. Ni går dit med läraren ni har på lektionen.",
-  "Julavslutning fre 18/12: 8.20–12.20, lunch 11.40, bussen hem 12.30.",
-  "Mattediagnosen är fortfarande oklar: planeringen säger tor 19/11. Fråga läraren om du inte redan gjort det."
+  "Lucia fre 11/12 kl 9.30 i matsalen. Julavslutning fre 18/12: 8.20–12.20, bussen hem 12.30."
  ],
  "fokus": [
   {
-   "ikon": "🧪",
-   "titel": "Kemi: plugga det du missade på genrepet",
-   "text": "Genrepet är gjort. Gå igenom det du svarade fel på och testa dig på just det igen, utan bok. Torsdag kväll: lätt genomgång och sova i tid."
+   "ikon": "➗",
+   "titel": "Matte: plugga som om provet är på måndag",
+   "text": "Kalendern säger mån 23/11 och tis 24/11, planeringen tor 26/11 och fre 27/11. Fråga läraren idag. Tills dess: ett kort pass lördag och ett söndag, en rubrik i taget på provkortet. Räkna med penna utan att titta i exemplen. Genomgångsfilmerna för kapitel 2 ligger på provkortet."
   },
   {
-   "ikon": "➗",
-   "titel": "Matte: använd diagnosen inför provet",
-   "text": "Provet är 26–27/11 och listan har bara börjat. Ta ett kort pass per dag från helgen: en rubrik i taget på provkortet, räkna med penna utan att titta i exemplen. Planeringen säger diagnos tor 19/11, men du har sagt att den redan är gjord. Fråga läraren vad som gäller och be om resultatet, det visar vad du ska öva på. Genomgångsfilmerna för kapitel 2 ligger i matte-Classroom."
+   "ikon": "🧪",
+   "titel": "Kemi: klart idag",
+   "text": "Från i morgon finns en ruta \"Efter provet\" här på sidan. Skriv där vad som gick bra och vad du missade, så använder vi det till repetitionen om ett par veckor."
   },
   {
    "ikon": "🗣️",
-   "titel": "Franska: lite högt då och då",
-   "text": "Muntliga provet är mån 30/11. Läs texterna i kapitel 2 högt några minuter några gånger i veckan. Det är så det blir lätt till slut."
+   "titel": "Franska: nya datum",
+   "text": "Skriftligt prov tor 3/12 och muntligt mån 7/12. Börja med några glosor och verb (pouvoir, vouloir, finir) några minuter då och då nästa vecka, så blir vecka 49 lugn."
   }
  ],
  "tempo": [
   {
    "v": 47,
    "niva": 3,
-   "etikett": "Provvecka",
-   "vad": "Kemiprov fre"
+   "etikett": "Kemiprov",
+   "vad": "Kemiprov fre 20/11"
   },
   {
    "v": 48,
    "niva": 3,
    "etikett": "Matte",
-   "vad": "Matteprov del 1 och 2"
+   "vad": "Matteprov: mån–tis eller tor–fre (fråga läraren)"
   },
   {
    "v": 49,
    "niva": 2,
    "etikett": "Franska",
-   "vad": "Muntligt prov mån 30/11"
+   "vad": "Skriftligt prov tor 3/12"
   },
   {
    "v": 50,
    "niva": 3,
    "etikett": "Franska + fysik",
-   "vad": "Skriftligt 7/12, fysik/teknik 11/12"
+   "vad": "Muntligt mån 7/12, fysik/teknik fre 11/12"
   },
   {
    "v": 51,
    "niva": 1,
    "etikett": "Snart jul",
-   "vad": "Betygssamtal, mentorsdag, avslutning"
+   "vad": "Betygsprat, mentorsdag, avslutning"
   }
  ],
  "dagar": [
@@ -246,11 +248,12 @@
    "tid": "08.20–14.35",
    "ta_med": [],
    "skola": [
-    "KEMIPROV: syror, baser och joner"
+    "KEMIPROV: syror, baser och joner",
+    "Matte: fråga läraren om provet är mån–tis 23–24/11 eller tor–fre 26–27/11"
    ],
    "plugg": [],
    "prov": true,
-   "notis": "Ät frukost. Du är förberedd."
+   "notis": "Ät frukost. Du är förberedd. Glöm inte matte-frågan på lektionen."
   },
   {
    "datum": "2026-11-22",
@@ -258,15 +261,21 @@
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Räkna några uppgifter på det som var svårt",
+     "vad": "Lördag: delen och det hela. Titta på film Y 2.3 och Y 2.4 och räkna några uppgifter med penna",
+     "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MjU0ODI5MzAxNzk/details"
+    },
+    {
+     "amne": "Matte",
+     "vad": "Söndag: förändringsfaktor, procentuell ökning och minskning, ränta. Sedan ett kort provgenrep utan att titta i exemplen",
      "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
     },
     {
      "amne": "Franska",
-     "vad": "Läs texterna i kapitel 2 högt en kort stund"
+     "vad": "Några glosor och verb från kapitel 2, en kort stund"
     }
    ],
-   "skola": []
+   "skola": [],
+   "notis": "Matteprovet kan vara på måndag. Två korta pass räcker, inte en hel dag."
   },
   {
    "datum": "2026-11-23",
@@ -274,18 +283,19 @@
    "ta_med": [
     "Idrottskläder"
    ],
-   "skola": [],
+   "skola": [
+    "MATTE: klasskalendern säger delprov 2 idag (planeringen säger tor 26/11)",
+    "Franska: kapitel 2c, textboken s. 42–43"
+   ],
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Öva extra på det som var svårt på diagnosen",
+     "vad": "Räkna om det du missade i genrepet, eller inför i morgon: felboken",
      "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
-    },
-    {
-     "amne": "Franska",
-     "vad": "Öva fraserna i kapitel 2 högt"
     }
-   ]
+   ],
+   "viktig": true,
+   "notis": "Gå på det läraren sa i fredags om vilken dag provet är."
   },
   {
    "datum": "2026-11-24",
@@ -294,19 +304,21 @@
     "Idrottskläder"
    ],
    "skola": [
-    "Studiestöd 15.30–16.30, bra läge att fråga om matten inför provet"
+    "MATTE: klasskalendern säger delprov 1 idag (planeringen säger tor 26/11)",
+    "Studiestöd 15.30–16.30, bra läge att fråga om matten"
    ],
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Blandade uppgifter kapitel 2 med penna",
+     "vad": "Om provet blir tor–fre: blandade uppgifter kapitel 2 med penna",
      "lank": "https://classroom.google.com/c/MTYyNjE2NTQ1NTMy/p/MTYyNzc1NzU2NzI1/details"
     },
     {
      "amne": "Franska",
-     "vad": "Spela in dig själv när du läser och lyssna"
+     "vad": "Glosor och verb kapitel 2, en kort stund"
     }
-   ]
+   ],
+   "viktig": true
   },
   {
    "datum": "2026-11-25",
@@ -316,7 +328,11 @@
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Gå igenom felboken och räkna om ett par av de missade. Sedan sova i tid."
+     "vad": "Om provet blir tor–fre: felboken och ett par missade uppgifter. Sedan sova i tid."
+    },
+    {
+     "amne": "Franska",
+     "vad": "Läs texten i kapitel 2c högt"
     }
    ],
    "viktig": true
@@ -326,7 +342,7 @@
    "tid": "08.20–16.25",
    "ta_med": [],
    "skola": [
-    "MATTEPROV kapitel 2, del 1",
+    "Matteplaneringen säger provet del 1 idag (kalendern säger 23–24/11)",
     "Studiestöd 15.25–16.25 om du vill"
    ],
    "plugg": [
@@ -335,18 +351,16 @@
      "vad": "Kort titt i felboken inför del 2"
     }
    ],
-   "prov": true,
-   "notis": "Ät frukost. Du har övat i flera veckor, lita på det."
+   "notis": "Gå på det läraren har sagt om vilken dag provet är."
   },
   {
    "datum": "2026-11-27",
    "tid": "08.20–14.35",
    "ta_med": [],
    "skola": [
-    "MATTEPROV kapitel 2, del 2"
+    "Matteplaneringen säger provet del 2 idag"
    ],
-   "plugg": [],
-   "prov": true
+   "plugg": []
   },
   {
    "datum": "2026-11-29",
@@ -354,14 +368,15 @@
    "plugg": [
     {
      "amne": "Franska",
-     "vad": "Öva ett samtal på franska med någon hemma inför muntliga provet"
+     "vad": "Glosor och verb kapitel 2: pouvoir, vouloir, finir",
+     "lank": "https://classroom.google.com/c/NzAzODg1NjQxMTY0/m/ODcyMjEzOTcwNzE4/details"
     },
     {
      "amne": "Franska",
-     "vad": "Läs texterna i kapitel 2 högt en sista gång"
+     "vad": "Objektspronomen (le, la, les): gör några meningar själv"
     }
    ],
-   "notis": "Muntliga provet i franska är i morgon.",
+   "notis": "Skriftliga provet i franska är tor 3/12.",
    "skola": []
   }
  ],
@@ -501,10 +516,10 @@
    }
   },
   {
-   "datum": "2026-11-26",
-   "datum2": "2026-11-27",
+   "datum": "2026-11-23",
+   "datum2": "2026-11-24",
    "amne": "Matte",
-   "titel": "Kapitel 2, del 1 och 2",
+   "titel": "Kapitel 2, del 1 och 2 (datum oklart: 23–24/11 eller 26–27/11)",
    "borja": "2026-11-11",
    "farg": "matte",
    "notebooklm": "Ge mig 10 procentuppgifter i stil med kapitel 2 (förändringsfaktor, procentuella förändringar och ränta). Visa inte svaret förrän jag har svarat, och visa sedan hur man räknar steg för steg.",
@@ -553,7 +568,7 @@
      "kunna": [
       "Gjort ett provgenrep på hela kapitel 2 (NotebookLM-uppgifter eller blandade uppgifter), med penna och utan att titta i exemplen",
       "Räknat om det jag missade",
-      "Genrep tis 24/11"
+      "Genrep sön 22/11"
      ]
     }
    ],
@@ -601,10 +616,47 @@
    }
   },
   {
-   "datum": "2026-11-30",
+   "datum": "2026-12-03",
+   "amne": "Franska",
+   "titel": "Skriftligt prov kapitel 2",
+   "borja": "2026-11-22",
+   "farg": "franska",
+   "lankar": [
+    {
+     "t": "Veckoplanering franska",
+     "url": "https://classroom.google.com/c/NzAzODg1NjQxMTY0/m/ODcyMjEzOTcwNzE4/details"
+    }
+   ],
+   "grupper": [
+    {
+     "rubrik": "Kapitel 2 enligt veckoplaneringen",
+     "typ": "gora",
+     "kunna": [
+      "2a: pouvoir och vouloir (textboken s. 34–35)",
+      "2b: finir (textboken s. 38–40)",
+      "2b: objektspronomen som direkt objekt",
+      "2c: textboken s. 42–43",
+      "Glosorna i kapitel 2"
+     ]
+    },
+    {
+     "rubrik": "Testa dig själv",
+     "typ": "gora",
+     "kunna": [
+      "Gjort ett NotebookLM-quiz på verben och glosorna",
+      "Gjort om quizet på det jag missade",
+      "Genrep mån 30/11"
+     ]
+    }
+   ],
+   "notebooklm": "Du är min fransklärare. Förhör mig på kapitel 2: böj pouvoir, vouloir och finir i presens, och ge mig meningar där jag ska byta ut ett substantiv mot le, la eller les. En fråga i taget, rätta och förklara kort. Avsluta med en lista över det jag ska öva mer på.",
+   "kallor": "Lägg in foton av textboken s. 34–35, 38–40 och 42–43 och övningsboken."
+  },
+  {
+   "datum": "2026-12-07",
    "amne": "Franska",
    "titel": "Muntligt prov kapitel 2",
-   "borja": "2026-11-12",
+   "borja": "2026-11-23",
    "farg": "franska",
    "tips": "Prata högt, gärna med någon hemma eller spela in dig själv och lyssna.",
    "notebooklm": "Du är min fransklärare. Ställ enkla frågor på franska om texterna i kapitel 2, en i taget. Jag svarar högt och skriver sedan in vad jag sa. Rätta mig vänligt och föreslå ett bättre sätt att säga det.",
@@ -643,24 +695,8 @@
      "kunna": [
       "Haft ett samtal på franska med någon hemma utan manus",
       "Övat igen på det som var svårt",
-      "Genrep sön 29/11"
+      "Genrep sön 6/12"
      ]
-    }
-   ]
-  },
-  {
-   "datum": "2026-12-07",
-   "amne": "Franska",
-   "titel": "Skriftligt prov kapitel 2",
-   "borja": "2026-11-23",
-   "farg": "franska",
-   "kunna": [
-    "Glosor och verb i kapitel 2"
-   ],
-   "lankar": [
-    {
-     "t": "Veckoplanering franska",
-     "url": "https://classroom.google.com/c/NzAzODg1NjQxMTY0/m/ODcyMjEzOTcwNzE4/details"
     }
    ]
   },
@@ -693,7 +729,7 @@
   },
   {
    "datum": "2026-12-02",
-   "text": "Kemi: kort repetition, ett NotebookLM-quiz på det du missade på provet (10 min). Då sitter det kvar till åk 9."
+   "text": "Kemi: kort repetition, ett NotebookLM-quiz på det du missade på provet (10 min). Så håller du kunskapen levande till åk 9."
   },
   {
    "datum": "2026-12-11",
@@ -701,11 +737,15 @@
   },
   {
    "datum": "2026-12-15",
-   "text": "Hemkunskap grupp 1 och betygssamtal i franska"
+   "text": "Hemkunskap grupp 1"
   },
   {
    "datum": "2026-12-17",
    "text": "Mentorsdag"
+  },
+  {
+   "datum": "2026-12-17",
+   "text": "Betygsprat i franska (enligt planeringen), samma dag som mentorsdagen i kalendern"
   },
   {
    "datum": "2026-12-18",
@@ -718,16 +758,16 @@
  "jullov": "2026-12-18",
  "kolla": [],
  "bra": [
-  "Alla pluggpass måndag och tisdag är avbockade, och kemi-genrepet är gjort.",
-  "22 av 23 punkter i kemi avbockade inför provet på fredag. Du började tidigt och det märks.",
+  "Kemi: alla 23 punkter avbockade och testat dig själv 4 av 4 gånger.",
+  "Alla pluggpass onsdag och torsdag avbockade.",
   "Inga uppgifter saknas i Classroom."
  ],
  "veckans_teknik": {
-  "titel": "Testa dig utan bok",
-  "text": "Att känna igen något när man läser det är inte samma sak som att kunna det. Gör därför kemi-genrepet på tisdag som på riktigt: stäng boken, sätt en timer och svara på ett NotebookLM-prov utan att kika. Rätta efteråt och plugga bara det du missade. Samma knep funkar för matten: räkna utan att titta i lösningarna först.",
+  "titel": "Penna, inte facit",
+  "text": "I matte är det lätt att tro att man kan när man läser lösningen. Gör tvärtom i helgen: välj en uppgift per rubrik på provkortet, räkna den med penna utan att titta, och kolla facit först efteråt. Det du missar skriver du i felboken. Det är den du tittar i kvällen före provet.",
   "extra": [
    "Korta pass, 25 min fokus och 5 min paus. Mobilen i ett annat rum.",
-   "Byt ämne mellan passen: lite kemi, lite matte. Hjärnan gillar omväxling.",
+   "Säg högt vilken metod du väljer innan du räknar: delen, det hela eller förändringsfaktor.",
    "Kvällen före ett prov: lätt repetition och sova i tid slår en sista lång plugg-timme."
   ]
  },
@@ -797,13 +837,13 @@
  "ovriga": [
   {
    "amne": "Svenska",
-   "vad": "Pågående uppgift i Classroom: Argumenterande text (uppdaterad 11/11). Inget datum.",
-   "url": "https://classroom.google.com/c/MTYyNzE3MDM3NTUy/a/MjU0MDA3ODg5Njk/details"
+   "vad": "Ny PowerPoint om ordklasser (20/11). Pågående uppgift: Argumenterande text, inget datum.",
+   "url": "https://classroom.google.com/c/MTYyNzE3MDM3NTUy/m/MTYyODUzOTM4MzE4/details"
   },
   {
    "amne": "Engelska",
-   "vad": "Uppgift i Classroom: Horror story. Inget datum.",
-   "url": "https://classroom.google.com/c/MTYyNzE3MjgzNTA5/a/MjU0NzUyNTY4NDI/details"
+   "vad": "Nytt material: The survival challenge (20/11). Uppgiften Horror story har inget datum.",
+   "url": "https://classroom.google.com/c/MTYyNzE3MjgzNTA5/m/MjU1OTQ2Mzc3ODg/details"
   },
   {
    "amne": "SO",
@@ -819,7 +859,7 @@
  "fragor": [
   {
    "amne": "Matte",
-   "fraga": "Lärarens planering säger diagnos på kapitel 2 tor 19/11, men du har sagt att den redan är gjord. Kolla med läraren på måndag: blir det någon diagnos på torsdag, eller var det den ni gjorde förra veckan?"
+   "fraga": "Klasskalendern säger matteprov mån 23/11 (del 2) och tis 24/11 (del 1), men planeringen säger tor 26/11 och fre 27/11. Vilka dagar gäller? Och blev det någon diagnos, och kan jag få se resultatet?"
   },
   {
    "amne": "Fysik/teknik",
@@ -831,7 +871,7 @@
   },
   {
    "amne": "Franska",
-   "fraga": "Hur går muntliga provet mån 30/11 till, och vad bedöms?"
+   "fraga": "Planeringen säger nu skriftligt prov tor 3/12 och muntligt mån 7/12. Stämmer det, och hur går muntliga provet till?"
   },
   {
    "amne": "Kemi",
