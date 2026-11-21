@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Diagnos kapitel 2 · rättad</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=Patrick+Hand&family=Caveat:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9ecef;--paper:#fff;--ink:#16181d;--mut:#62666e;--line:#d9dde3;--band:#0a84d6;--bandbg:#e3f1fb;--yel:#f6c400;--acc:#ff6b2c}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Source Serif 4",Georgia,serif;padding:max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) 60px max(10px,env(safe-area-inset-left))}
+main{max-width:860px;margin:0 auto}
+.sheet{background:var(--paper);border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 8px 30px rgba(0,0,0,.06);margin:0 0 18px;overflow:hidden}
+.band{background:var(--band);color:#fff;padding:9px 18px;font:700 14px/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between}
+.in{padding:22px clamp(16px,4vw,40px) 26px}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(28px,6vw,40px);font-weight:800;line-height:1.05}
+h2{font-size:24px;margin:4px 0 6px}
+.sub{font:600 14px Inter,sans-serif;color:var(--mut);letter-spacing:.04em;text-transform:uppercase;margin-top:6px}
+.info{font:15px/1.5 Inter,sans-serif;background:var(--bandbg);border-radius:12px;padding:14px 16px;margin-top:16px}
+.info ol,.info ul{margin:6px 0 0;padding-left:20px}.info li{margin:3px 0}
+.info b{font-weight:700}
+.legend{font:13px/1.5 Inter,sans-serif;color:var(--mut);margin-top:12px}
+.legend b{color:var(--ink);font-weight:700;letter-spacing:.06em}
+.delhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.delhead .tag{font:600 13px Inter,sans-serif;background:#f1f3f5;border-radius:999px;padding:5px 11px;color:var(--mut)}
+.q{display:grid;grid-template-columns:46px 1fr auto;gap:0 10px;padding:20px 0;border-top:1px solid var(--line)}
+.q:first-of-type{border-top:0}
+.num{font:800 24px/1.1 "Bricolage Grotesque",Inter,sans-serif;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.abil{font:600 14px Inter,sans-serif;letter-spacing:.12em;color:#3a3f47;white-space:nowrap;padding-top:4px}
+.body p{margin:0 0 8px}
+.subs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 18px;margin:6px 0 4px}
+.subs.two{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.subs div{white-space:normal}
+.fig{display:flex;flex-wrap:wrap;gap:22px 34px;align-items:flex-end;margin:10px 0 2px}
+.fig figure{margin:0;display:flex;gap:8px;align-items:flex-start}
+.fig figcaption{font-size:17px}
+table.t{border-collapse:collapse;margin:10px 0 4px;font:16px Inter,sans-serif;min-width:min(100%,520px)}
+.t th,.t td{border:1.5px solid #333;padding:9px 14px;text-align:center}
+.t th{font-style:italic;font-weight:500;background:#fafafa}
+.t td.l{border:0;text-align:right;padding-right:8px;font-family:"Source Serif 4",serif;font-size:17px}
+.scroll{overflow-x:auto}
+.clip{font-family:Georgia,serif;border-left:1.5px solid #555;border-right:1.5px solid #555;padding:8px 12px;max-width:290px;margin:10px 0 4px;background:#fcfcfa}
+.clip h4{margin:0 0 4px;font:600 22px/1.1 Inter,sans-serif}
+.clip p{margin:0;font-size:13.5px;line-height:1.35;text-align:justify}
+.star{color:var(--acc);font-size:20px;line-height:1}
+.calc{width:30px;height:34px}
+.done{font:15px/1.55 Inter,sans-serif}
+.done h3{font-size:22px;margin-bottom:8px}
+.note{font:13px Inter,sans-serif;color:var(--mut);margin-top:10px}
+@media(max-width:520px){.q{grid-template-columns:38px 1fr}.abil{grid-column:2;padding:0 0 6px;order:-1}body{font-size:16.5px}}
+@media print{body{background:#fff;padding:0}.sheet{box-shadow:none;break-inside:auto}.q{break-inside:avoid}}
+
+.task{padding:18px 0 22px;border-top:1px solid var(--line)}
+.task:first-of-type{border-top:0}
+.task .q{border:0;padding:0 0 10px}
+.ansrow{display:flex;gap:12px;align-items:flex-start;margin-left:56px}
+.paper{flex:1;min-width:0;background:#fffef8 repeating-linear-gradient(to bottom,transparent 0,transparent 37px,#c9d7ea 37px,#c9d7ea 38px);border-left:2px solid #f0b4b4;border-radius:4px;padding:3px 12px 6px 14px;box-shadow:0 1px 2px rgba(0,0,0,.06);font-family:"Patrick Hand","Comic Sans MS",cursive;font-size:19px;color:#3c3f45;line-height:38px}
+.l{min-height:38px;display:flex;flex-wrap:wrap;align-items:center;column-gap:4px;line-height:1.25;padding:3px 0}
+.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-size:.8em;line-height:1.05;margin:0 2px}
+.fr span:first-child{border-bottom:1.6px solid currentColor;padding:0 3px}
+.fr span{padding:0 3px}
+.u{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px}
+.ok{font-family:Caveat,cursive;color:#d0021b;font-weight:700;font-size:1.35em;line-height:1;transform:rotate(-6deg);display:inline-block}
+.rn{font-family:Caveat,cursive;color:#d0021b;font-weight:600;font-size:1.12em;line-height:1.15}
+.wr{text-decoration:underline wavy #d0021b;text-decoration-thickness:1.6px;text-underline-offset:4px}
+.wr .fr span:first-child{border-color:#3c3f45}
+.pts{flex:none;width:74px;height:74px;border:2.5px solid #d0021b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Caveat,cursive;color:#d0021b;font-size:19px;font-weight:700;transform:rotate(-8deg);background:rgba(255,255,255,.6)}
+.pts span{font-size:28px;margin-right:2px}
+.pts.strike span{font-size:22px}
+.fixlbl{margin:12px 0 4px 56px;font:700 12.5px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#d0021b}
+.fix{margin-left:56px;background-color:#fff8f8;border-left-color:#d0021b}
+.fix .rn{color:#b0001a}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.name{font-family:"Patrick Hand",cursive;font-size:22px;color:#3c3f45;border-bottom:1.5px solid #999;padding:0 30px 0 4px;margin-top:10px;display:inline-block}
+.bigscore{font-family:Caveat,cursive;color:#d0021b;font-weight:700;font-size:44px;line-height:1;border:3px solid #d0021b;border-radius:50%;width:140px;height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-7deg)}
+.bigscore small{font-size:22px}
+.legend2{font:13.5px/1.6 Inter,sans-serif;color:var(--mut);margin-top:14px}
+.legend2 .rn{font-size:17px}
+table.sum{border-collapse:collapse;font:15px Inter,sans-serif;margin:8px 0}
+.sum td,.sum th{border-bottom:1px solid var(--line);padding:6px 14px;text-align:left}
+.sum tr.t td{font-weight:800;border-top:2px solid #333;font-size:17px}
+.sumgrid{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center}
+.hand-note{font-family:Caveat,cursive;color:#d0021b;font-size:24px;line-height:1.25;font-weight:600;margin-top:12px}
+@media(max-width:560px){.ansrow{margin-left:0;flex-direction:column-reverse;align-items:flex-end}.ansrow .paper{width:100%}.fixlbl,.fix{margin-left:0}.paper{font-size:17.5px}.pts{width:64px;height:64px;margin-bottom:-6px}}
+</style></head>
+<body><main>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="calc" viewBox="0 0 30 34"><rect x="1" y="1" width="28" height="32" rx="3" fill="#8e98a6"/><rect x="5" y="5" width="20" height="7" rx="1" fill="#eef1f4"/>
+<g fill="#eef1f4"><rect x="5" y="15" width="4" height="3"/><rect x="11" y="15" width="4" height="3"/><rect x="17" y="15" width="4" height="3"/><rect x="23" y="15" width="2.5" height="3"/>
+<rect x="5" y="20.5" width="4" height="3"/><rect x="11" y="20.5" width="4" height="3"/><rect x="17" y="20.5" width="4" height="3"/><rect x="23" y="20.5" width="2.5" height="3"/>
+<rect x="5" y="26" width="4" height="3"/><rect x="11" y="26" width="4" height="3"/><rect x="17" y="26" width="4" height="3"/><rect x="23" y="26" width="2.5" height="3"/></g></symbol>
+</defs></svg>
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Rättad</span></div>
+<div class="in"><div class="top"><div>
+<h1>Diagnos kapitel 2</h1>
+<div class="sub">Samband och förändring · version A · rättad</div>
+<div class="name">Namn: Hugo</div>
+<div class="legend2">Blyerts = det du skrev. <span class="rn">Rödpenna</span> = rättning och kommentarer. <span class="ok">✓</span> = rätt. <span class="wr">Vågigt streck</span> = här blev det fel. Där det behövs finns ett fullpoängssvar under ditt svar.</div>
+</div>
+<div class="bigscore">29/38<small>poäng</small></div></div>
+<p class="hand-note">Bra jobbat, Hugo! Tydlig uppställning och mycket rätt.<br>Kolla ränta baklänges, avrundning och "varför" inför måndag.</p>
+</div></section>
+
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Diagnos kap 2 · A · rättad</span></div><div class="in">
+<div class="delhead"><h2>Del I</h2><span class="tag">Utan räknare</span></div>
+<div class="task"><div class="q"><div class="num"><span>1</span></div><div class="body">
+<p>Hur många procent av figurerna är gula?</p>
+<div class="fig">
+<figure><figcaption>a)</figcaption>
+<svg width="150" height="62" viewBox="0 0 150 62" aria-label="Rektangel med 20 rutor, 7 gula">
+<g stroke="#222" stroke-width="1.4">
+<rect x="1" y="1" width="29.6" height="30" fill="#f6c400"/><rect x="30.6" y="1" width="29.6" height="30" fill="#f6c400"/><rect x="60.2" y="1" width="29.6" height="30" fill="#f6c400"/><rect x="89.8" y="1" width="29.6" height="30" fill="#f6c400"/><rect x="119.4" y="1" width="29.6" height="30" fill="#fff"/>
+<rect x="1" y="31" width="29.6" height="30" fill="#f6c400"/><rect x="30.6" y="31" width="29.6" height="30" fill="#f6c400"/><rect x="60.2" y="31" width="29.6" height="30" fill="#f6c400"/><rect x="89.8" y="31" width="29.6" height="30" fill="#fff"/><rect x="119.4" y="31" width="29.6" height="30" fill="#fff"/>
+</g>
+</svg></figure>
+<figure><figcaption>b)</figcaption>
+<svg width="96" height="96" viewBox="-48 -48 96 96" aria-label="Cirkel i 8 lika delar, 3 gula">
+<path d="M0 0 L0 -46 A46 46 0 0 1 32.53 -32.53 Z" fill="#f6c400"/>
+<path d="M0 0 L32.53 -32.53 A46 46 0 0 1 46 0 Z" fill="#f6c400"/>
+<path d="M0 0 L46 0 A46 46 0 0 1 32.53 32.53 Z" fill="#f6c400"/>
+<circle r="46" fill="none" stroke="#222" stroke-width="1.6"/>
+<g stroke="#222" stroke-width="1.3"><line x1="0" y1="-46" x2="0" y2="46"/><line x1="-46" y1="0" x2="46" y2="0"/><line x1="-32.53" y1="-32.53" x2="32.53" y2="32.53"/><line x1="-32.53" y1="32.53" x2="32.53" y2="-32.53"/></g>
+</svg></figure>
+<figure><figcaption>c)</figcaption>
+<svg width="96" height="96" viewBox="0 0 96 96" aria-label="Kvadrat med 25 rutor, 9 gula">
+<g stroke="#222" stroke-width="1.2">
+<rect x="1" y="1" width="18.8" height="18.8" fill="#f6c400"/><rect x="19.8" y="1" width="18.8" height="18.8" fill="#fff"/><rect x="38.6" y="1" width="18.8" height="18.8" fill="#f6c400"/><rect x="57.4" y="1" width="18.8" height="18.8" fill="#fff"/><rect x="76.2" y="1" width="18.8" height="18.8" fill="#f6c400"/>
+<rect x="1" y="19.8" width="18.8" height="18.8" fill="#fff"/><rect x="19.8" y="19.8" width="18.8" height="18.8" fill="#f6c400"/><rect x="38.6" y="19.8" width="18.8" height="18.8" fill="#fff"/><rect x="57.4" y="19.8" width="18.8" height="18.8" fill="#f6c400"/><rect x="76.2" y="19.8" width="18.8" height="18.8" fill="#fff"/>
+<rect x="1" y="38.6" width="18.8" height="18.8" fill="#f6c400"/><rect x="19.8" y="38.6" width="18.8" height="18.8" fill="#fff"/><rect x="38.6" y="38.6" width="18.8" height="18.8" fill="#f6c400"/><rect x="57.4" y="38.6" width="18.8" height="18.8" fill="#fff"/><rect x="76.2" y="38.6" width="18.8" height="18.8" fill="#fff"/>
+<rect x="1" y="57.4" width="18.8" height="18.8" fill="#fff"/><rect x="19.8" y="57.4" width="18.8" height="18.8" fill="#f6c400"/><rect x="38.6" y="57.4" width="18.8" height="18.8" fill="#fff"/><rect x="57.4" y="57.4" width="18.8" height="18.8" fill="#fff"/><rect x="76.2" y="57.4" width="18.8" height="18.8" fill="#fff"/>
+<rect x="1" y="76.2" width="18.8" height="18.8" fill="#f6c400"/><rect x="19.8" y="76.2" width="18.8" height="18.8" fill="#fff"/><rect x="38.6" y="76.2" width="18.8" height="18.8" fill="#fff"/><rect x="57.4" y="76.2" width="18.8" height="18.8" fill="#fff"/><rect x="76.2" y="76.2" width="18.8" height="18.8" fill="#fff"/>
+</g></svg></figure>
+</div>
+</div><div class="abil">M</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">a) <span class="fr"><span>7</span><span>10</span></span> = <span class="u">70%</span> <span class="ok">✓</span>&nbsp;&nbsp; b) <span class="fr"><span>3</span><span>8</span></span> = <span class="u">37,5%</span> <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">c) <span class="fr"><span>9×5</span><span>20×5</span></span> = <span class="fr"><span>45</span><span>100</span></span> = <span class="wr">45%</span> <span class="rn">Räkna rutorna igen: 5 · 5 = 25 st. 9/25 = 36 %</span></div></div><div class="pts"><span>2/3</span> p</div></div></div><div class="task"><div class="q"><div class="num"><span>2</span></div><div class="body">
+<p>Beräkna. Visa hur du tänker.</p>
+<div class="subs"><div>a) 25 % av 360 kr</div><div>b) 15 % av 80 kr</div><div>c) 1 % av 4 500 kr</div><div>d) 120 % av 50 kr</div></div>
+</div><div class="abil">M K</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">a) 25% av 360kr = <span class="fr"><span>360</span><span>4</span></span> = 90kr <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">b) 15% av 80kr = 5% av 80kr × 3 =</div><div class="l" style="padding-left:0.0em">4kr × 3 = 12kr <span class="ok">✓</span> <span class="rn">Smart!</span></div><div class="l" style="padding-left:0.0em">c) 1% av 4500kr = <span class="fr"><span>45<s>00</s></span><span>1<s>00</s></span></span> = <span class="fr"><span>45</span><span>1</span></span> = 45kr <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">d) 120% av 50kr = 50kr + 10kr = 60kr <span class="ok">✓</span></div></div><div class="pts"><span>4/4</span> p</div></div></div><div class="task"><div class="q"><div class="num"><span>3</span></div><div class="body">
+<p>Skriv av tabellen och fyll i det som saknas. Bråken ska stå i enklaste form.</p>
+<div class="scroll"><table class="t">
+<tr><td class="l"></td><th>Bråk</th><th>Decimaltal</th><th>Procent</th></tr>
+<tr><td class="l">a)</td><td>3/4</td><td></td><td></td></tr>
+<tr><td class="l">b)</td><td></td><td>0,08</td><td></td></tr>
+<tr><td class="l">c)</td><td></td><td></td><td>45 %</td></tr>
+<tr><td class="l">d)</td><td>1/8</td><td></td><td></td></tr>
+</table></div>
+</div><div class="abil">B M</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">a) Decimaltal: 0,75 &nbsp; Procent = 75% <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">b) Bråk = <span class="fr"><span>8/4</span><span>100/4</span></span> = <span class="fr"><span>2</span><span>25</span></span> &nbsp; Procent = 8% <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">c) Bråk = <span class="fr"><span>45/5</span><span>100/5</span></span> = <span class="fr"><span>9</span><span>20</span></span> &nbsp; Decimaltal = 0,45 <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">d) Decimaltal = 0,125 &nbsp; Procent = 12,5% <span class="ok">✓</span></div></div><div class="pts"><span>4/4</span> p</div></div></div><div class="task"><div class="q"><div class="num"><span>4</span></div><div class="body">
+<p>I klass 8B går 30 elever. 12 av dem tränar i en idrottsförening.</p>
+<div class="subs"><div>a) Vilket tal är <i>delen</i>?</div><div>b) Vilket tal är <i>det hela</i>?</div><div>c) Hur stor är <i>andelen</i>? Svara i procent.</div></div>
+</div><div class="abil">B</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">8B 30elever 12st i idrottsförening</div><div class="l" style="padding-left:0.0em">a) 12 <span class="ok">✓</span> &nbsp; b) 30 <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">c) <span class="fr"><span>12/3</span><span>30/3</span></span> = <span class="fr"><span>4</span><span>10</span></span> = 40% <span class="ok">✓</span></div></div><div class="pts"><span>3/3</span> p</div></div></div><div class="task"><div class="q"><div class="num"><span>5</span></div><div class="body">
+<p>Diagrammet visar hur stor andel av eleverna på en skola som cyklar till skolan.</p>
+<svg width="300" height="190" viewBox="0 0 300 190" style="max-width:100%;margin:6px 0 8px" aria-label="Stapeldiagram: 2025 20 procent, 2026 25 procent">
+<g font-family="Inter,sans-serif" font-size="12" fill="#333">
+<text x="6" y="14" font-weight="600">Andel som cyklar</text>
+<g stroke="#ccd2da" stroke-width="1"><line x1="44" y1="126" x2="290" y2="126"/><line x1="44" y1="102" x2="290" y2="102"/><line x1="44" y1="78" x2="290" y2="78"/><line x1="44" y1="54" x2="290" y2="54"/><line x1="44" y1="30" x2="290" y2="30"/></g>
+<line x1="44" y1="150" x2="290" y2="150" stroke="#222" stroke-width="1.5"/><line x1="44" y1="24" x2="44" y2="150" stroke="#222" stroke-width="1.5"/>
+<text x="38" y="154" text-anchor="end">0 %</text><text x="38" y="130" text-anchor="end">5 %</text><text x="38" y="106" text-anchor="end">10 %</text><text x="38" y="82" text-anchor="end">15 %</text><text x="38" y="58" text-anchor="end">20 %</text><text x="38" y="34" text-anchor="end">25 %</text>
+<rect x="85" y="54" width="56" height="96" fill="#0a84d6"/><rect x="190" y="30" width="56" height="120" fill="#0a84d6"/>
+<text x="113" y="172" text-anchor="middle">2025</text><text x="218" y="172" text-anchor="middle">2026</text>
+</g></svg>
+<div class="subs two"><div>a) Hur många <b>procentenheter</b> ökade andelen?</div><div>b) Hur många <b>procent</b> ökade andelen?</div></div>
+<p style="margin-top:6px">c) Förklara med egna ord varför svaren i a) och b) blir olika.</p>
+</div><div class="abil">B R K</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">a) 25% − 20% = 5 procentenheter <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">b) <span class="fr"><span>5/5</span><span>20/5</span></span> = <span class="fr"><span>1</span><span>4</span></span> = 25% <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">c) Procentenheter visar skillnaden. och procent visar <span class="wr">ökningen.</span></div><div class="l" style="padding-left:0.0em"><span class="rn">Nästan! Säg jämfört med vad: ökningen jämfört med det man hade från början (20 %).</span></div></div><div class="pts"><span>2/3</span> p</div></div><div class="fixlbl">Så hade ett fullpoängssvar sett ut</div><div class="paper fix"><div class="l" style="padding-left:0.0em"><span class="rn">a) 25 % − 20 % = 5 procentenheter</span></div><div class="l" style="padding-left:0.0em"><span class="rn">b) 5/20 = 0,25 = 25 %</span></div><div class="l" style="padding-left:0.0em"><span class="rn">c) Procentenheter är skillnaden mellan två procentsatser.</span></div><div class="l" style="padding-left:0.0em"><span class="rn">Procent visar hur stor ökningen är jämfört med</span></div><div class="l" style="padding-left:0.0em"><span class="rn">det man hade från början: 5 av 20 är 25 %.</span></div></div></div><div class="task"><div class="q"><div class="num"><span>6</span></div><div class="body">
+<p>Skriv förändringsfaktorn när ett pris</p>
+<div class="subs"><div>a) ökar med 30 %</div><div>b) minskar med 15 %</div><div>c) minskar med 4 %</div><div>d) ökar med 100 %</div></div>
+<p style="margin-top:8px">Vad har hänt med ett pris som multipliceras med</p>
+<div class="subs"><div>e) 0,7</div><div>f) 1,05</div></div>
+</div><div class="abil">B M</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">a) x · 0,3 &nbsp;&nbsp; b) 0,15 · x &nbsp;&nbsp; c) 0,04 · x &nbsp;&nbsp; d) x + x</div><div class="l" style="padding-left:0.0em">e) Priset sänks för att det är <span class="u">lägre</span> än 1</div><div class="l" style="padding-left:0.0em">f) Priset höjs för att det är <span class="u">högre</span> än 1</div><div class="l" style="padding-left:0.0em"><span class="rn">Stryks! Förändringsfaktor har ni inte gått igenom, så uppgiften räknas inte. Mitt fel, inte ditt.</span></div></div><div class="pts strike"><span>stryks</span></div></div></div><div class="task"><div class="q"><div class="num"><span>7</span><span class="star">✩</span></div><div class="body">
+<p>Två butiker säljer samma jacka för samma pris. Butik A sänker priset med 10 %, och veckan efter sänker de det nya priset med 10 % igen. Butik B sänker priset med 20 % en enda gång.</p>
+<p>Var blir jackan billigast? Visa med en beräkning och förklara varför det blir så.</p>
+</div><div class="abil">P R K</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">A. sänker med 10%</div><div class="l" style="padding-left:1.2em">efter 2 veckor med 10%</div><div class="l" style="padding-left:0.0em">B. sänker med 20%</div><div class="l" style="padding-left:0.0em">Ex. <span class="u">Jacka pris = 500kr</span> <span class="rn">Bra idé!</span></div><div class="l" style="padding-left:0.0em">A. 500kr 10% = 500kr − 50kr = 450kr</div><div class="l" style="padding-left:1.2em">450kr − 10% = 450kr − 45kr = <span class="u">405kr</span> <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">B. 500kr − 20% = 500 − 100kr = <span class="u">400kr</span> <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">SVAR: <span class="u">Jackan i butik B är billigast.</span> <span class="ok">✓</span> Anledningen är för att</div><div class="l" style="padding-left:0.0em">de sänker priset från början direkt</div><div class="l" style="padding-left:0.0em">med 20%. Butik A sänker först</div><div class="l" style="padding-left:0.0em">10% och sen 10%. <span class="rn">Det här är vad som händer, men varför?</span></div><div class="l" style="padding-left:0.0em"><span class="rn">Varför blir 2 · 10 % mindre än 20 %? Se nedan.</span></div></div><div class="pts"><span>1/2</span> p</div></div><div class="fixlbl">Så hade ett fullpoängssvar sett ut</div><div class="paper fix"><div class="l" style="padding-left:0.0em"><span class="rn">SVAR: Butik B är billigast, 400 kr mot 405 kr.</span></div><div class="l" style="padding-left:0.0em"><span class="rn">Det blir så eftersom A:s andra sänkning räknas på</span></div><div class="l" style="padding-left:0.0em"><span class="rn">det lägre priset 450 kr. 10 % av 450 kr är bara 45 kr,</span></div><div class="l" style="padding-left:0.0em"><span class="rn">medan B sänker 20 % av hela 500 kr = 100 kr.</span></div></div></div>
+</div></section>
+
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Diagnos kap 2 · A · rättad</span></div><div class="in">
+<div class="delhead"><h2>Del II</h2><span class="tag">Räknare tillåten</span></div>
+<div class="task"><div class="q"><div class="num"><span>8</span><svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Sara har sparat 1 360 kr till en cykel. Det är 34 % av vad cykeln kostar. Vad kostar cykeln?</p>
+</div><div class="abil">M</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">1360kr</div><div class="l" style="padding-left:0.0em">1360kr = 34% av vad cykeln kostar.</div><div class="l" style="padding-left:0.0em">1% av cykeln = <span class="fr"><span>1360</span><span>34</span></span> = <span class="u">40kr</span></div><div class="l" style="padding-left:0.0em">100% = 40 × 100 = <span class="u">4000kr</span> <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em"><span class="u">SVAR: Cykeln kostar 4000kr</span> <span class="rn">Mycket bra uppställning!</span></div></div><div class="pts"><span>2/2</span> p</div></div></div><div class="task"><div class="q"><div class="num"><span>9</span><svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Ett par hörlurar är nedsatta. Hur många procent har priset sänkts? Avrunda till hela procent.</p>
+<svg width="250" height="120" viewBox="0 0 250 120" style="max-width:100%;margin:6px 0" aria-label="Prislapp: förr 1 249 kr, nu 949 kr">
+<path d="M30 8 H236 a6 6 0 0 1 6 6 V106 a6 6 0 0 1 -6 6 H30 L6 60 Z" fill="#fff4cc" stroke="#222" stroke-width="1.6"/>
+<circle cx="28" cy="60" r="6" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<g font-family="Inter,sans-serif" fill="#222">
+<text x="56" y="38" font-size="15">Förr</text><text x="120" y="38" font-size="20" font-weight="600">1 249 kr</text>
+<line x1="118" y1="31" x2="214" y2="31" stroke="#c0392b" stroke-width="2.2"/>
+<text x="56" y="88" font-size="15">Nu</text><text x="112" y="92" font-size="38" font-weight="800" fill="#c0392b">949 kr</text>
+</g></svg>
+</div><div class="abil">M K</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">Förr = 1249kr</div><div class="l" style="padding-left:0.0em">Nu = 949kr</div><div class="l" style="padding-left:0.0em">skillnaden = 1249 − 949 = <span class="u">300kr</span> <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">Pris sänkning = <span class="fr"><span>300</span><span>1249</span></span> = 0,240... × 100 = <span class="rn">←&nbsp;rätt tal att dela med!</span></div><div class="l" style="padding-left:7.199999999999999em"><span class="u">24% sänkning</span> <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">SVAR: <span class="u">Priset har sänkts med 24%</span></div></div><div class="pts"><span>2/2</span> p</div></div></div><div class="task"><div class="q"><div class="num"><span>10</span><svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Skriv av tabellen och fyll i det som saknas.</p>
+<div class="scroll"><table class="t">
+<tr><td class="l"></td><th>Kapital</th><th>Räntesats</th><th>Tid</th><th>Ränta</th></tr>
+<tr><td class="l">a)</td><td>18 000 kr</td><td>3,5 %</td><td>1 år</td><td>?</td></tr>
+<tr><td class="l">b)</td><td>6 400 kr</td><td>?</td><td>1 år</td><td>208 kr</td></tr>
+<tr><td class="l">c)</td><td>15 000 kr</td><td>4 %</td><td>9 månader</td><td>?</td></tr>
+<tr><td class="l">d)</td><td>?</td><td>2,5 %</td><td>1/2 år</td><td>375 kr</td></tr>
+</table></div>
+</div><div class="abil">M P B</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">a) Ränta = 0,035 × 18000kr = <span class="u">630kr</span> <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">b) Räntesats = <span class="wr"><span class="fr"><span>6400</span><span>208</span></span></span> = <span class="wr">30,7%</span> <span class="rn">Upp och ner! Ränta ÷ kapital. 30 % ränta är inte rimligt.</span></div><div class="l" style="padding-left:0.0em">c) Ränta = 0,04 × 15000kr = 600kr/år</div><div class="l" style="padding-left:1.2em">3 mån = <span class="fr"><span>600</span><span>4</span></span> = 150kr</div><div class="l" style="padding-left:1.2em">9 mån = 150×3 = <span class="u">450kr</span> <span class="ok">✓</span> <span class="rn">Smart med ett kvartal!</span></div><div class="l" style="padding-left:0.0em">d) Kapital = <span class="fr"><span>375</span><span>0,025</span></span> = <span class="wr">15000kr</span> <span class="rn">375 kr är bara för ett halvår!</span></div></div><div class="pts"><span>2/4</span> p</div></div><div class="fixlbl">Så hade ett fullpoängssvar sett ut</div><div class="paper fix"><div class="l" style="padding-left:0.0em"><span class="rn">b) Räntesats = 208 / 6400 = 0,0325 = 3,25 %  (rimligt ✓)</span></div><div class="l" style="padding-left:0.0em"><span class="rn">d) På ett helt år: 375 · 2 = 750 kr</span></div><div class="l" style="padding-left:1.2em"><span class="rn">Kapital = 750 / 0,025 = 30 000 kr</span></div><div class="l" style="padding-left:1.2em"><span class="rn">Koll: 2,5 % av 30 000 = 750 kr/år, ett halvår = 375 kr ✓</span></div></div></div><div class="task"><div class="q"><div class="num"><span>11</span><svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<div class="clip"><h4>Lägenhet steg – och sjönk</h4>
+<p>LUND (LT) En lägenhet som såldes för 2 400 000 kr har haft ett händelserikt år. Först steg priset med 6 %. Sedan sjönk det med 4 % från det nya priset.</p></div>
+<div class="subs two" style="margin-top:10px"><div>a) Vad kostar lägenheten nu?</div><div>b) Hur många procent har priset förändrats totalt? Avrunda till en decimal.</div></div>
+</div><div class="abil">M P</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">a) Pris nu = 2400000kr <span class="wr">− 6%</span> = <span class="rn">"steg" = upp, alltså + 6 %</span></div><div class="l" style="padding-left:0.0em">2400000 − 144000 = 2256000kr.</div><div class="l" style="padding-left:0.0em">2256000kr − 4% = 2256000kr − <span class="rn">✓ rätt att ta 4 % av det nya priset</span></div><div class="l" style="padding-left:0.0em">90 240kr = <span class="u">2 165 760kr</span></div><div class="l" style="padding-left:0.0em"><span class="rn">Rätt metod, men läste fel i början → 1 av 2</span></div><div class="l" style="padding-left:0.0em">b) 2400000kr − 2165760kr = 234 240kr</div><div class="l" style="padding-left:0.0em"><span class="fr"><span>234 240</span><span>2400000</span></span> = 0,09... × 100 = <span class="u">9,8%</span> <span class="ok">✓</span> <span class="rn">rätt räknat med dina siffror</span></div></div><div class="pts"><span>2/3</span> p</div></div><div class="fixlbl">Så hade ett fullpoängssvar sett ut</div><div class="paper fix"><div class="l" style="padding-left:0.0em"><span class="rn">a) Steg 6 %: 6 % av 2 400 000 = 144 000</span></div><div class="l" style="padding-left:1.2em"><span class="rn">2 400 000 + 144 000 = 2 544 000 kr</span></div><div class="l" style="padding-left:0.0em"><span class="rn">Sjönk 4 %: 4 % av 2 544 000 = 101 760</span></div><div class="l" style="padding-left:1.2em"><span class="rn">2 544 000 − 101 760 = 2 442 240 kr</span></div><div class="l" style="padding-left:0.0em"><span class="rn">b) Ökning: 2 442 240 − 2 400 000 = 42 240 kr</span></div><div class="l" style="padding-left:1.2em"><span class="rn">42 240 / 2 400 000 = 0,0176 ≈ 1,8 %</span></div><div class="l" style="padding-left:0.0em"><span class="rn">SVAR: a) 2 442 240 kr &nbsp; b) priset har ökat med 1,8 %</span></div></div></div><div class="task"><div class="q"><div class="num"><span>12</span><svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Diagrammet visar antalet besökare i en simhall.</p>
+<svg width="340" height="210" viewBox="0 0 340 210" style="max-width:100%;margin:6px 0 8px" aria-label="Stapeldiagram besökare: 2023 48 000, 2024 54 000, 2025 51 300">
+<g font-family="Inter,sans-serif" font-size="12" fill="#333">
+<text x="6" y="14" font-weight="600">Antal besökare</text>
+<g stroke="#ccd2da"><line x1="62" y1="40" x2="330" y2="40"/><line x1="62" y1="80" x2="330" y2="80"/><line x1="62" y1="120" x2="330" y2="120"/><line x1="62" y1="160" x2="330" y2="160"/></g>
+<line x1="62" y1="180" x2="330" y2="180" stroke="#222" stroke-width="1.5"/><line x1="62" y1="28" x2="62" y2="180" stroke="#222" stroke-width="1.5"/>
+<text x="56" y="184" text-anchor="end">0</text><text x="56" y="164" text-anchor="end">10 000</text><text x="56" y="124" text-anchor="end">30 000</text><text x="56" y="84" text-anchor="end">50 000</text><text x="56" y="44" text-anchor="end">70 000</text>
+<line x1="62" y1="140" x2="330" y2="140" stroke="#e5e8ec"/><line x1="62" y1="100" x2="330" y2="100" stroke="#e5e8ec"/><line x1="62" y1="60" x2="330" y2="60" stroke="#e5e8ec"/>
+<rect x="88" y="84" width="54" height="96" fill="#109a8a"/><rect x="170" y="72" width="54" height="108" fill="#109a8a"/><rect x="252" y="77.4" width="54" height="102.6" fill="#109a8a"/>
+<text x="115" y="78" text-anchor="middle" font-weight="600">48 000</text><text x="197" y="66" text-anchor="middle" font-weight="600">54 000</text><text x="279" y="71" text-anchor="middle" font-weight="600">51 300</text>
+<text x="115" y="198" text-anchor="middle">2023</text><text x="197" y="198" text-anchor="middle">2024</text><text x="279" y="198" text-anchor="middle">2025</text>
+</g></svg>
+<p>a) Med hur många procent ökade antalet besökare från 2023 till 2024?</p>
+<p>b) Med hur många procent förändrades antalet från 2024 till 2025?</p>
+<p>c) Lisa säger: <i>”Från 2023 till 2025 har antalet ökat med 12,5 % − 5 % = 7,5 %.”</i> Har Lisa rätt? Visa med en beräkning och förklara.</p>
+</div><div class="abil">P R K</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em"><span class="u">2023 = 48000 &nbsp;2024 = 54000 &nbsp;2025 = 51300</span> <span class="rn">Bra att börja så!</span></div><div class="l" style="padding-left:0.0em">a) skillnaden mellan 2023 och 2024 =</div><div class="l" style="padding-left:1.2em">54 000 − 48000 = 6000</div><div class="l" style="padding-left:1.2em"><span class="fr"><span>6000</span><span>48 000</span></span> = 0,125 × 100 = <span class="u">12,5% ökning</span> <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">b) skillnaden mellan 2024 och 2025 =</div><div class="l" style="padding-left:1.2em">54000 − 51 300 = 2700</div><div class="l" style="padding-left:1.2em"><span class="fr"><span>2700</span><span>54000</span></span> = 0,05 × 100 = <span class="u">5% sänkning</span> <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">c) 2023 → 2025 = 51 300 − 48 000 =</div><div class="l" style="padding-left:1.2em">3300 ökning</div><div class="l" style="padding-left:1.2em"><span class="fr"><span>3300</span><span>48000</span></span> = 0,068... × 100 = <span class="wr">6,8%</span> <span class="rn">0,06875 → avrunda till 6,9 %</span></div><div class="l" style="padding-left:2.4em">SVAR: Lisa har fel. ökningen</div><div class="l" style="padding-left:2.4em">är inte 7,5% från 2023 till</div><div class="l" style="padding-left:2.4em">2025 <span class="ok">✓</span> <span class="rn">Rätt! Men förklara varför man inte kan räkna 12,5 − 5.</span></div></div><div class="pts"><span>3/4</span> p</div></div><div class="fixlbl">Så hade ett fullpoängssvar sett ut</div><div class="paper fix"><div class="l" style="padding-left:0.0em"><span class="rn">c) 3 300 / 48 000 = 0,06875 ≈ 6,9 %</span></div><div class="l" style="padding-left:0.0em"><span class="rn">SVAR: Lisa har fel, ökningen är 6,9 %. Man kan inte</span></div><div class="l" style="padding-left:0.0em"><span class="rn">dra 5 % från 12,5 % eftersom procenten räknas på olika tal:</span></div><div class="l" style="padding-left:0.0em"><span class="rn">12,5 % av 48 000 men 5 % av 54 000.</span></div></div></div><div class="task"><div class="q"><div class="num"><span>13</span><svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Anta att jorden har 8,2 · 10<sup>9</sup> invånare och att 18 % av dem bor i Indien. Hur många bor då i Indien? Svara i grundpotensform med två värdesiffror.</p>
+</div><div class="abil">M B</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">Jordens invånare = 8,2×10<sup>9</sup> =</div><div class="l" style="padding-left:0.0em">8,200000000 st invånare</div><div class="l" style="padding-left:0.0em">18% av 8.200000000 =</div><div class="l" style="padding-left:0.0em">1 476 000 000 invånare <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">1,476 000 000 = <span class="wr">1,4</span> × 10<sup>9</sup> <span class="rn">1,4|76 → nästa siffra 7 → avrunda upp till 1,5</span></div><div class="l" style="padding-left:0.0em">SVAR: 1,4×10<sup>9</sup> av jordens invånare bor i Indien. <span class="rn">bra svarsmening!</span></div></div><div class="pts"><span>1/2</span> p</div></div><div class="fixlbl">Så hade ett fullpoängssvar sett ut</div><div class="paper fix"><div class="l" style="padding-left:0.0em"><span class="rn">18 % av 8,2 · 10⁹ = 0,18 · 8,2 · 10⁹ = 1,476 · 10⁹</span></div><div class="l" style="padding-left:0.0em"><span class="rn">Två värdesiffror: 1,476 ≈ 1,5</span></div><div class="l" style="padding-left:0.0em"><span class="rn">SVAR: Ungefär 1,5 · 10⁹ personer bor i Indien.</span></div></div></div><div class="task"><div class="q"><div class="num"><span>14</span><span class="star">✩</span><svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Priset på en skateboard höjdes med 25 %. Nu kostar den 500 kr. Butiken vill sänka priset så att det blir samma som före höjningen.</p>
+<p>Med hur många procent ska de sänka priset? Förklara varför svaret inte är 25 %.</p>
+</div><div class="abil">P R K</div></div>
+<div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em"><span class="u">400</span> + 25% = 500kr <span class="ok">✓</span> <span class="rn">Rätt pris från början!</span></div><div class="l" style="padding-left:0.0em">För att 25% av 500kr</div><div class="l" style="padding-left:0.0em">är inte 100kr som priset</div><div class="l" style="padding-left:0.0em">ökade med. <span class="ok">✓</span> <span class="rn">Bra tänkt!</span></div><div class="l" style="padding-left:0.0em">25% av 500 = 125kr</div><div class="l" style="padding-left:0.0em"><span class="rn">Men vad är svaret? Hur många procent ska de sänka?</span></div></div><div class="pts"><span>1/2</span> p</div></div><div class="fixlbl">Så hade ett fullpoängssvar sett ut</div><div class="paper fix"><div class="l" style="padding-left:0.0em"><span class="rn">Pris före höjningen: 400 kr (500 kr är 125 %)</span></div><div class="l" style="padding-left:0.0em"><span class="rn">De ska sänka 500 − 400 = 100 kr</span></div><div class="l" style="padding-left:0.0em"><span class="rn">100 / 500 = 0,20 = 20 %</span></div><div class="l" style="padding-left:0.0em"><span class="rn">SVAR: 20 %. Inte 25 %, eftersom sänkningen räknas på</span></div><div class="l" style="padding-left:0.0em"><span class="rn">det högre priset 500 kr. 25 % av 500 kr är 125 kr, inte 100 kr.</span></div></div></div>
+</div></section>
+
+<section class="sheet"><div class="in">
+<h2>Summering</h2>
+<div class="sumgrid">
+<table class="sum"><tr><th>Uppgift</th><th>Poäng</th></tr><tr><td>1</td><td>2 / 3</td></tr><tr><td>2</td><td>4 / 4</td></tr><tr><td>3</td><td>4 / 4</td></tr><tr><td>4</td><td>3 / 3</td></tr><tr><td>5</td><td>2 / 3</td></tr><tr><td>6</td><td>stryks</td></tr><tr><td>7</td><td>1 / 2</td></tr><tr><td>8</td><td>2 / 2</td></tr><tr><td>9</td><td>2 / 2</td></tr><tr><td>10</td><td>2 / 4</td></tr><tr><td>11</td><td>2 / 3</td></tr><tr><td>12</td><td>3 / 4</td></tr><tr><td>13</td><td>1 / 2</td></tr><tr><td>14</td><td>1 / 2</td></tr>
+<tr><td>Del I</td><td>16 / 19</td></tr><tr><td>Del II</td><td>13 / 19</td></tr>
+<tr class="t"><td>Totalt</td><td>29 / 38</td></tr></table>
+<div class="bigscore">29/38<small>76 %</small></div>
+</div>
+<p class="note">Uppgift 6 är struken eftersom förändringsfaktor inte ingår i ert kapitel. Poängen är satt så här: en poäng per deluppgift, och två poäng där både beräkning och förklaring eller rätt avrundning krävs. Läraren kan sätta poäng på ett annat sätt.</p>
+</div></section>
+</main></body></html>
