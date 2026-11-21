@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Din diagnos · kapitel 2</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1ea;--card:#fff;--ink:#16181d;--mut:#666a73;--line:#e4dfd4;--acc:#ff6b2c;--ok:#1f9d6b;--okbg:#e3f5ec;--mid:#c98a00;--midbg:#fff4d6;--go:#0a84d6;--gobg:#e3f1fb;--soft:#f8f5ef;--bad:#c0392b}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) 60px max(12px,env(safe-area-inset-left))}
+main{max-width:860px;margin:0 auto}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.01em;margin:0}
+h2{font-size:24px;margin:34px 0 12px}
+h3{font-size:19px;margin:0 0 6px}
+p{margin:0 0 10px}
+.upd{font-size:12px;color:var(--mut);text-align:right;margin:2px 4px 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:14px}
+.hero{border-radius:24px;padding:24px 22px;color:#fff;background:radial-gradient(120% 140% at 100% 0%,#4fc3f7 0%,#0a84d6 45%,#3d3bb8 100%);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-60px;bottom:-80px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.12)}
+.hero .k{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.hero h1{font-size:clamp(30px,7vw,46px);line-height:1.04;margin:6px 0 10px;font-weight:800}
+.hero p{max-width:620px;font-size:16.5px;position:relative;z-index:1}
+/* overview */
+.ov{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.ovi{border-radius:14px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start}
+.ovi b{display:block}.ovi span{font-size:14px;color:var(--mut)}
+.ovi i{font-style:normal;font-size:20px;line-height:1.2}
+.g{background:var(--okbg)}.m{background:var(--midbg)}.u{background:var(--gobg)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--mut);margin:0 0 10px}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.dot{width:12px;height:12px;border-radius:4px;display:inline-block}
+/* strengths */
+.str{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.str .card{margin:0;border-left:5px solid var(--ok)}
+.hand{font-family:"Bricolage Grotesque",Inter,sans-serif;background:var(--soft);border-radius:8px;padding:2px 8px;display:inline-block;margin:2px 0}
+/* step cards */
+.step{border-top:6px solid var(--go)}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--go);color:#fff;font:800 17px "Bricolage Grotesque";margin-right:8px;flex:none}
+.step .hd{display:flex;align-items:center;margin-bottom:10px}
+.step .hd h3{margin:0;font-size:21px}
+.was{background:#fdf0ee;border-radius:12px;padding:10px 14px;margin:8px 0 12px;font-size:15px}
+.was b{color:var(--bad)}
+.rule{background:var(--gobg);border-radius:12px;padding:12px 14px;margin:10px 0;font-size:15.5px}
+.rule b{color:#0868ad}
+.big{font:800 22px "Bricolage Grotesque",Inter,sans-serif}
+ol.steps{padding-left:22px;margin:8px 0}ol.steps li{margin:4px 0}
+.calc{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;font-size:15px;line-height:1.75;overflow-wrap:anywhere}
+.calc .c{color:var(--mut);font-family:Inter;font-size:13px}
+table.f{border-collapse:collapse;margin:8px 0;font-size:15px;width:100%;max-width:520px}
+.f th,.f td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left}
+.f th{font-size:13px;color:var(--mut);font-weight:600}
+.f td.x{font-weight:700;color:#0868ad}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin:10px 0}
+.cmp div{border-radius:12px;padding:10px 14px;font-size:15px}
+.cmp .a{background:#f4f4f4}.cmp .b{background:var(--okbg)}
+.cmp small{display:block;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+details{background:var(--soft);border-radius:12px;padding:10px 14px;margin:8px 0}
+details summary{cursor:pointer;font-weight:600}
+details[open] summary{margin-bottom:6px}
+.try{border:2px dashed #b9d9f2;border-radius:14px;padding:12px 14px;margin-top:12px}
+.try h4{margin:0 0 6px;font:700 15px Inter}
+.try ol{margin:4px 0 6px;padding-left:22px}
+/* tool */
+.tool{background:linear-gradient(180deg,#eef7fe,#fff);border:1px solid #cfe6f7;border-radius:16px;padding:14px 16px;margin:12px 0}
+.tool label{font-size:14px;font-weight:600}
+.tool .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 0 10px}
+.tool input{width:90px;font:600 18px Inter;padding:6px 8px;border:1px solid #9cc8ea;border-radius:10px}
+.seg{display:inline-flex;border:1px solid #9cc8ea;border-radius:10px;overflow:hidden}
+.seg button{border:0;background:#fff;font:600 15px Inter;padding:8px 14px;cursor:pointer;color:#0868ad}
+.seg button.on{background:#0a84d6;color:#fff}
+.bar{height:30px;border-radius:8px;display:flex;align-items:center;padding:0 10px;color:#fff;font-weight:700;font-size:14px;white-space:nowrap;margin:5px 0;transition:width .3s}
+.out{font-size:17px;margin-top:6px}
+.out .big{color:#0868ad}
+.np{background:#fff7ef;border:1px solid #ffd9bf;border-radius:14px;padding:12px 14px;margin:8px 0;font-size:15px}
+.np code{display:block;white-space:normal;background:#fff;border-radius:8px;padding:8px 10px;margin-top:6px;font:14px/1.5 Inter;color:#333}
+.cta{display:block;text-align:center;background:var(--acc);color:#fff;text-decoration:none;font:800 20px "Bricolage Grotesque";padding:16px;border-radius:16px;margin:12px 0}
+.small{font-size:13px;color:var(--mut)}
+@media(max-width:520px){body{font-size:15.5px}.calc{font-size:14px}}
+</style></head>
+<body><main>
+<div class="upd">Uppdaterad: Lördag 21/11 kl 13:40</div>
+
+<section class="hero">
+<div class="k">Diagnos kapitel 2 · ditt resultat</div>
+<h1>Riktigt bra jobbat, Hugo!</h1>
+<p>Du gjorde hela diagnosen och visade hur du tänkte i nästan varje uppgift. Det är precis så man ska göra. Du har en stark grund i procent. Nedan ser du vad som gick bra och fem saker som kan lyfta dig mest på provet.</p>
+</section>
+
+<h2>Så gick det, område för område</h2>
+<div class="legend"><span><i class="dot" style="background:#9fdcbf"></i>Gick bra i diagnosen</span><span><i class="dot" style="background:#ffe08a"></i>Delvis, nära</span><span><i class="dot" style="background:#9ccdf0"></i>Här finns mest att vinna</span></div>
+<div class="ov">
+<div class="ovi g"><i>✓</i><div><b>Procent av ett tal</b><span>Uppg. 2: alla rätt med smarta huvudräkningsknep</span></div></div>
+<div class="ovi g"><i>✓</i><div><b>Bråk, decimaltal och procent</b><span>Uppg. 3: allt rätt, snygg förkortning</span></div></div>
+<div class="ovi g"><i>✓</i><div><b>Delen, det hela, andelen</b><span>Uppg. 4 och 8: rätt, med 1 %-metoden</span></div></div>
+<div class="ovi g"><i>✓</i><div><b>Procentuell förändring</b><span>Uppg. 9 och 12: rätt bas varje gång</span></div></div>
+<div class="ovi m"><i>≈</i><div><b>Procentenheter</b><span>Uppg. 5: räknat rätt, förklaringen kan bli vassare</span></div></div>
+<div class="ovi m"><i>≈</i><div><b>Ränta</b><span>Uppg. 10: a och c rätt, b och d (baklänges) blev fel</span></div></div>
+<div class="ovi u"><i>↑</i><div><b>Förändringsfaktor</b><span>Uppg. 6, 11 och 14: nytt för dig, och den viktigaste att lära sig</span></div></div>
+<div class="ovi u"><i>↑</i><div><b>Avrundning och förklaringar</b><span>Uppg. 12c, 13 och 14: små saker som ger poäng</span></div></div>
+</div>
+<p class="small" style="margin-top:8px">Uppgift 1a: där var det mitt facit som var fel, inte du. Figuren hade 10 rutor, så 70 % är helt rätt.</p>
+
+<h2>Det här gjorde du riktigt bra</h2>
+<div class="str">
+<div class="card"><h3>Smart huvudräkning</h3><p>Uppg. 2b: <span class="hand">15 % = 5 % · 3 = 4 kr · 3 = 12 kr</span>. Att dela upp procentsatsen i bitar är ett riktigt bra knep.</p></div>
+<div class="card"><h3>1 %-metoden</h3><p>Uppg. 8: <span class="hand">1 % = 1360/34 = 40 kr, 100 % = 4000 kr</span>. Helt rätt, och med svar i en mening.</p></div>
+<div class="card"><h3>Rätt bas</h3><p>Uppg. 9 och 12: du delade med <b>det gamla</b> värdet (1 249 och 48 000). Det är det vanligaste felet på procentprov, och du undvek det.</p></div>
+<div class="card"><h3>Tid i ränta</h3><p>Uppg. 10c: <span class="hand">3 mån = 600/4 = 150 kr, 9 mån = 450 kr</span>. Smart att gå via ett kvartal.</p></div>
+<div class="card"><h3>Testa med ett eget tal</h3><p>Uppg. 7: du hittade på ett pris (500 kr) och räknade. Det är en riktig problemlösarstrategi.</p></div>
+<div class="card"><h3>Tydlig uppställning</h3><p>Du skriver vad du räknar ut ("Skillnaden =", "1 % av cykeln =") och avslutar med SVAR. Det gör det lätt för läraren att ge dig poäng.</p></div>
+</div>
+
+<h2>Fem steg uppåt</h2>
+<p>Här finns poängen att hämta. Ta ett steg i taget. Läs, titta på exemplet och testa själv utan att titta på svaret.</p>
+
+<!-- STEG 1 -->
+<section class="card step">
+<div class="hd"><span class="n">1</span><h3>Förändringsfaktor: ett tal som gör hela jobbet</h3></div>
+<div class="was">I uppg. 6 skrev du <b>0,3</b> för "ökar med 30 %". Men 0,3 är 30 % <i>av</i> priset, alltså bara själva ökningen. Förändringsfaktorn ska ge <b>hela det nya priset</b> på en gång.</div>
+
+<p>Tänk så här: det gamla priset är alltid <b>100 %</b>. Fråga dig: <b>hur många procent är det nya priset?</b></p>
+<svg viewBox="0 0 560 150" style="width:100%;max-width:520px;margin:4px 0" aria-label="Staplar: 100 procent, 130 procent, 85 procent">
+<g font-family="Inter,sans-serif" font-size="13">
+<text x="0" y="22" fill="#333">Gammalt pris</text><rect x="110" y="8" width="250" height="22" rx="5" fill="#9aa3ae"/><text x="368" y="24" fill="#333" font-weight="700">100 %  → faktor 1</text>
+<text x="0" y="67" fill="#333">+30 %</text><rect x="110" y="53" width="250" height="22" rx="5" fill="#0a84d6"/><rect x="360" y="53" width="75" height="22" rx="5" fill="#59b4ef"/><text x="443" y="69" fill="#0868ad" font-weight="700">130 % → 1,30</text>
+<text x="0" y="112" fill="#333">−15 %</text><rect x="110" y="98" width="212" height="22" rx="5" fill="#ff6b2c"/><rect x="322" y="98" width="38" height="22" rx="5" fill="none" stroke="#ff6b2c" stroke-dasharray="4 3"/><text x="368" y="114" fill="#c2410c" font-weight="700">85 % → 0,85</text>
+<text x="110" y="144" fill="#666" font-size="12">Förändringsfaktorn = det nya priset i procent, skrivet som decimaltal</text>
+</g></svg>
+
+<div class="rule"><b>Ökning:</b> 1 + procenten &nbsp;&nbsp;(+30 % → 1 + 0,30 = <b>1,30</b>)<br><b>Minskning:</b> 1 − procenten &nbsp;&nbsp;(−15 % → 1 − 0,15 = <b>0,85</b>)<br><b>Nytt värde</b> = gammalt värde · förändringsfaktor</div>
+
+<table class="f">
+<tr><th>Förändring</th><th>Nya priset är</th><th>Faktor</th></tr>
+<tr><td>ökar med 30 %</td><td>130 %</td><td class="x">1,30</td></tr>
+<tr><td>minskar med 15 %</td><td>85 %</td><td class="x">0,85</td></tr>
+<tr><td>minskar med 4 %</td><td>96 %</td><td class="x">0,96</td></tr>
+<tr><td>ökar med 100 % (fördubblas)</td><td>200 %</td><td class="x">2</td></tr>
+</table>
+
+<p><b>Baklänges</b> (uppg. 6e och f): läs av faktorn som procent och jämför med 100 %.</p>
+<div class="calc">0,7 = 70 % &nbsp;→ 30 % mindre än 100 % &nbsp;→ <b>sänkt med 30 %</b><br>1,05 = 105 % → 5 % mer än 100 % &nbsp;&nbsp;→ <b>höjt med 5 %</b></div>
+<p class="small">Du hade rätt att 0,7 betyder sänkning och 1,05 höjning. Nu lägger du bara till <i>hur mycket</i>.</p>
+
+<div class="tool" id="tool">
+<label>Prova själv: skriv en procent och välj ökning eller minskning</label>
+<div class="row"><input type="text" id="pp" value="30" inputmode="decimal" autocomplete="off"><span>%</span>
+<span class="seg"><button id="bu" class="on" type="button">Ökning</button><button id="bd" type="button">Minskning</button></span></div>
+<div class="bar" style="width:50%;background:#9aa3ae">100 %</div>
+<div class="bar" id="nb" style="width:65%;background:#0a84d6">130 %</div>
+<div class="out">Förändringsfaktor: <span class="big" id="ff">1,30</span> <span class="small" id="fx">(1 + 0,30)</span></div>
+</div>
+
+<h3 style="margin-top:14px">Supertricket: flera förändringar efter varandra</h3>
+<p>Multiplicera faktorerna. Då slipper du räkna ut kronor i varje steg. Så här blir uppg. 11:</p>
+<div class="calc">Steg upp 6 % → 1,06 &nbsp;&nbsp; sjönk 4 % → 0,96<br>2 400 000 · 1,06 · 0,96 = <b>2 442 240 kr</b><br><span class="c">Total faktor:</span> 1,06 · 0,96 = 1,0176 → 101,76 % → <b>ökat 1,8 %</b></div>
+<div class="was" style="background:#fff7e0">I uppg. 11 läste du "steg" som en minskning och drog av 6 %. Din metod var rätt: du räknade 4 % på det <i>nya</i> priset. Det var bara ordet som lurade dig. Se steg 4.</div>
+
+<p><b>Uppg. 14 med faktor:</b> efter höjningen är 500 kr = 125 % av det gamla priset.</p>
+<div class="calc">Gammalt pris: 500 / 1,25 = 400 kr &nbsp;<span class="c">(dela med faktorn för att gå baklänges)</span><br>Sänkning: 100 kr av 500 kr → 100 / 500 = 0,20 = <b>20 %</b></div>
+<p class="small">Du hittade 400 kr och förstod varför det inte blir 25 %. Det enda som saknades var sista raden: räkna ut procenten och skriv SVAR.</p>
+
+<div class="try"><h4>Testa dig själv (utan att titta)</h4>
+<ol><li>Vilken förändringsfaktor har en ökning med 8 %? En minskning med 35 %?</li>
+<li>Ett pris multipliceras med 0,88. Vad har hänt?</li>
+<li>En tröja kostar 400 kr. Priset höjs med 10 % och sänks sedan med 10 %. Vad kostar den nu?</li>
+<li>Efter 20 % rabatt kostar en väska 640 kr. Vad kostade den innan?</li></ol>
+<details><summary>Visa svar</summary>1) 1,08 och 0,65 &nbsp; 2) Sänkt med 12 % &nbsp; 3) 400 · 1,10 · 0,90 = 396 kr (inte 400!) &nbsp; 4) 640 / 0,80 = 800 kr</details>
+</div>
+</section>
+
+<!-- STEG 2 -->
+<section class="card step">
+<div class="hd"><span class="n">2</span><h3>Ränta baklänges: täck över det du söker</h3></div>
+<div class="was">Uppg. 10b: du räknade <b>6400 / 208</b> och fick 30,7 %. Uppg. 10d: du glömde att räntan bara gällde ett <b>halvår</b>.</div>
+<p>Ränta är bara "procent av" med andra namn. Använd triangeln: täck över det du letar efter så ser du vad du ska räkna.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin:6px 0">
+<svg viewBox="0 0 280 185" style="width:240px;max-width:100%" aria-label="Triangel: Ränta överst, Räntesats och Kapital nederst">
+<g font-family="Inter,sans-serif"><polygon points="140,8 274,178 6,178" fill="#e3f1fb" stroke="#0a84d6" stroke-width="2.5"/>
+<line x1="58" y1="112" x2="222" y2="112" stroke="#0a84d6" stroke-width="2"/><line x1="140" y1="112" x2="140" y2="178" stroke="#0a84d6" stroke-width="2"/>
+<text x="140" y="88" text-anchor="middle" font-size="20" font-weight="700" fill="#0868ad">Ränta</text>
+<text x="88" y="152" text-anchor="middle" font-size="16" font-weight="700" fill="#0868ad">Räntesats</text>
+<text x="196" y="152" text-anchor="middle" font-size="16" font-weight="700" fill="#0868ad">Kapital</text></g></svg>
+<div style="font-size:15.5px;line-height:2"><b>Ränta</b> = räntesats · kapital<br><b>Räntesats</b> = ränta / kapital<br><b>Kapital</b> = ränta / räntesats<br><span class="small">Gäller för ett helt år</span></div></div>
+
+<div class="rule"><b>Knep 1:</b> när du söker räntesatsen delar du alltid med kapitalet. Det lilla talet står överst.<br><b>Knep 2:</b> är tiden inte ett år? Räkna om räntan till ett helt år först.<br><b>Knep 3: kolla rimligheten.</b> Bankränta brukar vara några procent. 30 % är inte rimligt, så räkna igen.</div>
+
+<p><b>10b rätt:</b></p>
+<div class="calc">Räntesats = 208 / 6 400 = 0,0325 = <b>3,25 %</b> &nbsp;<span class="c">rimligt ✓</span></div>
+<p><b>10d rätt:</b></p>
+<div class="calc">375 kr på ett halvår → 375 · 2 = 750 kr på ett helt år<br>Kapital = 750 / 0,025 = <b>30 000 kr</b><br><span class="c">Koll: 2,5 % av 30 000 = 750 kr per år, halva året 375 kr ✓</span></div>
+
+<div class="try"><h4>Testa dig själv</h4>
+<ol><li>Kapital 8 000 kr, ränta 180 kr på ett år. Vilken räntesats?</li>
+<li>Räntesats 3 %, ränta 450 kr på ett år. Hur stort är kapitalet?</li>
+<li>Räntesats 4 %, ränta 100 kr på 3 månader. Hur stort är kapitalet?</li></ol>
+<details><summary>Visa svar</summary>1) 180 / 8000 = 0,0225 = 2,25 % &nbsp; 2) 450 / 0,03 = 15 000 kr &nbsp; 3) 100 · 4 = 400 kr per år → 400 / 0,04 = 10 000 kr</details>
+</div>
+</section>
+
+<!-- STEG 3 -->
+<section class="card step">
+<div class="hd"><span class="n">3</span><h3>Avrunda, kapa inte</h3></div>
+<div class="was">Uppg. 12c: 0,06875 blev <b>6,8 %</b>, men det ska vara 6,9 %. Uppg. 13: 1,476 · 10⁹ blev <b>1,4 · 10⁹</b>, men det ska vara 1,5 · 10⁹.</div>
+<div class="rule">Titta på <b>siffran efter</b> den sista du ska ha kvar.<br><b>0–4:</b> behåll &nbsp;&nbsp; <b>5–9:</b> öka den sista siffran med ett</div>
+<div class="calc">6,8|75 % &nbsp;→ nästa siffra är 7 → <b>6,9 %</b><br>1,4|76 · 10⁹ → nästa siffra är 7 → <b>1,5 · 10⁹</b><br>24,0|19 % → nästa siffra är 1 → <b>24,0 %</b></div>
+<div class="try"><h4>Testa dig själv</h4>
+<ol><li>Avrunda 3,46 till en decimal.</li><li>Avrunda 0,1249 till hela procent.</li><li>Skriv 2 386 000 i grundpotensform med två värdesiffror.</li></ol>
+<details><summary>Visa svar</summary>1) 3,5 &nbsp; 2) 12 % &nbsp; 3) 2,4 · 10⁶</details>
+</div>
+</section>
+
+<!-- STEG 4 -->
+<section class="card step">
+<div class="hd"><span class="n">4</span><h3>Läs uppgiften som en detektiv</h3></div>
+<p>Tre gånger läste du lite för snabbt: "steg" blev minskning (11a), 25 rutor räknades som 20 (1c) och "veckan efter" blev "efter 2 veckor" (7, det kostade inget den här gången). Det handlar inte om matte, bara om en vana som är lätt att träna.</p>
+<ol class="steps">
+<li><b>Stryk under nyckelorden</b> i huvudet eller på pappret: <i>steg, ökade, höjdes</i> betyder upp (faktor över 1). <i>Sjönk, sänktes, rabatt</i> betyder ner (faktor under 1).</li>
+<li><b>Räkna figurer två gånger</b>, till exempel rad för rad: 5 rader · 5 rutor = 25.</li>
+<li><b>Läs frågan igen innan du skriver SVAR.</b> Svarar jag på det som frågas? I uppg. 14 frågades efter procent, så svaret ska vara i procent.</li>
+</ol>
+</section>
+
+<!-- STEG 5 -->
+<section class="card step">
+<div class="hd"><span class="n">5</span><h3>Förklara varför, inte bara vad</h3></div>
+<p>Dina slutsatser var rätta. För de högre poängen ska du också visa <b>varför</b>. En enkel mall:</p>
+<div class="rule big" style="font-size:18px">"Det blir så <b>eftersom</b> … räknas på …"</div>
+<div class="cmp">
+<div class="a"><small>Ditt svar, uppg. 7</small>B är billigast. A sänker först 10 % och sen 10 %.</div>
+<div class="b"><small>Starkare svar</small>B är billigast, 400 kr mot 405 kr. Det blir så <b>eftersom</b> A:s andra sänkning räknas på det <b>lägre</b> priset 450 kr. 10 % av 450 är bara 45 kr, inte 50 kr.</div>
+</div>
+<div class="cmp">
+<div class="a"><small>Ditt svar, uppg. 12c</small>Lisa har fel, ökningen är inte 7,5 %.</div>
+<div class="b"><small>Starkare svar</small>Lisa har fel. Ökningen är 6,9 %. Man kan inte dra 5 % från 12,5 % <b>eftersom</b> procenten räknas på olika tal: 12,5 % av 48 000 men 5 % av 54 000.</div>
+</div>
+<div class="cmp">
+<div class="a"><small>Ditt svar, uppg. 5c</small>Procentenheter visar skillnaden och procent visar ökningen.</div>
+<div class="b"><small>Starkare svar</small>Procentenheter är skillnaden mellan två procentsatser (25 − 20 = 5). Procent visar hur stor ökningen är <b>jämfört med det man hade från början</b>: 5 av 20 = 25 %.</div>
+</div>
+<p class="small">Ett litet extra tips: skriv <b>0,125 = 12,5 %</b> i stället för "0,125 · 100 = 12,5 %". Det betyder samma sak för dig, men det första är matematiskt korrekt.</p>
+</section>
+
+<h2>Plugga med NotebookLM</h2>
+<div class="np">Klistra in den här texten och räkna med penna innan du tittar på svaren.
+<code>Ge mig 8 uppgifter om förändringsfaktor för åk 8: skriva faktorn för en ökning eller minskning, tolka en faktor som 0,92, två förändringar efter varandra och räkna baklänges (pris före rabatt). Ge en uppgift i taget. Visa inte svaret förrän jag har svarat, och visa sedan lösningen steg för steg.</code></div>
+<div class="np"><code>Ge mig 6 räntetabeller där det okända är räntesatsen, kapitalet eller räntan, och där tiden ibland är 3, 6 eller 9 månader. En i taget. Rätta mitt svar och säg om det är rimligt.</code></div>
+
+<h2>Nästa steg</h2>
+<div class="card">
+<p>Läs steg 1 och 2 en gång till och gör "Testa dig själv" utan att titta. Gör sedan <b>version B</b>. Den är kortare (8 uppgifter, ungefär 30 min) och handlar mest om förändringsfaktor och ränta. Gör den på samma sätt som förut: på papper, visa alla steg, och fota och skicka.</p>
+<a class="cta" href="../../kap2-b/">Till version B →</a>
+<p class="small">Kom ihåg: att du har gått igenom en genomgång betyder inte att du kan det än. Det ser du först när du räknar själv utan att titta. Därför är version B nästa steg.</p>
+</div>
+
+<details><summary>Alla svar till diagnos A</summary>
+<p style="font-size:14.5px">1) a 70 % b 37,5 % c 36 % · 2) 90, 12, 45, 60 kr · 3) 0,75 och 75 % · 2/25 och 8 % · 9/20 och 0,45 · 0,125 och 12,5 % · 4) 12, 30, 40 % · 5) 5 procentenheter, 25 % · 6) 1,30, 0,85, 0,96, 2, sänkt 30 %, höjt 5 % · 7) B (400 kr mot 405 kr) · 8) 4 000 kr · 9) 24 % · 10) 630 kr, 3,25 %, 450 kr, 30 000 kr · 11) 2 442 240 kr, ökat 1,8 % · 12) 12,5 %, −5 %, nej: 6,9 % · 13) 1,5 · 10⁹ · 14) 20 %</p>
+</details>
+
+</main>
+<script>
+(function(){var up=true,pp=document.getElementById('pp'),nb=document.getElementById('nb'),ff=document.getElementById('ff'),fx=document.getElementById('fx'),bu=document.getElementById('bu'),bd=document.getElementById('bd');
+function fmt(x){x=Math.round(x*10000)/10000;if(Number.isInteger(x))return String(x);var d=String(x).split('.')[1].length;return x.toFixed(Math.max(2,d)).replace('.',',')}
+function r(){var p=parseFloat(String(pp.value).replace(',','.'));if(isNaN(p)||p<0)p=0;if(!up&&p>100)p=100;var f=up?1+p/100:1-p/100;var pct=Math.round(f*1000)/10;
+nb.style.width=Math.max(4,Math.min(100,f*50))+'%';nb.style.background=up?'#0a84d6':'#ff6b2c';nb.textContent=String(pct).replace('.',',')+' %';
+ff.textContent=fmt(f);fx.textContent='('+(up?'1 + ':'1 − ')+fmt(p/100)+')';}
+bu.onclick=function(){up=true;bu.className='on';bd.className='';r()};bd.onclick=function(){up=false;bd.className='on';bu.className='';r()};pp.oninput=r;r();})();
+</script>
+</body></html>
