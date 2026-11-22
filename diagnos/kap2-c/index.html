@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Diagnos kapitel 2 · version C</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9ecef;--paper:#fff;--ink:#16181d;--mut:#62666e;--line:#d9dde3;--band:#0a84d6;--bandbg:#e3f1fb;--yel:#f6c400;--acc:#ff6b2c}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Source Serif 4",Georgia,serif;padding:max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) 60px max(10px,env(safe-area-inset-left))}
+main{max-width:860px;margin:0 auto}
+.sheet{background:var(--paper);border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 8px 30px rgba(0,0,0,.06);margin:0 0 18px;overflow:hidden}
+.band{background:var(--band);color:#fff;padding:9px 18px;font:700 14px/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between}
+.in{padding:22px clamp(16px,4vw,40px) 26px}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(28px,6vw,40px);font-weight:800;line-height:1.05}
+h2{font-size:24px;margin:4px 0 6px}
+.sub{font:600 14px Inter,sans-serif;color:var(--mut);letter-spacing:.04em;text-transform:uppercase;margin-top:6px}
+.info{font:15px/1.5 Inter,sans-serif;background:var(--bandbg);border-radius:12px;padding:14px 16px;margin-top:16px}
+.info ol,.info ul{margin:6px 0 0;padding-left:20px}.info li{margin:3px 0}
+.info b{font-weight:700}
+.legend{font:13px/1.5 Inter,sans-serif;color:var(--mut);margin-top:12px}
+.legend b{color:var(--ink);font-weight:700;letter-spacing:.06em}
+.delhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.delhead .tag{font:600 13px Inter,sans-serif;background:#f1f3f5;border-radius:999px;padding:5px 11px;color:var(--mut)}
+.q{display:grid;grid-template-columns:46px 1fr auto;gap:0 10px;padding:20px 0;border-top:1px solid var(--line)}
+.q:first-of-type{border-top:0}
+.num{font:800 24px/1.1 "Bricolage Grotesque",Inter,sans-serif;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.abil{font:600 14px Inter,sans-serif;letter-spacing:.12em;color:#3a3f47;white-space:nowrap;padding-top:4px}
+.body p{margin:0 0 8px}
+.subs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 18px;margin:6px 0 4px}
+.subs.two{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.subs div{white-space:normal}
+.fig{display:flex;flex-wrap:wrap;gap:22px 34px;align-items:flex-end;margin:10px 0 2px}
+.fig figure{margin:0;display:flex;gap:8px;align-items:flex-start}
+.fig figcaption{font-size:17px}
+table.t{border-collapse:collapse;margin:10px 0 4px;font:16px Inter,sans-serif;min-width:min(100%,520px)}
+.t th,.t td{border:1.5px solid #333;padding:9px 14px;text-align:center}
+.t th{font-style:italic;font-weight:500;background:#fafafa}
+.t td.l{border:0;text-align:right;padding-right:8px;font-family:"Source Serif 4",serif;font-size:17px}
+.scroll{overflow-x:auto}
+.clip{font-family:Georgia,serif;border-left:1.5px solid #555;border-right:1.5px solid #555;padding:8px 12px;max-width:290px;margin:10px 0 4px;background:#fcfcfa}
+.clip h4{margin:0 0 4px;font:600 22px/1.1 Inter,sans-serif}
+.clip p{margin:0;font-size:13.5px;line-height:1.35;text-align:justify}
+.star{color:var(--acc);font-size:20px;line-height:1}
+.calc{width:30px;height:34px}
+.done{font:15px/1.55 Inter,sans-serif}
+.done h3{font-size:22px;margin-bottom:8px}
+.note{font:13px Inter,sans-serif;color:var(--mut);margin-top:10px}
+@media(max-width:520px){.q{grid-template-columns:38px 1fr}.abil{grid-column:2;padding:0 0 6px;order:-1}body{font-size:16.5px}}
+@media print{body{background:#fff;padding:0}.sheet{box-shadow:none;break-inside:auto}.q{break-inside:avoid}}
+.chk{font:600 13px Inter,sans-serif;color:#0868ad;background:#eef6fd;border-radius:8px;padding:5px 10px;margin-top:10px;display:inline-block}
+.ctl{background:#fff4d6;border-radius:12px;padding:12px 16px;margin-top:12px;font:15px/1.5 Inter,sans-serif}
+.ctl b{font-weight:700}
+</style></head>
+<body><main>
+
+<!-- Calculator icon (reused) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="calc" viewBox="0 0 30 34"><rect x="1" y="1" width="28" height="32" rx="3" fill="#8e98a6"/><rect x="5" y="5" width="20" height="7" rx="1" fill="#eef1f4"/>
+<g fill="#eef1f4"><rect x="5" y="15" width="4" height="3"/><rect x="11" y="15" width="4" height="3"/><rect x="17" y="15" width="4" height="3"/><rect x="23" y="15" width="2.5" height="3"/>
+<rect x="5" y="20.5" width="4" height="3"/><rect x="11" y="20.5" width="4" height="3"/><rect x="17" y="20.5" width="4" height="3"/><rect x="23" y="20.5" width="2.5" height="3"/>
+<rect x="5" y="26" width="4" height="3"/><rect x="11" y="26" width="4" height="3"/><rect x="17" y="26" width="4" height="3"/><rect x="23" y="26" width="2.5" height="3"/></g></symbol>
+</defs></svg>
+
+<section class="sheet">
+<div class="band"><span>Matematik åk 8</span><span>Diagnos</span></div>
+<div class="in">
+<h1>Diagnos kapitel 2</h1>
+<div class="sub">Version C · läsa noga, ränta och förklara</div>
+<div class="info"><b>6 uppgifter, ungefär 25 min.</b> Bara sådant ni har gått igenom. Papper, penna och räknare till del II. Visa alla steg och avsluta med <b>Svar:</b>. Sätt <b>?</b> där du är osäker. Skriv start- och sluttid.</div>
+<div class="ctl"><b>Ny vana i dag: kontrollrutinen.</b> När du är klar med en uppgift, gör de här tre sakerna innan du går vidare:
+<ol style="margin:6px 0 0;padding-left:20px"><li>Jämför varje siffra i din uträkning med siffrorna i uppgiften.</li><li>Höjs eller sänks det? Plus eller minus?</li><li>Är svaret rimligt?</li></ol>
+Sätt en liten bock ✓ i marginalen när du har kontrollerat.</div>
+<div class="legend"><b>B</b> begrepp · <b>M</b> metod · <b>P</b> problemlösning · <b>R</b> resonemang · <b>K</b> kommunikation.</div>
+</div></section>
+
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Diagnos kap 2 · C</span></div><div class="in">
+<div class="delhead"><h2>Del I</h2><span class="tag">Utan räknare</span></div>
+
+<div class="q"><div class="num">1</div><div class="body">
+<svg width="250" height="100" viewBox="0 0 250 100" style="max-width:100%;margin:2px 0 8px" aria-label="Biljett 240 kr">
+<path d="M8 8 H242 V36 a12 12 0 0 0 0 28 V92 H8 V64 a12 12 0 0 0 0 -28 Z" fill="#fff4cc" stroke="#222" stroke-width="1.6"/>
+<line x1="180" y1="14" x2="180" y2="86" stroke="#222" stroke-dasharray="4 4"/>
+<g font-family="Inter,sans-serif" fill="#222"><text x="26" y="40" font-size="14">Konsertbiljett</text><text x="26" y="76" font-size="30" font-weight="800">240 kr</text><text x="211" y="56" font-size="12" text-anchor="middle" transform="rotate(-90 211 52)">ENTRÉ</text></g></svg>
+<p>Priset på biljetten <b>sänks</b> först med 25 %. Några månader senare <b>höjs</b> det nya priset med 20 %.</p>
+<p>a) Vad kostar biljetten nu?</p>
+<p>b) Är biljetten nu billigare eller dyrare än från början? Förklara varför det blir så.</p>
+<div class="chk">Kontroll: stämmer siffrorna med texten? · höjs eller sänks? · rimligt?</div>
+</div><div class="abil">M R K</div></div>
+
+<div class="q"><div class="num">2</div><div class="body">
+<p>Avrunda.</p>
+<div class="subs two"><div>a) 0,1867 till procent med en decimal</div><div>b) 4 762 000 i grundpotensform med två värdesiffror</div><div>c) 3 049 000 i grundpotensform med två värdesiffror</div></div>
+</div><div class="abil">M</div></div>
+
+</div></section>
+
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Diagnos kap 2 · C</span></div><div class="in">
+<div class="delhead"><h2>Del II</h2><span class="tag">Räknare tillåten</span></div>
+
+<div class="q"><div class="num">3<svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Skriv av tabellen och fyll i det som saknas.</p>
+<div class="scroll"><table class="t">
+<tr><td class="l"></td><th>Kapital</th><th>Räntesats</th><th>Tid</th><th>Ränta</th></tr>
+<tr><td class="l">a)</td><td>?</td><td>2,5 %</td><td>6 månader</td><td>300 kr</td></tr>
+<tr><td class="l">b)</td><td>16 000 kr</td><td>?</td><td>3 månader</td><td>120 kr</td></tr>
+<tr><td class="l">c)</td><td>?</td><td>4,2 %</td><td>1/4 år</td><td>630 kr</td></tr>
+<tr><td class="l">d)</td><td>9 000 kr</td><td>3,2 %</td><td>8 månader</td><td>?</td></tr>
+</table></div>
+<div class="chk">Kontroll: stämmer siffrorna med texten? · höjs eller sänks? · rimligt?</div>
+</div><div class="abil">M P B</div></div>
+
+<div class="q"><div class="num">4<svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<div class="clip"><h4>Djurparken lockar och tappar</h4>
+<p>SKÅNE (LT) År 2024 hade djurparken 640 000 besökare. År 2025 ökade antalet med 15 %. År 2026 minskade antalet med 12 % jämfört med 2025.</p></div>
+<p style="margin-top:10px">a) Hur många besökare hade djurparken 2026?</p>
+<p>b) Med hur många procent förändrades antalet besökare från 2024 till 2026? Avrunda till en decimal.</p>
+<div class="chk">Kontroll: stämmer siffrorna med texten? · höjs eller sänks? · rimligt?</div>
+</div><div class="abil">M P</div></div>
+
+<div class="q"><div class="num">5<svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Diagrammet visar Linneas månadshyra.</p>
+<svg width="320" height="200" viewBox="0 0 320 200" style="max-width:100%;margin:6px 0 8px" aria-label="Stapeldiagram hyra: 2024 8 000 kr, 2025 8 400 kr, 2026 8 820 kr">
+<g font-family="Inter,sans-serif" font-size="12" fill="#333">
+<text x="6" y="14" font-weight="600">Månadshyra (kr)</text>
+<g stroke="#e3e7ec"><line x1="56" y1="50" x2="310" y2="50"/><line x1="56" y1="90" x2="310" y2="90"/><line x1="56" y1="130" x2="310" y2="130"/></g>
+<line x1="56" y1="170" x2="310" y2="170" stroke="#222" stroke-width="1.5"/><line x1="56" y1="28" x2="56" y2="170" stroke="#222" stroke-width="1.5"/>
+<text x="50" y="174" text-anchor="end">0</text><text x="50" y="134" text-anchor="end">3 000</text><text x="50" y="94" text-anchor="end">6 000</text><text x="50" y="54" text-anchor="end">9 000</text>
+<rect x="80" y="63.3" width="56" height="106.7" fill="#e07a2e"/><rect x="160" y="58" width="56" height="112" fill="#e07a2e"/><rect x="240" y="52.4" width="56" height="117.6" fill="#e07a2e"/>
+<text x="108" y="57" text-anchor="middle" font-weight="600">8 000</text><text x="188" y="52" text-anchor="middle" font-weight="600">8 400</text><text x="268" y="46" text-anchor="middle" font-weight="600">8 820</text>
+<text x="108" y="188" text-anchor="middle">2024</text><text x="188" y="188" text-anchor="middle">2025</text><text x="268" y="188" text-anchor="middle">2026</text>
+</g></svg>
+<p>Erik säger: <i>”Hyran har ökat med 5 % båda åren. Alltså har den ökat med lika många kronor båda åren.”</i></p>
+<p>Har Erik rätt? Visa med en beräkning och förklara.</p>
+</div><div class="abil">R K</div></div>
+
+<div class="q"><div class="num">6<svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Efter en <b>höjning</b> med 8 % kostar ett gymkort 3 240 kr per år. Vad kostade gymkortet före höjningen?</p>
+<div class="chk">Kontroll: stämmer siffrorna med texten? · höjs eller sänks? · rimligt?</div>
+</div><div class="abil">M P</div></div>
+
+</div></section>
+
+<section class="sheet"><div class="in done">
+<h3>Klart? Samma som förut</h3>
+<ol><li>Har du gjort kontrollrutinen på varje uppgift?</li><li>Fota varje sida rakt ovanifrån i bra ljus.</li><li>Skicka bilderna till pappa.</li></ol>
+<p class="note">Facit finns inte på sidan.</p>
+</div></section>
+</main></body></html>
