@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Diagnos kapitel 2 · version E (generalrepetition 2)</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9ecef;--paper:#fff;--ink:#16181d;--mut:#62666e;--line:#d9dde3;--band:#0a84d6;--bandbg:#e3f1fb;--yel:#f6c400;--acc:#ff6b2c}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Source Serif 4",Georgia,serif;padding:max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) 60px max(10px,env(safe-area-inset-left))}
+main{max-width:860px;margin:0 auto}
+.sheet{background:var(--paper);border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 8px 30px rgba(0,0,0,.06);margin:0 0 18px;overflow:hidden}
+.band{background:var(--band);color:#fff;padding:9px 18px;font:700 14px/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between}
+.in{padding:22px clamp(16px,4vw,40px) 26px}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(28px,6vw,40px);font-weight:800;line-height:1.05}
+h2{font-size:24px;margin:4px 0 6px}
+.sub{font:600 14px Inter,sans-serif;color:var(--mut);letter-spacing:.04em;text-transform:uppercase;margin-top:6px}
+.info{font:15px/1.5 Inter,sans-serif;background:var(--bandbg);border-radius:12px;padding:14px 16px;margin-top:16px}
+.info ol,.info ul{margin:6px 0 0;padding-left:20px}.info li{margin:3px 0}
+.info b{font-weight:700}
+.legend{font:13px/1.5 Inter,sans-serif;color:var(--mut);margin-top:12px}
+.legend b{color:var(--ink);font-weight:700;letter-spacing:.06em}
+.delhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.delhead .tag{font:600 13px Inter,sans-serif;background:#f1f3f5;border-radius:999px;padding:5px 11px;color:var(--mut)}
+.q{display:grid;grid-template-columns:46px 1fr auto;gap:0 10px;padding:20px 0;border-top:1px solid var(--line)}
+.q:first-of-type{border-top:0}
+.num{font:800 24px/1.1 "Bricolage Grotesque",Inter,sans-serif;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.abil{font:600 14px Inter,sans-serif;letter-spacing:.12em;color:#3a3f47;white-space:nowrap;padding-top:4px}
+.body p{margin:0 0 8px}
+.subs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 18px;margin:6px 0 4px}
+.subs.two{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.subs div{white-space:normal}
+.fig{display:flex;flex-wrap:wrap;gap:22px 34px;align-items:flex-end;margin:10px 0 2px}
+.fig figure{margin:0;display:flex;gap:8px;align-items:flex-start}
+.fig figcaption{font-size:17px}
+table.t{border-collapse:collapse;margin:10px 0 4px;font:16px Inter,sans-serif;min-width:min(100%,520px)}
+.t th,.t td{border:1.5px solid #333;padding:9px 14px;text-align:center}
+.t th{font-style:italic;font-weight:500;background:#fafafa}
+.t td.l{border:0;text-align:right;padding-right:8px;font-family:"Source Serif 4",serif;font-size:17px}
+.scroll{overflow-x:auto}
+.clip{font-family:Georgia,serif;border-left:1.5px solid #555;border-right:1.5px solid #555;padding:8px 12px;max-width:290px;margin:10px 0 4px;background:#fcfcfa}
+.clip h4{margin:0 0 4px;font:600 22px/1.1 Inter,sans-serif}
+.clip p{margin:0;font-size:13.5px;line-height:1.35;text-align:justify}
+.star{color:var(--acc);font-size:20px;line-height:1}
+.calc{width:30px;height:34px}
+.done{font:15px/1.55 Inter,sans-serif}
+.done h3{font-size:22px;margin-bottom:8px}
+.note{font:13px Inter,sans-serif;color:var(--mut);margin-top:10px}
+@media(max-width:520px){.q{grid-template-columns:38px 1fr}.abil{grid-column:2;padding:0 0 6px;order:-1}body{font-size:16.5px}}
+@media print{body{background:#fff;padding:0}.sheet{box-shadow:none;break-inside:auto}.q{break-inside:avoid}}
+.chk{font:600 13px Inter,sans-serif;color:#0868ad;background:#eef6fd;border-radius:8px;padding:5px 10px;margin-top:10px;display:inline-block}
+.ctl{background:#fff4d6;border-radius:12px;padding:12px 16px;margin-top:12px;font:15px/1.5 Inter,sans-serif}
+.ctl b{font-weight:700}
+</style></head>
+<body><main>
+
+<!-- Calculator icon (reused) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="calc" viewBox="0 0 30 34"><rect x="1" y="1" width="28" height="32" rx="3" fill="#8e98a6"/><rect x="5" y="5" width="20" height="7" rx="1" fill="#eef1f4"/>
+<g fill="#eef1f4"><rect x="5" y="15" width="4" height="3"/><rect x="11" y="15" width="4" height="3"/><rect x="17" y="15" width="4" height="3"/><rect x="23" y="15" width="2.5" height="3"/>
+<rect x="5" y="20.5" width="4" height="3"/><rect x="11" y="20.5" width="4" height="3"/><rect x="17" y="20.5" width="4" height="3"/><rect x="23" y="20.5" width="2.5" height="3"/>
+<rect x="5" y="26" width="4" height="3"/><rect x="11" y="26" width="4" height="3"/><rect x="17" y="26" width="4" height="3"/><rect x="23" y="26" width="2.5" height="3"/></g></symbol>
+</defs></svg>
+
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Diagnos</span></div><div class="in">
+<h1>Diagnos kapitel 2</h1><div class="sub">Version E · generalrepetition 2</div>
+<div class="info"><b>Sista generalrepetitionen.</b> 15 uppgifter, ungefär 60 min: del I utan räknare (cirka 25 min), sedan del II med räknare (cirka 35 min). Bara sådant ni har gått igenom.
+<ol><li>Papper, penna, suddgummi och räknare till del II. Ingen bok eller anteckningar.</li><li>Visa alla steg, skriv enheter och avsluta med <b>Svar:</b> i en hel mening.</li><li>Sätt <b>?</b> där du är osäker.</li><li>Skriv start- och sluttid för varje del.</li></ol></div>
+<div class="ctl"><b>Dagens fokus: läs varje rad.</b> Innan du börjar räkna: stryk under varje uppgift i texten (a, b, c …) och varje villkor ("hälften av", "resten", "jämfört med året innan"). Bocka av varje deluppgift när du har svarat på den.<br>
+<b>Kontrollrutinen</b> som vanligt: (1) stämmer siffrorna med texten, (2) höjs eller sänks, (3) delar jag med värdet från början, (4) är svaret rimligt?</div>
+<div class="legend"><b>B</b> begrepp · <b>M</b> metod · <b>P</b> problemlösning · <b>R</b> resonemang · <b>K</b> kommunikation. <span class="star">✩</span> = lite svårare. Uppgift 15 är provets svåraste, ta den sist och gör så mycket du kan.</div>
+</div></section>
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Diagnos kap 2 · E</span></div><div class="in"><div class="delhead"><h2>Del I</h2><span class="tag">Utan räknare</span></div>
+<div class="q"><div class="num"><span>1</span></div><div class="body"><p>Hur stor andel av kulorna är gula? Svara i</p><svg width="172" height="140" viewBox="0 0 172 140" style="margin:4px 0 6px"><circle cx="18" cy="18" r="13" fill="#f6c400" stroke="#222" stroke-width="1.2"/><circle cx="52" cy="18" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="86" cy="18" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="120" cy="18" r="13" fill="#f6c400" stroke="#222" stroke-width="1.2"/><circle cx="154" cy="18" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="18" cy="52" r="13" fill="#f6c400" stroke="#222" stroke-width="1.2"/><circle cx="52" cy="52" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="86" cy="52" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="120" cy="52" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="154" cy="52" r="13" fill="#f6c400" stroke="#222" stroke-width="1.2"/><circle cx="18" cy="86" r="13" fill="#f6c400" stroke="#222" stroke-width="1.2"/><circle cx="52" cy="86" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="86" cy="86" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="120" cy="86" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="154" cy="86" r="13" fill="#f6c400" stroke="#222" stroke-width="1.2"/><circle cx="18" cy="120" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="52" cy="120" r="13" fill="#f6c400" stroke="#222" stroke-width="1.2"/><circle cx="86" cy="120" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="120" cy="120" r="13" fill="#4a90d9" stroke="#222" stroke-width="1.2"/><circle cx="154" cy="120" r="13" fill="#f6c400" stroke="#222" stroke-width="1.2"/></svg><div class="subs"><div>a) bråkform (enklaste form)</div><div>b) decimalform</div><div>c) procentform</div></div></div><div class="abil">B M</div></div>
+<div class="q"><div class="num"><span>2</span></div><div class="body"><p>Beräkna. Visa hur du tänker.</p><div class="subs"><div>a) 20 % av 450 kr</div><div>b) 2,5 % av 800 kr</div><div>c) 110 % av 70 kr</div><div>d) 1 % av 3 600 kr</div></div></div><div class="abil">M K</div></div>
+<div class="q"><div class="num"><span>3</span></div><div class="body"><div class="subs two"><div>a) Tre fjärdedelar av ett tal är 24. Vilket är talet?</div><div>b) 30 % av ett tal är 12. Vilket är talet?</div></div></div><div class="abil">B M</div></div>
+<div class="q"><div class="num"><span>4</span></div><div class="body"><p>Räntesatsen på ett sparkonto höjs från 2 % till 3 %.</p><div class="subs two"><div>a) Hur många <b>procentenheter</b> höjdes räntesatsen?</div><div>b) Hur många <b>procent</b> höjdes räntesatsen?</div></div></div><div class="abil">B M</div></div>
+<div class="q"><div class="num"><span>5</span></div><div class="body"><p>Båda butikerna säljer samma glassbåt för samma ordinarie pris. Du ska köpa 4 glassbåtar.</p><div class="fig" style="gap:18px"><svg width="200" height="96" viewBox="0 0 200 96"><rect x="2" y="2" width="196" height="92" rx="10" fill="#ffe3d6" stroke="#c0392b" stroke-width="2"/><g font-family="Inter,sans-serif" text-anchor="middle" fill="#a1281b"><text x="100" y="30" font-size="14" font-weight="600">Butik A · Glassbåtar</text><text x="100" y="68" font-size="19" font-weight="800">Köp 4, betala för 3!</text></g></svg>
+<svg width="200" height="96" viewBox="0 0 200 96"><rect x="2" y="2" width="196" height="92" rx="10" fill="#dff1e6" stroke="#1f9d6b" stroke-width="2"/><g font-family="Inter,sans-serif" text-anchor="middle" fill="#16704c"><text x="100" y="30" font-size="14" font-weight="600">Butik B · Glassbåtar</text><text x="100" y="72" font-size="34" font-weight="800">20 % rabatt</text></g></svg></div><p>Vilket erbjudande är bäst? Förklara hur du tänker.</p></div><div class="abil">P R K</div></div>
+<div class="q"><div class="num"><span>6</span></div><div class="body"><p>En bok kostar 40 kr i en butik och 100 kr i en annan.</p><div class="subs two"><div>a) Hur många procent <b>dyrare</b> är boken som kostar 100 kr?</div><div>b) Hur många procent <b>billigare</b> är boken som kostar 40 kr?</div></div></div><div class="abil">M R</div></div>
+<div class="q"><div class="num"><span>7</span></div><div class="body"><p>I klass 8D går 32 elever. En fjärdedel av eleverna cyklar till skolan. Hälften av de övriga eleverna går. Resten åker buss.</p><div class="subs two"><div>a) Hur många elever åker buss?</div><div>b) Hur många procent av eleverna i klassen åker buss?</div></div></div><div class="abil">P K</div></div>
+
+<p class="note">Klar med del I? Skriv sluttiden, ta fram räknaren och gå vidare.</p></div></section>
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Diagnos kap 2 · E</span></div><div class="in"><div class="delhead"><h2>Del II</h2><span class="tag">Räknare tillåten</span></div>
+<div class="q"><div class="num"><span>8</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><p>Efter en rabatt på 450 kr kostar en cykel 3 150 kr. Hur många procent var rabatten? Avrunda till tiondels procent.</p></div><div class="abil">M P</div></div>
+<div class="q"><div class="num"><span>9</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><p>Hur många procent har priset sänkts? Avrunda till tiondels procent.</p><svg width="260" height="120" viewBox="0 0 260 120" style="max-width:100%;margin:6px 0"><path d="M30 8 H246 a6 6 0 0 1 6 6 V106 a6 6 0 0 1 -6 6 H30 L6 60 Z" fill="#fff4cc" stroke="#222" stroke-width="1.6"/><circle cx="28" cy="60" r="6" fill="#fff" stroke="#222" stroke-width="1.4"/><g font-family="Inter,sans-serif" fill="#222"><text x="56" y="32" font-size="13" fill="#555">Hörlurar</text><text x="56" y="56" font-size="14">Förr</text><text x="112" y="58" font-size="19" font-weight="600">849 kr</text><line x1="110" y1="52" x2="176" y2="52" stroke="#c0392b" stroke-width="2.2"/><text x="56" y="96" font-size="14">Nu</text><text x="104" y="99" font-size="34" font-weight="800" fill="#c0392b">629 kr</text></g></svg></div><div class="abil">M K</div></div>
+<div class="q"><div class="num"><span>10</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><p>Skriv av tabellen och fyll i det som saknas.</p><div class="scroll"><table class="t">
+<tr><td class="l"></td><th>Kapital</th><th>Räntesats</th><th>Tid</th><th>Ränta</th></tr>
+<tr><td class="l">a)</td><td>20 000 kr</td><td>?</td><td>6 månader</td><td>350 kr</td></tr>
+<tr><td class="l">b)</td><td>?</td><td>2,4 %</td><td>3 månader</td><td>480 kr</td></tr>
+<tr><td class="l">c)</td><td>45 000 kr</td><td>3,2 %</td><td>8 månader</td><td>?</td></tr>
+<tr><td class="l">d)</td><td>12 000 kr</td><td>5 %</td><td>?</td><td>150 kr</td></tr></table></div>
+<p style="margin-top:10px">e) Ali lånar 18 000 kr. Räntesatsen är 7 %. Efter 4 månader betalar han tillbaka lånet och räntan. Hur mycket betalar han sammanlagt?</p></div><div class="abil">M P B</div></div>
+<div class="q"><div class="num"><span>11</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><div class="clip"><h4>Husets värde upp och ner</h4><p>GENARP (LT) Ett hus värderades till 3 200 000 kr. Första året steg värdet med 5 %. Andra året sjönk värdet med 5 % jämfört med året innan.</p></div><p style="margin-top:10px">a) Vad är huset värt efter två år?</p><p>b) Förklara varför huset inte är värt 3 200 000 kr igen.</p></div><div class="abil">M R K</div></div>
+<div class="q"><div class="num"><span>12</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><p>Efter en höjning med 6 % kostar en månadsbiljett 795 kr. Vad kostade biljetten före höjningen?</p></div><div class="abil">M P</div></div>
+<div class="q"><div class="num"><span>13</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><p>En tröja kostade 500 kr. Priset sänktes först med 20 % och sedan med ytterligare 10 % av det nya priset. Med hur många procent sänktes priset sammanlagt? Två elever löste uppgiften:</p><div class="fig" style="align-items:flex-start;gap:16px"><svg width="300" height="112" viewBox="0 0 300 112" style="max-width:100%"><defs><pattern id="sqJonas" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M12 0H0V12" fill="none" stroke="#cfe0f0"/></pattern></defs><rect x="1" y="1" width="298" height="110" rx="6" fill="#fff" stroke="#9cb8d6"/><rect x="1" y="1" width="298" height="110" rx="6" fill="url(#sqJonas)"/><g font-family="Patrick Hand,Comic Sans MS,cursive" font-size="18" fill="#3c3f45"><text x="14" y="24" font-size="15" fill="#6b6e75">Jonas lösning</text><text x="14" y="52">20 % + 10 % = 30 %</text><text x="14" y="82">Svar: Priset sänktes med 30 %.</text></g></svg><svg width="300" height="202" viewBox="0 0 300 202" style="max-width:100%"><defs><pattern id="sqSara" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M12 0H0V12" fill="none" stroke="#cfe0f0"/></pattern></defs><rect x="1" y="1" width="298" height="200" rx="6" fill="#fff" stroke="#9cb8d6"/><rect x="1" y="1" width="298" height="200" rx="6" fill="url(#sqSara)"/><g font-family="Patrick Hand,Comic Sans MS,cursive" font-size="18" fill="#3c3f45"><text x="14" y="24" font-size="15" fill="#6b6e75">Saras lösning</text><text x="14" y="52">20 % av 500 kr = 100 kr → 400 kr</text><text x="14" y="82">10 % av 400 kr = 40 kr → 360 kr</text><text x="14" y="112">Sänkning: 500 − 360 = 140 kr</text><text x="14" y="142">140 / 500 = 0,28 = 28 %</text><text x="14" y="172">Svar: Priset sänktes med 28 %.</text></g></svg></div><div class="subs two" style="margin-top:8px"><div>a) Vem har löst uppgiften rätt?</div><div>b) Förklara vilket fel den andra eleven har gjort.</div></div></div><div class="abil">R K</div></div>
+<div class="q"><div class="num"><span>14</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><p>a) Jorden har ungefär 8,1 miljarder invånare. Ungefär 17 % av dem bor i Afrika. Hur många bor i Afrika? Svara i grundpotensform med två värdesiffror.</p><p>b) Skriv 4 650 000 i grundpotensform med två värdesiffror.</p></div><div class="abil">M B</div></div>
+<div class="q"><div class="num"><span>15</span><span class="star">✩</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><p>På en skola går 600 elever. 45 % av eleverna är tjejer, resten är killar. Två tredjedelar av tjejerna och 40 % av killarna äter frukost i skolan.</p><p>a) Hur många tjejer äter frukost i skolan?</p><p>b) Hur många killar äter frukost i skolan?</p><p>c) Hur många procent av alla elever äter frukost i skolan?</p><p>d) Nästa år vill skolan att 60 % av eleverna ska äta frukost. Hur många fler elever måste då äta frukost?</p></div><div class="abil">P B K</div></div>
+</div></section>
+<section class="sheet"><div class="in done"><h3>Klart? Samma som förut</h3><ol><li>Har du svarat på varje deluppgift? Räkna bockarna.</li><li>Fota varje sida rakt ovanifrån i bra ljus.</li><li>Skicka bilderna till pappa.</li></ol><p class="note">Facit finns inte på sidan.</p></div></section>
+</main></body></html>
