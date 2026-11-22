@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Diagnos kapitel 2 · version C · rättad</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=Patrick+Hand&family=Caveat:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9ecef;--paper:#fff;--ink:#16181d;--mut:#62666e;--line:#d9dde3;--band:#0a84d6;--bandbg:#e3f1fb;--yel:#f6c400;--acc:#ff6b2c}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Source Serif 4",Georgia,serif;padding:max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) 60px max(10px,env(safe-area-inset-left))}
+main{max-width:860px;margin:0 auto}
+.sheet{background:var(--paper);border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 8px 30px rgba(0,0,0,.06);margin:0 0 18px;overflow:hidden}
+.band{background:var(--band);color:#fff;padding:9px 18px;font:700 14px/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between}
+.in{padding:22px clamp(16px,4vw,40px) 26px}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(28px,6vw,40px);font-weight:800;line-height:1.05}
+h2{font-size:24px;margin:4px 0 6px}
+.sub{font:600 14px Inter,sans-serif;color:var(--mut);letter-spacing:.04em;text-transform:uppercase;margin-top:6px}
+.info{font:15px/1.5 Inter,sans-serif;background:var(--bandbg);border-radius:12px;padding:14px 16px;margin-top:16px}
+.info ol,.info ul{margin:6px 0 0;padding-left:20px}.info li{margin:3px 0}
+.info b{font-weight:700}
+.legend{font:13px/1.5 Inter,sans-serif;color:var(--mut);margin-top:12px}
+.legend b{color:var(--ink);font-weight:700;letter-spacing:.06em}
+.delhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.delhead .tag{font:600 13px Inter,sans-serif;background:#f1f3f5;border-radius:999px;padding:5px 11px;color:var(--mut)}
+.q{display:grid;grid-template-columns:46px 1fr auto;gap:0 10px;padding:20px 0;border-top:1px solid var(--line)}
+.q:first-of-type{border-top:0}
+.num{font:800 24px/1.1 "Bricolage Grotesque",Inter,sans-serif;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.abil{font:600 14px Inter,sans-serif;letter-spacing:.12em;color:#3a3f47;white-space:nowrap;padding-top:4px}
+.body p{margin:0 0 8px}
+.subs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 18px;margin:6px 0 4px}
+.subs.two{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.subs div{white-space:normal}
+.fig{display:flex;flex-wrap:wrap;gap:22px 34px;align-items:flex-end;margin:10px 0 2px}
+.fig figure{margin:0;display:flex;gap:8px;align-items:flex-start}
+.fig figcaption{font-size:17px}
+table.t{border-collapse:collapse;margin:10px 0 4px;font:16px Inter,sans-serif;min-width:min(100%,520px)}
+.t th,.t td{border:1.5px solid #333;padding:9px 14px;text-align:center}
+.t th{font-style:italic;font-weight:500;background:#fafafa}
+.t td.l{border:0;text-align:right;padding-right:8px;font-family:"Source Serif 4",serif;font-size:17px}
+.scroll{overflow-x:auto}
+.clip{font-family:Georgia,serif;border-left:1.5px solid #555;border-right:1.5px solid #555;padding:8px 12px;max-width:290px;margin:10px 0 4px;background:#fcfcfa}
+.clip h4{margin:0 0 4px;font:600 22px/1.1 Inter,sans-serif}
+.clip p{margin:0;font-size:13.5px;line-height:1.35;text-align:justify}
+.star{color:var(--acc);font-size:20px;line-height:1}
+.calc{width:30px;height:34px}
+.done{font:15px/1.55 Inter,sans-serif}
+.done h3{font-size:22px;margin-bottom:8px}
+.note{font:13px Inter,sans-serif;color:var(--mut);margin-top:10px}
+@media(max-width:520px){.q{grid-template-columns:38px 1fr}.abil{grid-column:2;padding:0 0 6px;order:-1}body{font-size:16.5px}}
+@media print{body{background:#fff;padding:0}.sheet{box-shadow:none;break-inside:auto}.q{break-inside:avoid}}
+
+.task{padding:18px 0 22px;border-top:1px solid var(--line)}
+.task:first-of-type{border-top:0}
+.task .q{border:0;padding:0 0 10px}
+.ansrow{display:flex;gap:12px;align-items:flex-start;margin-left:56px}
+.paper{flex:1;min-width:0;background:#fffef8 repeating-linear-gradient(to bottom,transparent 0,transparent 37px,#c9d7ea 37px,#c9d7ea 38px);border-left:2px solid #f0b4b4;border-radius:4px;padding:3px 12px 6px 14px;box-shadow:0 1px 2px rgba(0,0,0,.06);font-family:"Patrick Hand","Comic Sans MS",cursive;font-size:19px;color:#3c3f45;line-height:38px}
+.l{min-height:38px;display:flex;flex-wrap:wrap;align-items:center;column-gap:4px;line-height:1.25;padding:3px 0}
+.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-size:.8em;line-height:1.05;margin:0 2px}
+.fr span:first-child{border-bottom:1.6px solid currentColor;padding:0 3px}
+.fr span{padding:0 3px}
+.u{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px}
+.ok{font-family:Caveat,cursive;color:#d0021b;font-weight:700;font-size:1.35em;line-height:1;transform:rotate(-6deg);display:inline-block}
+.rn{font-family:Caveat,cursive;color:#d0021b;font-weight:600;font-size:1.12em;line-height:1.15}
+.wr{text-decoration:underline wavy #d0021b;text-decoration-thickness:1.6px;text-underline-offset:4px}
+.wr .fr span:first-child{border-color:#3c3f45}
+.pts{flex:none;width:74px;height:74px;border:2.5px solid #d0021b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Caveat,cursive;color:#d0021b;font-size:19px;font-weight:700;transform:rotate(-8deg);background:rgba(255,255,255,.6)}
+.pts span{font-size:28px;margin-right:2px}
+.pts.strike span{font-size:22px}
+.fixlbl{margin:12px 0 4px 56px;font:700 12.5px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#d0021b}
+.fix{margin-left:56px;background-color:#fff8f8;border-left-color:#d0021b}
+.fix .rn{color:#b0001a}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.name{font-family:"Patrick Hand",cursive;font-size:22px;color:#3c3f45;border-bottom:1.5px solid #999;padding:0 30px 0 4px;margin-top:10px;display:inline-block}
+.bigscore{font-family:Caveat,cursive;color:#d0021b;font-weight:700;font-size:44px;line-height:1;border:3px solid #d0021b;border-radius:50%;width:140px;height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-7deg)}
+.bigscore small{font-size:22px}
+.legend2{font:13.5px/1.6 Inter,sans-serif;color:var(--mut);margin-top:14px}
+.legend2 .rn{font-size:17px}
+table.sum{border-collapse:collapse;font:15px Inter,sans-serif;margin:8px 0}
+.sum td,.sum th{border-bottom:1px solid var(--line);padding:6px 14px;text-align:left}
+.sum tr.t td{font-weight:800;border-top:2px solid #333;font-size:17px}
+.sumgrid{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center}
+.hand-note{font-family:Caveat,cursive;color:#d0021b;font-size:24px;line-height:1.25;font-weight:600;margin-top:12px}
+@media(max-width:560px){.band{font-size:11.5px;letter-spacing:.08em;gap:10px}.ansrow{margin-left:0;flex-direction:column-reverse;align-items:flex-end}.ansrow .paper{width:100%}.fixlbl,.fix{margin-left:0}.paper{font-size:17.5px}.pts{width:64px;height:64px;margin-bottom:-6px}}
+</style></head><body><main><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="calc" viewBox="0 0 30 34"><rect x="1" y="1" width="28" height="32" rx="3" fill="#8e98a6"/><rect x="5" y="5" width="20" height="7" rx="1" fill="#eef1f4"/>
+<g fill="#eef1f4"><rect x="5" y="15" width="4" height="3"/><rect x="11" y="15" width="4" height="3"/><rect x="17" y="15" width="4" height="3"/><rect x="23" y="15" width="2.5" height="3"/>
+<rect x="5" y="20.5" width="4" height="3"/><rect x="11" y="20.5" width="4" height="3"/><rect x="17" y="20.5" width="4" height="3"/><rect x="23" y="20.5" width="2.5" height="3"/>
+<rect x="5" y="26" width="4" height="3"/><rect x="11" y="26" width="4" height="3"/><rect x="17" y="26" width="4" height="3"/><rect x="23" y="26" width="2.5" height="3"/></g></symbol>
+</defs></svg>
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Rättad</span></div>
+<div class="in"><div class="top"><div>
+<h1>Diagnos kapitel 2</h1><div class="sub">Version C · rättad</div><div class="name">Namn: Hugo</div>
+<div class="legend2">Blyerts = det du skrev. <span class="rn">Rödpenna</span> = rättning. <span class="ok">✓</span> = rätt. <span class="wr">Vågigt streck</span> = här blev det fel.</div>
+</div><div class="bigscore">13/18<small>poäng</small></div></div>
+<p class="hand-note">Riktigt bra, Hugo! Räntan för kort tid: alla fyra rätt. Höjning och sänkning åt rätt håll i både 1 och 4. Och en mycket bra förklaring i 1b.<br>Två saker kvar: avrunda i grundpotensform (titta på nästa siffra) och baklänges efter en höjning → använd 1 %-metoden.</p>
+<p class="small" style="font:13.5px Inter;color:#666">Tid: del I 10 min, del II 32 min.</p>
+</div></section>
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Kap 2 · C · rättad</span></div><div class="in"><div class="delhead"><h2>Del I</h2><span class="tag">Utan räknare</span></div><div class="task"><div class="q"><div class="num"><span>1</span></div><div class="body">
+<svg width="250" height="100" viewBox="0 0 250 100" style="max-width:100%;margin:2px 0 8px" aria-label="Biljett 240 kr">
+<path d="M8 8 H242 V36 a12 12 0 0 0 0 28 V92 H8 V64 a12 12 0 0 0 0 -28 Z" fill="#fff4cc" stroke="#222" stroke-width="1.6"/>
+<line x1="180" y1="14" x2="180" y2="86" stroke="#222" stroke-dasharray="4 4"/>
+<g font-family="Inter,sans-serif" fill="#222"><text x="26" y="40" font-size="14">Konsertbiljett</text><text x="26" y="76" font-size="30" font-weight="800">240 kr</text><text x="211" y="56" font-size="12" text-anchor="middle" transform="rotate(-90 211 52)">ENTRÉ</text></g></svg>
+<p>Priset på biljetten <b>sänks</b> först med 25 %. Några månader senare <b>höjs</b> det nya priset med 20 %.</p>
+<p>a) Vad kostar biljetten nu?</p>
+<p>b) Är biljetten nu billigare eller dyrare än från början? Förklara varför det blir så.</p>
+<div class="chk">Kontroll: stämmer siffrorna med texten? · höjs eller sänks? · rimligt?</div>
+</div><div class="abil">M R K</div></div><div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">a) 240kr − 25% = 240kr − 60kr =</div><div class="l" style="padding-left:1.2em">180kr. 180kr + 20% = 180kr + 36kr <span class="ok">✓</span> <span class="rn">Rätt håll båda gångerna!</span></div><div class="l" style="padding-left:1.2em">= <span class="u">216kr</span> <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">b) Biljetten är nu billigare än från början,</div><div class="l" style="padding-left:0.0em">eftersom första förändringen är större än andra</div><div class="l" style="padding-left:0.0em">förändringen. Man tar inte andra <span class="u">sänkningen</span> från</div><div class="l" style="padding-left:0.0em">första priset, utan andra priset efter första</div><div class="l" style="padding-left:0.0em">sänkningen. <span class="ok">✓</span> <span class="rn">Mycket bra förklaring med "eftersom"! (andra gången var en höjning)</span></div></div><div class="pts"><span>3/3</span> p</div></div></div><div class="task"><div class="q"><div class="num"><span>2</span></div><div class="body">
+<p>Avrunda.</p>
+<div class="subs two"><div>a) 0,1867 till procent med en decimal</div><div>b) 4 762 000 i grundpotensform med två värdesiffror</div><div>c) 3 049 000 i grundpotensform med två värdesiffror</div></div>
+</div><div class="abil">M</div></div><div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">a) 0,1867 ≈ <span class="wr">0,2</span> <span class="rn">Läs igen: "till procent med en decimal"</span></div><div class="l" style="padding-left:0.0em">b) 4,7<u>62 000</u> = <span class="wr">4,7</span>×10<sup>6</sup> <span class="rn">4,7|62 → nästa siffra 6 → avrunda upp!</span></div><div class="l" style="padding-left:0.0em">c) 3,0<u>49 000</u> = 3,0×10<sup>6</sup> <span class="ok">✓</span> <span class="rn">Snyggt, nollan står med!</span></div></div><div class="pts"><span>1/3</span> p</div></div><div class="fixlbl">Så hade ett fullpoängssvar sett ut</div><div class="paper fix"><div class="l" style="padding-left:0.0em"><span class="rn">a) 0,1867 = 18,67 % → en decimal: 18,6|7 → 18,7 %</span></div><div class="l" style="padding-left:0.0em"><span class="rn">b) 4 762 000 = 4,762 · 10⁶ → två värdesiffror: 4,7|62 → 4,8 · 10⁶</span></div><div class="l" style="padding-left:0.0em"><span class="rn">Tips: skriv först hela talet med alla siffror (4,762), titta sedan på nästa siffra.</span></div></div></div></div></section>
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Kap 2 · C · rättad</span></div><div class="in"><div class="delhead"><h2>Del II</h2><span class="tag">Räknare tillåten</span></div><div class="task"><div class="q"><div class="num"><span>3</span><svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Skriv av tabellen och fyll i det som saknas.</p>
+<div class="scroll"><table class="t">
+<tr><td class="l"></td><th>Kapital</th><th>Räntesats</th><th>Tid</th><th>Ränta</th></tr>
+<tr><td class="l">a)</td><td>?</td><td>2,5 %</td><td>6 månader</td><td>300 kr</td></tr>
+<tr><td class="l">b)</td><td>16 000 kr</td><td>?</td><td>3 månader</td><td>120 kr</td></tr>
+<tr><td class="l">c)</td><td>?</td><td>4,2 %</td><td>1/4 år</td><td>630 kr</td></tr>
+<tr><td class="l">d)</td><td>9 000 kr</td><td>3,2 %</td><td>8 månader</td><td>?</td></tr>
+</table></div>
+<div class="chk">Kontroll: stämmer siffrorna med texten? · höjs eller sänks? · rimligt?</div>
+</div><div class="abil">M P B</div></div><div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">a) Kapitalet = &nbsp;<svg width="92" height="60" viewBox="0 0 92 60" style="vertical-align:middle"><g fill="none" stroke="#6b6e75" stroke-width="1.4"><path d="M46 3 L89 57 L3 57 Z"/><path d="M19 37 H73"/></g><g font-family="Patrick Hand" font-size="11" fill="#55585e"><text x="46" y="31" text-anchor="middle">Ränta</text><text x="46" y="51" text-anchor="middle">Räntesats × kap</text></g></svg> <span class="rn">Triangeln igen, bra!</span></div><div class="l" style="padding-left:1.2em"><span class="fr"><span>300</span><span>0,025</span></span> × 2 = 12000kr × 2 = 24 000kr <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">b) Räntesatsen = <span class="fr"><span>120</span><span>16000</span></span> = 0,0075 × 100 =</div><div class="l" style="padding-left:3.5999999999999996em">0,75% × 4 = 3% <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">c) Kapitalet = <span class="fr"><span>630</span><span>0,042</span></span> × 4 = 15000kr × 4 = 60 000kr <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">d) Ränta = 0,032 × 9000 = 288kr/år</div><div class="l" style="padding-left:1.2em">1 mån = <span class="fr"><span>288</span><span>12</span></span> = 24kr</div><div class="l" style="padding-left:1.2em">8 mån = 24kr × 8 = 192kr <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em"><span class="rn">Alla fyra rätt! Ränta för kort tid klarar du nu, åt båda hållen.</span></div></div><div class="pts"><span>4/4</span> p</div></div></div><div class="task"><div class="q"><div class="num"><span>4</span><svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<div class="clip"><h4>Djurparken lockar och tappar</h4>
+<p>SKÅNE (LT) År 2024 hade djurparken 640 000 besökare. År 2025 ökade antalet med 15 %. År 2026 minskade antalet med 12 % jämfört med 2025.</p></div>
+<p style="margin-top:10px">a) Hur många besökare hade djurparken 2026?</p>
+<p>b) Med hur många procent förändrades antalet besökare från 2024 till 2026? Avrunda till en decimal.</p>
+<div class="chk">Kontroll: stämmer siffrorna med texten? · höjs eller sänks? · rimligt?</div>
+</div><div class="abil">M P</div></div><div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">2024 = 640 000 besökare</div><div class="l" style="padding-left:0.0em">2025 = 1,15 ökning</div><div class="l" style="padding-left:0.0em">2026 = 0,88 minskning från 2025 <span class="rn">Rätt siffror och rätt håll!</span></div><div class="l" style="padding-left:0.0em">a) 2025 = 640 000 × 1,15 = 736 000 besökare år 2025</div><div class="l" style="padding-left:0.0em">2026 = 736 000 × 0,88 = <span class="u">647 680 besökare</span> <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">b) 2024 = 640 000 besökare</div><div class="l" style="padding-left:1.2em">2026 = 647 680 besökare</div><div class="l" style="padding-left:1.2em">skillnad = 7680 besökare</div><div class="l" style="padding-left:1.2em"><span class="fr"><span>7680</span><span>640000</span></span> = 0,012 × 100 = 1,2% <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">svar: a) 647 680 besökare 2026 &nbsp; b) 1,2%</div></div><div class="pts"><span>3/3</span> p</div></div></div><div class="task"><div class="q"><div class="num"><span>5</span><svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Diagrammet visar Linneas månadshyra.</p>
+<svg width="320" height="200" viewBox="0 0 320 200" style="max-width:100%;margin:6px 0 8px" aria-label="Stapeldiagram hyra: 2024 8 000 kr, 2025 8 400 kr, 2026 8 820 kr">
+<g font-family="Inter,sans-serif" font-size="12" fill="#333">
+<text x="6" y="14" font-weight="600">Månadshyra (kr)</text>
+<g stroke="#e3e7ec"><line x1="56" y1="50" x2="310" y2="50"/><line x1="56" y1="90" x2="310" y2="90"/><line x1="56" y1="130" x2="310" y2="130"/></g>
+<line x1="56" y1="170" x2="310" y2="170" stroke="#222" stroke-width="1.5"/><line x1="56" y1="28" x2="56" y2="170" stroke="#222" stroke-width="1.5"/>
+<text x="50" y="174" text-anchor="end">0</text><text x="50" y="134" text-anchor="end">3 000</text><text x="50" y="94" text-anchor="end">6 000</text><text x="50" y="54" text-anchor="end">9 000</text>
+<rect x="80" y="63.3" width="56" height="106.7" fill="#e07a2e"/><rect x="160" y="58" width="56" height="112" fill="#e07a2e"/><rect x="240" y="52.4" width="56" height="117.6" fill="#e07a2e"/>
+<text x="108" y="57" text-anchor="middle" font-weight="600">8 000</text><text x="188" y="52" text-anchor="middle" font-weight="600">8 400</text><text x="268" y="46" text-anchor="middle" font-weight="600">8 820</text>
+<text x="108" y="188" text-anchor="middle">2024</text><text x="188" y="188" text-anchor="middle">2025</text><text x="268" y="188" text-anchor="middle">2026</text>
+</g></svg>
+<p>Erik säger: <i>”Hyran har ökat med 5 % båda åren. Alltså har den ökat med lika många kronor båda åren.”</i></p>
+<p>Har Erik rätt? Visa med en beräkning och förklara.</p>
+</div><div class="abil">R K</div></div><div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">2024 = 8000kr &nbsp; 2025 = 8400kr &nbsp; 2026 = 8820kr</div><div class="l" style="padding-left:0.0em">Från 2024 till 2026 = <span class="fr"><span>400</span><span>8000</span></span> = 0,05×100 = 5% <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">Från 2025 till 2026 = <span class="fr"><span>420</span><span>8400</span></span> = 0,05×100 = 5% <span class="ok">✓</span></div><div class="l" style="padding-left:0.0em">svar: Erik säger: "Alltså har den ökat med lika många kronor</div><div class="l" style="padding-left:0.0em">båda åren". Det stämmer inte. Från 2024 till 2025 var</div><div class="l" style="padding-left:0.0em">ökningen <span class="u">400kr</span>, medans från 2025 till 2026 var det en</div><div class="l" style="padding-left:0.0em">ökning på 420kr. Hyran har ökat med 5% båda åren,</div><div class="l" style="padding-left:0.0em">men inte med lika många kronor. <span class="ok">✓</span> <span class="rn">Rätt! Lägg till varför: vilket tal räknas 5 % på?</span></div></div><div class="pts"><span>2/3</span> p</div></div><div class="fixlbl">Så hade ett fullpoängssvar sett ut</div><div class="paper fix"><div class="l" style="padding-left:0.0em"><span class="rn">…men inte med lika många kronor, eftersom 5 % räknas på</span></div><div class="l" style="padding-left:0.0em"><span class="rn">olika tal: 5 % av 8 000 = 400 kr, men andra året 5 % av den</span></div><div class="l" style="padding-left:0.0em"><span class="rn">högre hyran 8 400 = 420 kr.</span></div></div></div><div class="task"><div class="q"><div class="num"><span>6</span><svg class="calc"><use href="#calc"/></svg></div><div class="body">
+<p>Efter en <b>höjning</b> med 8 % kostar ett gymkort 3 240 kr per år. Vad kostade gymkortet före höjningen?</p>
+<div class="chk">Kontroll: stämmer siffrorna med texten? · höjs eller sänks? · rimligt?</div>
+</div><div class="abil">M P</div></div><div class="ansrow"><div class="paper"><div class="l" style="padding-left:0.0em">Höjning 8% = 3240kr/år gymkort</div><div class="l" style="padding-left:0.0em"><s>×1,08</s> &nbsp;1,0 − 0,08 = <span class="wr">0,92</span></div><div class="l" style="padding-left:0.0em">Pris före höjning = <span class="wr">0,92 × 3240</span> = 2980,8 kr ?</div><div class="l" style="padding-left:2.4em">SVAR: 2980,8kr <span class="rn">Bra att du satte ?, din känsla var rätt!</span></div><div class="l" style="padding-left:0.0em"><span class="rn">Koll: 2 980,8 + 8 % = 3 219 kr, inte 3 240. Använd din 1 %-metod!</span></div></div><div class="pts"><span>0/2</span> p</div></div><div class="fixlbl">Så hade ett fullpoängssvar sett ut</div><div class="paper fix"><div class="l" style="padding-left:0.0em"><span class="rn">Efter höjningen är priset 100 % + 8 % = 108 %</span></div><div class="l" style="padding-left:0.0em"><span class="rn">108 % = 3 240 kr</span></div><div class="l" style="padding-left:0.0em"><span class="rn">1 % = 3 240 / 108 = 30 kr</span></div><div class="l" style="padding-left:0.0em"><span class="rn">100 % = 30 · 100 = 3 000 kr</span></div><div class="l" style="padding-left:0.0em"><span class="rn">SVAR: Gymkortet kostade 3 000 kr. Koll: 3 000 + 8 % = 3 240 ✓</span></div><div class="l" style="padding-left:0.0em"><span class="rn">Samma typ som cykeln i A: hitta 1 % först.</span></div></div></div></div></section>
+<section class="sheet"><div class="in"><h2>Summering</h2><div class="sumgrid">
+<table class="sum"><tr><th>Uppgift</th><th>Poäng</th></tr><tr><td>1</td><td>3 / 3</td></tr><tr><td>2</td><td>1 / 3</td></tr><tr><td>3</td><td>4 / 4</td></tr><tr><td>4</td><td>3 / 3</td></tr><tr><td>5</td><td>2 / 3</td></tr><tr><td>6</td><td>0 / 2</td></tr><tr><td>Del I</td><td>4 / 6</td></tr><tr><td>Del II</td><td>9 / 12</td></tr><tr class="t"><td>Totalt</td><td>13 / 18</td></tr></table>
+<div class="bigscore">13/18<small>72 %</small></div></div>
+<h2 style="font-size:20px">Med dig till måndag</h2>
+<ol style="font:16px/1.7 Inter;margin:6px 0 0;padding-left:22px">
+<li><b>Grundpotensform:</b> skriv alla siffror först (4,762 · 10⁶), titta på nästa siffra och avrunda.</li>
+<li><b>Pris före en höjning eller rabatt:</b> hitta 1 % först. Efter +8 % är det 108 %, efter −15 % är det 85 %.</li>
+<li><b>Kontrollrutinen:</b> gör den på varje uppgift och sätt en bock. I uppgift 6 hade den fångat felet: 2 980,8 + 8 % blir inte 3 240.</li></ol>
+</div></section></main></body></html>
