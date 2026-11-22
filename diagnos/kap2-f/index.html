@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Diagnos kapitel 2 · version F (träna det som blev fel)</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9ecef;--paper:#fff;--ink:#16181d;--mut:#62666e;--line:#d9dde3;--band:#0a84d6;--bandbg:#e3f1fb;--yel:#f6c400;--acc:#ff6b2c}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Source Serif 4",Georgia,serif;padding:max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) 60px max(10px,env(safe-area-inset-left))}
+main{max-width:860px;margin:0 auto}
+.sheet{background:var(--paper);border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 8px 30px rgba(0,0,0,.06);margin:0 0 18px;overflow:hidden}
+.band{background:var(--band);color:#fff;padding:9px 18px;font:700 14px/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between}
+.in{padding:22px clamp(16px,4vw,40px) 26px}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(28px,6vw,40px);font-weight:800;line-height:1.05}
+h2{font-size:24px;margin:4px 0 6px}
+.sub{font:600 14px Inter,sans-serif;color:var(--mut);letter-spacing:.04em;text-transform:uppercase;margin-top:6px}
+.info{font:15px/1.5 Inter,sans-serif;background:var(--bandbg);border-radius:12px;padding:14px 16px;margin-top:16px}
+.info ol,.info ul{margin:6px 0 0;padding-left:20px}.info li{margin:3px 0}
+.info b{font-weight:700}
+.legend{font:13px/1.5 Inter,sans-serif;color:var(--mut);margin-top:12px}
+.legend b{color:var(--ink);font-weight:700;letter-spacing:.06em}
+.delhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.delhead .tag{font:600 13px Inter,sans-serif;background:#f1f3f5;border-radius:999px;padding:5px 11px;color:var(--mut)}
+.q{display:grid;grid-template-columns:46px 1fr auto;gap:0 10px;padding:20px 0;border-top:1px solid var(--line)}
+.q:first-of-type{border-top:0}
+.num{font:800 24px/1.1 "Bricolage Grotesque",Inter,sans-serif;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.abil{font:600 14px Inter,sans-serif;letter-spacing:.12em;color:#3a3f47;white-space:nowrap;padding-top:4px}
+.body p{margin:0 0 8px}
+.subs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 18px;margin:6px 0 4px}
+.subs.two{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.subs div{white-space:normal}
+.fig{display:flex;flex-wrap:wrap;gap:22px 34px;align-items:flex-end;margin:10px 0 2px}
+.fig figure{margin:0;display:flex;gap:8px;align-items:flex-start}
+.fig figcaption{font-size:17px}
+table.t{border-collapse:collapse;margin:10px 0 4px;font:16px Inter,sans-serif;min-width:min(100%,520px)}
+.t th,.t td{border:1.5px solid #333;padding:9px 14px;text-align:center}
+.t th{font-style:italic;font-weight:500;background:#fafafa}
+.t td.l{border:0;text-align:right;padding-right:8px;font-family:"Source Serif 4",serif;font-size:17px}
+.scroll{overflow-x:auto}
+.clip{font-family:Georgia,serif;border-left:1.5px solid #555;border-right:1.5px solid #555;padding:8px 12px;max-width:290px;margin:10px 0 4px;background:#fcfcfa}
+.clip h4{margin:0 0 4px;font:600 22px/1.1 Inter,sans-serif}
+.clip p{margin:0;font-size:13.5px;line-height:1.35;text-align:justify}
+.star{color:var(--acc);font-size:20px;line-height:1}
+.calc{width:30px;height:34px}
+.done{font:15px/1.55 Inter,sans-serif}
+.done h3{font-size:22px;margin-bottom:8px}
+.note{font:13px Inter,sans-serif;color:var(--mut);margin-top:10px}
+@media(max-width:520px){.q{grid-template-columns:38px 1fr}.abil{grid-column:2;padding:0 0 6px;order:-1}body{font-size:16.5px}}
+@media print{body{background:#fff;padding:0}.sheet{box-shadow:none;break-inside:auto}.q{break-inside:avoid}}
+.chk{font:600 13px Inter,sans-serif;color:#0868ad;background:#eef6fd;border-radius:8px;padding:5px 10px;margin-top:10px;display:inline-block}
+.ctl{background:#fff4d6;border-radius:12px;padding:12px 16px;margin-top:12px;font:15px/1.5 Inter,sans-serif}
+.ctl b{font-weight:700}
+</style></head>
+<body><main>
+
+<!-- Calculator icon (reused) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="calc" viewBox="0 0 30 34"><rect x="1" y="1" width="28" height="32" rx="3" fill="#8e98a6"/><rect x="5" y="5" width="20" height="7" rx="1" fill="#eef1f4"/>
+<g fill="#eef1f4"><rect x="5" y="15" width="4" height="3"/><rect x="11" y="15" width="4" height="3"/><rect x="17" y="15" width="4" height="3"/><rect x="23" y="15" width="2.5" height="3"/>
+<rect x="5" y="20.5" width="4" height="3"/><rect x="11" y="20.5" width="4" height="3"/><rect x="17" y="20.5" width="4" height="3"/><rect x="23" y="20.5" width="2.5" height="3"/>
+<rect x="5" y="26" width="4" height="3"/><rect x="11" y="26" width="4" height="3"/><rect x="17" y="26" width="4" height="3"/><rect x="23" y="26" width="2.5" height="3"/></g></symbol>
+</defs></svg>
+
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Diagnos</span></div><div class="in">
+<h1>Diagnos kapitel 2</h1><div class="sub">Version F · träna det som blev fel</div>
+<div class="info"><b>Kort och riktad.</b> 8 uppgifter, ungefär 30–35 min. Här finns bara sådant som du har gjort fel på någon gång i A–D. Del I utan räknare, del II med räknare.
+<ol><li>Visa alla steg, skriv enheter och avsluta med <b>Svar:</b> i en hel mening.</li><li>Sätt <b>?</b> där du är osäker.</li><li>Skriv start- och sluttid.</li></ol></div>
+<div class="ctl"><b>Innan du räknar:</b> stryk under varje deluppgift och varje villkor i texten ("en tredjedel", "resten", "det sänkta priset", "fler än på lördagen"). Bocka av varje deluppgift när du har svarat.<br>
+<b>Kontroll efter varje uppgift:</b> (1) stämmer siffrorna med texten, (2) höjs eller sänks, (3) delar jag med värdet från början, (4) gäller räntan ett helt år, (5) två värdesiffror = titta på den tredje siffran.</div>
+<div class="legend"><b>B</b> begrepp · <b>M</b> metod · <b>P</b> problemlösning · <b>R</b> resonemang · <b>K</b> kommunikation. <span class="star">✩</span> = lite svårare, ta den sist.</div>
+</div></section>
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Diagnos kap 2 · F</span></div><div class="in"><div class="delhead"><h2>Del I</h2><span class="tag">Utan räknare</span></div>
+<div class="q"><div class="num"><span>1</span></div><div class="body"><p>Avrunda.</p><div class="subs two"><div>a) 0,2349 till procent med en decimal</div><div>b) 0,0864 till hela procent</div><div>c) 5 850 000 i grundpotensform med två värdesiffror</div><div>d) 3 149 000 i grundpotensform med två värdesiffror</div></div></div><div class="abil">M</div></div>
+<div class="q"><div class="num"><span>2</span></div><div class="body"><p>I ett handbollslag finns 24 spelare. En tredjedel av spelarna är tjejer, resten är killar. Hälften av tjejerna och en fjärdedel av killarna har spelat i mer än tre år.</p><p>a) Hur många tjejer finns i laget?</p><p>b) Hur många killar har spelat i mer än tre år?</p><p>c) Hur många procent av hela laget har spelat i mer än tre år? Avrunda till hela procent.</p></div><div class="abil">P K</div></div>
+
+<p class="note">Klar med del I? Ta fram räknaren och gå vidare.</p></div></section>
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Diagnos kap 2 · F</span></div><div class="in"><div class="delhead"><h2>Del II</h2><span class="tag">Räknare tillåten</span></div>
+<div class="q"><div class="num"><span>3</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><p>Priset på en elsparkcykel höjdes med 270 kr. Nu kostar den 2 520 kr. Med hur många procent höjdes priset? Avrunda till tiondels procent.</p></div><div class="abil">M P</div></div>
+<div class="q"><div class="num"><span>4</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><p>Skriv av tabellen och fyll i det som saknas.</p><div class="scroll"><table class="t">
+<tr><td class="l"></td><th>Kapital</th><th>Räntesats</th><th>Tid</th><th>Ränta</th></tr>
+<tr><td class="l">a)</td><td>32 000 kr</td><td>?</td><td>3 månader</td><td>240 kr</td></tr>
+<tr><td class="l">b)</td><td>?</td><td>4,5 %</td><td>6 månader</td><td>900 kr</td></tr>
+<tr><td class="l">c)</td><td>15 000 kr</td><td>?</td><td>1/2 år</td><td>195 kr</td></tr></table></div>
+<p style="margin-top:10px">d) Sanna lånar 24 000 kr. Räntesatsen är 5,5 %. Efter 9 månader betalar hon tillbaka lånet och räntan. Hur mycket betalar hon sammanlagt?</p></div><div class="abil">M P B</div></div>
+<div class="q"><div class="num"><span>5</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><div class="clip"><h4>Cykeln på rea och sedan dyrare</h4><p>LUND (LT) En cykel kostade 1 800 kr. I januari sänktes priset med 15 %. I mars höjdes det sänkta priset med 12 %.</p></div><p style="margin-top:10px">a) Vad kostar cykeln efter höjningen i mars?</p><p>b) Med hur många procent har priset förändrats jämfört med 1 800 kr? Avrunda till tiondels procent.</p><p>c) Ali säger: <i>”−15 % + 12 % = −3 %, så cykeln är 3 % billigare.”</i> Förklara varför Ali har fel.</p></div><div class="abil">M P R</div></div>
+<div class="q"><div class="num"><span>6</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><div class="subs two"><div>a) Efter en <b>höjning</b> med 4 % kostar ett gymkort 3 120 kr. Vad kostade det före höjningen?</div><div>b) Efter en <b>rabatt</b> på 35 % kostar en jacka 520 kr. Vad kostade jackan före rabatten?</div></div></div><div class="abil">M P</div></div>
+<div class="q"><div class="num"><span>7</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><p>Diagrammet visar antalet medlemmar i en idrottsförening.</p><svg width="330" height="200" viewBox="0 0 330 200" style="max-width:100%;margin:6px 0 8px"><g font-family="Inter,sans-serif" font-size="12" fill="#333"><text x="6" y="14" font-weight="600">Antal medlemmar</text><line x1="60" y1="170.0" x2="320" y2="170.0" stroke="#e3e7ec"/><text x="54" y="174.0" text-anchor="end">0</text><line x1="60" y1="135.0" x2="320" y2="135.0" stroke="#e3e7ec"/><text x="54" y="139.0" text-anchor="end">400</text><line x1="60" y1="100.0" x2="320" y2="100.0" stroke="#e3e7ec"/><text x="54" y="104.0" text-anchor="end">800</text><line x1="60" y1="65.0" x2="320" y2="65.0" stroke="#e3e7ec"/><text x="54" y="69.0" text-anchor="end">1 200</text><line x1="60" y1="30.0" x2="320" y2="30.0" stroke="#e3e7ec"/><text x="54" y="34.0" text-anchor="end">1 600</text><line x1="60" y1="170" x2="320" y2="170" stroke="#222" stroke-width="1.5"/><line x1="60" y1="24" x2="60" y2="170" stroke="#222" stroke-width="1.5"/><rect x="77.33333333333334" y="65.0" width="52" height="105.0" fill="#7b4dff"/><text x="103.33333333333334" y="59.0" text-anchor="middle" font-weight="600">1 200</text><text x="103.33333333333334" y="188" text-anchor="middle">2024</text><rect x="164.00000000000003" y="38.75" width="52" height="131.25" fill="#7b4dff"/><text x="190.00000000000003" y="32.75" text-anchor="middle" font-weight="600">1 500</text><text x="190.00000000000003" y="188" text-anchor="middle">2025</text><rect x="250.66666666666669" y="65.0" width="52" height="105.0" fill="#7b4dff"/><text x="276.6666666666667" y="59.0" text-anchor="middle" font-weight="600">1 200</text><text x="276.6666666666667" y="188" text-anchor="middle">2026</text></g></svg><p>Tove säger: <i>”Antalet ökade med 300 och minskade sedan med 300. Alltså ökade det först med 25 % och minskade sedan med 25 %.”</i></p><p>Har Tove rätt? Visa med beräkningar och förklara.</p></div><div class="abil">P R K</div></div>
+<div class="q"><div class="num"><span>8</span><span class="star">✩</span><svg class="calc"><use href="#calc"/></svg></div><div class="body"><p>Ett café sålde 400 bullar en lördag. 35 % var kanelbullar, en femtedel var vaniljbullar och resten var chokladbullar. På söndagen sålde caféet 20 % fler chokladbullar än på lördagen.</p><p>a) Hur många kanelbullar såldes på lördagen?</p><p>b) Hur många chokladbullar såldes på lördagen?</p><p>c) Hur många chokladbullar såldes på söndagen?</p><p>d) Hur många procent av lördagens bullar var chokladbullar?</p></div><div class="abil">P B K</div></div>
+</div></section>
+<section class="sheet"><div class="in done"><h3>Klart? Samma som förut</h3><ol><li>Räkna bockarna: har du svarat på varje deluppgift?</li><li>Fota varje sida rakt ovanifrån i bra ljus.</li><li>Skicka bilderna till pappa.</li></ol><p class="note">Facit finns inte på sidan.</p></div></section>
+</main></body></html>
