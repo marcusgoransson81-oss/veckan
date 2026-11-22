@@ -354,4 +354,32 @@ for(const c of ['H','M'])for(const wk of W){
 }
 })();
 </script>
+<style>
+.pchk{list-style:none;padding-left:0}.pchk li{display:grid;grid-template-columns:24px 1fr;gap:6px;align-items:start}
+.pchk input{width:18px;height:18px;margin:2px 0 0;accent-color:#2e7d32;cursor:pointer}
+.pchk li.done .pt{opacity:.55;text-decoration:line-through}.pchk .pw{display:block;font-size:11.5px;color:var(--mut);text-decoration:none}
+.pst{font-size:11.5px;color:var(--mut);margin:8px 0 0}
+</style>
+<script>
+(()=>{const h2=[...document.querySelectorAll('h2')].find(e=>/Att göra för föräldrar/.test(e.textContent));if(!h2)return;
+const ul=h2.nextElementSibling&&h2.nextElementSibling.querySelector('ul');if(!ul)return;
+const SB='https://wpjgybjmezxorhltbdcr.supabase.co/rest/v1/checks',SK='sb_publishable_bbDqfwFGM5plLU7DWIhlsg_TWjOE8L-',SH={apikey:SK,'Content-Type':'application/json'};
+const LS={g(k){try{return localStorage.getItem(k)}catch(e){return null}},s(k,v){try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}};
+const hs=s=>{let h=5381;for(const c of s)h=((h<<5)+h+c.codePointAt(0))|0;return (h>>>0).toString(36)};
+const fmt=t=>{const d=new Date(t);return ['sön','mån','tis','ons','tor','fre','lör'][d.getDay()]+' '+d.getDate()+'/'+(d.getMonth()+1)+' kl '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')};
+ul.classList.add('pchk');const st=document.createElement('p');st.className='pst';ul.after(st);
+const items=[...ul.children].map(li=>{const c=li.cloneNode(true);c.querySelectorAll('.chg,.new').forEach(x=>x.remove());
+ const txt=c.textContent.replace(/^\s*☐\s*/,'').replace(/\s+/g,' ').trim();const key='k-foraldrar-'+hs(txt);
+ const body=li.innerHTML.replace(/^\s*☐\s*/,'');li.innerHTML='';const cb=document.createElement('input');cb.type='checkbox';cb.setAttribute('aria-label','Klart');
+ const pt=document.createElement('div');pt.className='pt';pt.innerHTML=body;const pw=document.createElement('span');pw.className='pw';pt.appendChild(pw);li.append(cb,pt);
+ return {li,cb,pw,key}});
+const show=(it,done,when)=>{it.cb.checked=done;it.li.classList.toggle('done',done);it.pw.textContent=done&&when?'✓ Klart '+fmt(when):''};
+items.forEach(it=>{const v=LS.g(it.key);show(it,!!v,v&&v!='1'?v:null)});
+const status=ok=>{st.textContent=ok?'☁️ Bockarna sparas online, så ni ser samma bockar på alla enheter.':'Bockarna sparas bara i den här webbläsaren (ingen kontakt med servern).'};
+(async()=>{try{const r=await fetch(SB+'?select=key,done,updated_at&key=like.k-foraldrar-*',{headers:SH});if(!r.ok)throw 0;const m=new Map((await r.json()).map(x=>[x.key,x]));
+ items.forEach(it=>{const x=m.get(it.key);if(x){LS.s(it.key,x.done?x.updated_at:null);show(it,x.done,x.updated_at)}});status(true)}catch(e){status(false)}})();
+items.forEach(it=>it.cb.addEventListener('change',async()=>{const now=new Date().toISOString(),d=it.cb.checked;LS.s(it.key,d?now:null);show(it,d,now);
+ try{const r=await fetch(SB,{method:'POST',headers:{...SH,Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify([{key:it.key,done:d,updated_at:now}])});status(r.ok)}catch(e){status(false)}}));
+})();
+</script>
 </body></html>
