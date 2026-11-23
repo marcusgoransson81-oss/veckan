@@ -190,7 +190,7 @@ if(nxt)h+=`<span class="pill">📝 Nästa prov: <b>${esc(nxt.amne)}</b> ${fd(nxt
 h+=`</div></section>`;
 if(D.nytt&&D.nytt.length)h+=`<div class="nytt">${D.nytt.map(n=>`<span>${esc(n)}</span>`).join('')}</div>`;
 // IDAG först
-{const t=D.dagar.map(x=>({...x,d:P(x.datum)})).find(x=>dd(x.d,today)==0||(x.helg&&dd(today,x.d)>=-1&&dd(today,x.d)<=1));
+{const L0=D.dagar.map(x=>({...x,d:P(x.datum)})),w0=today.getDay();const t=L0.find(x=>dd(x.d,today)==0&&!x.helg)||((w0==0||w0==6)?L0.find(x=>x.helg&&dd(today,x.d)>=-1&&dd(today,x.d)<=1):undefined);
  if(t)h+=`<h2>☀️ Idag</h2><div class="days" id="idag"></div>`;window.__idag=t;}
 // fokus
 h+=`<h2>🎯 Veckans fokus</h2><div class="fokus">${D.fokus.map((f,i)=>`<div class="card fk"><span class="num">${i+1}</span><div class="ic">${f.ikon}</div><h3>${esc(f.titel)}</h3><p>${esc(f.text)}</p></div>`).join('')}</div>`;
