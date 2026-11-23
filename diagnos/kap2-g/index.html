@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Övningsprov delprov 1 · utan räknare</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9ecef;--paper:#fff;--ink:#16181d;--mut:#62666e;--line:#d9dde3;--band:#0a84d6;--bandbg:#e3f1fb;--yel:#f6c400;--acc:#ff6b2c}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Source Serif 4",Georgia,serif;padding:max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) 60px max(10px,env(safe-area-inset-left))}
+main{max-width:860px;margin:0 auto}
+.sheet{background:var(--paper);border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 8px 30px rgba(0,0,0,.06);margin:0 0 18px;overflow:hidden}
+.band{background:var(--band);color:#fff;padding:9px 18px;font:700 14px/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between}
+.in{padding:22px clamp(16px,4vw,40px) 26px}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(28px,6vw,40px);font-weight:800;line-height:1.05}
+h2{font-size:24px;margin:4px 0 6px}
+.sub{font:600 14px Inter,sans-serif;color:var(--mut);letter-spacing:.04em;text-transform:uppercase;margin-top:6px}
+.info{font:15px/1.5 Inter,sans-serif;background:var(--bandbg);border-radius:12px;padding:14px 16px;margin-top:16px}
+.info ol,.info ul{margin:6px 0 0;padding-left:20px}.info li{margin:3px 0}
+.info b{font-weight:700}
+.legend{font:13px/1.5 Inter,sans-serif;color:var(--mut);margin-top:12px}
+.legend b{color:var(--ink);font-weight:700;letter-spacing:.06em}
+.delhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.delhead .tag{font:600 13px Inter,sans-serif;background:#f1f3f5;border-radius:999px;padding:5px 11px;color:var(--mut)}
+.q{display:grid;grid-template-columns:46px 1fr auto;gap:0 10px;padding:20px 0;border-top:1px solid var(--line)}
+.q:first-of-type{border-top:0}
+.num{font:800 24px/1.1 "Bricolage Grotesque",Inter,sans-serif;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.abil{font:600 14px Inter,sans-serif;letter-spacing:.12em;color:#3a3f47;white-space:nowrap;padding-top:4px}
+.body p{margin:0 0 8px}
+.subs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 18px;margin:6px 0 4px}
+.subs.two{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.subs div{white-space:normal}
+.fig{display:flex;flex-wrap:wrap;gap:22px 34px;align-items:flex-end;margin:10px 0 2px}
+.fig figure{margin:0;display:flex;gap:8px;align-items:flex-start}
+.fig figcaption{font-size:17px}
+table.t{border-collapse:collapse;margin:10px 0 4px;font:16px Inter,sans-serif;min-width:min(100%,520px)}
+.t th,.t td{border:1.5px solid #333;padding:9px 14px;text-align:center}
+.t th{font-style:italic;font-weight:500;background:#fafafa}
+.t td.l{border:0;text-align:right;padding-right:8px;font-family:"Source Serif 4",serif;font-size:17px}
+.scroll{overflow-x:auto}
+.clip{font-family:Georgia,serif;border-left:1.5px solid #555;border-right:1.5px solid #555;padding:8px 12px;max-width:290px;margin:10px 0 4px;background:#fcfcfa}
+.clip h4{margin:0 0 4px;font:600 22px/1.1 Inter,sans-serif}
+.clip p{margin:0;font-size:13.5px;line-height:1.35;text-align:justify}
+.star{color:var(--acc);font-size:20px;line-height:1}
+.calc{width:30px;height:34px}
+.done{font:15px/1.55 Inter,sans-serif}
+.done h3{font-size:22px;margin-bottom:8px}
+.note{font:13px Inter,sans-serif;color:var(--mut);margin-top:10px}
+@media(max-width:520px){.q{grid-template-columns:38px 1fr}.abil{grid-column:2;padding:0 0 6px;order:-1}body{font-size:16.5px}}
+@media print{body{background:#fff;padding:0}.sheet{box-shadow:none;break-inside:auto}.q{break-inside:avoid}}
+.chk{font:600 13px Inter,sans-serif;color:#0868ad;background:#eef6fd;border-radius:8px;padding:5px 10px;margin-top:10px;display:inline-block}
+.ctl{background:#fff4d6;border-radius:12px;padding:12px 16px;margin-top:12px;font:15px/1.5 Inter,sans-serif}
+.ctl b{font-weight:700}
+</style></head>
+<body><main>
+
+<!-- Calculator icon (reused) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="calc" viewBox="0 0 30 34"><rect x="1" y="1" width="28" height="32" rx="3" fill="#8e98a6"/><rect x="5" y="5" width="20" height="7" rx="1" fill="#eef1f4"/>
+<g fill="#eef1f4"><rect x="5" y="15" width="4" height="3"/><rect x="11" y="15" width="4" height="3"/><rect x="17" y="15" width="4" height="3"/><rect x="23" y="15" width="2.5" height="3"/>
+<rect x="5" y="20.5" width="4" height="3"/><rect x="11" y="20.5" width="4" height="3"/><rect x="17" y="20.5" width="4" height="3"/><rect x="23" y="20.5" width="2.5" height="3"/>
+<rect x="5" y="26" width="4" height="3"/><rect x="11" y="26" width="4" height="3"/><rect x="17" y="26" width="4" height="3"/><rect x="23" y="26" width="2.5" height="3"/></g></symbol>
+</defs></svg>
+
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Övning</span></div><div class="in">
+<h1>Övningsprov delprov 1</h1><div class="sub">Kapitel 2 · version G · utan räknare</div>
+<div class="info"><b>Träning inför tisdagens delprov.</b> Allt görs <b>utan räknare</b>, som på riktiga provet. 14 uppgifter, ungefär 40 min. Samma typ av uppgifter som lärarens övningsprov, plus lite extra.
+<ol><li>Papper, penna och suddgummi. Ingen räknare, ingen bok.</li><li>Visa hur du tänker, skriv enheter och avsluta med <b>Svar:</b>.</li><li>Sätt <b>?</b> där du är osäker.</li><li>Skriv start- och sluttid.</li></ol></div>
+<div class="ctl"><b>Huvudräkningsknep:</b> 10 % = dela med 10 · 1 % = dela med 100 · 25 % = en fjärdedel · 50 % = hälften · 5 % = hälften av 10 %.<br>
+<b>Kontroll:</b> stryk under varje deluppgift och bocka av. Dela med värdet från början. Avrunda: titta på första siffran du stryker, 5–9 = öka med ett.</div>
+<div class="legend"><b>B</b> begrepp · <b>M</b> metod · <b>P</b> problemlösning · <b>R</b> resonemang · <b>K</b> kommunikation. <span class="star">✩</span> = lite svårare.</div>
+</div></section>
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Övning delprov 1 · G</span></div><div class="in"><div class="delhead"><h2>Del I</h2><span class="tag">Utan räknare</span></div>
+<div class="q"><div class="num"><span>1</span></div><div class="body"><p>Hur många procent av figurerna är gula?</p><div class="fig"><figure><figcaption>a)</figcaption><svg width="132" height="106"><g stroke="#222" stroke-width="1.3"><rect x="1" y="1" width="26" height="26" fill="#f6c400"/><rect x="27" y="1" width="26" height="26" fill="#f6c400"/><rect x="53" y="1" width="26" height="26" fill="#f6c400"/><rect x="79" y="1" width="26" height="26" fill="#fff"/><rect x="105" y="1" width="26" height="26" fill="#fff"/><rect x="1" y="27" width="26" height="26" fill="#f6c400"/><rect x="27" y="27" width="26" height="26" fill="#f6c400"/><rect x="53" y="27" width="26" height="26" fill="#fff"/><rect x="79" y="27" width="26" height="26" fill="#fff"/><rect x="105" y="27" width="26" height="26" fill="#fff"/><rect x="1" y="53" width="26" height="26" fill="#f6c400"/><rect x="27" y="53" width="26" height="26" fill="#f6c400"/><rect x="53" y="53" width="26" height="26" fill="#fff"/><rect x="79" y="53" width="26" height="26" fill="#fff"/><rect x="105" y="53" width="26" height="26" fill="#fff"/><rect x="1" y="79" width="26" height="26" fill="#f6c400"/><rect x="27" y="79" width="26" height="26" fill="#f6c400"/><rect x="53" y="79" width="26" height="26" fill="#fff"/><rect x="79" y="79" width="26" height="26" fill="#fff"/><rect x="105" y="79" width="26" height="26" fill="#fff"/></g></svg></figure><figure><figcaption>b)</figcaption><svg width="96" height="96" viewBox="-48 -48 96 96"><path d="M0 0 L0.00 -46.00 A46 46 0 0 1 32.53 -32.53 Z" fill="#fff" stroke="#222" stroke-width="1.3"/><path d="M0 0 L32.53 -32.53 A46 46 0 0 1 46.00 0.00 Z" fill="#fff" stroke="#222" stroke-width="1.3"/><path d="M0 0 L46.00 0.00 A46 46 0 0 1 32.53 32.53 Z" fill="#fff" stroke="#222" stroke-width="1.3"/><path d="M0 0 L32.53 32.53 A46 46 0 0 1 0.00 46.00 Z" fill="#fff" stroke="#222" stroke-width="1.3"/><path d="M0 0 L0.00 46.00 A46 46 0 0 1 -32.53 32.53 Z" fill="#fff" stroke="#222" stroke-width="1.3"/><path d="M0 0 L-32.53 32.53 A46 46 0 0 1 -46.00 0.00 Z" fill="#f6c400" stroke="#222" stroke-width="1.3"/><path d="M0 0 L-46.00 0.00 A46 46 0 0 1 -32.53 -32.53 Z" fill="#f6c400" stroke="#222" stroke-width="1.3"/><path d="M0 0 L-32.53 -32.53 A46 46 0 0 1 -0.00 -46.00 Z" fill="#f6c400" stroke="#222" stroke-width="1.3"/></svg></figure><figure><figcaption>c)</figcaption><svg width="122" height="63"><polygon points="1.0,61 21.0,1 41.0,61" fill="#fff" stroke="#222" stroke-width="1.3"/><polygon points="21.0,1 41.0,61 61.0,1" fill="#f6c400" stroke="#222" stroke-width="1.3"/><polygon points="41.0,61 61.0,1 81.0,61" fill="#f6c400" stroke="#222" stroke-width="1.3"/><polygon points="61.0,1 81.0,61 101.0,1" fill="#f6c400" stroke="#222" stroke-width="1.3"/><polygon points="81.0,61 101.0,1 121.0,61" fill="#fff" stroke="#222" stroke-width="1.3"/></svg></figure></div></div><div class="abil">M</div></div>
+<div class="q"><div class="num"><span>2</span></div><div class="body"><p>Hur mycket är</p><div class="subs"><div>a) 10 % av 85 kr</div><div>b) 40 % av 300 kr</div><div>c) 6 % av 50 000 kr</div><div>d) 25 % av 64 kr</div><div>e) 150 % av 30 kr</div><div>f) 0,5 % av 2 000 kr</div></div></div><div class="abil">M</div></div>
+<div class="q"><div class="num"><span>3</span></div><div class="body"><p>Skriv andelarna som bråk i enklaste form.</p><div class="subs"><div>a) 70 %</div><div>b) 45 %</div><div>c) 64 %</div><div>d) 12,5 %</div></div></div><div class="abil">B M</div></div>
+<div class="q"><div class="num"><span>4</span><span class="star">✩</span></div><div class="body"><p>Vilket tal i beräkningen nedan är</p><div class="subs"><div>a) andelen</div><div>b) delen</div><div>c) det hela</div></div><div style="display:inline-block;border:1.5px solid #333;border-radius:6px;padding:6px 14px;margin:8px 0;font-family:Patrick Hand,Comic Sans MS,cursive;font-size:20px">40 % av 150 kr = 60 kr</div><p>d) Det hela är 80 kr och delen är 20 kr. Hur stor är andelen i procent?</p></div><div class="abil">B</div></div>
+<div class="q"><div class="num"><span>5</span></div><div class="body"><p>Hur många procent är</p><div class="subs"><div>a) 18 cm av 40 cm</div><div>b) 210 kr av 300 kr</div><div>c) 2,4 l av 3 l</div><div>d) 7 av 8</div><div>e) 45 kr av 30 kr</div></div></div><div class="abil">B M</div></div>
+<div class="q"><div class="num"><span>6</span></div><div class="body"><p>Vilket är mest: 24 % av 50 kr eller 50 % av 25 kr? Förklara hur du tänker.</p></div><div class="abil">M R</div></div>
+<div class="q"><div class="num"><span>7</span><span class="star">✩</span></div><div class="body"><p>a) Ge ett exempel på hur en procentenhet kan vara lika med 25 %.</p><p>b) Räntesatsen höjs från 2 % till 2,5 %. Hur många procentenheter och hur många procent höjdes räntesatsen?</p></div><div class="abil">P R B</div></div>
+</div></section>
+<section class="sheet"><div class="band"><span>Matematik åk 8</span><span>Övning delprov 1 · G</span></div><div class="in"><div class="delhead"><h2>Del I forts.</h2><span class="tag">Utan räknare</span></div>
+<div class="q"><div class="num"><span>8</span></div><div class="body"><p>Vilket är talet?</p><div class="subs two"><div>a) 20 % av ett tal är 14.</div><div>b) Tre femtedelar av ett tal är 27.</div></div><p style="margin-top:8px">c) 15 % av eleverna i en klass har glasögon. Det är 3 elever. Hur många elever går i klassen?</p></div><div class="abil">B M</div></div>
+<div class="q"><div class="num"><span>9</span></div><div class="body"><p>Med hur många procent har priset ändrats? Skriv om det är en höjning eller en sänkning.</p><div class="subs"><div>a) från 80 kr till 100 kr</div><div>b) från 250 kr till 200 kr</div><div>c) från 40 kr till 100 kr</div></div></div><div class="abil">M B</div></div>
+<div class="q"><div class="num"><span>10</span></div><div class="body"><p>Skriv i procentform.</p><div class="subs"><div>a) 0,07</div><div>b) 0,375</div><div>c) 1,25</div><div>d) 3/4</div><div>e) 7/20</div></div></div><div class="abil">B</div></div>
+<div class="q"><div class="num"><span>11</span></div><div class="body"><p>Skriv av tabellen och fyll i det som saknas.</p><div class="scroll"><table class="t">
+<tr><td class="l"></td><th>Kapital</th><th>Räntesats</th><th>Tid</th><th>Ränta</th></tr>
+<tr><td class="l">a)</td><td>20 000 kr</td><td>3 %</td><td>1 år</td><td>?</td></tr>
+<tr><td class="l">b)</td><td>20 000 kr</td><td>3 %</td><td>6 månader</td><td>?</td></tr>
+<tr><td class="l">c)</td><td>?</td><td>5 %</td><td>1 år</td><td>250 kr</td></tr></table></div>
+<p style="margin-top:10px">d) Du lånar 10 000 kr. Räntesatsen är 4 %. Efter 3 månader betalar du tillbaka lånet och räntan. Hur mycket betalar du sammanlagt?</p></div><div class="abil">M B</div></div>
+<div class="q"><div class="num"><span>12</span></div><div class="body"><p>En tröja kostar 400 kr. Priset höjs med 10 %. Sedan sänks det nya priset med 10 %.</p><p>a) Vad kostar tröjan nu?</p><p>b) Förklara varför tröjan inte kostar 400 kr igen.</p></div><div class="abil">M R K</div></div>
+<div class="q"><div class="num"><span>13</span></div><div class="body"><p>Avrunda.</p><div class="subs two"><div>a) 0,4763 till procent med en decimal</div><div>b) 3 850 000 i grundpotensform med två värdesiffror</div><div>c) 12 450 000 i grundpotensform med två värdesiffror</div><div>d) 0,0951 till hela procent</div></div></div><div class="abil">M</div></div>
+<div class="q"><div class="num"><span>14</span><span class="star">✩</span></div><div class="body"><p>I en klass går 30 elever. 40 % av eleverna har en katt och en tredjedel har en hund. 4 av eleverna har både katt och hund.</p><p>a) Hur många elever har en katt?</p><p>b) Hur många elever har en hund?</p><p>c) Hur många elever har varken katt eller hund?</p><p>d) Hur många procent av eleverna har varken katt eller hund?</p></div><div class="abil">P B K</div></div>
+</div></section>
+<section class="sheet"><div class="in done"><h3>Klart?</h3><ol><li>Räkna bockarna: har du svarat på varje deluppgift?</li><li>Fota varje sida rakt ovanifrån i bra ljus.</li><li>Skicka bilderna till pappa.</li></ol><p class="note">Facit finns inte på sidan.</p></div></section>
+</main></body></html>
