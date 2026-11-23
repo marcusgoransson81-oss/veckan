@@ -60,6 +60,7 @@ h2 .n{font-size:12px;font-family:Inter;font-weight:600;color:var(--mut);margin-l
 .tag.bring:before{content:"🎒 "}
 .sk{font-size:13.5px;margin:0;padding-left:16px}.sk li{margin:2px 0}
 .dnote{font-size:13.5px;color:var(--mut);font-style:italic}
+.frv{font-size:13.5px;margin:4px 0}
 .pl{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;padding:7px 8px;border-radius:10px;background:var(--pb);cursor:pointer;user-select:none}
 .pl input{margin-top:3px;accent-color:var(--pc);width:16px;height:16px;flex:none}
 .pl .m{font-weight:700;color:var(--pc);white-space:nowrap}
@@ -249,6 +250,7 @@ function card(x){{
   const cls=['day'];if(dd(x.d,today)==0||x.nu)cls.push('today');if(x.prov)cls.push('prov');if(x.ledig)cls.push('ledig');if(x.helg)cls.push('helg');
   let s=`<div class="${cls.join(' ')}"><div class="dh"><span class="dn">${x.nu?'Idag · helgen':x.helg?'Helg':DN[x.d.getDay()]}</span><span class="dd">${x.d.getDate()}/${x.d.getMonth()+1}</span>${x.prov?'<span class="badge p">PROV</span>':x.viktig?'<span class="badge">VIKTIGT</span>':x.tid?`<span class="tm">${x.tid}</span>`:''}</div>`;
   if(x.ta_med&&x.ta_med.length)s+=`<div>${x.ta_med.map(t=>`<span class="tag bring">${esc(t)}</span>`).join('')}</div>`;
+  {const wd=x.d.getDay(),fv=(wd==1||wd==2)?'blå':wd==4?'grön':'';if(fv&&x.tid&&!x.ledig&&!x.helg)s+=`<div class="frv">📍 Franskan är i <b>${fv} vinge</b></div>`;}
   if(x.skola&&x.skola.length)s+=`<ul class="sk">${x.skola.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`;
   (x.plugg||[]).forEach((p,pi)=>{const k=`p-${x.datum}-${pi}`,on=store.get(k);s+=`<label class="pl c-${COL[p.amne]||'kemi'}${on?' done':''}" data-k="${k}"><input type="checkbox"${on?' checked':''}><span class="t"><span class="m">${esc(p.amne)}</span> · ${esc(p.vad)}${p.lank?` <a class="pk-l" href="${p.lank}" target="_blank" rel="noopener" onclick="event.stopPropagation()">📂 Öppna</a>`:''}</span></label>`});
   if(x.notis)s+=`<div class="dnote">${esc(x.notis)}</div>`;

@@ -13,6 +13,7 @@ Publiceras via GitHub Pages: https://marcusgoransson81-oss.github.io/veckan/
 - Ämnen med prov snart får detaljerade checklistor i `grupper` (rubrik + kunna). Bygg dem från lärarens lista i Classroom/planeringen, hitta inte på omfattning som inte är känd.
 - Checkrutornas lagring nycklas på ämne+datum+text, så oförändrade punkter behåller sina bockar.
 - NotebookLM-recept (`notebooklm`, `notebooklm_extra`, `notebooklm_tips`) och studietips (`veckans_teknik`, `teknik_bank`) anpassas efter vilka ämnen och prov som är aktuella.
+- **Franska-salen**: index.html visar automatiskt "📍 Franskan är i blå vinge" på måndagar och tisdagar och "grön vinge" på torsdagar (skoldagar med `tid`, ej `ledig`/`helg`). Inget att fylla i; ändras salarna, ändra raden i `card()` i index.html.
 - `nytt` = förändringar sedan förra söndagen.
 - Söndagsuppdateringen lägger in två veckor framåt (kommande vecka + veckan efter). På lördag/söndag visar index.html kommande vecka som första flik och lägger helgens `helg`-post (lör/sön före) först i den fliken som "Idag · helgen", så helgens pass inte försvinner. Plugg-bockar nycklas på datum+index, så ändra inte ordningen på redan avbockade pass.
 - Sätt `uppdaterad` (datum) och `uppdaterad_tid` (ÅÅÅÅ-MM-DDTHH:MM, svensk tid) vid varje uppdatering. index.html och koll.html visar den överst som "Uppdaterad: Lördag 14/11 kl 09:49".
