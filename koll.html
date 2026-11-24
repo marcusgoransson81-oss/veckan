@@ -2,7 +2,7 @@
 <html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><title>Hugos bockar</title>
 <style>
-:root{--bg:#f4f1ea;--card:#fff;--ink:#16181d;--mut:#666a73;--line:#e4dfd4;--ok:#1f9d6b;--kemi:#7b4dff;--matte:#0a84d6;--franska:#e0336b;--fysik:#109a8a}
+:root{--bg:#f4f1ea;--card:#fff;--ink:#16181d;--mut:#666a73;--line:#e4dfd4;--ok:#1f9d6b;--kemi:#7b4dff;--matte:#0a84d6;--franska:#e0336b;--fysik:#109a8a;--svenska:#c77700}
 @media(prefers-color-scheme:dark){:root{--bg:#121316;--card:#1d1f24;--ink:#f1efe9;--mut:#a3a6ae;--line:#30333a}}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,sans-serif;padding:16px}main{max-width:760px;margin:0 auto}
 h1{font-size:24px;margin:0 0 4px}.sub{color:var(--mut);font-size:13px;margin-bottom:14px}
@@ -19,9 +19,18 @@ ul{list-style:none;margin:0;padding:0}li{padding:3px 0 3px 24px;position:relativ
 const SB='https://wpjgybjmezxorhltbdcr.supabase.co/rest/v1/checks',SK='sb_publishable_bbDqfwFGM5plLU7DWIhlsg_TWjOE8L-';
 const hs=t=>{let h=0;for(const c of t)h=(h*31+c.charCodeAt(0))|0;return (h>>>0).toString(36)};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const COL={'Kemi':'kemi','Matte':'matte','Franska':'franska','Fysik och teknik':'fysik'};
+const COL={'Kemi':'kemi','Matte':'matte','Franska':'franska','Fysik och teknik':'fysik','Svenska':'svenska'};
 let D,rows;
-const UPD=s=>{if(!s)return'';const t=new Date(s.length>10?s:s+'T12:00');const W=['Söndag','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag'];return 'Uppdaterad: '+W[t.getDay()]+' '+t.getDate()+'/'+(t.getMonth()+1)+(s.length>10?' kl '+s.slice(11,16):'')};try{D=await (await fetch('data.json',{cache:'no-store'})).json();document.getElementById('upd').textContent=UPD(D.uppdaterad_tid||D.uppdaterad);rows=await (await fetch(SB+'?select=key,done,updated_at',{headers:{apikey:SK}})).json()}catch(e){document.getElementById('out').innerHTML='<p class="err">Kunde inte hämta bockarna just nu.</p>';return}
+const UPD=s=>{if(!s)return'';const t=new Date(s.length>10?s:s+'T12:00');const W=['Söndag','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag'];return 'Uppdaterad: '+W[t.getDay()]+' '+t.getDate()+'/'+(t.getMonth()+1)+(s.length>10?' kl '+s.slice(11,16):'')};// Dagsmedveten text (se UPDATE.md): {dag:ÅÅÅÅ-MM-DD}, {kvar:ÅÅÅÅ-MM-DD}, [[före:ÅÅÅÅ-MM-DD|text]], [[från:ÅÅÅÅ-MM-DD|text]], varianter [{fran,till,text}], objekt i listor med fran/till. Rör aldrig kunna/fraga (bockarnas nycklar).
+const REL=(()=>{const T=new Date();T.setHours(0,0,0,0);const P=s=>{const[a,b,c]=s.split('-');return new Date(+a,b-1,+c)},df=s=>Math.round((P(s)-T)/864e5),W=['söndag','måndag','tisdag','onsdag','torsdag','fredag','lördag'],K=['sön','mån','tis','ons','tor','fre','lör'];
+ const dag=s=>{const n=df(s),d=P(s),dm=d.getDate()+'/'+(d.getMonth()+1);if(n==0)return'i dag';if(n==1)return'i morgon';if(n==-1)return'i går';if(n>1&&n<7)return'på '+W[d.getDay()]+' '+dm;if(n<-1&&n>-7)return'i '+W[d.getDay()]+'s';return K[d.getDay()]+' '+dm};
+ const kvar=s=>{const n=df(s);return n==0?'i dag':n==1?'i morgon':n>1?'om '+n+' dagar':n==-1?'i går':'för '+(-n)+' dagar sedan'};
+ const ok=o=>(!o.fran||df(o.fran)<=0)&&(!o.till||df(o.till)>=0);
+ const str=s=>{let p;do{p=s;s=s.replace(/\[\[(före|från):(\d{4}-\d\d-\d\d)\|([^\[\]]*)\]\]/g,(m,k,d,t)=>(k=='före'?df(d)>0:df(d)<=0)?t:'')}while(s!=p);return s.replace(/\{dag:(\d{4}-\d\d-\d\d)\}/g,(m,d)=>dag(d)).replace(/\{Dag:(\d{4}-\d\d-\d\d)\}/g,(m,d)=>{const x=dag(d);return x[0].toUpperCase()+x.slice(1)}).replace(/\{kvar:(\d{4}-\d\d-\d\d)\}/g,(m,d)=>kvar(d)).replace(/ {2,}/g,' ').replace(/ ([.,:])/g,'$1').trim()};
+ const isVar=v=>Array.isArray(v)&&v.length&&v.every(o=>o&&typeof o=='object'&&'text'in o&&Object.keys(o).every(k=>['fran','till','text'].includes(k)));
+ const walk=(v,key)=>{if(key=='kunna'||key=='fraga')return v;if(typeof v=='string')return str(v);if(isVar(v)){const m=v.filter(ok).pop();return m?str(m.text):''}if(Array.isArray(v)){const fx=!['plugg','dagar','prov','grupper'].includes(key);return v.filter(o=>!fx||!(o&&typeof o=='object'&&!Array.isArray(o)&&('fran'in o||'till'in o))||ok(o)).map(x=>walk(x)).filter(x=>!fx||x!=='')}if(v&&typeof v=='object'){const o={};for(const k in v)o[k]=walk(v[k],k);return o}return v};
+ return D=>walk(D)})();
+try{D=await (await fetch('data.json',{cache:'no-store'})).json();D=REL(D);document.getElementById('upd').textContent=UPD(D.uppdaterad_tid||D.uppdaterad);rows=await (await fetch(SB+'?select=key,done,updated_at',{headers:{apikey:SK}})).json()}catch(e){document.getElementById('out').innerHTML='<p class="err">Kunde inte hämta bockarna just nu.</p>';return}
 const P=x=>{const[a,b,c]=x.split('-');return new Date(+a,b-1,+c)};const today=new Date();today.setHours(0,0,0,0);
 const live=p=>P(p.datum2||p.datum)>=today;
 const rel=(amne,d)=>D.prov.filter(p=>p.amne.startsWith(amne)&&p.datum>=d).sort((a,b)=>a.datum<b.datum?-1:1)[0];

@@ -1,51 +1,77 @@
 {
- "uppdaterad": "2026-11-23",
- "uppdaterad_tid": "2026-11-23T17:00",
+ "uppdaterad": "2026-11-24",
+ "uppdaterad_tid": "2026-11-24T17:23",
  "vecka": 48,
- "rubrik": "Matteprov i morgon och tisdag, sedan franska",
- "hej": "Du har jobbat med matten hela helgen och gjort två diagnoser. Det är precis så man förbereder sig. Nu är provet bestämt: delprov 2 i morgon måndag och delprov 1 på tisdag. I dag räcker det med diagnos C och ett kort genrep, sedan vila. På provet: läs varje uppgift noga och kör kontrollrutinen innan du går vidare. Efter matten byter du till franska, skriftligt prov tor 3/12. Lite varje dag räcker långt.",
+ "rubrik": [
+  {
+   "till": "2026-11-27",
+   "text": "Grammatikprov i svenska {dag:2026-11-27}, sedan franska"
+  },
+  {
+   "fran": "2026-11-28",
+   "text": "Nu är det franskans tur: prov {dag:2026-12-07}"
+  }
+ ],
+ "hej": [
+  {
+   "till": "2026-11-24",
+   "text": "Bra kämpat med matten, båda delproven är gjorda nu! Nästa prov är svenska: grammatikprov {dag:2026-11-27}. Läraren har lagt ut 20 instuderingsfrågor i Classroom. Ta några av dem i kväll och resten i morgon, så har du torsdagen till ett genrep. Franskan har fått ett nytt datum i planeringen: prov på kapitel 2 mån 7/12."
+  },
+  {
+   "fran": "2026-11-25",
+   "till": "2026-11-27",
+   "text": "Matten är klar, snyggt jobbat med båda delproven. Nu är det svenska: grammatikprovet är {dag:2026-11-27}. [[före:2026-11-27|Gå igenom de 20 instuderingsfrågorna lite i taget och testa dig utan att titta innan provet.]][[från:2026-11-27|Läs varje fråga noga och ge exempel i dina svar.]] Efter svenskan kommer franskan: planeringen säger prov på kapitel 2 mån 7/12."
+  },
+  {
+   "fran": "2026-11-28",
+   "text": "Grammatikprovet är gjort, bra jobbat med svenskan. Nu är det franskans tur: provet på kapitel 2 är {dag:2026-12-07} enligt veckoplaneringen. Lite varje dag, så har du koll utan stress."
+  }
+ ],
  "nytt": [
-  "Matte: provet är mån 23/11 (delprov 2) och tis 24/11 (delprov 1). Det står i klasskalendern och pappa har bekräftat det. Lärarens planering visar fortfarande tor–fre, den är inte uppdaterad.",
-  "Matte: diagnos A, B och C ligger här på sidan, länkade från provkortet. Provkortet följer nu bara det ni har gått igenom.",
+  "Matte: båda delproven är gjorda, mån 23/11 och tis 24/11.",
+  "Svenska: grammatikprov fre 27/11 enligt klasskalendern. Läraren lade ut instuderingsfrågor i Classroom 23/11.",
+  "Franska: veckoplaneringen säger nu prov på kapitel 2 mån 7/12. Skriftligt prov tor 3/12 och muntligt prov står inte kvar. Kolla med läraren.",
+  "Fysik/teknik: provet är flyttat till ons 3/2 efter jullovet enligt klasskalendern.",
+  "SO: nytt quiz om Franska revolutionen, bra för ditt grupparbete.",
   "Mentor: Rania är kvar som din mentor. Skolan skrev 19/11 att meddelandet om ny mentor var ett felaktigt utskick.",
-  "Franska: planeringen för v. 48 är kapitel 2c (textboken s. 42–43, övningsboken s. 76–82) och repetition på torsdag.",
   "Hemkunskap grupp 1 tis 1/12."
  ],
  "fokus": [
   {
-   "ikon": "➗",
-   "titel": "Matte: i morgon och tisdag",
-   "text": "Gör diagnos C i dag och ett kort genrep, mer behövs inte. Använd kontrollrutinen på varje uppgift: stämmer siffrorna med texten, höjs eller sänks det, och är svaret rimligt? Visa alla steg och avsluta med Svar:. Sedan vila och sova i tid."
+   "till": "2026-11-27",
+   "ikon": "📝",
+   "titel": "Svenska: grammatikprov {dag:2026-11-27}",
+   "text": "Läraren har lagt ut 20 instuderingsfrågor och en PowerPoint om ordklasser i Classroom. Skriv egna korta svar med ett exempel på varje, så har du en sammanfattning att plugga från. [[före:2026-11-27|Genrep {dag:2026-11-26}: svara på frågorna utan att titta och öva sedan bara på det du missade.]][[från:2026-11-27|Läs varje fråga noga och ge exempel i svaren.]]"
   },
   {
    "ikon": "🗣️",
-   "titel": "Franska: skriftligt tor 3/12",
-   "text": "Från onsdag är det franskans tur. Lite varje dag: pouvoir, vouloir och finir, objektspronomen (le, la, les) och glosorna i kapitel 2. Genrep mån 30/11, så hinner du öva på det du missar innan provet."
+   "titel": "Franska: prov {dag:2026-12-07}",
+   "text": "Veckoplaneringen säger nu prov på kapitel 2 mån 7/12, inte tor 3/12 som det stod förut. Fråga läraren vad som gäller och om det blir en muntlig del. [[före:2026-11-28|Efter svenskan börjar du lite smått: pouvoir, vouloir och finir, objektspronomen (le, la, les) och glosorna.]][[från:2026-11-28|Lite varje dag: pouvoir, vouloir och finir, objektspronomen (le, la, les) och glosorna i kapitel 2. Genrep tor 3/12.]]"
   },
   {
-   "ikon": "🧪",
-   "titel": "Kemi: efter provet",
-   "text": "När du fått tillbaka provet: skriv i rutan Efter provet vad som gick bra och vad du missade. Ons 2/12 gör du ett kort quiz på just det."
+   "ikon": "📓",
+   "titel": "Matte och kemi: efter proven",
+   "text": "När du får tillbaka proven: skriv i rutan Efter provet vad som gick bra och vad du missade. Ons 2/12 gör du ett kort quiz på kemimissarna och tis 8/12 på mattemissarna."
   }
  ],
  "tempo": [
   {
    "v": 48,
    "niva": 3,
-   "etikett": "Matte",
-   "vad": "Matteprov mån 23/11 och tis 24/11"
+   "etikett": "Matte + svenska",
+   "vad": "Matteprov mån–tis, grammatikprov fre 27/11"
   },
   {
    "v": 49,
    "niva": 2,
    "etikett": "Franska",
-   "vad": "Skriftligt prov tor 3/12"
+   "vad": "Förbered franskaprovet, genrep tor 3/12"
   },
   {
    "v": 50,
-   "niva": 3,
-   "etikett": "Franska + fysik",
-   "vad": "Muntligt mån 7/12, fysik/teknik fre 11/12"
+   "niva": 2,
+   "etikett": "Franska",
+   "vad": "Prov kapitel 2 mån 7/12"
   },
   {
    "v": 51,
@@ -243,7 +269,7 @@
    "plugg": [
     {
      "amne": "Matte",
-     "vad": "Inför delprov 1 i morgon: kort titt i felboken och på det du missade i diagnoserna. Sedan sova i tid.",
+     "vad": "Inför delprov 1 {dag:2026-11-24}: kort titt i felboken och på det du missade i diagnoserna. Sedan sova i tid.",
      "lank": "https://marcusgoransson81-oss.github.io/veckan/diagnos/kap2-b/rattat/"
     }
    ],
@@ -264,6 +290,11 @@
    ],
    "plugg": [
     {
+     "amne": "Svenska",
+     "vad": "Gå igenom PowerPointen Ordklasser och svara på instuderingsfrågorna 1–11 med egna exempel",
+     "lank": "https://classroom.google.com/c/MTYyNzE3MDM3NTUy/m/MjU2MDQ4NDY1NTg/details"
+    },
+    {
      "amne": "Franska",
      "vad": "Några glosor från kapitel 2c, en kort stund",
      "lank": "https://classroom.google.com/c/NzAzODg1NjQxMTY0/m/ODcyMjEzOTcwNzE4/details"
@@ -271,7 +302,7 @@
    ],
    "viktig": true,
    "prov": true,
-   "notis": "Sista matteprovet idag. Efteråt räcker det med lite franska."
+   "notis": "Delprov 1 i matte. Efteråt räcker det med lite svenska."
   },
   {
    "datum": "2026-11-25",
@@ -279,6 +310,11 @@
    "ta_med": [],
    "skola": [],
    "plugg": [
+    {
+     "amne": "Svenska",
+     "vad": "Instuderingsfrågorna 12–20: de och dem, dom, formellt och informellt språk",
+     "lank": "https://classroom.google.com/c/MTYyNzE3MDM3NTUy/m/MjU2MDQ4NDY1NTg/details"
+    },
     {
      "amne": "Franska",
      "vad": "Läs texten i kapitel 2c högt (textboken s. 42–43)",
@@ -297,23 +333,34 @@
    ],
    "plugg": [
     {
+     "amne": "Svenska",
+     "vad": "Genrep: svara på alla 20 frågorna utan att titta, rätta och öva på det du missade",
+     "lank": "https://classroom.google.com/c/MTYyNzE3MDM3NTUy/m/MjU2MDQ4NDY1NTg/details"
+    },
+    {
      "amne": "Franska",
      "vad": "Böj pouvoir, vouloir och finir i presens utan att titta, rätta sedan",
      "lank": "https://classroom.google.com/c/NzAzODg1NjQxMTY0/m/ODcyMjEzOTcwNzE4/details"
     }
-   ]
+   ],
+   "viktig": true
   },
   {
    "datum": "2026-11-27",
    "tid": "08.20–14.35",
    "ta_med": [],
-   "skola": [],
+   "skola": [
+    "SVENSKA: grammatikprov"
+   ],
    "plugg": [
     {
      "amne": "Franska",
      "vad": "Objektspronomen: gör några egna meningar med le, la och les"
     }
-   ]
+   ],
+   "prov": true,
+   "viktig": true,
+   "notis": "Ät frukost. Läs varje fråga noga och ge ett exempel när du förklarar."
   },
   {
    "datum": "2026-11-29",
@@ -329,7 +376,7 @@
      "vad": "Objektspronomen (le, la, les): gör några meningar själv"
     }
    ],
-   "notis": "Skriftliga provet i franska är tor 3/12.",
+   "notis": "Franskaprovet på kapitel 2 är mån 7/12 enligt veckoplaneringen. Kolla med läraren att det stämmer.",
    "skola": []
   },
   {
@@ -342,11 +389,10 @@
    "plugg": [
     {
      "amne": "Franska",
-     "vad": "Genrep: NotebookLM-quiz på verben och glosorna i kapitel 2, som om det vore provet",
+     "vad": "NotebookLM-quiz på verben och glosorna i kapitel 2",
      "lank": "https://classroom.google.com/c/NzAzODg1NjQxMTY0/m/ODcyMjEzOTcwNzE4/details"
     }
-   ],
-   "viktig": true
+   ]
   },
   {
    "datum": "2026-12-01",
@@ -362,7 +408,7 @@
    "plugg": [
     {
      "amne": "Franska",
-     "vad": "Gör om det du missade på genrepet"
+     "vad": "Gör om det du missade i quizet"
     }
    ],
    "viktig": true
@@ -380,7 +426,7 @@
     },
     {
      "amne": "Franska",
-     "vad": "Lätt genomgång av glosorna. Sedan sova i tid."
+     "vad": "Glosorna i kapitel 2 åt båda hållen, säg dem högt"
     }
    ],
    "viktig": true
@@ -390,18 +436,17 @@
    "tid": "08.20–16.25",
    "ta_med": [],
    "skola": [
-    "FRANSKA: skriftligt prov kapitel 2",
     "Studiestöd 15.25–16.25 om du vill"
    ],
    "plugg": [
     {
      "amne": "Franska",
-     "vad": "Öva några fraser högt inför muntliga provet mån 7/12",
+     "vad": "Genrep: quiz på hela kapitel 2 som om det vore provet, utan att titta",
      "lank": "https://classroom.google.com/c/NzAzODg1NjQxMTY0/m/ODcyMjEzOTcwNzE4/details"
     }
    ],
-   "prov": true,
-   "notis": "Ät frukost. Du har övat lite i taget, det räcker långt."
+   "notis": "Här stod det förut skriftligt prov i franska. Nu säger planeringen mån 7/12. Kolla med läraren.",
+   "viktig": true
   },
   {
    "datum": "2026-12-04",
@@ -411,11 +456,11 @@
    "plugg": [
     {
      "amne": "Franska",
-     "vad": "Spela in dig själv när du läser en text från kapitel 2 och lyssna"
+     "vad": "Gör om det du missade på genrepet"
     },
     {
-     "amne": "Fysik",
-     "vad": "Kolla i Classroom om läraren har lagt ut vad som ingår i provet fre 11/12"
+     "amne": "Franska",
+     "vad": "Läs en text från kapitel 2 högt, gärna inspelad så du kan lyssna"
     }
    ]
   }
@@ -668,10 +713,79 @@
    }
   },
   {
-   "datum": "2026-12-03",
+   "datum": "2026-11-27",
+   "amne": "Svenska",
+   "titel": "Grammatikprov: ordklasser och språkbruk",
+   "borja": "2026-11-24",
+   "farg": "svenska",
+   "lankar": [
+    {
+     "t": "Instuderingsfrågor till grammatikprovet",
+     "url": "https://classroom.google.com/c/MTYyNzE3MDM3NTUy/m/MjU2MDQ4NDY1NTg/details"
+    },
+    {
+     "t": "PowerPoint Ordklasser",
+     "url": "https://classroom.google.com/c/MTYyNzE3MDM3NTUy/m/MTYyODUzOTM4MzE4/details"
+    }
+   ],
+   "grupper": [
+    {
+     "rubrik": "Läsa och förbereda",
+     "typ": "gora",
+     "kunna": [
+      "Gått igenom PowerPointen Ordklasser",
+      "Skrivit egna svar på alla 20 instuderingsfrågor"
+     ]
+    },
+    {
+     "rubrik": "Ordklasser",
+     "typ": "gora",
+     "kunna": [
+      "Hur många ordklasser det finns och vilka de är",
+      "Substantiv, verb, adjektiv och adverb: förklara och ge exempel",
+      "Pronomen, räkneord och prepositioner: förklara och ge exempel",
+      "Konjunktioner, subjunktioner och interjektioner: förklara och ge exempel"
+     ]
+    },
+    {
+     "rubrik": "Språkbruk",
+     "typ": "gora",
+     "kunna": [
+      "Skillnaden på de och dem, och när man använder dom",
+      "Skillnaden mellan formellt och informellt språk, och när man använder vilket",
+      "Tre formella och tre informella ord",
+      "Fråga 15–18 om stor bokstav och hur de olika sorterna används (se Frågor till läraren)"
+     ]
+    },
+    {
+     "rubrik": "Testa dig själv",
+     "typ": "gora",
+     "kunna": [
+      "Gjort ett NotebookLM-quiz på alla 20 frågorna",
+      "Gjort om det jag missade",
+      "Genrep tor 26/11: svarat på frågorna utan att titta"
+     ]
+    }
+   ],
+   "notebooklm": "Du är min svensklärare. Förhör mig på instuderingsfrågorna till grammatikprovet, en fråga i taget. Be mig alltid ge ett eget exempel. Säg om svaret var rätt, förklara kort och ge mig en ny mening där jag ska hitta ordklasserna. Avsluta med en lista över det jag ska öva mer på.",
+   "kallor": "Lägg in instuderingsfrågorna och PowerPointen Ordklasser från Classroom, plus dina egna svar.",
+   "toppoang": {
+    "fraga": "Hur skiljer man på de och dem?",
+    "e": "De är subjekt och dem är objekt.",
+    "a": "De används när ordet är subjekt, alltså den som gör något: De spelar fotboll. Dem används när ordet är objekt: Jag såg dem. Ett knep är att byta mot vi och oss. Går det att säga vi, ska det vara de. Går det att säga oss, ska det vara dem.",
+    "skillnad": [
+     "Förklarar vad subjekt och objekt betyder i stället för att bara säga orden.",
+     "Ger ett eget exempel på båda.",
+     "Visar ett knep för att välja rätt."
+    ],
+    "not": "Exemplet visar hur man utvecklar ett svar. Det är inte lärarens bedömningsmall."
+   }
+  },
+  {
+   "datum": "2026-12-07",
    "amne": "Franska",
-   "titel": "Skriftligt prov kapitel 2",
-   "borja": "2026-11-22",
+   "titel": "Prov kapitel 2",
+   "borja": "2026-11-28",
    "farg": "franska",
    "lankar": [
     {
@@ -692,71 +806,38 @@
      ]
     },
     {
-     "rubrik": "Testa dig själv",
+     "rubrik": "Prata och läsa högt",
      "typ": "gora",
      "kunna": [
-      "Gjort ett NotebookLM-quiz på verben och glosorna",
-      "Gjort om quizet på det jag missade",
-      "Genrep mån 30/11"
-     ]
-    }
-   ],
-   "notebooklm": "Du är min fransklärare. Förhör mig på kapitel 2: böj pouvoir, vouloir och finir i presens, och ge mig meningar där jag ska byta ut ett substantiv mot le, la eller les. En fråga i taget, rätta och förklara kort. Avsluta med en lista över det jag ska öva mer på.",
-   "kallor": "Lägg in foton av textboken s. 34–35, 38–40 och 42–43 och övningsboken."
-  },
-  {
-   "datum": "2026-12-07",
-   "amne": "Franska",
-   "titel": "Muntligt prov kapitel 2",
-   "borja": "2026-11-23",
-   "farg": "franska",
-   "tips": "Prata högt, gärna med någon hemma eller spela in dig själv och lyssna.",
-   "notebooklm": "Du är min fransklärare. Ställ enkla frågor på franska om texterna i kapitel 2, en i taget. Jag svarar högt och skriver sedan in vad jag sa. Rätta mig vänligt och föreslå ett bättre sätt att säga det.",
-   "kallor": "Lägg in texterna och glosorna från kapitel 2 (foton av sidorna fungerar).",
-   "lankar": [
-    {
-     "t": "Veckoplanering franska",
-     "url": "https://classroom.google.com/c/NzAzODg1NjQxMTY0/m/ODcyMjEzOTcwNzE4/details"
-    }
-   ],
-   "toppoang": {
-    "fraga": "Qu’est-ce que tu aimes faire le week-end ?",
-    "e": "J’aime le foot.",
-    "a": "Le week-end, j’aime jouer au foot avec mes amis parce que c’est amusant. Le samedi, je joue souvent un match et le dimanche je me repose. Et toi, qu’est-ce que tu aimes faire ?",
-    "skillnad": [
-     "Utvecklar svaret med parce que (därför att).",
-     "Använder tidsord: le samedi, le dimanche, souvent.",
-     "Ställer en motfråga så att det blir ett samtal."
-    ],
-    "not": "Exemplet visar hur man utvecklar ett svar. Vad läraren bedömer på just det här provet vet vi inte än, se Frågor till läraren."
-   },
-   "grupper": [
-    {
-     "rubrik": "Öva",
-     "typ": "gora",
-     "kunna": [
-      "Gått igenom texterna i kapitel 2",
-      "Övat fraserna högt",
-      "Spelat in dig själv och lyssnat",
-      "Övat ett samtal med någon hemma"
+      "Läst texterna i kapitel 2 högt",
+      "Övat fraserna högt"
      ]
     },
     {
      "rubrik": "Testa dig själv",
      "typ": "gora",
      "kunna": [
-      "Haft ett samtal på franska med någon hemma utan manus",
-      "Övat igen på det som var svårt",
-      "Genrep sön 6/12"
+      "Gjort ett NotebookLM-quiz på verben och glosorna",
+      "Gjort om quizet på det jag missade",
+      "Genrep tor 3/12"
      ]
     }
-   ]
+   ],
+   "notebooklm": "Du är min fransklärare. Förhör mig på kapitel 2: böj pouvoir, vouloir och finir i presens, och ge mig meningar där jag ska byta ut ett substantiv mot le, la eller les. En fråga i taget, rätta och förklara kort. Avsluta med en lista över det jag ska öva mer på.",
+   "kallor": "Lägg in foton av textboken s. 34–35, 38–40 och 42–43 och övningsboken.",
+   "notebooklm_extra": [
+    {
+     "titel": "Öva att prata",
+     "text": "Du är min fransklärare. Ställ enkla frågor på franska om texterna i kapitel 2, en i taget. Jag svarar högt och skriver sedan in vad jag sa. Rätta mig vänligt och föreslå ett bättre sätt att säga det."
+    }
+   ],
+   "tips": "Planeringen säger bara Teste chapitre 2. Fråga läraren om det blir en muntlig del, så vet du hur du ska öva."
   },
   {
-   "datum": "2026-12-11",
+   "datum": "2027-02-03",
    "amne": "Fysik och teknik",
    "titel": "Prov",
-   "borja": "2026-11-23",
+   "borja": "2027-01-11",
    "farg": "fysik",
    "kunna": [
     "Vad som ingår är inte utlagt än. Fråga läraren om du vill veta tidigt."
@@ -806,15 +887,15 @@
  "jullov": "2026-12-18",
  "kolla": [],
  "bra": [
-  "Matte: två diagnoser gjorda i helgen och flera punkter på provkortet avbockade.",
+  "Matte: du förberedde dig i flera omgångar med diagnoser och övningsprov, och nu är båda delproven gjorda.",
   "Kemi: du gick igenom hela listan och testade dig utan bok före provet.",
   "Inga uppgifter saknas i Classroom."
  ],
  "veckans_teknik": {
-  "titel": "Kontrollrutinen",
-  "text": "Många poäng försvinner inte för att man inte kan, utan för att man läser fel. Gör därför tre saker efter varje uppgift innan du går vidare: jämför siffrorna i din uträkning med siffrorna i texten, kolla om det höjs eller sänks, och fråga dig om svaret är rimligt. Sätt en liten bock i marginalen när du har kollat.",
+  "titel": "Svara med exempel",
+  "text": "På ett grammatikprov räcker det sällan att säga regeln. Visa att du kan använda den: förklara med egna ord och ge ett eget exempel. Adjektiv beskriver hur något är, till exempel en röd bil. Skriv dina svar på instuderingsfrågorna så, då har du både förklaringen och exemplet klart.",
   "extra": [
-   "Säg högt vilken metod du väljer innan du räknar: andelen, delen, det hela eller ränta.",
+   "Hitta ordklasserna i en mening ur en bok du läser. Det är bra träning och går snabbt.",
    "Kvällen före ett prov: lätt repetition och sova i tid slår en sista lång plugg-timme.",
    "Franska: läs glosor och verb högt. Det du säger fastnar bättre än det du bara läser."
   ]
@@ -845,6 +926,10 @@
    {
     "titel": "Verbförhör",
     "text": "Förhör mig på pouvoir, vouloir och finir i presens. Säg en person (t.ex. nous) och ett verb, jag svarar, och du rättar direkt. Blanda ordningen och ta om de jag missar."
+   },
+   {
+    "titel": "Ordklassjakt",
+    "text": "Skriv en mening på 8–10 ord. Jag säger vilken ordklass varje ord är. Rätta mig och förklara de jag missar. Gör fem meningar som blir svårare och svårare."
    }
   ],
   "extra": [
@@ -889,7 +974,7 @@
  "ovriga": [
   {
    "amne": "Svenska",
-   "vad": "Ny PowerPoint om ordklasser (20/11). Pågående uppgift: Argumenterande text, inget datum.",
+   "vad": "Pågående uppgifter utan datum: Argumenterande text och Gruppuppgift svenska författare. Grammatikprovet har ett eget provkort.",
    "url": "https://classroom.google.com/c/MTYyNzE3MDM3NTUy/m/MTYyODUzOTM4MzE4/details"
   },
   {
@@ -899,8 +984,8 @@
   },
   {
    "amne": "SO",
-   "vad": "Grupparbete om 1700- och 1800-talet (16/11). Du har Franska revolutionen: inledning, fakta, avslutande ord och en presentation. Dela upp jobbet i gruppen. Inget datum utsatt än.",
-   "url": "https://classroom.google.com/c/MTYyNTg2OTMwMDIy/p/MjU1NzE5NTg2NTA/details"
+   "vad": "Grupparbete om 1700- och 1800-talet. Du har Franska revolutionen: inledning, fakta, avslutande ord och en presentation. Nytt 23/11: quiz om Franska revolutionen på Mixquiz och en PowerPoint om 1700–1800-talet. Inget datum utsatt än.",
+   "url": "https://classroom.google.com/c/MTYyNTg2OTMwMDIy/p/MTYyODU4NTkyMTkx/details"
   },
   {
    "amne": "Hemkunskap",
@@ -910,16 +995,20 @@
  ],
  "fragor": [
   {
+   "amne": "Svenska",
+   "fraga": "Fråga 15–18 i instuderingsfrågorna handlar om interjektioner och stor bokstav efter vissa tecken. Menas skiljetecken (punkt, frågetecken, utropstecken)?"
+  },
+  {
+   "amne": "Franska",
+   "fraga": "Planeringen säger nu prov på kapitel 2 mån 7/12. Förut stod det skriftligt prov tor 3/12 och muntligt mån 7/12. Vad gäller, och blir det en muntlig del?"
+  },
+  {
    "amne": "Fysik/teknik",
-   "fraga": "Vad ingår i provet fre 11/12, och finns det en lista att plugga från?"
+   "fraga": "Provet är flyttat till ons 3/2. Vad ingår, och finns det en lista att plugga från?"
   },
   {
    "amne": "SO",
    "fraga": "När ska grupparbetet om Franska revolutionen vara klart, och när är presentationen?"
-  },
-  {
-   "amne": "Franska",
-   "fraga": "Planeringen säger nu skriftligt prov tor 3/12 och muntligt mån 7/12. Stämmer det, och hur går muntliga provet till?"
   },
   {
    "amne": "Hemkunskap/idrott",
