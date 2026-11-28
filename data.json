@@ -1,66 +1,58 @@
 {
- "uppdaterad": "2026-11-24",
- "uppdaterad_tid": "2026-11-24T17:23",
- "vecka": 48,
+ "uppdaterad": "2026-11-28",
+ "uppdaterad_tid": "2026-11-28T16:37",
+ "vecka": 49,
  "rubrik": [
   {
-   "till": "2026-11-27",
-   "text": "Grammatikprov i svenska {dag:2026-11-27}, sedan franska"
+   "till": "2026-12-07",
+   "text": "Franskans tur: prov {dag:2026-12-07}"
   },
   {
-   "fran": "2026-11-28",
-   "text": "Nu är det franskans tur: prov {dag:2026-12-07}"
+   "fran": "2026-12-08",
+   "text": "Franskan är gjord, nu lugnt mot jullovet"
   }
  ],
  "hej": [
   {
-   "till": "2026-11-24",
-   "text": "Bra kämpat med matten, båda delproven är gjorda nu! Nästa prov är svenska: grammatikprov {dag:2026-11-27}. Läraren har lagt ut 20 instuderingsfrågor i Classroom. Ta några av dem i kväll och resten i morgon, så har du torsdagen till ett genrep. Franskan har fått ett nytt datum i planeringen: prov på kapitel 2 mån 7/12."
+   "till": "2026-12-06",
+   "text": "Grammatikprovet i svenska är gjort, bra jobbat! Nu är det franska: provet på kapitel 2 är {dag:2026-12-07}, och nu står det både i klasskalendern och i planeringen. Ta lite varje dag: verben pouvoir, vouloir och finir, le, la och les, ordningstalen och glosorna. Nytt den här veckan: en knapp på provkortet som kopierar en prompt till Gemini, så att du kan öva att prata franska."
   },
   {
-   "fran": "2026-11-25",
-   "till": "2026-11-27",
-   "text": "Matten är klar, snyggt jobbat med båda delproven. Nu är det svenska: grammatikprovet är {dag:2026-11-27}. [[före:2026-11-27|Gå igenom de 20 instuderingsfrågorna lite i taget och testa dig utan att titta innan provet.]][[från:2026-11-27|Läs varje fråga noga och ge exempel i dina svar.]] Efter svenskan kommer franskan: planeringen säger prov på kapitel 2 mån 7/12."
+   "fran": "2026-12-07",
+   "till": "2026-12-07",
+   "text": "Franskaprovet är {dag:2026-12-07}. Läs frågorna noga och ta det lugnt, du har förberett dig lite i taget."
   },
   {
-   "fran": "2026-11-28",
-   "text": "Grammatikprovet är gjort, bra jobbat med svenskan. Nu är det franskans tur: provet på kapitel 2 är {dag:2026-12-07} enligt veckoplaneringen. Lite varje dag, så har du koll utan stress."
+   "fran": "2026-12-08",
+   "text": "Franskaprovet är gjort, bra kämpat! Skriv några rader i rutan Efter provet när du fått tillbaka det. Nu är det inga fler prov före jullovet enligt det som finns utlagt."
   }
  ],
  "nytt": [
-  "Matte: båda delproven är gjorda, mån 23/11 och tis 24/11.",
-  "Svenska: grammatikprov fre 27/11 enligt klasskalendern. Läraren lade ut instuderingsfrågor i Classroom 23/11.",
-  "Franska: veckoplaneringen säger nu prov på kapitel 2 mån 7/12. Skriftligt prov tor 3/12 och muntligt prov står inte kvar. Kolla med läraren.",
-  "Fysik/teknik: provet är flyttat till ons 3/2 efter jullovet enligt klasskalendern.",
-  "SO: nytt quiz om Franska revolutionen, bra för ditt grupparbete.",
-  "Mentor: Rania är kvar som din mentor. Skolan skrev 19/11 att meddelandet om ny mentor var ett felaktigt utskick.",
-  "Hemkunskap grupp 1 tis 1/12."
+  "Franska: provet på kapitel 2 mån 7/12 står nu också i klasskalendern (Prov chap. 2abc). Det är oklart om det blir en muntlig del.",
+  "Franska: planeringen har lagt till ordningstal (premier, deuxième …) på lektionen tor 26/11. De finns nu med på provkortet.",
+  "Nytt: knappar som kopierar en färdig prompt till Gemini, för att öva att prata franska (provkortet) och engelska (The survival challenge).",
+  "Svenska: grammatikprovet var fre 27/11. Skriv i rutan Efter provet när du fått tillbaka det.",
+  "Hemkunskap grupp 1 tis 1/12 enligt klasskalendern, men Edlevo visar ingen lektion efter NO den dagen. Kolla med läraren."
  ],
  "fokus": [
   {
-   "till": "2026-11-27",
-   "ikon": "📝",
-   "titel": "Svenska: grammatikprov {dag:2026-11-27}",
-   "text": "Läraren har lagt ut 20 instuderingsfrågor och en PowerPoint om ordklasser i Classroom. Skriv egna korta svar med ett exempel på varje, så har du en sammanfattning att plugga från. [[före:2026-11-27|Genrep {dag:2026-11-26}: svara på frågorna utan att titta och öva sedan bara på det du missade.]][[från:2026-11-27|Läs varje fråga noga och ge exempel i svaren.]]"
-  },
-  {
+   "till": "2026-12-07",
    "ikon": "🗣️",
    "titel": "Franska: prov {dag:2026-12-07}",
-   "text": "Veckoplaneringen säger nu prov på kapitel 2 mån 7/12, inte tor 3/12 som det stod förut. Fråga läraren vad som gäller och om det blir en muntlig del. [[före:2026-11-28|Efter svenskan börjar du lite smått: pouvoir, vouloir och finir, objektspronomen (le, la, les) och glosorna.]][[från:2026-11-28|Lite varje dag: pouvoir, vouloir och finir, objektspronomen (le, la, les) och glosorna i kapitel 2. Genrep tor 3/12.]]"
+   "text": "Kapitel 2: pouvoir, vouloir och finir, le, la och les, ordningstalen, texten i 2c och glosorna. [[före:2026-12-03|Lite varje dag fram till genrepet tor 3/12.]][[från:2026-12-03|Genrep tor 3/12, sedan bara det du missade.]] Säg verben och meningarna högt, det hjälper om det blir en muntlig del."
   },
   {
-   "ikon": "📓",
-   "titel": "Matte och kemi: efter proven",
-   "text": "När du får tillbaka proven: skriv i rutan Efter provet vad som gick bra och vad du missade. Ons 2/12 gör du ett kort quiz på kemimissarna och tis 8/12 på mattemissarna."
+   "ikon": "✍️",
+   "titel": "Svenska: efter grammatikprovet",
+   "text": "Skriv några rader i rutan Efter provet när du fått tillbaka det. En kort repetition på det du missade ligger fre 11/12."
+  },
+  {
+   "ikon": "🏝️",
+   "titel": "Engelska: The survival challenge",
+   "text": "Överlevnadsplanen har inget datum än. Prata igenom dina idéer med Gemini-knappen längre ner innan du skriver, då går skrivandet lättare."
   }
  ],
  "tempo": [
-  {
-   "v": 48,
-   "niva": 3,
-   "etikett": "Matte + svenska",
-   "vad": "Matteprov mån–tis, grammatikprov fre 27/11"
-  },
   {
    "v": 49,
    "niva": 2,
@@ -77,7 +69,7 @@
    "v": 51,
    "niva": 1,
    "etikett": "Snart jul",
-   "vad": "Betygsprat, mentorsdag, avslutning"
+   "vad": "Resultat i franska, betygsprat, avslutning"
   }
  ],
  "dagar": [
@@ -376,7 +368,7 @@
      "vad": "Objektspronomen (le, la, les): gör några meningar själv"
     }
    ],
-   "notis": "Franskaprovet på kapitel 2 är mån 7/12 enligt veckoplaneringen. Kolla med läraren att det stämmer.",
+   "notis": "Franskaprovet på kapitel 2 är mån 7/12 enligt både klasskalendern och planeringen.",
    "skola": []
   },
   {
@@ -385,7 +377,9 @@
    "ta_med": [
     "Idrottskläder"
    ],
-   "skola": [],
+   "skola": [
+    "Franska: repetition på lektionen"
+   ],
    "plugg": [
     {
      "amne": "Franska",
@@ -401,7 +395,7 @@
     "Idrottskläder"
    ],
    "skola": [
-    "Hemkunskap grupp 1",
+    "Hemkunskap grupp 1 enligt klasskalendern (Edlevo visar ingen lektion efter NO, kolla med läraren)",
     "Franska: repetition på lektionen",
     "Studiestöd 15.30–16.30, bra läge att fråga om franskan"
    ],
@@ -436,6 +430,7 @@
    "tid": "08.20–16.25",
    "ta_med": [],
    "skola": [
+    "Franska: repetition på lektionen",
     "Studiestöd 15.25–16.25 om du vill"
    ],
    "plugg": [
@@ -445,7 +440,7 @@
      "lank": "https://classroom.google.com/c/NzAzODg1NjQxMTY0/m/ODcyMjEzOTcwNzE4/details"
     }
    ],
-   "notis": "Här stod det förut skriftligt prov i franska. Nu säger planeringen mån 7/12. Kolla med läraren.",
+   "notis": "Genrepet hemma gör du som om det vore provet: utan att titta i boken.",
    "viktig": true
   },
   {
@@ -461,6 +456,93 @@
     {
      "amne": "Franska",
      "vad": "Läs en text från kapitel 2 högt, gärna inspelad så du kan lyssna"
+    }
+   ]
+  },
+  {
+   "datum": "2026-12-06",
+   "helg": true,
+   "skola": [],
+   "plugg": [
+    {
+     "amne": "Franska",
+     "vad": "Lätt repetition: säg verben och några meningar med le, la och les högt"
+    },
+    {
+     "amne": "Franska",
+     "vad": "Gå igenom det du missade på genrepet en sista gång, sedan vila"
+    }
+   ],
+   "notis": "Franskaprovet är mån 7/12. Packa väskan och sov i tid."
+  },
+  {
+   "datum": "2026-12-07",
+   "tid": "08.20–14.30",
+   "ta_med": [
+    "Idrottskläder"
+   ],
+   "skola": [
+    "FRANSKA: prov kapitel 2"
+   ],
+   "plugg": [],
+   "prov": true,
+   "viktig": true,
+   "notis": "Ät frukost. Läs varje fråga noga och ta det lugnt."
+  },
+  {
+   "datum": "2026-12-08",
+   "tid": "08.20–16.30",
+   "ta_med": [
+    "Idrottskläder"
+   ],
+   "skola": [
+    "Studiestöd 15.30–16.30"
+   ],
+   "plugg": [
+    {
+     "amne": "Matte",
+     "vad": "Kort repetition: ett quiz på det du missade på matteprovet, så sitter kapitel 2 kvar till nästa kapitel"
+    }
+   ]
+  },
+  {
+   "datum": "2026-12-09",
+   "tid": "08.20–14.40",
+   "ta_med": [],
+   "skola": [],
+   "plugg": [
+    {
+     "amne": "Engelska",
+     "vad": "The survival challenge: prata igenom din plan med Gemini-knappen och skriv några stödord"
+    }
+   ]
+  },
+  {
+   "datum": "2026-12-10",
+   "tid": "08.20–16.25",
+   "ta_med": [],
+   "skola": [
+    "Studiestöd 15.25–16.25 om du vill"
+   ],
+   "plugg": [
+    {
+     "amne": "SO",
+     "vad": "Franska revolutionen: gör quizet i Classroom och skriv ner tre fakta till grupparbetet",
+     "lank": "https://classroom.google.com/c/MTYyNTg2OTMwMDIy/p/MTYyODU4NTkyMTkx/details"
+    }
+   ]
+  },
+  {
+   "datum": "2026-12-11",
+   "tid": "08.20–14.35",
+   "ta_med": [],
+   "skola": [
+    "Luciafirande i matsalen kl. 9.30"
+   ],
+   "plugg": [
+    {
+     "amne": "Svenska",
+     "vad": "Kort repetition: ett NotebookLM-quiz på det du missade på grammatikprovet"
     }
    ]
   }
@@ -802,6 +884,7 @@
       "2b: finir (textboken s. 38–40)",
       "2b: objektspronomen som direkt objekt",
       "2c: textboken s. 42–43",
+      "2c: ordningstal (premier, deuxième …), enligt planeringen tor 26/11",
       "Glosorna i kapitel 2"
      ]
     },
@@ -831,7 +914,12 @@
      "text": "Du är min fransklärare. Ställ enkla frågor på franska om texterna i kapitel 2, en i taget. Jag svarar högt och skriver sedan in vad jag sa. Rätta mig vänligt och föreslå ett bättre sätt att säga det."
     }
    ],
-   "tips": "Planeringen säger bara Teste chapitre 2. Fråga läraren om det blir en muntlig del, så vet du hur du ska öva."
+   "tips": "Klasskalendern och planeringen säger båda prov mån 7/12. Fråga läraren om det blir en muntlig del, så vet du hur du ska öva.",
+   "gemini": {
+    "titel": "Prata franska med Gemini",
+    "beskr": "Kopierar en färdig prompt till Gemini för ett franskt samtal om det ni gått igenom i kapitel 2. Klistra in i Gemini, skicka och prata med Live eller mikrofonen.",
+    "text": "Du är en rolig och peppande franskcoach i ett röstsamtal med en elev i åk 8 som läser franska som moderna språk. Eleven har prov på kapitel 2 i läroboken måndag 7/12. Målet är ett långt och levande samtal där eleven pratar så mycket franska som möjligt och samtidigt blir förhörd på det som ska kunnas.\n\nDET SOM SKA ÖVAS (håll dig till detta)\n1. pouvoir och vouloir i presens, alla personer (je peux, tu veux, nous pouvons och så vidare)\n2. finir i presens, alla personer (je finis, nous finissons, ils finissent)\n3. le, la och les som direkt objekt framför verbet (\"Tu regardes la télé ? Oui, je la regarde.\")\n4. Ordningstal (premier, première, deuxième, troisième och så vidare)\n5. Repetition från kapitel 1 när det passar in: prepositioner och att fråga om och beskriva vägen.\nKapitlet har också glosor och texter som du inte känner till. Om eleven nämner eller läser upp ord ur boken, använd dem i samtalet. Använd annars bara enkla vardagsord. Bedöm aldrig ordförrådet: kan eleven inte ett ord, säg det på svenska och fortsätt.\n\nSVENSKA OCH FRANSKA\n- Frågor, repliker och rollspel på franska. Förklaringar, rättningar och instruktioner på svenska.\n- Börja med ungefär hälften svenska. När eleven svarar rätt flera gånger i rad, prata mer franska. När eleven kör fast, gå tillbaka till mer svenska.\n- Prata långsamt och tydligt på franska. Säger eleven \"igen\", \"encore\" eller \"långsammare\", upprepa långsammare.\n- Säger eleven något på svenska som går att säga på franska, hjälp eleven att säga det på franska.\n\nSÅ GÅR SAMTALET TILL\n- Korta repliker, en fråga i taget, och vänta alltid på svaret.\n- Kör i omgångar på några minuter och byt typ av omgång så att det aldrig blir tjatigt:\n  Snabbfrågor: säg en person och ett verb, till exempel \"nous, finir\", och eleven säger formen.\n  Byt ut ordet: säg en mening, eleven svarar med le, la eller les.\n  Rollspel: på ett café, kompisar som planerar helgen (on peut, je veux), en tävling där någon kommer först, andra och tredje, en turist som frågar om vägen. Ställ följdfrågor så att eleven måste svara med hela meningar.\n  Lärarbyte: eleven ställer frågor till dig på franska och du svarar, ibland med ett medvetet fel som eleven ska hitta.\n  Bossrunda: fem blandade frågor i provstil.\n- Efter varje omgång: säg poängen och vad som gick bra, och fråga vilken omgång eleven vill köra härnäst. Föreslå själv nästa om eleven inte väljer. Avsluta aldrig samtalet på eget initiativ.\n\nANPASSNING\n- Två rätt i rad på samma sak: gör nästa fråga svårare, till exempel hela meningar, en annan person eller verb och pronomen i samma svar (\"Tu veux le livre ? Oui, je le veux.\").\n- Fel svar: förklara kort på svenska, säg rätt svar på franska, låt eleven säga om det och ta upp samma sak igen några frågor senare.\n- Håll koll på vad eleven missar och kom tillbaka till det under hela samtalet.\n\nTON\n- Glad, uppmuntrande och gärna lite skojig. Poäng: 1 för rätt, 2 för rätt på första försöket och bonus för långa meningar. Säg poängen högt ibland.\n- Beröm insatsen, men säg aldrig att något sitter efter ett eller två rätt svar.\n- Kommentera uttalet bara om ett ord var svårt att förstå, och säg då hur det ska låta.\n- Läs aldrig upp symboler, listor eller emojis.\n\nNär eleven säger \"klar\" eller \"fini\": säg totalpoängen och sammanfatta på svenska, i högst fem meningar, vad som gick bra och vad som behöver övas mer före provet.\n\nBörja nu: hälsa kort på franska och svenska, säg i en mening hur samtalet går till och starta med en lätt uppvärmning."
+   }
   },
   {
    "datum": "2027-02-03",
@@ -857,16 +945,16 @@
  ],
  "ovrigt": [
   {
-   "datum": "2026-12-08",
-   "text": "Matte: kort repetition, ett quiz på det du missade på provet. Så sitter kapitel 2 kvar till nästa kapitel."
-  },
-  {
    "datum": "2026-12-11",
    "text": "Lucia kl 9.30 i matsalen"
   },
   {
    "datum": "2026-12-15",
    "text": "Hemkunskap grupp 1"
+  },
+  {
+   "datum": "2026-12-15",
+   "text": "Franska: resultat på provet enligt planeringen. Gör ett kort quiz på det du missade."
   },
   {
    "datum": "2026-12-17",
@@ -887,17 +975,17 @@
  "jullov": "2026-12-18",
  "kolla": [],
  "bra": [
-  "Matte: du förberedde dig i flera omgångar med diagnoser och övningsprov, och nu är båda delproven gjorda.",
-  "Kemi: du gick igenom hela listan och testade dig utan bok före provet.",
+  "Svenska: du bockade av instuderingsfrågorna inför grammatikprovet.",
+  "Matte och kemi: båda proven är gjorda, och du skrev tankar efter kemiprovet om vad du gör annorlunda nästa gång.",
   "Inga uppgifter saknas i Classroom."
  ],
  "veckans_teknik": {
-  "titel": "Svara med exempel",
-  "text": "På ett grammatikprov räcker det sällan att säga regeln. Visa att du kan använda den: förklara med egna ord och ge ett eget exempel. Adjektiv beskriver hur något är, till exempel en röd bil. Skriv dina svar på instuderingsfrågorna så, då har du både förklaringen och exemplet klart.",
+  "titel": "Säg det högt",
+  "text": "Språk lär man sig genom att använda dem. Säg verbformerna och meningarna högt i stället för att bara läsa dem. Börja med je, tu, il, elle och fortsätt med nous, vous, ils. Säg sedan en mening och byt ut ordet mot le, la eller les.",
   "extra": [
-   "Hitta ordklasserna i en mening ur en bok du läser. Det är bra träning och går snabbt.",
-   "Kvällen före ett prov: lätt repetition och sova i tid slår en sista lång plugg-timme.",
-   "Franska: läs glosor och verb högt. Det du säger fastnar bättre än det du bara läser."
+   "Spela in dig själv när du läser texten i 2c och lyssna. Du hör själv vad som låter fel.",
+   "Gemini-knappen på provkortet kopierar en prompt för ett samtal på franska. Kör den med mikrofonen eller Live och be om att få bli förhörd.",
+   "Ordningstalen: räkna upp vilka som kom först, andra och tredje i något du har sett, på franska."
   ]
  },
  "notebooklm_tips": {
@@ -1000,7 +1088,7 @@
   },
   {
    "amne": "Franska",
-   "fraga": "Planeringen säger nu prov på kapitel 2 mån 7/12. Förut stod det skriftligt prov tor 3/12 och muntligt mån 7/12. Vad gäller, och blir det en muntlig del?"
+   "fraga": "Klasskalendern och planeringen säger prov på kapitel 2 mån 7/12. Blir det en muntlig del, och ingår ordningstalen?"
   },
   {
    "amne": "Fysik/teknik",
@@ -1013,6 +1101,14 @@
   {
    "amne": "Hemkunskap/idrott",
    "fraga": "Ska \"Kost och hälsa – en utmaning\" och \"Introduktion till konditionstema\" göras? De saknar datum i Classroom."
+  }
+ ],
+ "gemini": [
+  {
+   "amne": "Engelska",
+   "titel": "Prata engelska med Gemini",
+   "beskr": "Kopierar en färdig prompt till Gemini för ett samtal på engelska om din överlevnadsplan i The survival challenge. Klistra in i Gemini, skicka och prata med Live eller mikrofonen. Bra uppvärmning innan du skriver.",
+   "text": "Du är en rolig och nyfiken samtalspartner på engelska i ett röstsamtal med en elev i åk 8. Eleven jobbar med en engelskuppgift, \"The survival challenge\": klassen har sett filmen Cast Away och varje elev har valt två saker att ta med till en öde ö. Eleven ska skriva en överlevnadsplan. Ditt jobb är att hjälpa eleven att prata engelska om sina idéer så att det blir lättare att skriva sedan. Skriv aldrig texten åt eleven.\n\nUPPGIFTENS FRÅGOR (bygg samtalet på dem)\nDel 1: Vilka två saker valde eleven? Ångrar eleven valen efter filmen?\nDel 2: Hur hittar man mat och vatten? Var sover man och hur skyddar man sig? Hur hjälper sakerna till att bygga ett skydd? Vilka faror finns? Hur försöker man ta sig hem?\nDel 3: Vad hjälpte Chuck mest att överleva? Vad skulle vara svårast för eleven? Vad lärde eleven sig om överlevnad, vänskap och människans natur?\n\nSÅ GÅR SAMTALET TILL\n- Prata engelska, lugnt och tydligt. Använd svenska bara om eleven kör fast eller ber om det, och gå sedan tillbaka till engelska.\n- Korta repliker, en fråga i taget, och vänta alltid på svaret.\n- Gör det till ett äventyr: du kan spela en annan överlevare på ön, en reporter som intervjuar eleven efter räddningen eller en kapten på ett fartyg som hittar eleven. Byt roll ibland så att samtalet kan pågå länge.\n- Ställ följdfrågor (why, how, what if) så att eleven utvecklar sina svar och ger exempel.\n- Hjälp med ord: om eleven inte hittar ett ord, ge det på engelska och låt eleven använda det i en mening.\n- Rätta vänligt och kort: upprepa elevens mening på rätt sätt och gå vidare, utan långa grammatikförklaringar.\n- Avsluta aldrig samtalet på eget initiativ. Fråga i stället om eleven vill fortsätta med nästa del eller byta roll.\n- Läs aldrig upp symboler, listor eller emojis.\n\nNär eleven säger \"done\" eller \"klar\": ge på svenska en kort sammanfattning i högst fem meningar av elevens bästa idéer, och nämn fem bra engelska ord eller fraser från samtalet som eleven kan använda i sin text.\n\nBörja nu: hälsa kort på engelska, säg i en mening hur samtalet går till och fråga vilka två saker eleven valde."
   }
  ]
 }
